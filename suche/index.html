@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Datenbank - Handschriftenarchiv Dresdner Kreuzchor</title>
+		<link rel="shortcut icon" href="../favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400" rel="stylesheet">
+		<script type="text/javascript" src="search.js"></script>
+		<script type="text/html" id="template">
+		</script>
+	</head>
+	<body>
+		<img src="../favicon.ico" id="icon"/>
+		<div id="search">
+			<span style="font-size:16pt;">Volltext-Suche</span>
+			<form method="GET" action="search.php">
+				<input type="text" name="search" style="width:80%"/><br>
+				<input type="submit" value="Suchen" style="float:right;margin-top:7%;margin-right:10%;"/>
+			</form>
+		</div>
+		<div id="search-b">
+			<span style="font-size:16pt;">erweiterte Suche</span>
+			<form method="POST" action="search.php">
+				Verknüpfung der Suchargumente:
+				<select name="mode" onchange="checkModeSwitch()">
+					<option selected value="AND">UND</option>
+					<option value="OR">ODER</option>
+				</select>
+				<table>
+					<tbody id="searchelems"><tr><td><select name="search[]" class="srch" onfocus="this.oldvalue=this.value;" onchange="checkSelect(this);this.oldvalue=this.value;">
+						<option>ID</option><option>Titel</option><option>Komponist</option><option>Bearbeiter</option><option>Dichter</option><option>Setzer</option>
+						<option>Typus</option><option>Verlag</option><option>Sprache</option><option>Anzahl</option><option>Sammlung</option><option>Standort</option>
+						<option>Signatur</option></select></td><td class="text"><input name="val[]" type="number"></td><td></td></tr></tbody>
+					<tfoot><tr><td><button type="button" onclick="nfield()" id="add"/></td><td colspan="2"></td></tr></tfoot>
+				</table>
+				<button type="submit" class="go"/>
+			</form>
+		</div>
+
+		<!-- jQuery -->
+		<script src="../js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="../js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="../js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="../js/jquery.waypoints.min.js"></script>
+		<!-- Counters -->
+		<script src="../js/jquery.countTo.js"></script>
+		<!-- Flexslider -->
+		<script src="../js/jquery.flexslider-min.js"></script>
+
+		<!-- Main JS (Do not remove) -->
+		<script src="../js/main.js"></script>
+	</body>
+</html>

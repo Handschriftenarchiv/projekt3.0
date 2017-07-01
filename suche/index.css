@@ -1,0 +1,86 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	width:96%;
+	height:96%;
+	overflow:hidden;
+	font-size:12pt;
+}
+body:after{
+	content:"";
+	position:absolute;
+	z-index:-1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	opacity:0.5;
+	background: url('background.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center -10px;
+}
+#icon{
+	position:fixed;
+	left:3%;
+	top:4%;
+	width:12%;
+}
+#search{
+	position:absolute;
+	left:15%;
+	top:11%;
+	height:78%;
+	width:35%;
+	box-sizing:border-box;
+	border-right:1px solid black;
+	padding-top:10%;
+	font-family:"Playfair Display",Arial,serif;
+}
+#search-b{
+	position:absolute;
+	right:10%;
+	top:11%;
+	bottom:11%;
+	height:78%;
+	width:39%;
+	box-sizing:border-box;
+	padding-top:10%;
+	font-family:"Playfair Display",Arial,serif;
+	overflow-y:auto;
+}
+input,select,button{
+	border:none;
+	background-color:rgba(196,196,196,0.82);
+	padding:7px;
+}
+.remove,
+#add,
+.go{
+	background-color:transparent;
+	background-size:100%;
+	background-repeat:no-repeat;
+	background-position:bottom center;
+	border:none;
+	padding:0px;
+	height:2em;
+	width:2em;
+	font-family:"Karla";
+}
+.remove{
+	background-image:url(minus.svg);
+}
+#add{
+	background-image:url(plus.svg);
+}
+.go{
+	background-image:url(enter.svg);
+	width:5em;
+	float:right;
+	margin-right:45%;
+}
+.text>input{
+	width:15em;
+}
