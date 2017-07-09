@@ -204,6 +204,12 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 									}
 									?>
 								</table>
+								<?php
+								if(!empty($dsatz['Audiolink'])){
+									echo "<p>Hörbeispiel</p>";
+									echo "<audio controls><source src=\"$dsatz[Audiolink]\" type=\"audio/mpeg\" />Ihr Browser unterstütz HTML5 leider nicht.</audio>";
+								}
+								?>
 								<a href="."><p>neue Suche</p></a>
 							</div>
 						</div>
