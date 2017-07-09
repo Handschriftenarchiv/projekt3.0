@@ -119,11 +119,11 @@
 									<span>Datenbank</span>
 									<h2>Suchergebnisse</h2>
 									<p class="fh5co-lead"><?php
-									if(isset($_GET['search'])){
+									if(isset($_GET['mode'])){
+										echo "erweiterte Suche";
+									}else{
 										$s=$_GET['search'];
 										echo "Sie suchten nach &quot;$s&quot;";
-									}else{
-										echo "erweiterte Suche";
 									}
 									?></p>
 								</div>
@@ -143,7 +143,7 @@
 <?php
 require_once "config.php";
 
-if(isset($_GET['search'])){
+if(!isset($_GET['mode'])){
 	$s=$_GET['search'];
 	$sql="SELECT * FROM archivalien WHERE Titel like '%$s%' OR Komponist like '%$s%' OR Bearbeiter like '%$s%' OR Dichter like '%$s%' OR Setzer like '%$s%' OR Typus like '%$s%' OR Verlag like '%$s%' ".
 	"OR Verfassungsdatum like '%$s%' OR Sprache like '%$s%' OR Anzahl like '%$s%' OR Sammlung like '%$s%'OR Standort like '%$s%' OR Signatur like '%".stripSig($s)."%'";
@@ -151,29 +151,29 @@ if(isset($_GET['search'])){
 	while($dsatz=mysqli_fetch_assoc($res)){
 		echo "\t\t\t\t\t\t\t<blockquote><a href=\"details.php?id=".$dsatz['ID']."\"><p>".$dsatz['Titel']."<br><i>".$dsatz['Komponist']."</i></p></a></blockquote><br>\n";
 	}
-}elseif(isset($_POST['val'])&&count($_POST['val'])>0){
+}elseif(isset($_GET['val'])&&count($_GET['val'])>0){
 	$res=mysqli_query($con,"DESCRIBE archivalien");
 	while($dsatz=mysqli_fetch_array($res,MYSQLI_NUM)){
 		$cols[]=$dsatz[0];
 	}
-	if(count($_POST['search'])!==count($_POST['val'])){
+	if(count($_GET['search'])!==count($_GET['val'])){
 		error("A0");
 		mysqli_close($con);
 		exit;
 	}
 	$sql="SELECT * FROM archivalien WHERE ";
-	for($i=0;$i<count($_POST['val']);$i++){
-		if(!in_array($_POST['search'][$i],$cols)){
+	for($i=0;$i<count($_GET['val']);$i++){
+		if(!in_array($_GET['search'][$i],$cols)){
 			error("A1");
 			continue;
 		}
-		if($_POST['search'][$i]=='ID'){
-			$sql.=$_POST['search'][$i]." like '".mysqli_real_escape_string($con,$_POST['val'][$i])."' ";
+		if($_GET['search'][$i]=='ID'){
+			$sql.=$_GET['search'][$i]." like '".mysqli_real_escape_string($con,$_GET['val'][$i])."' ";
 		}else{
-			$sql.=$_POST['search'][$i]." like '%".mysqli_real_escape_string($con,$_POST['val'][$i])."%' ";
+			$sql.=$_GET['search'][$i]." like '%".mysqli_real_escape_string($con,$_GET['val'][$i])."%' ";
 		}
-		if($i+1<count($_POST['val'])){
-			$sql.=$_POST['mode']." ";
+		if($i+1<count($_GET['val'])){
+			$sql.=$_GET['mode']." ";
 		}
 	}
 	$res=mysqli_query($con,$sql);
@@ -189,7 +189,10 @@ if(isset($_GET['search'])){
 	header("Location: ./");
 	exit;
 }
+if(isset($_GET['search'])){
 ?>
+							<a href="."><p>neue Suche</p></a>
+<?php } ?>
 						</div>
 					</div>
 				</div>
