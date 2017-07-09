@@ -119,11 +119,11 @@
 									<span>Datenbank</span>
 									<h2>Suchergebnisse</h2>
 									<p class="fh5co-lead"><?php
-									if(isset($_GET['search'])){
+									if(isset($_GET['mode'])){
+										echo "erweiterte Suche";
+									}else{
 										$s=$_GET['search'];
 										echo "Sie suchten nach &quot;$s&quot;";
-									}else{
-										echo "erweiterte Suche";
 									}
 									?></p>
 								</div>
@@ -143,7 +143,7 @@
 <?php
 require_once "config.php";
 
-if(isset($_GET['search'])){
+if(!isset($_GET['mode'])){
 	$s=$_GET['search'];
 	$sql="SELECT * FROM archivalien WHERE Titel like '%$s%' OR Komponist like '%$s%' OR Bearbeiter like '%$s%' OR Dichter like '%$s%' OR Setzer like '%$s%' OR Typus like '%$s%' OR Verlag like '%$s%' ".
 	"OR Verfassungsdatum like '%$s%' OR Sprache like '%$s%' OR Anzahl like '%$s%' OR Sammlung like '%$s%'OR Standort like '%$s%' OR Signatur like '%".stripSig($s)."%'";
