@@ -204,7 +204,7 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 									}
 									?>
 								</table>
-								<a href=".">neue Suche</a>
+								<a href="."><p>neue Suche</p></a>
 							</div>
 						</div>
 					</div>
