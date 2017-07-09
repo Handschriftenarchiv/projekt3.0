@@ -189,7 +189,10 @@ if(!isset($_GET['mode'])){
 	header("Location: ./");
 	exit;
 }
+if(isset($_GET['search'])){
 ?>
+<a href=".">neue Suche</a>
+<?php } ?>
 						</div>
 					</div>
 				</div>
