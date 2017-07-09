@@ -191,7 +191,7 @@ if(!isset($_GET['mode'])){
 }
 if(isset($_GET['search'])){
 ?>
-<a href=".">neue Suche</a>
+							<a href="."><p>neue Suche</p></a>
 <?php } ?>
 						</div>
 					</div>
