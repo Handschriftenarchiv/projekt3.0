@@ -3,24 +3,24 @@ require_once "config.php";
 if(empty($_GET['id'])){
 	header('Location: index.php');
 	exit;
-}else{
-	$dsatz=mysqli_fetch_assoc(mysqli_query($con,"SELECT * FROM archivalien WHERE ID=".$_GET['id']));
-	if(empty($dsatz['Komponist'])){
-		$dsatz['Komponist']="unbekannt";
-	}
-	if(empty($dsatz['Dichter'])){
-		$dsatz['Dichter']='unbekannt';
-	}
-	if(empty($dsatz['Setzer'])){
-		$dsatz['Setzer']='unbekannt';
-	}
-	if(empty($dsatz['Verlag'])){
-		$dsatz['Verlag']='unbekannt';
-	}
-	if(empty($dsatz['Verfassungsdatum'])){
-		$dsatz['Verfassungsdatum']='unbekannt';
-	}
-	$dsatz['Signatur']=formatSig($dsatz['Signatur']);
+}
+$dsatz=mysqli_fetch_assoc(mysqli_query($con,"SELECT * FROM archivalien WHERE ID=".$_GET['id']));
+if(empty($dsatz['Komponist'])){
+	$dsatz['Komponist']="unbekannt";
+}
+if(empty($dsatz['Dichter'])){
+	$dsatz['Dichter']='unbekannt';
+}
+if(empty($dsatz['Setzer'])){
+	$dsatz['Setzer']='unbekannt';
+}
+if(empty($dsatz['Verlag'])){
+	$dsatz['Verlag']='unbekannt';
+}
+if(empty($dsatz['Verfassungsdatum'])){
+	$dsatz['Verfassungsdatum']='unbekannt';
+}
+$dsatz['Signatur']=formatSig($dsatz['Signatur']);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -36,55 +36,55 @@ if(empty($_GET['id'])){
 		<meta name="keywords" content="Handschrift, Kreuzchor, Geschichte, Archiv, Dresden" />
 		<meta name="author" content="Handschriftenarchiv Dresdner Kreuzchor" />
 		<!--
-	  	//////////////////////////////////////////////////////
+		//////////////////////////////////////////////////////
 
-	  	FREE HTML5 TEMPLATE
-	  	DESIGNED & DEVELOPED by FREEHTML5.CO
+		FREE HTML5 TEMPLATE
+		DESIGNED & DEVELOPED by FREEHTML5.CO
 
-	  	Website: 		http://freehtml5.co/
-	  	Email: 			info@freehtml5.co
-	  	Twitter: 		http://twitter.com/fh5co
-	  	Facebook: 		https://www.facebook.com/fh5co
+		Website: 		http://freehtml5.co/
+		Email: 			info@freehtml5.co
+		Twitter: 		http://twitter.com/fh5co
+		Facebook: 		https://www.facebook.com/fh5co
 
-	  	//////////////////////////////////////////////////////
-	  	 -->
+		//////////////////////////////////////////////////////
+		 -->
 
-	    	<!-- Facebook and Twitter integration -->
-	  	<meta property="og:title" content=""/>
-	  	<meta property="og:image" content=""/>
-	  	<meta property="og:url" content=""/>
-	  	<meta property="og:site_name" content=""/>
-	  	<meta property="og:description" content=""/>
-	  	<meta name="twitter:title" content="" />
-	  	<meta name="twitter:image" content="" />
-	  	<meta name="twitter:url" content="" />
-	  	<meta name="twitter:card" content="" />
+		<!-- Facebook and Twitter integration -->
+		<meta property="og:title" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content=""/>
+		<meta property="og:site_name" content=""/>
+		<meta property="og:description" content=""/>
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" content="" />
+		<meta name="twitter:card" content="" />
 
-	  	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	  	<link rel="shortcut icon" href="../favicon.ico">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="shortcut icon" href="../favicon.ico">
 
-	  	<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
-	  	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
 
-	  	<!-- Animate.css -->
-	  	<link rel="stylesheet" href="../css/animate.css">
-	  	<!-- Icomoon Icon Fonts-->
-	  	<link rel="stylesheet" href="../css/icomoon.css">
-	  	<!-- Bootstrap  -->
-	  	<link rel="stylesheet" href="../css/bootstrap.css">
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="../css/animate.css">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="../css/icomoon.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="../css/bootstrap.css">
 
-	  	<!-- Flexslider  -->
-	  	<link rel="stylesheet" href="../css/flexslider.css">
+		<!-- Flexslider  -->
+		<link rel="stylesheet" href="../css/flexslider.css">
 
-	  	<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/style.css">
 
 
-	  	<!-- Modernizr JS -->
-	  	<script src="../js/modernizr-2.6.2.min.js"></script>
-	  	<!-- FOR IE9 below -->
-	  	<!--[if lt IE 9]>
-	  	<script src="js/respond.min.js"></script>
-	  	<![endif]-->
+		<!-- Modernizr JS -->
+		<script src="../js/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
 	</head>
 	<body>
 		<nav id="fh5co-main-nav" role="navigation">
@@ -131,101 +131,100 @@ if(empty($_GET['id'])){
 					</div>
 				</div>
 			</header>
-		<aside id="fh5co-hero" class="js-fullheight">
-			<div class="flexslider js-fullheight">
-				<ul class="slides">
-				<li style="background-image: url(images/slide_1.jpg);">
-					<div class="overlay-gradient"></div>
-					<div class="container">
-						<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
-							<div class="slider-text-inner">
-								<div class="desc">
-									<span>Datenbank</span>
-									<h2>Details</h2>
-									<p class="fh5co-lead"><?php
-									switch($dsatz['Typus']){
-										case 'Handschrift':
-											echo "zur Handschrift";
-											break;
-										case 'Kopie von Handschrift':
-											echo "zur Kopie der Handschrift";
-											break;
-										case 'Druck':
-											echo "zum Druck";
-											break;
-									}
-									echo " &quot;".$dsatz['Titel']."&quot;";
-									?></p>
+			<aside id="fh5co-hero" class="js-fullheight">
+				<div class="flexslider js-fullheight">
+					<ul class="slides">
+					<li style="background-image: url(images/slide_1.jpg);">
+						<div class="overlay-gradient"></div>
+						<div class="container">
+							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
+								<div class="slider-text-inner">
+									<div class="desc">
+										<span>Datenbank</span>
+										<h2>Details</h2>
+										<p class="fh5co-lead"><?php
+										switch($dsatz['Typus']){
+											case 'Handschrift':
+												echo "zur Handschrift";
+												break;
+											case 'Kopie von Handschrift':
+												echo "zur Kopie der Handschrift";
+												break;
+											case 'Druck':
+												echo "zum Druck";
+												break;
+										}
+										echo " &quot;".$dsatz['Titel']."&quot;";
+										?></p>
+									</div>
 								</div>
 							</div>
 						</div>
+					</li>
+					</ul>
+				</div>
+			</aside>
+
+			<div id="fh5co-about">
+				<div class="container">
+					<div class="row animate-box">
+						<div class="col-md-8 col-md-offset-2 text-center animate-box">
+							<div class="about-content">
+								<style>
+								th{
+								text-align:right;}
+								td{
+								text-align:left;}
+								</style>
+								<h2><?php echo $dsatz['Titel']; ?></h2>
+								<h3><?php echo $dsatz['Komponist']; ?></h3>
+								<table style="margin:auto;">
+									<tr><th>Titel:&nbsp;</th><td><?php echo $dsatz['Titel'];?></td></tr>
+									<tr><th>Komponist:&nbsp;</th><td><?php echo $dsatz['Komponist']; ?></td></tr>
+									<?php
+									if(!empty($dsatz['Bearbeiter'])){
+										echo "<tr><th>Bearbeiter:&nbsp;</th><td>".$dsatz['Bearbeiter'].'</td></tr>';
+									}
+									?>
+									<tr><th>Dichter:&nbsp;</th><td><?php echo $dsatz['Dichter']; ?></td></tr>
+									<tr><th>Setzer:&nbsp;</th><td><?php echo $dsatz['Setzer']; ?></td></tr>
+									<tr><th>Typus:&nbsp;</th><td><?php echo $dsatz['Typus'];?></td></tr><?php
+									if($dsatz['Typus']=='Druck'){
+										echo "<tr><th>Verlag:&nbsp;</th><td>$dsatz[Verlag]</td></tr>\n";
+									}
+									?><tr><th>Verfassungsdatum:&nbsp;</th><td><?php echo $dsatz['Verfassungsdatum']; ?></td></tr>
+									<tr><th>Sprache:&nbsp;</th><td><?php echo $dsatz['Sprache'];?></td></tr>
+									<tr><th>Anzahl:&nbsp;</th><td><?php echo $dsatz['Anzahl'];?></td></tr>
+									<tr><th>Sammlung:&nbsp;</th><td><?php echo $dsatz['Sammlung'];?></td></tr>
+									<tr><th>Standort:&nbsp;</th><td><?php echo $dsatz['Standort'];?></td></tr>
+									<tr><th>Signatur:&nbsp;</th><td><?php echo $dsatz['Signatur'];?></td></tr>
+									<?php
+									if(!empty($dsatz['Bemerkungen'])){
+										echo '<tr><th>Bemerkungen:&nbsp;</th><td>'.$dsatz['Bemerkungen'].'</td></tr>';
+									}
+									?>
+								</table>
+								<a href="."><p>neue Suche</p></a>
+							</div>
+						</div>
 					</div>
-				</li>
-				</ul>
+				</div>
 			</div>
-		</aside>
+		</div>
+		<!-- jQuery -->
+		<script src="../js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="../js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="../js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="../js/jquery.waypoints.min.js"></script>
+		<!-- Counters -->
+		<script src="../js/jquery.countTo.js"></script>
+		<!-- Flexslider -->
+		<script src="../js/jquery.flexslider-min.js"></script>
 
-		<div id="fh5co-about">
-			<div class="container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center animate-box">
-						<div class="about-content">
-<style>
-th{
-text-align:right;}
-td{
-text-align:left;}
-</style>
-<h2><?php echo $dsatz['Titel']; ?></h2>
-<h3><?php echo $dsatz['Komponist']; ?></h3>
-<table style="margin:auto;">
-	<tr><th>Titel:&nbsp;</th><td><?php echo $dsatz['Titel'];?></td></tr>
-	<tr><th>Komponist:&nbsp;</th><td><?php echo $dsatz['Komponist']; ?></td></tr>
-	<?php
-	if(!empty($dsatz['Bearbeiter'])){
-		echo "<tr><th>Bearbeiter:&nbsp;</th><td>".$dsatz['Bearbeiter'].'</td></tr>';
-	}
-	?>
-	<tr><th>Dichter:&nbsp;</th><td><?php echo $dsatz['Dichter']; ?></td></tr>
-	<tr><th>Setzer:&nbsp;</th><td><?php echo $dsatz['Setzer']; ?></td></tr>
-	<tr><th>Typus:&nbsp;</th><td><?php echo $dsatz['Typus'];?></td></tr><?php
-	if($dsatz['Typus']=='Druck'){
-		echo "<tr><th>Verlag:&nbsp;</th><td>$dsatz[Verlag]</td></tr>\n";
-	}
-	?><tr><th>Verfassungsdatum:&nbsp;</th><td><?php echo $dsatz['Verfassungsdatum']; ?></td></tr>
-	<tr><th>Sprache:&nbsp;</th><td><?php echo $dsatz['Sprache'];?></td></tr>
-	<tr><th>Anzahl:&nbsp;</th><td><?php echo $dsatz['Anzahl'];?></td></tr>
-	<tr><th>Sammlung:&nbsp;</th><td><?php echo $dsatz['Sammlung'];?></td></tr>
-	<tr><th>Standort:&nbsp;</th><td><?php echo $dsatz['Standort'];?></td></tr>
-	<tr><th>Signatur:&nbsp;</th><td><?php echo $dsatz['Signatur'];?></td></tr>
-	<?php
-	if(!empty($dsatz['Bemerkungen'])){
-		echo '<tr><th>Bemerkungen:&nbsp;</th><td>'.$dsatz['Bemerkungen'].'</td></tr>';
-	}
-	?>
-</table>
-<?php } ?>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-<!-- jQuery -->
-<script src="../js/jquery.min.js"></script>
-<!-- jQuery Easing -->
-<script src="../js/jquery.easing.1.3.js"></script>
-<!-- Bootstrap -->
-<script src="../js/bootstrap.min.js"></script>
-<!-- Waypoints -->
-<script src="../js/jquery.waypoints.min.js"></script>
-<!-- Counters -->
-<script src="../js/jquery.countTo.js"></script>
-<!-- Flexslider -->
-<script src="../js/jquery.flexslider-min.js"></script>
-
-<!-- Main JS (Do not remove) -->
-<script src="../js/main.js"></script>
-</body>
+		<!-- Main JS (Do not remove) -->
+		<script src="../js/main.js"></script>
+	</body>
 </html>
