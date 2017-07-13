@@ -1,7 +1,7 @@
 <?php
 require_once "config.php";
 if(empty($_GET['id'])){
-	header('Location: index.php');
+	header('Location: .');
 	exit;
 }
 $dsatz=mysqli_fetch_assoc(mysqli_query($con,"SELECT * FROM archivalien WHERE ID=".$_GET['id']));
@@ -204,6 +204,19 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 									}
 									?>
 								</table>
+								<?php
+								if(!empty($dsatz['Audiolink'])){
+									echo "<strong>Hörbeispiel: </strong>";
+									echo "<audio controls><source src=\"$dsatz[Audiolink]\" type=\"audio/mpeg\" />Ihr Browser unterstütz HTML5 leider nicht.</audio>";
+								}
+								if(!empty($dsatz['Dokumentlink'])){
+									$docs=explode(' ',$dsatz['Dokumentlink']);
+									echo "<strong>Digitalisate:</strong><br>";
+									foreach($docs as $doc){
+										echo "<iframe style=\"width:525px;height:417px;\" src=\"$doc\" frameborder=\"0\" allowfullscreen>Ihr Browser unterstützt leider keine iframes.<br>Wir können ihnen leider keine Digitalisate zeigen.</iframe>";
+									}
+								}
+								?>
 								<a href="."><p>neue Suche</p></a>
 							</div>
 						</div>
