@@ -213,7 +213,7 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 									$docs=explode(' ',$dsatz['Dokumentlink']);
 									echo "<strong>Digitalisate:</strong><br>";
 									foreach($docs as $doc){
-										echo "<iframe style=\"width:525px;height:417px;\" src=\"$doc\" frameborder=\"0\" allowfullscreen>Ihr Browser unterstützt leider keine iframes.<br>Wir können ihnen leider keine Digitalisate zeigen.</iframe>";
+										echo "<iframe width=\"100%\" height=\"394\" src=\"$doc\" frameborder=\"0\" allowfullscreen>Ihr Browser unterstützt leider keine iframes.<br>Wir können ihnen leider keine Digitalisate zeigen.</iframe>";
 									}
 								}
 								?>
