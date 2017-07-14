@@ -1,3 +1,9 @@
+<?php
+if(!isset($_GET['search'])){
+	header("Location: ./");
+	exit;
+}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -142,6 +148,7 @@
 						<div class="about-content">
 <?php
 require_once "config.php";
+require_once "misc.php";
 
 if(!isset($_GET['mode'])){
 	$s=$_GET['search'];
@@ -151,15 +158,10 @@ if(!isset($_GET['mode'])){
 	while($dsatz=mysqli_fetch_assoc($res)){
 		echo "\t\t\t\t\t\t\t<blockquote><a href=\"details.php?id=".$dsatz['ID']."\"><p>".$dsatz['Titel']."<br><i>".$dsatz['Komponist']."</i></p></a></blockquote><br>\n";
 	}
-}elseif(isset($_GET['val'])&&count($_GET['val'])>0){
+}else{
 	$res=mysqli_query($con,"DESCRIBE archivalien");
 	while($dsatz=mysqli_fetch_array($res,MYSQLI_NUM)){
 		$cols[]=$dsatz[0];
-	}
-	if(count($_GET['search'])!==count($_GET['val'])){
-		error("A0");
-		mysqli_close($con);
-		exit;
 	}
 	$sql="SELECT * FROM archivalien WHERE ";
 	for($i=0;$i<count($_GET['val']);$i++){
@@ -168,7 +170,11 @@ if(!isset($_GET['mode'])){
 			continue;
 		}
 		if($_GET['search'][$i]=='ID'){
-			$sql.=$_GET['search'][$i]." like '".mysqli_real_escape_string($con,$_GET['val'][$i])."' ";
+			$sql.="ID like '".mysqli_real_escape_string($con,$_GET['val'][$i])."' ";
+		}elseif($_GET['search'][$i]=='Audiolink'||$_GET['search'][$i]=='Dokumentlink'){
+			if(isset($_GET[$_GET['search'][$i]])){
+				$sql.=$_GET['search'][$i]." IS NOT NULL ";
+			}
 		}else{
 			$sql.=$_GET['search'][$i]." like '%".mysqli_real_escape_string($con,$_GET['val'][$i])."%' ";
 		}
@@ -180,18 +186,14 @@ if(!isset($_GET['mode'])){
 	mysqli_close($con);
 	if(!$res){
 		error(mysqli_errno($con));
-		exit;
 	}
 	while($dsatz=mysqli_fetch_assoc($res)){
 		echo "\t\t\t\t\t\t\t<blockquote><a href=\"details.php?id=".$dsatz['ID']."\"><p>".$dsatz['Titel']."<br><i>".$dsatz['Komponist']."</i></p></a></blockquote><br>\n";
 	}
-}else{
-	header("Location: ./");
-	exit;
 }
 if(isset($_GET['search'])){
 ?>
-							<a href="."><p>neue Suche</p></a>
+<a href="."><p>neue Suche</p></a>
 <?php } ?>
 						</div>
 					</div>

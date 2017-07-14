@@ -1,5 +1,6 @@
 <?php
 require_once "config.php";
+require_once "misc.php";
 if(empty($_GET['id'])){
 	header('Location: .');
 	exit;
