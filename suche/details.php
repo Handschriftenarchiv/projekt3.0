@@ -172,6 +172,7 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 							<div class="about-content">
 								<style>
 								th{
+								vertical-align: text-top;
 								text-align:right;}
 								td{
 								text-align:left;}
@@ -202,21 +203,21 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 									if(!empty($dsatz['Bemerkungen'])){
 										echo '<tr><th>Bemerkungen:&nbsp;</th><td>'.$dsatz['Bemerkungen'].'</td></tr>';
 									}
+									if(!empty($dsatz['Audiolink'])){
+										echo "<tr><th>Hörbeispiel:&nbsp;</th><td><audio controls><source src=\"$dsatz[Audiolink]\" type=\"audio/mpeg\" />"
+											."Ihr Browser unterstütz HTML5 leider nicht.<br>Wir können ihnen leider kein Hörbeispiel vorspielen.</audio></td></tr>";
+									}
+									if(!empty($dsatz['Dokumentlink'])){
+										$docs=explode(' ',$dsatz['Dokumentlink']);
+										echo "<tr><th rowspan=\"".count($docs)."\">Digitalisate:&nbsp;</th><td>"
+											."<iframe width=\"100%\" height=\"394\" src=\"".array_shift($docs)."\" frameborder=\"0\" allowfullscreen>"
+											."Ihr Browser unterstützt leider keine iframes.<br>Wir können ihnen leider keine Digitalisate anzeigen.</iframe></td></tr>";
+										foreach($docs as $doc){
+											echo "<tr><td><iframe width=\"100%\" height=\"394\" src=\"$doc\" frameborder=\"0\" allowfullscreen></iframe></td></tr>";
+										}
+									}
 									?>
 								</table>
-								<?php
-								if(!empty($dsatz['Audiolink'])){
-									echo "<strong>Hörbeispiel: </strong>";
-									echo "<audio controls><source src=\"$dsatz[Audiolink]\" type=\"audio/mpeg\" />Ihr Browser unterstütz HTML5 leider nicht.</audio>";
-								}
-								if(!empty($dsatz['Dokumentlink'])){
-									$docs=explode(' ',$dsatz['Dokumentlink']);
-									echo "<strong>Digitalisate:</strong><br>";
-									foreach($docs as $doc){
-										echo "<iframe style=\"width:525px;height:417px;\" src=\"$doc\" frameborder=\"0\" allowfullscreen>Ihr Browser unterstützt leider keine iframes.<br>Wir können ihnen leider keine Digitalisate zeigen.</iframe>";
-									}
-								}
-								?>
 								<a href="."><p>neue Suche</p></a>
 							</div>
 						</div>
