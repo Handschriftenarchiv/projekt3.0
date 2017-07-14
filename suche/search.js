@@ -12,12 +12,14 @@ var search={
 		"Anzahl":"<input name=\"val[]\" maxlength=\"255\">",
 		"Sammlung":"<select name=\"val[]\"><option>Introitensammlung</option><option>Archiv</option></select>",
 		"Standort":"<input name=\"val[]\" maxlength=\"50\"/>",
-		"Signatur":"<input name=\"val[]\"/>"
+		"Signatur":"<input name=\"val[]\"/>",
+		"Audiolink":"<input name=\"Audiolink\" type=\"checkbox\" checked/>",
+		"Dokumentlink":"<input name=\"Dokumentlink\" type=\"checkbox\" checked/><input type=\"hidden\" name=\"val[]\" value=\"\""
 	},
 	selected:[0],
 	template:"<td><select name=\"search[]\" class=\"srch\" onfocus=\"this.oldvalue=this.value;\" onchange=\"checkSelect(this);this.oldvalue=this.value;\"><option{0}>ID</option><option{1}>Titel</option><option{2}>Komponist</option>"
 		+"<option{3}>Bearbeiter</option><option{4}>Dichter</option><option{5}>Setzer</option><option{6}>Typus</option><option{7}>Verlag</option><option{8}>Sprache</option>"
-		+"<option{9}>Anzahl</option><option{10}>Sammlung</option><option{11}>Standort</option><option{12}>Signatur</option></select></td><td class=\"text\"><input name=\"val[]\">"
+		+"<option{9}>Anzahl</option><option{10}>Sammlung</option><option{11}>Standort</option><option{12}>Signatur</option><option value=\"Audiolink\"{13}>Hörbeispiel verfügbar</option><option value=\"Dokumentlink\"{14}>Digitalisierungen verfügbar</option></select></td><td class=\"text\"><input name=\"val[]\">"
 		+"</td><td><button type=\"button\" onclick=\"removeP(this);\" class=\"remove\"/></td>"
 };
 function nfield(){
