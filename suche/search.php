@@ -164,7 +164,7 @@ if(!isset($_GET['mode'])){
 		$cols[]=$dsatz[0];
 	}
 	$sql="SELECT * FROM archivalien WHERE ";
-	for($i=0;$i<count($_GET['val']);$i++){
+	for($i=0;$i<count($_GET['search']);$i++){
 		if(!in_array($_GET['search'][$i],$cols)){
 			error("A1");
 			continue;
@@ -178,7 +178,7 @@ if(!isset($_GET['mode'])){
 		}else{
 			$sql.=$_GET['search'][$i]." like '%".mysqli_real_escape_string($con,$_GET['val'][$i])."%' ";
 		}
-		if($i+1<count($_GET['val'])){
+		if($i+1<count($_GET['search'])){
 			$sql.=$_GET['mode']." ";
 		}
 	}
