@@ -187,8 +187,12 @@ if(!isset($_GET['mode'])){
 	if(!$res){
 		error(mysqli_errno($con));
 	}
-	while($dsatz=mysqli_fetch_assoc($res)){
-		echo "\t\t\t\t\t\t\t<blockquote><a href=\"details.php?id=".$dsatz['ID']."\"><p>".$dsatz['Titel']."<br><i>".$dsatz['Komponist']."</i></p></a></blockquote><br>\n";
+	if(mysqli_num_rows($res)==0){
+		echo "\t\t\t\t\t\t\t<p>keine Ergebnisse für diese Suchanfrage</p>";
+	}else{
+		while($dsatz=mysqli_fetch_assoc($res)){
+			echo "\t\t\t\t\t\t\t<blockquote><a href=\"details.php?id=".$dsatz['ID']."\"><p>".$dsatz['Titel']."<br><i>".$dsatz['Komponist']."</i></p></a></blockquote><br>\n";
+		}
 	}
 }
 if(isset($_GET['search'])){
