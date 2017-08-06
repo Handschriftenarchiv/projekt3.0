@@ -145,7 +145,19 @@
 						</ul>
 					</div>
 					<div class="col-md-7 col-md-push-1 animate-box">
-						<form method="POST" action="message.php">
+						<?php
+						$valid=filter_var($email, FILTER_VALIDATE_EMAIL);
+						if(isset($_POST['name'])&&$valid){
+							$header="From: \"".str_replace('"',"",$_POST[name])."\" <$_POST[email]>\nContent-Type: text/plain\n";
+							$mail=mail('handschriftenarchiv@protonmail.com','Kontaktformular HSA',$header);
+						}
+						if($mail){
+							echo "Ihre E-Mail wurde erfolgreich an uns versandt. Wir werden Ihnen so schnell wie möglich antworten.";
+						}elseif(!$valid){
+							echo "Bitte geben Sie eine gültige E-Mail-Adresse ein!";
+						}
+						?>
+						<form method="POST">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
