@@ -152,10 +152,10 @@
 							$mail=mail('handschriftenarchiv@protonmail.com','Kontaktformular HSA',$header);
 						}
 						if($mail){
-							echo "Ihre E-Mail wurde erfolgreich an uns versandt. Wir werden Ihnen so schnell wie möglich antworten.";
+							echo "<p>Ihre E-Mail wurde erfolgreich an uns versandt. Wir werden Ihnen so schnell wie möglich antworten.</p>";
 						}elseif(!$valid){
-							echo "Bitte geben Sie eine gültige E-Mail-Adresse ein!";
-						}
+							echo "<p>Bitte geben Sie eine gültige E-Mail-Adresse ein!</p>";
+						}else{
 						?>
 						<form method="POST">
 							<div class="row">
@@ -181,6 +181,7 @@
 								</div>
 							</div>
 						</form>
+						<?php } ?>
 					</div>
 				</div>
 			</div>
