@@ -145,28 +145,43 @@
 						</ul>
 					</div>
 					<div class="col-md-7 col-md-push-1 animate-box">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Name">
+						<?php
+						$valid=filter_var($email, FILTER_VALIDATE_EMAIL);
+						if(isset($_POST['name'])&&$valid){
+							$header="From: \"".str_replace('"',"",$_POST[name])."\" <$_POST[email]>\nContent-Type: text/plain\n";
+							$mail=mail('handschriftenarchiv@protonmail.com','Kontaktformular HSA',$header);
+						}
+						if($mail){
+							echo "<p>Ihre E-Mail wurde erfolgreich an uns versandt. Wir werden Ihnen so schnell wie möglich antworten.</p>";
+						}elseif(!$valid){
+							echo "<p>Bitte geben Sie eine gültige E-Mail-Adresse ein!</p>";
+						}else{
+						?>
+						<form method="POST">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Name" name="name">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="E-Mail" name="email">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea name="text" class="form-control" id="" cols="30" rows="7" placeholder="Nachricht"></textarea>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<input type="submit" value="Nachricht senden" class="btn btn-primary">
+									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="E-Mail">
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Nachricht"></textarea>
-								</div>
-							</div>
-							<div class="col-md-12">
-								<div class="form-group">
-									<input type="submit" value="Nachricht senden" class="btn btn-primary">
-								</div>
-							</div>
-						</div>
+						</form>
+						<?php } ?>
 					</div>
 				</div>
 			</div>
