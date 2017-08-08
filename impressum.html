@@ -78,7 +78,7 @@
 						<li><a href="mediathek.html">Mediathek</a></li>
 						<li><a href="/suche/">Datenbank</a></li>
 						<li><a href="impressum.html">Impressum</a></li>
-						<li><a href="kontakt.html">Kontakt</a></li>
+						<li><a href="kontakt.php">Kontakt</a></li>
 					</ul>
 					<p class="fh5co-social-icon">
 						<a href="https://twitter.com/NotenarchivDKC"><i class="icon-twitter2"></i></a>
