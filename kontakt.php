@@ -121,7 +121,7 @@
 			   				<div class="slider-text-inner">
 			   					<div class="desc">
 			   						<span>Kontaktinformationen</span>
-			   						<h2>Konatkt</h2>
+			   						<h2>Kontakt</h2>
 			   						<p class="fh5co-lead">Bleiben Sie mit uns in Verbindung. Schreiben Sie uns.</p>
 			   					</div>
 			   				</div>
