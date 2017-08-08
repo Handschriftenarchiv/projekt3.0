@@ -156,7 +156,7 @@
 							}else{
 								echo "<p>Leider konnte Ihre Nachricht nicht versendet werden.</p>";
 							}
-						}else{
+						}elseif($process){
 							echo "<p>Bitte geben Sie eine gültige E-Mail-Adresse ein!</p>";
 						}
 						if(!isset($mail)){
@@ -175,7 +175,7 @@
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea name="text" class="form-control" id="" cols="30" rows="7" placeholder="Nachricht"><?php if(isset($_POST['name'])){echo $_POST['name'];}?></textarea>
+										<textarea name="text" class="form-control" id="" cols="30" rows="7" placeholder="Nachricht"><?php if(isset($_POST['text'])){echo $_POST['text'];}?></textarea>
 									</div>
 								</div>
 								<div class="col-md-12">
