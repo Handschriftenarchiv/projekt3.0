@@ -146,14 +146,15 @@
 					</div>
 					<div class="col-md-7 col-md-push-1 animate-box">
 						<?php
+						$process=isset($_POST['name']);
 						$valid=filter_var($email, FILTER_VALIDATE_EMAIL);
-						if(isset($_POST['name'])&&$valid){
+						if($process&&$valid){
 							$header="From: \"".str_replace('"',"",$_POST[name])."\" <$_POST[email]>\nContent-Type: text/plain\n";
 							$mail=mail('handschriftenarchiv@protonmail.com','Kontaktformular HSA',$header);
 						}
-						if($mail){
+						if($process&&$mail){
 							echo "<p>Ihre E-Mail wurde erfolgreich an uns versandt. Wir werden Ihnen so schnell wie möglich antworten.</p>";
-						}elseif(!$valid){
+						}elseif($process&&!$valid){
 							echo "<p>Bitte geben Sie eine gültige E-Mail-Adresse ein!</p>";
 						}else{
 						?>
