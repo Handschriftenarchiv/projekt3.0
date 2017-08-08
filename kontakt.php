@@ -9,7 +9,7 @@
 	<title>Kontakt - Handschriftenarchiv Dresdner Kreuzchor</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Bleiben Sie in Kontakt mit dem Handschriftenarchiv" />
-	<meta name="keywords" content="Konatkt, Handschriftenarchiv, Archiv, Dresden, Kreuzchor, Handschriftenarchiv, Dresdner Kreuzchor" />
+	<meta name="keywords" content="Kontakt, Handschriftenarchiv, Archiv, Dresden, Kreuzchor, Handschriftenarchiv, Dresdner Kreuzchor" />
 	<meta name="author" content="Handschriftenarchiv Dresdner Kreuzchor" />
 
   <!--
