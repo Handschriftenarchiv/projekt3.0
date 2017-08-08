@@ -78,7 +78,7 @@
 						<li><a href="mediathek.html">Mediathek</a></li>
 						<li><a href="/suche/">Datenbank</a></li>
 						<li><a href="impressum.html">Impressum</a></li>
-						<li><a href="kontakt.php">Kontakt</a></li>
+						<li><a href="kontakt.html">Kontakt</a></li>
 					</ul>
 					<p class="fh5co-social-icon">
 						<a href="https://twitter.com/NotenarchivDKC"><i class="icon-twitter2"></i></a>
@@ -147,32 +147,35 @@
 					<div class="col-md-7 col-md-push-1 animate-box">
 						<?php
 						$process=isset($_POST['name']);
-						$valid=filter_var($email, FILTER_VALIDATE_EMAIL);
+						$valid=!empty($_POST['email'])&&filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 						if($process&&$valid){
 							$header="From: \"".str_replace('"',"",$_POST[name])."\" <$_POST[email]>\nContent-Type: text/plain\n";
-							$mail=mail('handschriftenarchiv@protonmail.com','Kontaktformular HSA',$header);
-						}
-						if($process&&$mail){
-							echo "<p>Ihre E-Mail wurde erfolgreich an uns versandt. Wir werden Ihnen so schnell wie möglich antworten.</p>";
-						}elseif($process&&!$valid){
-							echo "<p>Bitte geben Sie eine gültige E-Mail-Adresse ein!</p>";
+							if(mail('handschriftenarchiv@protonmail.com','Kontaktformular HSA',$header)){
+								echo "<p>Ihre Nachricht wurde erfolgreich an uns versandt. Wir werden Ihnen so schnell wie möglich antworten.</p>";
+								$mail=true;
+							}else{
+								echo "<p>Leider konnte Ihre Nachricht nicht versendet werden.</p>";
+							}
 						}else{
+							echo "<p>Bitte geben Sie eine gültige E-Mail-Adresse ein!</p>";
+						}
+						if(!isset($mail)){
 						?>
 						<form method="POST">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Name" name="name">
+										<input type="text" class="form-control" placeholder="Name" name="name"<?php if(isset($_POST['name'])){echo " value=\"$_POST[name]\"";}?>>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="E-Mail" name="email">
+										<input type="text" class="form-control" placeholder="E-Mail" name="email"<?php if(isset($_POST['email'])){echo " value=\"$_POST[email]\"";}?>>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea name="text" class="form-control" id="" cols="30" rows="7" placeholder="Nachricht"></textarea>
+										<textarea name="text" class="form-control" id="" cols="30" rows="7" placeholder="Nachricht"><?php if(isset($_POST['name'])){echo $_POST['name'];}?></textarea>
 									</div>
 								</div>
 								<div class="col-md-12">
