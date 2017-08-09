@@ -150,7 +150,7 @@
 						$valid=!empty($_POST['email'])&&filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 						if($process&&$valid){
 							$header="From: \"".str_replace('"',"",$_POST[name])."\" <$_POST[email]>\nContent-Type: text/plain\n";
-							if(mail('handschriftenarchiv@protonmail.com','Kontaktformular HSA',$header)){
+							if(mail('handschriftenarchiv@protonmail.com','Kontaktformular HSA',$_POST['text'],$header)){
 								echo "<p>Ihre Nachricht wurde erfolgreich an uns versandt. Wir werden Ihnen so schnell wie möglich antworten.</p>";
 								$mail=true;
 							}else{
