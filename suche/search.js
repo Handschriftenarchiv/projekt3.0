@@ -118,3 +118,21 @@ function checkModeSwitch(){
 	}
 	e[0].disabled=false;
 }
+function lookup(){
+	if(document.getElementById("searchBox").value==""){
+		document.getElementById("suggestions").innerHTML="";
+		return;
+	}
+	if(window.XMLHttpRequest){
+		r=new XMLHttpRequest();
+	}else{r=new ActiveXObject("Microsoft.XMLHTTP");}
+	var url = [window.location.protocol, '//', window.location.host, window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/')), "/search.php?js&search=", document.getElementById("searchBox").value].join('');
+console.log(url);
+	r.open("GET", url, true);
+	r.send();
+	r.onreadystatechange=function(){
+		if(r.readyState==4&&r.status==200){
+			document.getElementById("suggestions").innerHTML=r.responseText;
+		}
+	};
+}
