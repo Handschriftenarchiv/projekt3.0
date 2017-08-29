@@ -15,8 +15,8 @@
 		<a href=".."><img border="0" src="../favicon.ico" id="icon"/></a>
 		<div id="search">
 			<span style="font-size:16pt;">Volltext-Suche</span>
-			<form method="GET" action="search.php">
-				<input type="text" name="search" style="width:80%"/><br>
+			<form method="GET" action="search.php" autocomplete="off">
+				<input type="search" list="suggestions" name="search" id="searchBox" style="width:80%" oninput="javascript:lookup();"/><br>
 				<input type="submit" value="Suchen" style="float:right;margin-top:7%;margin-right:10%;"/>
 			</form>
 		</div>
@@ -38,7 +38,7 @@
 				<button type="submit" class="go"/>
 			</form>
 		</div>
-
+		<datalist id="suggestions"></datalist>
 		<!-- jQuery -->
 		<script src="../js/jquery.min.js"></script>
 		<!-- jQuery Easing -->

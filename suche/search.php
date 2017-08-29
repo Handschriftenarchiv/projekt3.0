@@ -3,6 +3,27 @@ if(!isset($_GET['search'])){
 	header("Location: ./");
 	exit;
 }
+require_once "config.php";
+require_once "misc.php";
+if(isset($_GET['js'])){
+	header("Content-Type: text/plain");
+	$s=mysqli_real_escape_string($con,$_GET['search']);
+	if(!isset($_GET['field'])){
+		$sql="SELECT * FROM (SELECT Titel FROM archivalien WHERE Titel like '%$s%' AND Titel<>'$s' UNION "
+			."SELECT Komponist FROM archivalien WHERE Komponist like '%$s%' AND Komponist<>'$s' UNION "
+			."SELECT Bearbeiter FROM archivalien WHERE Bearbeiter like '%$s%' AND Bearbeiter<>'$s' UNION "
+			."SELECT Dichter FROM archivalien WHERE Dichter like '%$s%' AND Dichter<>'$s' UNION "
+			."SELECT Setzer FROM archivalien WHERE Setzer like '%$s%' AND Setzer<>'$s') AS a GROUP BY Titel LIMIT 20";
+	}else{
+		$_GET['field']=mysqli_real_escape_string($con,$_GET['field']);
+		$sql="SELECT $_GET[field] FROM archivalien WHERE $_GET[field] like '%$s%' AND NOT $_GET[field]='$s' GROUP BY $_GET[field] LIMIT 20";
+	}
+	$res=mysqli_query($con,$sql);
+	while($dsatz=mysqli_fetch_array($res,MYSQLI_NUM)){
+		echo "<option>".$dsatz[0]."<option>";
+	}
+	exit(0);
+}
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -147,9 +168,6 @@ if(!isset($_GET['search'])){
 					<div class="col-md-8 col-md-offset-2 text-center animate-box">
 						<div class="about-content">
 <?php
-require_once "config.php";
-require_once "misc.php";
-
 if(!isset($_GET['mode'])){
 	$s=$_GET['search'];
 	$sql="SELECT * FROM archivalien WHERE Titel like '%$s%' OR Komponist like '%$s%' OR Bearbeiter like '%$s%' OR Dichter like '%$s%' OR Setzer like '%$s%' OR Typus like '%$s%' OR Verlag like '%$s%' ".
