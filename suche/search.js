@@ -1,20 +1,20 @@
 var search={
 	fieldsTemplate:{
 		"ID":"<input type=\"number\" name=\"val[]\"/>",
-		"Titel":"<input name=\"val[]\" maxlength=\"50\"/>",
-		"Komponist":"<input name=\"val[]\" maxlength=\"50\"/>",
-		"Bearbeiter":"<input name=\"val[]\" maxlength=\"50\"/>",
-		"Dichter":"<input name=\"val[]\" maxlength=\"50\"/>",
-		"Setzer":"<input name=\"val[]\" maxlength=\"50\"/>",
+		"Titel":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"50\" oninput=\"lookupField(this,'Titel');\"/>",
+		"Komponist":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"50\" oninput=\"lookupField(this,'Komponist');\"/>",
+		"Bearbeiter":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"50\" oninput=\"lookupField(this,'Bearbeiter');\"/>",
+		"Dichter":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"50\" oninput=\"lookupField(this,'Dichter');\"/>",
+		"Setzer":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"50\" oninput=\"lookupField(this,'Setzer');\"/>",
 		"Typus":"<select name=\"val[]\"><option>Handschrift</option><option>Kopie von Handschrift</option><option>Druck</option></select>",
-		"Verlag":"<input name=\"val[]\" maxlength=\"50\"/>",
-		"Sprache":"<input name=\"val[]\" maxlength=\"20\"/>",
-		"Anzahl":"<input name=\"val[]\" maxlength=\"255\">",
+		"Verlag":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"50\" oninput=\"lookupField(this,'Verlag');\"/>",
+		"Sprache":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"20\" oninput=\"lookupField(this,'Sprache');\"/>",
+		"Anzahl":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"255\" oninput=\"lookupField(this,'Anzahl');\">",
 		"Sammlung":"<select name=\"val[]\"><option>Introitensammlung</option><option>Archiv</option></select>",
-		"Standort":"<input name=\"val[]\" maxlength=\"50\"/>",
+		"Standort":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"50\" oninput=\"lookupField(this,'Standort');\"/>",
 		"Signatur":"<input name=\"val[]\"/>",
 		"Audiolink":"<input name=\"Audiolink\" type=\"checkbox\" checked/>",
-		"Dokumentlink":"<input name=\"Dokumentlink\" type=\"checkbox\" checked/><input type=\"hidden\" name=\"val[]\" value=\"\""
+		"Dokumentlink":"<input name=\"Dokumentlink\" type=\"checkbox\" checked/><input type=\"hidden\" name=\"val[]\" value=\"\"/>"
 	},
 	selected:[0],
 	template:"<td><select name=\"search[]\" class=\"srch\" onfocus=\"this.oldvalue=this.value;\" onchange=\"checkSelect(this);this.oldvalue=this.value;\"><option{0}>ID</option><option{1}>Titel</option><option{2}>Komponist</option>"
@@ -127,6 +127,21 @@ function lookup(){
 		r=new XMLHttpRequest();
 	}else{r=new ActiveXObject("Microsoft.XMLHTTP");}
 	var url = [window.location.protocol, '//', window.location.host, window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/')), "/search.php?js&search=", document.getElementById("searchBox").value].join('');
+	r.open("GET", url, true);
+	r.send();
+	r.onreadystatechange=function(){
+		if(r.readyState==4&&r.status==200){
+			document.getElementById("suggestions").innerHTML=r.responseText;
+		}
+	};
+}
+function lookupField(elem,fieldName){
+	document.getElementById("suggestions").innerHTML="";
+	if(elem.value==""){return;}
+	if(window.XMLHttpRequest){
+		r=new XMLHttpRequest();
+	}else{r=new ActiveXObject("Microsoft.XMLHTTP");}
+	var url = [window.location.protocol, '//', window.location.host, window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/')), "/search.php?js&field=", fieldName, "&search=", elem.value].join('');
 console.log(url);
 	r.open("GET", url, true);
 	r.send();
