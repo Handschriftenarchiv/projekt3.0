@@ -84,3 +84,6 @@ input,select,button{
 .text>input{
 	width:15em;
 }
+input[type="search"]{
+	-webkit-appearance:textfield;
+}
