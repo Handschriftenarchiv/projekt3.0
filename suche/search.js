@@ -118,6 +118,18 @@ function checkModeSwitch(){
 	}
 	e[0].disabled=false;
 }
+function checkSubmit(extended){
+	if(extended){
+		for (var input of document.getElementsByName("val[]")) {
+			if (input.value=="") {
+				return false;
+			}
+		}
+		return true;
+	}else{
+		return document.getElementById("searchBox").value!="";
+	}
+}
 function lookup(){
 	if(document.getElementById("searchBox").value==""){
 		document.getElementById("suggestions").innerHTML="";
