@@ -3,7 +3,6 @@ if(!isset($_GET['search'])){
 	header("Location: ./");
 	exit;
 }
-require_once "config.php";
 require_once "misc.php";
 if(isset($_GET['js'])){
 	header("Content-Type: text/plain");
@@ -20,7 +19,7 @@ if(isset($_GET['js'])){
 	}
 	$res=mysqli_query($con,$sql);
 	while($dsatz=mysqli_fetch_array($res,MYSQLI_NUM)){
-		echo "<option>".$dsatz[0]."<option>";
+		echo '<option>'.$dsatz[0].'</option>';
 	}
 	exit(0);
 }

@@ -1,3 +1,8 @@
+function start(){
+	if(navigator.sayswho=="SAFARI"){
+		document.getElementById("searchBox").type="text";
+	}
+}
 var search={
 	fieldsTemplate:{
 		"ID":"<input type=\"number\" name=\"val[]\"/>",
@@ -8,7 +13,8 @@ var search={
 		"Setzer":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"50\" oninput=\"lookupField(this,'Setzer');\"/>",
 		"Typus":"<select name=\"val[]\"><option>Handschrift</option><option>Kopie von Handschrift</option><option>Druck</option></select>",
 		"Verlag":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"50\" oninput=\"lookupField(this,'Verlag');\"/>",
-		"Sprache":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"20\" oninput=\"lookupField(this,'Sprache');\"/>",
+		"Sprache":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"50\" oninput=\"lookupField(this,'Sprache');\"/>",
+		"Schrift":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"50\" oninput=\"lookupField(this,'Schrift');\"/>",
 		"Anzahl":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"255\" oninput=\"lookupField(this,'Anzahl');\">",
 		"Sammlung":"<select name=\"val[]\"><option>Introitensammlung</option><option>Archiv</option></select>",
 		"Standort":"<input type=\"search\" list=\"suggestions\" name=\"val[]\" maxlength=\"50\" oninput=\"lookupField(this,'Standort');\"/>",
@@ -18,17 +24,18 @@ var search={
 	},
 	selected:[0],
 	template:"<td><select name=\"search[]\" class=\"srch\" onfocus=\"this.oldvalue=this.value;\" onchange=\"checkSelect(this);this.oldvalue=this.value;\"><option{0}>ID</option><option{1}>Titel</option><option{2}>Komponist</option>"
-		+"<option{3}>Bearbeiter</option><option{4}>Dichter</option><option{5}>Setzer</option><option{6}>Typus</option><option{7}>Verlag</option><option{8}>Sprache</option>"
-		+"<option{9}>Anzahl</option><option{10}>Sammlung</option><option{11}>Standort</option><option{12}>Signatur</option><option value=\"Audiolink\"{13}>Hörbeispiel verfügbar</option><option value=\"Dokumentlink\"{14}>Digitalisierungen verfügbar</option></select></td><td class=\"text\"><input name=\"val[]\">"
+		+"<option{3}>Bearbeiter</option><option{4}>Dichter</option><option{5}>Setzer</option><option{6}>Typus</option><option{7}>Verlag</option><option{8}>Sprache</option><option{9}>Schrift</option>"
+		+"<option{10}>Anzahl</option><option{11}>Sammlung</option><option{12}>Standort</option><option{13}>Signatur</option><option value=\"Audiolink\"{14}>Hörbeispiel verfügbar</option><option value=\"Dokumentlink\"{15}>Digitalisierungen verfügbar</option></select></td><td class=\"text\"><input name=\"val[]\">"
 		+"</td><td><button type=\"button\" onclick=\"removeP(this);\" class=\"remove\"/></td>"
 };
 function nfield(){
 	var table=document.getElementById('searchelems');
-	if(document.getElementsByName('mode')[0].selectedIndex==0&&table.rows.length>12){
+	var mode=document.getElementsByName('mode')[0].selectedIndex;
+	if(mode==0&&table.rows.length>12){
 		return;
 	}
 	var newtr=table.insertRow(table.rows.length);
-	if(document.getElementsByName('mode')[0].selectedIndex==0){
+	if(mode==0){
 		newtr.innerHTML=search.template.replace(/{(\d+)}/g,function(match,number){
 			return search.selected.includes(parseInt(number))?" disabled=\"true\"":"";
 		});
@@ -51,6 +58,10 @@ function removeP(elem){
 }
 function checkSelect(elem){
 	elem.parentNode.parentNode.getElementsByTagName('td')[1].innerHTML=search.fieldsTemplate[elem.value];
+	if(navigator.sayswho=="SAFARI"){
+		elem.parentNode.parentNode.getElementsByTagName('td')[1].innerHTML
+			=elem.parentNode.parentNode.getElementsByTagName('td')[1].innerHTML.replace(/type=\"search\"/g,'');
+	}
 	var elems=document.getElementsByClassName('srch');
 	if(document.getElementsByName('mode')[0].selectedIndex==0){
 		var sel=elem.selectedIndex;
@@ -120,10 +131,12 @@ function checkModeSwitch(){
 }
 function checkSubmit(extended){
 	if(extended){
-		for (var input of document.getElementsByName("val[]")) {
-			if (input.value=="") {
+		var inputs=document.getElementsByName("val[]");
+		for (var i=0;i<inputs.length;i++) {
+			if(inputs[i].type=="checkbox")
+				continue;
+			if(inputs[i].value=="")
 				return false;
-			}
 		}
 		return true;
 	}else{
@@ -133,6 +146,7 @@ function checkSubmit(extended){
 function lookup(){
 	if(document.getElementById("searchBox").value==""){
 		document.getElementById("suggestions").innerHTML="";
+		document.getElementById("livesearch").innerHTML="";
 		return;
 	}
 	if(window.XMLHttpRequest){
@@ -140,12 +154,12 @@ function lookup(){
 	}else{r=new ActiveXObject("Microsoft.XMLHTTP");}
 	var url = [window.location.protocol, '//', window.location.host, window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/')), "/search.php?js&search=", document.getElementById("searchBox").value].join('');
 	r.open("GET", url, true);
-	r.send();
 	r.onreadystatechange=function(){
 		if(r.readyState==4&&r.status==200){
 			document.getElementById("suggestions").innerHTML=r.responseText;
 		}
 	};
+	r.send();
 }
 function lookupField(elem,fieldName){
 	document.getElementById("suggestions").innerHTML="";
@@ -154,7 +168,6 @@ function lookupField(elem,fieldName){
 		r=new XMLHttpRequest();
 	}else{r=new ActiveXObject("Microsoft.XMLHTTP");}
 	var url = [window.location.protocol, '//', window.location.host, window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/')), "/search.php?js&field=", fieldName, "&search=", elem.value].join('');
-console.log(url);
 	r.open("GET", url, true);
 	r.send();
 	r.onreadystatechange=function(){
@@ -163,3 +176,18 @@ console.log(url);
 		}
 	};
 }
+navigator.sayswho=(function(){
+	var ua= navigator.userAgent, tem,
+	M=ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+	if(/trident/i.test(M[1])){
+		tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+		return 'IE';
+	}
+	if(M[1]=== 'Chrome'){
+		tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+		if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+	}
+	M=M[2]?[M[1]]:[navigator.appName];
+	if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+	return M[0].toUpperCase();
+})();
