@@ -132,8 +132,9 @@ function checkModeSwitch(){
 function checkSubmit(extended){
 	if(extended){
 		var inputs=document.getElementsByName("val[]");
+		console.log(inputs);
 		for (var i=0;i<inputs.length;i++) {
-			if(inputs[i].type=="checkbox")
+			if(inputs[i].type=="hidden")
 				continue;
 			if(inputs[i].value=="")
 				return false;
