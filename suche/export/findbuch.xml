@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd">
+	<eadheader>
+		<eadid mainagencycode="DE-ISIL">DE-1234</eadid>
+		<filedesc>
+			<titlestmt>
+				<titleproper>Handschriftenarchiv Dresdner Kreuzchor</titleproper>
+			</titlestmt>
+		</filedesc>
+		<profiledesc>
+			<creation>
+				<date normal="2017-09-05">erstellt am 05.09.2017</date>
+			</creation>
+		</profiledesc>
+	</eadheader>
+	<archdesc level="collection" type="Findbuch">
+		<did>
+			<unitid>HSA-Bestand</unitid>
+			<repository>
+				<corpname role="Sonstige">Handschriftenarchiv Dresdner Kreuzchor</corpname>
+				<address>
+					<adressline>Dornblüthstraße 4,01277 Dresden,handschriftenarchiv@protonmail.com</adressline>
+				</address>
+				<extref xlink:role="url_archive" xlink:href="archiv.handschriften.bplaced.com">Website des Handschriftenarchiv Dresdner Kreuzchor</extref>
+			</repository>
+		</did>
+		<otherfindaid>
+			<extref xlink:role="url_findbuch" xlink:href="archiv.handschriften.bplaced.de/suche/export.php">Findbuch Handschriftenarchiv Dresdner Kreuzchor</extref>
+		</otherfindaid>
+		<dsc>
+			<c level="collection" id="HSA-Bestand">
+				<did>
+					<unitid>HSA-Bestand</unitid>
+					<!-- evtl. <origination>Dresdner Kreuzchor</origination> -->
+				</did>
+				<c level="file" id="DE-1234-20-01-01">
+					<did>
+						<unitid>20-01-01</unitid>
+						<unittitle type="title">Gott der Herr ist Sonn und Schild</unittitle>
+						<origination label="Autor">Johann Sebastian Bach</origination>
+						<physdesc>
+							<genreform normal="Handschriften">Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=1">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>12x Sopran</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-20-03-01">
+					<did>
+						<unitid>20-03-01</unitid>
+						<unittitle type="title">Kein Schöner Land</unittitle>
+						<origination label="Autor">Volkslied</origination>
+						<physdesc>
+							<genreform normal="Handschriften">Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=2">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>1x Tenor II</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-20-08-01">
+					<did>
+						<unitid>20-08-01</unitid>
+						<unittitle type="title">Der Faulbeerbaum</unittitle>
+						<origination label="Autor">Alexander Tichonowitsch Gretschaninow</origination>
+						<physdesc>
+							<genreform normal="Handschriften">Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Russisch </language>
+						</langmaterial>
+						<note>
+							<p>für Knabenchor <br> Kruzianer und Rantsdiskantist Dr.rer.nat. Gottfried Heder (Abgang vom Kreuzchor 1952)</p>
+						</note>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=3">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x Sopran<br>5x Alt</p>
+					</odd>
+					<daogrp id="DE-1234-20-08-01_digit">
+						<daodesc>
+							<list>
+								<item>
+									<title>Scan der Handschrift</title>
+									<genreform>BILD</genreform>
+								</item>
+								<item>
+									<title>Scan der Handschrift</title>
+									<genreform>BILD</genreform>
+								</item>
+							</list>
+						</daodesc>
+						<daoloc xlink:role="externer_viewer" xlink:href="//e.issuu.com/embed.html#25938217/45880531"/>
+						<daoloc xlink:role="externer_viewer" xlink:href="//e.issuu.com/embed.html#25938217/45878938"/>
+					</daogrp>
+				</c>
+				<c level="file" id="DE-1234-22-09-01">
+					<did>
+						<unitid>22-09-01</unitid>
+						<unittitle type="title">Maria im Walde</unittitle>
+						<origination label="Autor">Carl Riedel</origination>
+						<physdesc>
+							<genreform normal="Drucksachen">Druck</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=4">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x Sopran<br>4x Alt<br>4x Tenor<br>4x Bass</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-22-09-02">
+					<did>
+						<unitid>22-09-02</unitid>
+						<unittitle type="title">Weihnachtswunder</unittitle>
+						<origination label="Autor">Carl Riedel</origination>
+						<physdesc>
+							<genreform normal="Drucksachen">Druck</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=5">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x Sopran<br>3x Alt<br>4x Tenor<br>4xBass</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-22-09-03">
+					<did>
+						<unitid>22-09-03</unitid>
+						<unittitle type="title">Christkindleins Bergfahrt</unittitle>
+						<origination label="Autor">Carl Riedel</origination>
+						<physdesc>
+							<genreform normal="Drucksachen">Druck</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=6">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>4x Sopran<br>4x Alt<br>4x Tenor<br>4x Bass</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-01">
+					<did>
+						<unitid>21-11-01</unitid>
+						<unittitle type="title">Introitus für den 11. Sonntag nach Trinitatis</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=7">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>1x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-02">
+					<did>
+						<unitid>21-11-02</unitid>
+						<unittitle type="title">Introitus für den 11. Sonntag nach Trinitatis</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=8">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>1x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-03">
+					<did>
+						<unitid>21-11-03</unitid>
+						<unittitle type="title">Introitus für den 9. Sonntag nach Trinitatis</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=9">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>2x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-20-11-04">
+					<did>
+						<unitid>20-11-04</unitid>
+						<unittitle type="title">Introitus für den Buß- und Bettag</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Handschriften">Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=10">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>6x A5<br>1x A4</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-05">
+					<did>
+						<unitid>21-11-05</unitid>
+						<unittitle type="title">Introitus für den 21. Sonntag nach Trinitatis</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=11">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>6x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-06">
+					<did>
+						<unitid>21-11-06</unitid>
+						<unittitle type="title">Introitus für den 10. Sonntag nach Trinitatis</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=12">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>6x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-07">
+					<did>
+						<unitid>21-11-07</unitid>
+						<unittitle type="title">Introitus für den Sonntag Estomihi</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=13">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>6x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-08">
+					<did>
+						<unitid>21-11-08</unitid>
+						<unittitle type="title">Introitus für Judica, Palmarum, Gründonnerstag und Karfreitag</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=14">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>6x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-09">
+					<did>
+						<unitid>21-11-09</unitid>
+						<unittitle type="title">Ergänzung zum Introitus (Invocavit, Reminiscere, Oculi, Laetare)</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=15">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>6x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-20-11-10">
+					<did>
+						<unitid>20-11-10</unitid>
+						<unittitle type="title">Introiten-Sammlung - Beilagen</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Handschriften">Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+						<note>
+							<p>- Zettel: Vorderseite mit Schreibmaschine: Probentermine für Ostermette (ca. 1950), Rückseite handschriftliche Ergänzungen zu Introiten
+<br>
+- Zettel (3x): Rückseite maschinell geschrieben Brief: Von: Bund der Landeskirchen in der Deutschen Demokratischen Republik, 28.10.1980; An: Landesjugendpfarrer der Gliedkirchen des Bundes der Ev. Kirchen in der DDR; Betreff: Friedensdekade und Bußtag 1980
+Vorderseite: Handschriftliche Reihenfolge der (damaligen) Intoriten-Sammlung</p>
+						</note>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=16">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>4x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-22-11-11">
+					<did>
+						<unitid>22-11-11</unitid>
+						<unittitle type="title">Evangelisches Gesangbuch 602, Introitus</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Drucksachen">Druck</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+						<note>
+							<p>Handschriftliche Ergänzungen</p>
+						</note>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=17">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-12">
+					<did>
+						<unitid>21-11-12</unitid>
+						<unittitle type="title">Introitus für den 6. Sonntag nach Trinitatis</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+						<note>
+							<p>Beilage: Programmheft mit Introitus</p>
+						</note>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=18">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-13">
+					<did>
+						<unitid>21-11-13</unitid>
+						<unittitle type="title">Introitus für den 6. Sonntag nach Trinitatis</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=19">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-14">
+					<did>
+						<unitid>21-11-14</unitid>
+						<unittitle type="title">Introitus für Judica</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=20">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>6x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-15">
+					<did>
+						<unitid>21-11-15</unitid>
+						<unittitle type="title">Introitus für den 5. Sonntag nach Trinitatis</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=21">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-22-09-04">
+					<did>
+						<unitid>22-09-04</unitid>
+						<unittitle type="title">Der 150. Psalm</unittitle>
+						<origination label="Autor">Sethus Calvisius</origination>
+						<physdesc>
+							<genreform normal="Drucksachen">Druck</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=22">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>11x Sopran<br>6x Alt<br>9x Tenor<br>9x Baß</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-01">
+					<did>
+						<unitid>21-12-01</unitid>
+						<unittitle type="title">Stadt am Strom</unittitle>
+						<origination label="Autor">Rudolf Mauersberger</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=23">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>2x Sopran<br>2x Alt<br>2x Tenor<br>3x Baß</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-02">
+					<did>
+						<unitid>21-12-02</unitid>
+						<unittitle type="title">Ave Maria</unittitle>
+						<origination label="Autor">Anton Bruckner</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>?</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=24">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x Partitur </p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-03">
+					<did>
+						<unitid>21-12-03</unitid>
+						<unittitle type="title">Herr, bleibe bei uns</unittitle>
+						<origination label="Autor">Bruno Heroldt</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+						<note>
+							<p>"Dem Johanniskirchen- und Riedelschen Männerchor, Plauen, gewidmet."</p>
+						</note>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=25">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x Sopran<br>5x Alt<br>5x Tenor<br>5x Baß</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-04">
+					<did>
+						<unitid>21-12-04</unitid>
+						<unittitle type="title">Siehe, ich stehe vor der Tür</unittitle>
+						<origination label="Autor">Bruno Heroldt</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=26">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x Sopran<br>5x Alt<br>5x Tenor<br>5x Baß</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-05">
+					<did>
+						<unitid>21-12-05</unitid>
+						<unittitle type="title">Wie lieblich sind die Füße der Boten</unittitle>
+						<origination label="Autor">Bruno Heroldt</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=27">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x Sopran<br>5x Alt<br>6x Tenor<br>8x Baß</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-06">
+					<did>
+						<unitid>21-12-06</unitid>
+						<unittitle type="title">Maria durch ein Dornwald ging</unittitle>
+						<origination label="Autor">Bruno Heroldt</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=28">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x Sopran<br>6x Alt<br>4x Tenor<br>5x Baß</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-07">
+					<did>
+						<unitid>21-12-07</unitid>
+						<unittitle type="title">Still, Still</unittitle>
+						<origination label="Autor">Bruno Heroldt</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=29">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x Sopran<br>5x Alt<br>5x Tenor<br>5x Baß</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-08">
+					<did>
+						<unitid>21-12-08</unitid>
+						<unittitle type="title">Auf, auf, ihr Hirten nicht schlaft</unittitle>
+						<origination label="Autor">Bruno Heroldt</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=30">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x Sopran<br>5x Alt<br>5x Tenor<br>5x Baß</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-09">
+					<did>
+						<unitid>21-12-09</unitid>
+						<unittitle type="title">Mondlied</unittitle>
+						<origination label="Autor">Bruno Heroldt</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+						<note>
+							<p>Kopien mit dem Stempel vom »Riedelscher Männerchor von Plauen« versehen</p>
+						</note>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=31">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>6x Knabenchor (auch Jugendchor)<br>5x Tenor<br>5x Baß</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-10">
+					<did>
+						<unitid>21-12-10</unitid>
+						<unittitle type="title">Das Wanderlied der Jugend</unittitle>
+						<origination label="Autor">Bruno Heroldt</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+						<note>
+							<p>Kopien mit dem Stempel vom »Riedelscher Männerchor von Plauen« versehen</p>
+						</note>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=32">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x Knabenchor (auch Jugendchor)<br>5x Tenor<br>5x Baß</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-11">
+					<did>
+						<unitid>21-12-11</unitid>
+						<unittitle type="title">Einen Brief soll ich schreiben</unittitle>
+						<origination label="Autor">Bruno Heroldt</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+						<note>
+							<p>Kopien mit dem Stempel vom »Riedelscher Männerchor von Plauen« versehen</p>
+						</note>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=33">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x Knabenchor (auch Jugendchor)<br>5x Tenor<br>5x Baß</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-12">
+					<did>
+						<unitid>21-12-12</unitid>
+						<unittitle type="title">Abendwolke</unittitle>
+						<origination label="Autor">Bruno Heroldt</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+						<note>
+							<p>Kopien mit dem Stempel vom »Riedelscher Männerchor von Plauen« versehen</p>
+						</note>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=34">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x Knabenchor (auch Jugendchor)<br>5x Männerchor (Tenor I,II)</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-20-12-13">
+					<did>
+						<unitid>20-12-13</unitid>
+						<unittitle type="title">Morgenstern-Gesänge</unittitle>
+						<origination label="Autor">Otto Reinhold</origination>
+						<physdesc>
+							<genreform normal="Handschriften">Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+						<note>
+							<p>* Die Handschriften sind verschieden datiert. Vermutlich wurde sie zwischen 1949 und 1960 verfasst. 
+<br>
+**Sopran und Alt werden aus ganzen Stimmgruppen-Partituren gebildet (Präludium, Kleine Geschichte, Das Häuschen an der Bahn, Abendläuten). Bei Tenor und Baß bildet sich der Bestand aus einzelnen Liedblättern:
+<br>
+- Tenor aus 11x Präludium, 9x Kleine Geschichte, 7x Das Häuschen an der Bahn, 8x Abendläuten
+<br>
+- Baß aus 10x Präludium, 12x Kleine Geschichte, 10x Das Häuschen an der Bahn, 11x Abendläuten</p>
+						</note>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=35">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>17x Sopran<br>10x Alt<br>35x Tenor**<br>43x Baß**</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-14">
+					<did>
+						<unitid>21-12-14</unitid>
+						<unittitle type="title">Dresdner Requiem</unittitle>
+						<origination label="Autor">Rudolf Mauersberger</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=36">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>1x Kanbenchorpartitur</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-15">
+					<did>
+						<unitid>21-12-15</unitid>
+						<unittitle type="title">Danket dem Herrn</unittitle>
+						<origination label="Autor">Franz-Meyer Ambros</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=37">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>1x Sopran<br>1x Alt<br>1x Tenor<br>1x Baß</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-16">
+					<did>
+						<unitid>21-12-16</unitid>
+						<unittitle type="title">Laßt uns lauschen</unittitle>
+						<origination label="Autor">Volksweise</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=38">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>6x Gesamtchor</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-12-17">
+					<did>
+						<unitid>21-12-17</unitid>
+						<unittitle type="title">Dresdner Requiem</unittitle>
+						<origination label="Autor">Rudolf Mauersberger</origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=39">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>1x Knabenchor</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-16">
+					<did>
+						<unitid>21-11-16</unitid>
+						<unittitle type="title">Introitus für den Sonntag Jubilate</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=40">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>6x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-17">
+					<did>
+						<unitid>21-11-17</unitid>
+						<unittitle type="title">Liturgische Ergänzung zu den Sonntagen Inovativ, Reminiscere, Okuli und Lätare</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=41">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>1x</p>
+					</odd>
+				</c>
+				<c level="file" id="DE-1234-21-11-18">
+					<did>
+						<unitid>21-11-18</unitid>
+						<unittitle type="title">Introitus für den letzten Sonntag nach Trinitatis</unittitle>
+						<origination label="Autor"></origination>
+						<physdesc>
+							<genreform normal="Sonstige">Kopie von Handschrift</genreform>
+						</physdesc>
+						<langmaterial>
+							<!-- hier noch Erweiterung auf Normdaten! -->
+							<language>Deutsch</language>
+						</langmaterial>
+					</did>
+					<otherfindaid>
+						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=42">Titelaufnahme im Angebot des Archivs</extref>
+					</otherfindaid>
+					<odd>
+						<head>Anzahl</head>
+						<p>5x DIN A5<br>1x DIN A4<br>1x ehemals DIN A4</p>
+					</odd>
+				</c>
+	</c>
+		</dsc>
+	</archdesc>
+</ead>
