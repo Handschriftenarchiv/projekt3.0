@@ -18,15 +18,27 @@ body:after{
 	right: 0;
 	opacity:0.5;
 	background: url('background.png');
+
+	/*<style>
+*@keyframes center{0%{opacity:0;}100%{opacity:1;}}
+*#margin-center{
+*opacity:0;
+*animation: center 2s forwards 0.5s ease-in;}
+*abbr[title]{
+*text-decoration:none;
+*border:none;}
+</style>*/
+
 	background-repeat:no-repeat;
 	background-size:cover;
-	background-position:center -10px;
+	/*background-position:center -10px;*/
 }
 #icon{
 	position:fixed;
 	left:3%;
 	top:4%;
-	width:12%;
+	width:10%;
+	border-radius: 5px;
 }
 #search{
 	position:absolute;
@@ -55,6 +67,7 @@ input,select,button{
 	border:none;
 	background-color:rgba(196,196,196,0.82);
 	padding:7px;
+	border-radius: 5px;
 }
 .remove,
 #add,
@@ -83,7 +96,4 @@ input,select,button{
 }
 .text>input{
 	width:15em;
-}
-input[type="search"]{
-	-webkit-appearance:textfield;
 }
