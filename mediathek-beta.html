@@ -6,10 +6,10 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Kontakt - Handschriftenarchiv Dresdner Kreuzchor</title>
+	<title>Mediathek - Handschriftenarchiv Dresdner Kreuzchor</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Bleiben Sie in Kontakt mit dem Handschriftenarchiv" />
-	<meta name="keywords" content="Konatkt, Handschriftenarchiv, Archiv, Dresden, Kreuzchor, Handschriftenarchiv, Dresdner Kreuzchor" />
+	<meta name="description" content="Die Mediathek des Handschriftenarchivs Dresdner Kreuzchor" />
+	<meta name="keywords" content="Mediathek, Archiv, Handschriftenarchiv, Kreuzchor" />
 	<meta name="author" content="Handschriftenarchiv Dresdner Kreuzchor" />
 
   <!--
@@ -150,15 +150,15 @@ _idl.variant = "modal";
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(images/kontakt/start.jpg);">
+			   	<li style="background-image: url(images/mediathek/start.jpg);">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 			   				<div class="slider-text-inner">
 			   					<div class="desc">
-			   						<span>Kontaktinformationen</span>
-			   						<h2>Konatkt</h2>
-			   						<p class="fh5co-lead">Bleiben Sie mit uns in Verbindung. Schreiben Sie uns.</p>
+			   						<span>Bewegtbild</span>
+			   						<h2>Mediathek</h2>
+			   						<p class="fh5co-lead">Die Mediathek des Handschriftenarchis Dresdner Kreuzchor.</p>
 			   					</div>
 			   				</div>
 			   			</div>
@@ -167,67 +167,75 @@ _idl.variant = "modal";
 			  	</ul>
 		  	</div>
 		</aside>
-
-		<div id="fh5co-contact-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 col-md-push-1 animate-box">
-						<h3>Kontaktangaben</h3>
-						<ul class="contact-info">
-							<li><i class="icon-location-pin"></i>Dornblüthstraße 4, 01277 Dresden, Deutschland</li>
-							<li><i class="icon-phone2"></i><span>0351</span><span>3153572</span></li>
-							<li><i class="icon-mail"></i>handschriftenarchiv<br>[ät]protonmail.com</li>
-							<li><i class="icon-globe2"></i><a href="http://notenarchiv-dkc.bplaced.com/">notenarchiv-dkc.bplaced.com</a></li>
-						</ul>
-					</div>
-					<div class="col-md-7 col-md-push-1 animate-box">
-						<?php
-						$process=isset($_POST['name']);
-						$valid=!empty($_POST['email'])&&filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-						if($process&&$valid){
-							$header="From: \"".str_replace('"',"",$_POST[name])."\" <$_POST[email]>\nContent-Type: text/plain\n";
-							if(mail('handschriftenarchiv@protonmail.com','Anfrage Kontakt - Handschriftenarchiv Dresdner Kreuzchor',$_POST['text'],$header)){
-								echo "<p>Ihre Nachricht wurde erfolgreich an uns versandt. Wir werden Ihnen so schnell wie möglich antworten.</p>";
-								$mail=true;
-							}else{
-								echo "<p>Leider konnte Ihre Nachricht nicht versendet werden.</p>";
-							}
-						}elseif($process){
-							echo "<p>Bitte geben Sie eine gültige E-Mail-Adresse ein!</p>";
-						}
-						if(!isset($mail)){
-						?>
-						<form method="POST">
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Name" name="name"<?php if(isset($_POST['name'])){echo " value=\"$_POST[name]\"";}?>>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="E-Mail" name="email"<?php if(isset($_POST['email'])){echo " value=\"$_POST[email]\"";}?>>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-group">
-										<textarea name="text" class="form-control" id="" cols="30" rows="7" placeholder="Nachricht"><?php if(isset($_POST['text'])){echo $_POST['text'];}?></textarea>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="form-group">
-										<input type="submit" value="Nachricht senden" class="btn btn-primary">
-									</div>
-								</div>
-							</div>
-						</form>
-						<?php } ?>
+		<div class="container">
+			<div class="row">
+				<div class="fh5co-blog animate-box">
+					<div class="blog-text">
+						<center>
+							<iframe   class="fh5co-blog animate-box" src="https://player.vimeo.com/video/225288372?color=fff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							<h3>Imagefilm 3.0</h3>
+							<p>Das Projekt 3.0: Eine "Zurückbesinnung" auf den Kern des Archives. Mit neuer Webumgebung, durchsuchbarer Datenbank und regelmäßigen Blogeinträgen. Der Imagefilm stellt das neu veröffentlichte Pilotprojekt des Handschriftenarchivs vor.<br>Musik: <a href="http://www.EverMusic.de/"target="_blank">Into the Light</a></p>
+						</center>
 					</div>
 				</div>
 			</div>
 		</div>
+		<br>
+		<div class="container">
+			<div class="row">
+				<div class="fh5co-blog animate-box">
+					<div class="blog-text">
+						<center>
+							<iframe   class="fh5co-blog animate-box" src="https://player.vimeo.com/video/225288372?color=fff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							<h3>Imagefilm 3.0</h3>
+							<p>Das Projekt 3.0: Eine "Zurückbesinnung" auf den Kern des Archives. Mit neuer Webumgebung, durchsuchbarer Datenbank und regelmäßigen Blogeinträgen. Der Imagefilm stellt das neu veröffentlichte Pilotprojekt des Handschriftenarchivs vor.<br>Musik: <a href="http://www.EverMusic.de/"target="_blank">Into the Light</a></p>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row">
+				<div class="fh5co-blog animate-box">
+					<div class="blog-text">
+						<center>
+							<iframe   class="fh5co-blog animate-box" src="https://player.vimeo.com/video/225288372?color=fff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+							<h3>Imagefilm 3.0</h3>
+							<p>Das Projekt 3.0: Eine "Zurückbesinnung" auf den Kern des Archives. Mit neuer Webumgebung, durchsuchbarer Datenbank und regelmäßigen Blogeinträgen. Der Imagefilm stellt das neu veröffentlichte Pilotprojekt des Handschriftenarchivs vor.<br>Musik: <a href="http://www.EverMusic.de/"target="_blank">Into the Light</a></p>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h3>Imagefilm 3.0</h3>
+					<p>Das Projekt 3.0: Eine »Zurückbesinnung« auf den Kern des Archives. Mit neuer Webumgebung, durchsuchbarer Datenbank und regelmäßigen Blogeinträgen. Der Imagefilm stellt das neu veröffentlichte Pilotprojekt des Handschriftenarchivs vor.</p>
+					<br>
+					<iframe src="https://player.vimeo.com/video/225288372?color=fff" width="100%" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				</div>
+		</div>
 
 
+	<div class="fh5co-counters" style="background-image: url(images/blog/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
+			<div class="fh5co-narrow-content animate-box">
+				<div class="row" >
+					<div class="col-md-4 text-center">
+						<span class="fh5co-counter js-counters"><h2><font color="#ffffff">&nbsp;</font></h2></span>
+						<span class="fh5co-counter-label">&nbsp;</span>
+					</div>
+					<div class="col-md-4 text-center">
+						<span class="fh5co-counter js-counters"><h2><font color="#ffffff">&nbsp;</font></h2></span>
+						<span class="fh5co-counter-label">&nbsp;</span>
+					</div>
+					<div class="col-md-4 text-center">
+						<span class="fh5co-counter js-counters"><h2><font color="#ffffff">&nbsp;</font></h2></span>
+						<span class="fh5co-counter-label">&nbsp;</span>
+					</div>
+				</div>
+			</div>
+		</div>
 		<footer>
 			<div id="footer">
 				<div class="container">
