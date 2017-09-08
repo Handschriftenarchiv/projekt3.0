@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead xmlns="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd">
+<eadheader><eadid>DE-HSA</eadid>
+<filedesc>
+<titlestmt>
+<titleproper>Gott der Herr ist Sonn und Schild</titleproper>
+</titlestmt>
+</filedesc>
+<profiledesc>
+<creation><date normal="1950-02-28">ungefähr 28.02.1950</date>
+</creation>
+</profiledesc>
+</eadheader>
+<archdesc level="collection" type="Findbuch">
+<did>
+<repository>
+<corpname role="Sonstige">Handschriftenarchiv Dresdner Kreuzchor</corpname>
+<address><adressline>Dornblüthstraße 4,01277 Dresden,handschriftenarchiv@protonmail.com</adressline>
+<address>
+<extref xlink:role="url_archive" xlink:href="archiv.handschriften.bplaced.com">Handschriftenarchiv Dresdner Kreuzchor</extref>
+</repository>
+</did>
+<otherfindaid>
+<extref xlink:role="url_findbuch" xlink:href="archiv.handschriften.bplaced.com/suche/details.php?id=1">Gott der Herr ist Sonn und Schild im Katalog</extref>
+</otherfindaid>
+<dsc>
+<c level="collection" id="20-01-01">
+<did>
+<unitid>20-01-01</unitid>
+<unittitle>Gott der Herr ist Sonn und Schild</unittitle>
+<physdesc>
+<genreform normal="Handschriften">Handschrift</genreform>
+</physdesc>
+<langmaterial>
+<language langcode="ger" scriptcode="Latn">Deutsch</language>
+</langmaterial>
+</did>
+</c>
+</dsc>
+</archdesc>
+</ead>
