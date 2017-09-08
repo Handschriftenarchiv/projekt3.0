@@ -102,7 +102,7 @@ sub {
 }
 
 img {
-  border: 0;
+    border: 0;
 }
 
 svg:not(:root) {
@@ -1428,7 +1428,7 @@ figure {
 }
 
 img {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 .img-responsive {

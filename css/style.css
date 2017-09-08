@@ -7,10 +7,26 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
+
+/*Nachträglich eingefügte Style-Elemente*/
+/* =======================================================*/
+td.ratser, th.ratser {
+  padding: 20px;
+}
+
+table.ratser {
+  color: #929292;
+  margin-bottom: 1.5em;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Karla", Arial, sans-serif;
+}
+/* ======================================================= */
+
 body {
   font-family: "Karla", Arial, sans-serif;
   line-height: 1.8;
@@ -38,8 +54,14 @@ body.menu-show {
   overflow-y: hidden;
 }
 
+img.image-center {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 a {
-  color: #ffffff;
+  color: #5c5c5c;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -54,7 +76,7 @@ a:focus, a:active {
 p, span {
   margin-bottom: 1.5em;
   font-size: 18px;
-  color: #727272;
+  color: #929292;
   font-weight: 300;
   font-family: "Karla", Arial, sans-serif;
 }
@@ -82,8 +104,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::selection {
-  color: #fcfcfc;
-  background: #ffffff;
+  color: #fff;
+  background: #929292;
 }
 
 #fh5co-page {
@@ -1089,17 +1111,17 @@ header .fh5co-navbar-brand .fh5co-social-icon a {
   margin: 0 0 20px 0;
   position: relative;
   padding-left: 40px;
-  color: #727272;
+  color: #929292;
 }
 .contact-info li i {
   position: absolute;
   top: .3em;
   left: 0;
   font-size: 22px;
-  color: #727272;
+  color: #929292;
 }
 .contact-info li a {
-  color: #727272;
+  color: #929292;
 }
 
 .form-control {
@@ -1148,7 +1170,7 @@ input[type="text"] {
   margin-bottom: 0;
 }
 #footer ul li a {
-  color: #727272;
+  color: #929292;
 }
 #footer .float {
   width: 50%;
