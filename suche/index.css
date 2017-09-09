@@ -97,3 +97,17 @@ input,select,button{
 .text>input{
 	width:15em;
 }
+
+p.details {
+cursor: pointer;
+
+position: fixed;
+position: absolute;
+right: 0%;
+bottom: 1%;
+left: 3%;
+}
+
+p.details:hover{
+	background: url('background.png');
+}
