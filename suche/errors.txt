@@ -1,2 +1,0 @@
-A0:search columns and criteria at different length
-A1:unknown search column
