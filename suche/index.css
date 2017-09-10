@@ -98,7 +98,7 @@ input,select,button{
 	width:15em;
 }
 
-p.details {
+div.details {
 cursor: pointer;
 
 position: fixed;
@@ -108,6 +108,6 @@ bottom: 1%;
 left: 3%;
 }
 
-p.details:hover{
+div.details:hover{
 background: url('background.scharf.png');
 }
