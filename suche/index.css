@@ -21,6 +21,7 @@ body:after{
 	background-repeat:no-repeat;
 	background-size:cover;
 }
+
 #icon{
 	position:fixed;
 	left:3%;
@@ -84,4 +85,31 @@ input,select,button{
 }
 .text>input{
 	width:15em;
+}
+
+#details{
+	cursor: pointer;
+	position: fixed;
+	position: absolute;
+	right: 0%;
+	bottom: 1%;
+	left: 3%;
+	border-radius: 5px;
+	width:2.75em;
+	float:right;
+	margin-right:45%;
+}
+
+
+#info{
+	right: 0%;
+	bottom: 1%;
+	left: 12%;
+	position:absolute;
+	background-color:rgba(196,196,196,0.82);
+	background-repeat:repeat;
+	width: 50%;
+	height: 50px;
+	border-radius: 5px;
+	border: none;
 }
