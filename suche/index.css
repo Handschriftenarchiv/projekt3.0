@@ -104,12 +104,21 @@ input,select,button{
 #info{
 	right: 0%;
 	bottom: 1%;
-	left: 12%;
+	left: 10%;
 	position:absolute;
 	background-color:rgba(196,196,196,0.82);
 	background-repeat:repeat;
-	width: 50%;
-	height: 50px;
+	width: 25%;
+	height: 20%;
 	border-radius: 5px;
 	border: none;
+}
+
+img.details {
+	height: 100%;
+}
+
+p.details {
+		font-family:"Karla";
+			left: 50%;
 }
