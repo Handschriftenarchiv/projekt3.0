@@ -124,7 +124,7 @@ p.composer {
 		font-family:"Karla";
 	  bottom: 1%;
 		top: 50%;
-		left: 55%;
+		left: 60%;
 		width: 100%;
 		height: 100%;
 		font-size: 100%;
@@ -135,9 +135,9 @@ p.title {
 	 font-family:"Playfair Display",Arial,serif;
 	  bottom: 1%;
 		top: 25%;
-		left: 55%;
+		left: 60%;
 		width: 100%;
 		height: 100%;
-		font-size: 150%;
+	  font-size: 150%;
 		text-align:left;
 }
