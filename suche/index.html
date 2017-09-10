@@ -41,12 +41,15 @@
 			</form>
 		</div>
 
-		<div class="details">
-    <p onmouseover="background='/background.scharf.png'" onmouseout="background='/background.png'" />Information </p>
-	</div>
 
-
-
+		<script>
+			document.getElementById("details").addEventListener("mouseover", function() {
+		  document.getElementById("BG").style.backgroundImage = "url(background.scharf.png)";
+		}, false);
+		document.getElementById("details").addEventListener("mouseout", function() {
+		   document.getElementById("BG").style.backgroundImage = "url(background.png)";
+		}, false);
+		</script>
 
 		<datalist id="suggestions"></datalist>
 		<!-- jQuery -->
