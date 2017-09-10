@@ -18,20 +18,8 @@ body:after{
 	right: 0;
 	opacity:0.5;
 	background: url('background.png');
-
-	/*<style>
-*@keyframes center{0%{opacity:0;}100%{opacity:1;}}
-*#margin-center{
-*opacity:0;
-*animation: center 2s forwards 0.5s ease-in;}
-*abbr[title]{
-*text-decoration:none;
-*border:none;}
-</style>*/
-
 	background-repeat:no-repeat;
 	background-size:cover;
-	/*background-position:center -10px;*/
 }
 #icon{
 	position:fixed;
@@ -96,18 +84,4 @@ input,select,button{
 }
 .text>input{
 	width:15em;
-}
-
-div.details {
-cursor: pointer;
-
-position: fixed;
-position: absolute;
-right: 0%;
-bottom: 1%;
-left: 3%;
-}
-
-div.details:hover{
-background: url('background.scharf.png');
 }
