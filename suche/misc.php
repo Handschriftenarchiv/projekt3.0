@@ -21,7 +21,17 @@ function translate_iso639_2B($langcode){
 		case 'chi':return 'Chinesisch';
 		case 'eng':return 'Englisch';
 		case 'mul':return 'mehrere Sprachen';
-		case 'und':return 'nicht zu entscheiden';
 		case 'zxx':return 'kein linguistischer Inhalt';
+		case 'und':
+		default:return 'nicht zu entscheiden';
+	}
+}
+
+function translate_iso15924($scriptcode){
+	switch($scriptcode){
+		case 'Latf':
+		case 'Latg':
+		case 'Latn':return 'Latein';
+		case 'Cyrl':return 'Kyrillisch';
 	}
 }
