@@ -83,11 +83,17 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 				transform-origin: 50% 0%;
 				transform:perspective(800px) rotateX(90deg);
 				transition:transform 0.3s linear 0s;
+				border:1px solid black;
+				border-radius:4px;
+				padding:1em;
+				text-align:center;
 			}
 			#export>a{
 				font-face:"Playfair Display",Arial,serif;
-				color:black;
-				font-size: 1.5em;
+			}
+			#sidebar{
+				float:right;
+				text-align:center;
 			}
 		</style>
 
@@ -114,13 +120,13 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 	 				 <li><a href="../kontakt.php">Kontakt</a></li>
 	 			 </ul>
 	 			 <p class="fh5co-social-icon">
-	 				 <a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
-	 				 <a href="https://issuu.com/hsa6"target="_blank"><i class="icon-book"></i></a>
-	 				 <a href="https://vimeo.com/handschriftenarchiv"target="_blank"><i class="icon-vimeo"></i></a>
-	 				 <a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"target="_blank"><i class="icon-youtube"></i></a>
-	 				 <a href="https://plus.google.com/108785494716898198379"target="_blank"><i class="icon-google"></i></a>
-	 				 <a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
-	 				 <a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
+	 				 <a href="https://twitter.com/NotenarchivDKC" target="_blank"><i class="icon-twitter2"></i></a>
+	 				 <a href="https://issuu.com/hsa6" target="_blank"><i class="icon-book"></i></a>
+	 				 <a href="https://vimeo.com/handschriftenarchiv" target="_blank"><i class="icon-vimeo"></i></a>
+	 				 <a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw" target="_blank"><i class="icon-youtube"></i></a>
+	 				 <a href="https://plus.google.com/108785494716898198379" target="_blank"><i class="icon-google"></i></a>
+	 				 <a href="https://github.com/handschriftenarchiv" target="_blank"><i class="icon-github2"></i></a>
+	 				 <a href="https://be.net/handschriftenarchiv" target="_blank"><i class="icon-behance"></i></a>
 	 			 </p>
 	 		 </div>
 	 	 </div>
@@ -211,8 +217,8 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 										echo "<tr><th>Verlag:&nbsp;</th><td>$dsatz[Verlag]</td></tr>\n";
 									}
 									?><tr><th>Verfassungsdatum:&nbsp;</th><td><?php echo $dsatz['Verfassungsdatum']; ?></td></tr>
-									<tr><th>Sprache:&nbsp;</th><td><?php echo translate_iso639_2B($dsatz['Sprache']);?></td></tr>
-									<tr><th>Schriftsystem:&nbsp;</th><td><?php echo translate_iso15924($dsatz['Schrift']);?></td></tr>
+									<tr><th>Sprache:&nbsp;</th><td><?php echo $dsatz['Sprache'];?></td></tr>
+									<tr><th>Schriftsystem:&nbsp;</th><td><?php echo $dsatz['Schrift'];?></td></tr>
 									<tr><th>Anzahl:&nbsp;</th><td><?php echo $dsatz['Anzahl'];?></td></tr>
 									<tr><th>Sammlung:&nbsp;</th><td><?php echo $dsatz['Sammlung'];?></td></tr>
 									<tr><th>Standort:&nbsp;</th><td><?php echo $dsatz['Standort'];?></td></tr>
@@ -240,21 +246,20 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 								<a href="javascript:history.back()"><p>zurück zum Suchergebnis</p></a>
 								<a href="."><p>neue Suche</p></a>
 								<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.</p>
-								<button type="button" onclick="export_toggle()" class="btn btn-primary">exportieren</button>
-								<div id="export" data-open="no">
-									<form action="export-ris.php?id=<?php echo $_GET['ID'];?>">
-										<button type="submit" class="btn btn-primary">RIS</button>
-									</form>
-									<form action="export.php">
-										<button type="submit" class="btn btn-primary">EAD</button>
-									</form>
-								</div>
+							</div>
+						</div>
+						<div id="sidebar">
+							<button type="button" onclick="export_toggle()" class="btn btn-primary">exportieren</button>
+							<div id="export" data-open="no">
+								<a style='font-family:"Playfair Display",Arial,serif;' href="export-ris.php?id=<?php echo $_GET['ID'];?>" class="btn btn-primary">RIS</a><br>
+								<a style='font-family:"Playfair Display",Arial,serif;' href="export.php" class="btn btn-primary">EAD</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
 		<!-- jQuery -->
 		<script src="../js/jquery.min.js"></script>
 		<!-- jQuery Easing -->
