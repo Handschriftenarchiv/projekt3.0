@@ -177,7 +177,7 @@ _idl.variant = "modal";
 							<li><i class="icon-location-pin"></i>Dornblüthstraße 4, 01277 Dresden, Deutschland</li>
 							<li><i class="icon-phone2"></i><span>0351</span><span>3153572</span></li>
 							<li><i class="icon-mail"></i>handschriftenarchiv<br>[ät]protonmail.com</li>
-							<li><i class="icon-globe2"></i><a href="http://notenarchiv-dkc.bplaced.com/">notenarchiv-dkc.bplaced.com</a></li>
+							<li><i class="icon-globe2"></i><a href="http://notenarchiv-dkc.bplaced.com/">hsa.bplaced.com</a></li>
 						</ul>
 					</div>
 					<div class="col-md-7 col-md-push-1 animate-box">
