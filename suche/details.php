@@ -203,7 +203,7 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 									<tr><th>Anzahl:&nbsp;</th><td><?php echo $dsatz['Anzahl'];?></td></tr>
 									<tr><th>Sammlung:&nbsp;</th><td><?php echo $dsatz['Sammlung'];?></td></tr>
 									<tr><th>Standort:&nbsp;</th><td><?php echo $dsatz['Standort'];?></td></tr>
-									<tr><th>Signatur:&nbsp;</th><td><?php echo $dsatz['Signatur'];?></td></tr>
+									<tr><th>vorläufge Signatur:&nbsp;</th><td><?php echo $dsatz['Signatur'];?></td></tr>
 									<?php
 									if(!empty($dsatz['Bemerkungen'])){
 										echo '<tr><th>Bemerkungen:&nbsp;</th><td>'.$dsatz['Bemerkungen'].'</td></tr>';
