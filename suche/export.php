@@ -1,6 +1,7 @@
 <?php
 require_once "misc.php";
 header("Content-Type: text/xml");
+header('Content-Disposition: attachment; filename="findbuch.xml"');
 // Platzhalter für den Identifier
 $ident="DE-1234";
 ?><?xml version="1.0" encoding="UTF-8"?>
