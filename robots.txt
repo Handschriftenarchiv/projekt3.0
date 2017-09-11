@@ -1,0 +1,10 @@
+# robots.txt fuer http://
+
+User-agent: *
+
+Disallow: /images/
+Disallow: /suche/background.png
+Disallow: /suche/background.scharf.png
+Disallow: /suche/plus.svg
+Disallow: /suche/minus.svg
+Disallow: /suche/info.svg

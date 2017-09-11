@@ -59,8 +59,7 @@ switch($dsatz['Typus']){
 ?>							<genreform normal="<?php echo $norm_type; ?>"><?php echo $dsatz['Typus']; ?></genreform>
 						</physdesc>
 						<langmaterial>
-							<!-- hier noch Erweiterung auf Normdaten! -->
-							<language><?php echo $dsatz['Sprache']; ?></language>
+							<language langcode="<?php echo $dsatz['Sprache']; ?>" scriptcode="<?php echo $dsatz['Schrift'];?>"><?php echo translate_iso639_2B($dsatz['Sprache']); ?></language>
 						</langmaterial>
 <?php
 if(!empty($dsatz['Bemerkungen'])){
