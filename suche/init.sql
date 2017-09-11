@@ -12,6 +12,7 @@ CREATE TABLE IF NOT EXISTS `archivalien` (
   `Verlag` varchar(50) DEFAULT NULL,
   `Verfassungsdatum` varchar(20) DEFAULT NULL,
   `Sprache` varchar(50) NOT NULL,
+  `Schrift` varchar(50) NOT NULL DEFAULT 'Latn',
   `Anzahl` varchar(255) NOT NULL,
   `Sammlung` enum('Introitensammlung','Archiv') NOT NULL,
   `Standort` varchar(50) NOT NULL,
