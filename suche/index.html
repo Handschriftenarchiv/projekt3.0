@@ -41,25 +41,16 @@
 			</form>
 		</div>
 
-		<div id="info" style="display: none;">
-			<a href="http://archiv.handschriften.bplaced.de/"><img class="details" border="0" src="background.scharf.png" style="	border-radius: 5px;"/></a>
-						<p class="title">Mai</p>
-						<p class="composer">Ernst Pepping</p>
-		</div>
-
 		<div id="details">
 			<img border="0" src="info.svg" id="details"/>
+			<div id="info">
+				<a href="http://archiv.handschriften.bplaced.de/">
+					<img border="0" src="background.scharf.png" style="border-radius: 5px;"/>
+					<p class="title">Mai</p>
+					<p class="composer">Ernst Pepping</p>
+				</a>
+			</div>
 		</div>
-
-
-		<script>
-			document.getElementById("details").addEventListener("mouseover", function() {
-				document.getElementById('info').style.display = 'block'
-			}, false);
-			document.getElementById("details").addEventListener("mouseout", function() {
-				document.getElementById("info").style.display = 'none';
-			}, false);
-	</script>
 
 		<datalist id="suggestions"></datalist>
 		<!-- jQuery -->
