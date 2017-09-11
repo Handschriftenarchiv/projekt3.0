@@ -217,12 +217,12 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 										echo "<tr><th>Verlag:&nbsp;</th><td>$dsatz[Verlag]</td></tr>\n";
 									}
 									?><tr><th>Verfassungsdatum:&nbsp;</th><td><?php echo $dsatz['Verfassungsdatum']; ?></td></tr>
-									<tr><th>Sprache:&nbsp;</th><td><?php echo $dsatz['Sprache'];?></td></tr>
-									<tr><th>Schriftsystem:&nbsp;</th><td><?php echo $dsatz['Schrift'];?></td></tr>
+									<tr><th>Sprache:&nbsp;</th><td><?php echo translate_iso639_2B($dsatz['Sprache']);?></td></tr>
+									<tr><th>Schriftsystem:&nbsp;</th><td><?php echo translate_iso15924($dsatz['Schrift']);?></td></tr>
 									<tr><th>Anzahl:&nbsp;</th><td><?php echo $dsatz['Anzahl'];?></td></tr>
 									<tr><th>Sammlung:&nbsp;</th><td><?php echo $dsatz['Sammlung'];?></td></tr>
 									<tr><th>Standort:&nbsp;</th><td><?php echo $dsatz['Standort'];?></td></tr>
-									<tr><th>Signatur:&nbsp;</th><td><?php echo $dsatz['Signatur'];?></td></tr>
+									<tr><th>vorläufge Signatur:&nbsp;</th><td><?php echo $dsatz['Signatur'];?></td></tr>
 									<?php
 									if(!empty($dsatz['Bemerkungen'])){
 										echo '<tr><th>Bemerkungen:&nbsp;</th><td>'.$dsatz['Bemerkungen'].'</td></tr>';
