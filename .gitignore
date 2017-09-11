@@ -1,3 +1,7 @@
-
-.DS_Store
 suche/config.php
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
