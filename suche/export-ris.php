@@ -35,10 +35,23 @@ function ris($dsatz){
 		echo "\nA2  - $dsatz[Bearbeiter]";
 	}
 	if(!empty($dsatz['Verfassungsdatum'])){
-		$date=preg_replace('~.*(\d?\d[./-]\d?\d[./-]\d\d\d\d).*~','$1',$dsatz['Verfassungsdatum']);
-		echo "\nDA  - ".date('Y/m/d',strtotime($date));
-		$year=date_parse($date)['year'];
-		echo "\nPY  - $year";
+		$count=0;
+		$date=preg_replace('~.*(\d?\d\.\d?\d\.\d\d\d\d).*~','$1',$dsatz['Verfassungsdatum'],-1,$count);
+		if($count==0){
+			$date=preg_replace('~.*(\d?\d\.\d\d\d\d).*~','$1',$dsatz['Verfassungsdatum'],-1,$count);
+			if($count==0){
+				$year=preg_replace('~.*(\d\d\d\d).*~','$1',$dsatz['Verfassungsdatum'],-1,$count);
+				echo "\nPY  - $year";
+			}else{
+				$date=explode('.',$date);
+				echo "\nDA  - $date[0]/$date[1]";
+				echo "\nPY  - $date[0]";
+			}
+		}else{
+			echo "\nDA  - ".date('Y/m/d',strtotime($date));
+			$year=date_parse($date)['year'];
+			echo "\nPY  - $year";
+		}
 	}
 	if(!empty($dsatz['Verlag'])){
 		echo "\nPB  - $dsatz[Verlag]";
