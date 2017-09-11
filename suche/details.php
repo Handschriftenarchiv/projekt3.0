@@ -240,10 +240,14 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 								<a href="javascript:history.back()"><p>zurück zum Suchergebnis</p></a>
 								<a href="."><p>neue Suche</p></a>
 								<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.</p>
-								<button type="button" onclick="export_toggle()">exportieren</button>
+								<button type="button" onclick="export_toggle()" class="btn btn-primary">exportieren</button>
 								<div id="export" data-open="no">
-									<a style='font-family:"Playfair Display",Arial,serif;' href="export-ris.php?id=<?php echo $_GET['ID'];?>">RIS</a><br>
-									<a style='font-family:"Playfair Display",Arial,serif;' href="export.php">EAD</a>
+									<form action="export-ris.php?id=<?php echo $_GET['ID'];?>">
+										<button type="submit" class="btn btn-primary">RIS</button>
+									</form>
+									<form action="export.php">
+										<button type="submit" class="btn btn-primary">EAD</button>
+									</form>
 								</div>
 							</div>
 						</div>
