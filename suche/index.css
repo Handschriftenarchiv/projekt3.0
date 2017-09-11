@@ -121,23 +121,23 @@ img.details {
 
 p.composer {
 	position: absolute;
-		font-family:"Karla";
-	  bottom: 1%;
-		top: 50%;
-		left: 60%;
-		width: 100%;
-		height: 100%;
-		font-size: 100%;
-		text-align:left;
+	font-family:"Karla";
+	bottom: 1%;
+	top: 50%;
+	left: 60%;
+	width: 100%;
+	height: 100%;
+	font-size: 100%;
+	text-align:left;
 }
 p.title {
 	position: absolute;
-	 font-family:"Playfair Display",Arial,serif;
-	  bottom: 1%;
-		top: 25%;
-		left: 60%;
-		width: 100%;
-		height: 100%;
-	  font-size: 150%;
-		text-align:left;
+	font-family:"Playfair Display",Arial,serif;
+	bottom: 1%;
+	top: 25%;
+	left: 60%;
+	width: 100%;
+	height: 100%;
+	font-size: 150%;
+	text-align:left;
 }
