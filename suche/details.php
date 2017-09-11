@@ -78,6 +78,18 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 
 		<link rel="stylesheet" href="../css/style.css">
 
+		<style>
+			#export{
+				transform-origin: 50% 0%;
+				transform:perspective(800px) rotateX(90deg);
+				transition:transform 0.3s linear 0s;
+			}
+			#export>a{
+				font-face:"Playfair Display",Arial,serif;
+				color:black;
+				font-size: 1.5em;
+			}
+		</style>
 
 		<!-- Modernizr JS -->
 		<script src="../js/modernizr-2.6.2.min.js"></script>
@@ -199,7 +211,8 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 										echo "<tr><th>Verlag:&nbsp;</th><td>$dsatz[Verlag]</td></tr>\n";
 									}
 									?><tr><th>Verfassungsdatum:&nbsp;</th><td><?php echo $dsatz['Verfassungsdatum']; ?></td></tr>
-									<tr><th>Sprache:&nbsp;</th><td><?php echo $dsatz['Sprache'];?></td></tr>
+									<tr><th>Sprache:&nbsp;</th><td><?php echo translate_iso639_2B($dsatz['Sprache']);?></td></tr>
+									<tr><th>Schriftsystem:&nbsp;</th><td><?php echo translate_iso15924($dsatz['Schrift']);?></td></tr>
 									<tr><th>Anzahl:&nbsp;</th><td><?php echo $dsatz['Anzahl'];?></td></tr>
 									<tr><th>Sammlung:&nbsp;</th><td><?php echo $dsatz['Sammlung'];?></td></tr>
 									<tr><th>Standort:&nbsp;</th><td><?php echo $dsatz['Standort'];?></td></tr>
@@ -225,8 +238,13 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 								</table>
 								<br>
 								<a href="javascript:history.back()"><p>zurück zum Suchergebnis</p></a>
-								<a href="."><p>neue Suche</p></a><br>
-								<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+								<a href="."><p>neue Suche</p></a>
+								<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.</p>
+								<button type="button" onclick="export_toggle()">exportieren</button>
+								<div id="export" data-open="no">
+									<a style='font-family:"Playfair Display",Arial,serif;' href="export-ris.php?id=<?php echo $_GET['ID'];?>">RIS</a><br>
+									<a style='font-family:"Playfair Display",Arial,serif;' href="export.php">EAD</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -248,5 +266,18 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 
 		<!-- Main JS (Do not remove) -->
 		<script src="../js/main.js"></script>
+
+		<script>
+			function export_toggle(){
+				var menu=document.getElementById('export')
+				if(menu.dataset.open=="yes"){
+					menu.dataset.open="no";
+					menu.style="";
+				}else{
+					menu.dataset.open="yes";
+					menu.style="transform:perspective(800px) rotateX(0deg);";
+				}
+			}
+		</script>
 	</body>
 </html>
