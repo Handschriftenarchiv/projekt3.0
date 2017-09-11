@@ -78,6 +78,24 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 
 		<link rel="stylesheet" href="../css/style.css">
 
+		<style>
+			#export{
+				transform-origin: 50% 0%;
+				transform:perspective(800px) rotateX(90deg);
+				transition:transform 0.3s linear 0s;
+				border:1px solid black;
+				border-radius:4px;
+				padding:1em;
+				text-align:center;
+			}
+			#export>a{
+				font-face:"Playfair Display",Arial,serif;
+			}
+			#sidebar{
+				float:right;
+				text-align:center;
+			}
+		</style>
 
 		<!-- Modernizr JS -->
 		<script src="../js/modernizr-2.6.2.min.js"></script>
@@ -102,13 +120,13 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 	 				 <li><a href="../kontakt.php">Kontakt</a></li>
 	 			 </ul>
 	 			 <p class="fh5co-social-icon">
-	 				 <a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
-	 				 <a href="https://issuu.com/hsa6"target="_blank"><i class="icon-book"></i></a>
-	 				 <a href="https://vimeo.com/handschriftenarchiv"target="_blank"><i class="icon-vimeo"></i></a>
-	 				 <a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"target="_blank"><i class="icon-youtube"></i></a>
-	 				 <a href="https://plus.google.com/108785494716898198379"target="_blank"><i class="icon-google"></i></a>
-	 				 <a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
-	 				 <a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
+	 				 <a href="https://twitter.com/NotenarchivDKC" target="_blank"><i class="icon-twitter2"></i></a>
+	 				 <a href="https://issuu.com/hsa6" target="_blank"><i class="icon-book"></i></a>
+	 				 <a href="https://vimeo.com/handschriftenarchiv" target="_blank"><i class="icon-vimeo"></i></a>
+	 				 <a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw" target="_blank"><i class="icon-youtube"></i></a>
+	 				 <a href="https://plus.google.com/108785494716898198379" target="_blank"><i class="icon-google"></i></a>
+	 				 <a href="https://github.com/handschriftenarchiv" target="_blank"><i class="icon-github2"></i></a>
+	 				 <a href="https://be.net/handschriftenarchiv" target="_blank"><i class="icon-behance"></i></a>
 	 			 </p>
 	 		 </div>
 	 	 </div>
@@ -226,14 +244,22 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 								</table>
 								<br>
 								<a href="javascript:history.back()"><p>zurück zum Suchergebnis</p></a>
-								<a href="."><p>neue Suche</p></a><br>
-								<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
+								<a href="."><p>neue Suche</p></a>
+								<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.</p>
+							</div>
+						</div>
+						<div id="sidebar">
+							<button type="button" onclick="export_toggle()" class="btn btn-primary">exportieren</button>
+							<div id="export" data-open="no">
+								<a style='font-family:"Playfair Display",Arial,serif;' href="export-ris.php?id=<?php echo $_GET['ID'];?>" class="btn btn-primary">RIS</a><br>
+								<a style='font-family:"Playfair Display",Arial,serif;' href="export.php" class="btn btn-primary">EAD</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
 		<!-- jQuery -->
 		<script src="../js/jquery.min.js"></script>
 		<!-- jQuery Easing -->
@@ -249,5 +275,18 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 
 		<!-- Main JS (Do not remove) -->
 		<script src="../js/main.js"></script>
+
+		<script>
+			function export_toggle(){
+				var menu=document.getElementById('export')
+				if(menu.dataset.open=="yes"){
+					menu.dataset.open="no";
+					menu.style="";
+				}else{
+					menu.dataset.open="yes";
+					menu.style="transform:perspective(800px) rotateX(0deg);";
+				}
+			}
+		</script>
 	</body>
 </html>
