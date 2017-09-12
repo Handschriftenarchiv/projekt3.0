@@ -83,7 +83,7 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 				transform-origin: 50% 0%;
 				transform:perspective(800px) rotateX(90deg);
 				transition:transform 0.3s linear 0s;
-				border:1px solid black;
+				background-color: #f2f2f2;
 				border-radius:4px;
 				padding:1em;
 				text-align:center;
@@ -249,10 +249,10 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 							</div>
 						</div>
 						<div id="sidebar">
-							<button type="button" onclick="export_toggle()" class="btn btn-primary">exportieren</button>
+							<a type="button" onclick="export_toggle()" class="btn btn-primary"><i class="icon-export"></i></a>
 							<div id="export" data-open="no">
-								<a style='font-family:"Playfair Display",Arial,serif;' href="export-ris.php?id=<?php echo $_GET['ID'];?>" class="btn btn-primary">RIS</a><br>
-								<a style='font-family:"Playfair Display",Arial,serif;' href="export.php" class="btn btn-primary">EAD</a>
+								<a style='font-family:"Karla",Arial,serif; font-style:italic;' href="export-ris.php?id=<?php echo $_GET['ID'];?>" class="btn btn-primary">RIS</a><br>
+								<a style='font-family:"Karla",Arial,serif; font-style:italic;' href="export.php" class="btn btn-primary">EAD</a>
 							</div>
 						</div>
 					</div>
