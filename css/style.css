@@ -310,7 +310,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #c39f00 !important;
-  border-color: #000000 !important;
+  border-color: #e6e6e6 !important;
 }
 .btn-primary.btn-outline {
   background: transparent;
