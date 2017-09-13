@@ -1,0 +1,26 @@
+<manifest alg="2" build="2017.1.0.379" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive,cachebuster,textStyling" exportTarget="other" domain="notenarchiv-dkc.bplaced.com" resolutions="1x" timestamp="1505318990129">
+  <folder name="css">
+    <file name="site_global.css" crc="444006867"/>
+    <file name="master_a-musters.css" crc="4023077986" ref="index"/>
+    <file name="index.css" crc="3942935085" ref="index"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="209076791" ref="index"/>
+    <file name="museutils.js" crc="17924269" ref="index"/>
+    <file name="whatinput.js" crc="86476730" ref="index"/>
+    <file name="museconfig.js" crc="278381782" ref="index"/>
+    <file name="jquery.watch.js" crc="4240030481" ref="index"/>
+    <file name="require.js" crc="3861931657" ref="index"/>
+  </folder>
+  <folder name="images">
+    <file name="logo.png" crc="411324135" seo="true" ref="index">
+      <caption webpage="index" alt=""/>
+    </file>
+    <file name="u104-4.png" crc="245083170" ref="index"/>
+    <file name="u108-4.png" crc="7479530" ref="index"/>
+    <file name="u112-4.png" crc="2850284" ref="index"/>
+    <file name="u118-4.png" crc="3940797023" ref="index"/>
+    <file name="u127-4.png" crc="18665077" ref="index"/>
+  </folder>
+  <file name="index.html" crc="3832108162" seo="true" mt="1505318852789" redirect="true"/>
+</manifest>
