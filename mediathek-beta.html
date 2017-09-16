@@ -63,8 +63,11 @@
  <script src="js/respond.min.js"></script>
  <![endif]-->
 
- <!--Clappr-Player-->
- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/clappr/clappr@latest/dist/clappr.min.js"></script>
+
+ <!--Plyr-->
+ <script src="js/plyr.js"></script>
+<script>plyr.setup();</script>
+<link rel="stylesheet" href="css/plyr.css">
 
  </head>
  <body>
@@ -174,12 +177,10 @@ _idl.variant = "modal";
 		<div id="fh5co-about">
 			<div class="container">
 				<div align="center">
-					<div id="player"></div>
-					<script>
-					var player = new Clappr.Player({
-						source: "http://archiv.handschriften.bplaced.de/videos/video-1.mp4",
-						parentId: "#player"});
-					</script>
+					<video poster="images/blog/start.jpg" controls style="width: 630px;">
+						<source src="http://archiv.handschriften.bplaced.de/videos/video-1.mp4" type="video/mp4">
+						</video>
+
 					<blockquote><p>
 								Das Projekt 3.0: Eine &raquo;Zur&uuml;ckbesinnung&laquo; auf den Kern des Archives. Mit neuer Webumgebung, durchsuchbarer Datenbank und regelm&auml;&szlig;igen Blogeintr&auml;gen. Der Imagefilm stellt das neu ver&ouml;ffentlichte Pilotprojekt des Handschriftenarchivs vor. <br> [Musik: Into the Light / Lizenzfreie Musik / www.EverMusic.de]
 							</p></blockquote><br><br>
