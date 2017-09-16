@@ -22,3 +22,10 @@ CREATE TABLE IF NOT EXISTS `archivalien` (
   `Dokumentlink` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+
+CREATE TABLE IF NOT EXISTS `analytics` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `country` text,
+  `page` text NOT NULL,
+  `date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
