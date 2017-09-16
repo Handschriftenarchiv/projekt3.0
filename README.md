@@ -1,8 +1,11 @@
-# projekt3.0
-Komplette überarbeitung der Webpräsenz des HSA
+# Projekt 3.0
+…die grundlegende Überarbeitung der Webpräsenz des Handschriftenarchivs Dresdner Kreuzchor
 
-Es wurde das Design "[Words](https://freehtml5.co/words-free-html5-bootstrap-template-multi-purpose/)" von <http://freehtml5.co> verwendet. Jedoch unnterliegen alle Inhalte, die mit dem Handschriftenarchiv Dresdner Kreuzchor direkt in Verbindung gebracht werden können einer CC-BY-SA Lizenz. Lediglich das Logo unterliegt einem Copyright.
+Das ursprüngliche Design der entsprocht dem von"[Words](https://freehtml5.co/words-free-html5-bootstrap-template-multi-purpose/)" von <http://freehtml5.co>.
+Alle Inhalte, die mit dem Handschriftenarchiv Dresdner Kreuzchor direkt in Verbindung gebracht werden, unterliegen  einer CC-BY-SA Lizenz. Lediglich das Logo des Archivs unterliegt einem Copyright.
 
-Please do not publish this version of the website untill fall 2017. The Project 3.0 of the Handschriftenarchiv Dresdner Kreuzchor is still under construction.
+Da es sich hier um die Entwicklung eines Projektes handelt, was erst noch veröffentlicht werden soll, darf diese Seite nicht ohne die eindeutige Zustimmung der Entwickler vor dem 20. Oktober 2017 veröffentlicht werden. Das Projekt 3.0 befindet sich in ständiger Weiterentwicklung.
 
-Es wurde die Datei `suche/config.php` nicht hochgeladen, da diese sensible Daten und Passwörter enthält. In dieser Datei wird lediglich die Funktion `dbCon()` deklariert, welche die Verbindung zu Datenbank herstellt und ein `mysqli`-Objekt zurückgibt, welches diese Verbindung darstellt.
+##Bermerkungen:
+
+Die Datei `suche/config.php` wurde aus Datenschutzrechtlichen Gründen nicht auf GitHub veröffentlicht. In dieser Datei wird lediglich die Funktion `dbCon()` deklariert, welche die Verbindung zu Datenbank herstellt und ein `mysqli`-Objekt zurückgibt, welches diese Verbindung darstellt.
