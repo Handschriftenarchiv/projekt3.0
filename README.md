@@ -6,6 +6,6 @@ Alle Inhalte, die mit dem Handschriftenarchiv Dresdner Kreuzchor direkt in Verbi
 
 Da es sich hier um die Entwicklung eines Projektes handelt, was erst noch veröffentlicht werden soll, darf diese Seite nicht ohne die eindeutige Zustimmung der Entwickler vor dem 20. Oktober 2017 veröffentlicht werden. Das Projekt 3.0 befindet sich in ständiger Weiterentwicklung.
 
-##Bermerkungen:
+## Bermerkungen:
 
 Die Datei `suche/config.php` wurde aus Datenschutzrechtlichen Gründen nicht auf GitHub veröffentlicht. In dieser Datei wird lediglich die Funktion `dbCon()` deklariert, welche die Verbindung zu Datenbank herstellt und ein `mysqli`-Objekt zurückgibt, welches diese Verbindung darstellt.
