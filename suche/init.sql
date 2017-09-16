@@ -27,5 +27,6 @@ CREATE TABLE IF NOT EXISTS `analytics` (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `country` text,
   `page` text NOT NULL,
-  `date` datetime NOT NULL
+  `date` date NOT NULL,
+  `time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
