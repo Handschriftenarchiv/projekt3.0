@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+require_once '../analytics.php';
+?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -18,7 +20,9 @@
 					text: 'Zugriffe auf Seiten pro Land'
 				},
 				xAxis: {
-					categories: ['/index.php', '/suche/index.php', '/suche/details.php', '/suche/search.php', '/suche/export.php', '/suche/export-ris.php', '/mediathek.php', '/impressum.html', '/kontakt.php']
+					categories: <?php
+						echo json_encode(getPages());
+					?>
 				},
 				yAxis: {
 					min: 0,

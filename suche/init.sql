@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `archivalien` (
 
 CREATE TABLE IF NOT EXISTS `analytics` (
   `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `country` text,
+  `country` text NULL DEFAULT NULL,
   `page` text NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL
