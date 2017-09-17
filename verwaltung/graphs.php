@@ -59,16 +59,7 @@ require_once '../analytics.php';
 						}
 					}
 				},
-				series: [{
-					name: 'Germany',
-					data: [5, 3, 4, 7, 2,5, 3, 4, 7]
-				}, {
-					name: 'Swizerland',
-					data: [3, 4, 4, 2, 5,3, 4, 4, 2]
-				}, {
-					name: 'United States',
-					data: [2, 2, 3, 2, 1,2, 2, 3, 2]
-				}]
+				series: <?php echo json_encode(getByCountry(),JSON_NUMERIC_CHECK|JSON_PRETTY_PRINT); ?>
 			});
 		</script>
 	</body>
