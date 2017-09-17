@@ -11,4 +11,20 @@ function view(){
 	$page=$_SERVER['SCRIPT_NAME'];
 	$sql="INSERT INTO analytics(`country`,`page`,`date`,`time`)VALUES('$country','$page',CURRENT_DATE,CURRENT_TIME)";
 	mysqli_query($con,$sql);
+	mysqli_close($con);
+}
+
+function getPages(){
+	$con=dbCon();
+	$res=mysqli_query($con,"SELECT page FROM analytics GROUP BY page");
+	$val=array();
+	while($dsatz=mysqli_fetch_assoc($res)){
+		$val[]=$dsatz['page'];
+	}
+	mysqli_close($con);
+	return $val;
+}
+
+function getByCountry(){
+	// TODO
 }
