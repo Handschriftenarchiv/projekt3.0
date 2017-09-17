@@ -65,7 +65,7 @@ switch($dsatz['Typus']){
 <?php
 if(!empty($dsatz['Bemerkungen'])){
 ?>						<note>
-							<p><?php echo $dsatz['Bemerkungen']?></p>
+							<p><?php echo str_ireplace('<br>','<lb>',$dsatz['Bemerkungen']);?></p>
 						</note>
 <?php
 }
@@ -75,7 +75,7 @@ if(!empty($dsatz['Bemerkungen'])){
 					</otherfindaid>
 					<odd>
 						<head>Anzahl</head>
-						<p><?php echo $dsatz['Anzahl']; ?></p>
+						<p><?php echo str_ireplace('<br>','<lb>',$dsatz['Anzahl']); ?></p>
 					</odd>
 <?php
 if(!empty($dsatz['Dokumentlink'])){
