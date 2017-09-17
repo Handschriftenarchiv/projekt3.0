@@ -322,6 +322,39 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff !important;
 }
 
+.btn-lable {
+  background: transparent;
+  color: orange;
+  border: 2px solid orange;
+  border-radius: 5px;
+}
+.btn-lable.btn-outline {
+  background: transparent;
+  color: orange;
+  border: 2px solid orange;
+}
+.btn-lable.btn-outline:hover, .btn-lable.btn-outline:focus, .btn-lable.btn-outline:active {
+  background: orange;
+  color: orange !important;
+}
+
+.btn-lable:hover, .btn-lable:active, .btn-lable:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  color: orange;
+}
+
+.btn-lable {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  font-family: "Karla", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .btn-success {
   background: #5cb85c;
   color: #fff;
