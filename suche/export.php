@@ -3,7 +3,7 @@ require_once "misc.php";
 header("Content-Type: text/xml");
 header('Content-Disposition: attachment; filename="findbuch.xml"');
 // Platzhalter für den Identifier
-$ident="DE-1234";
+$ident="DE-2535";
 echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
 <ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd">
