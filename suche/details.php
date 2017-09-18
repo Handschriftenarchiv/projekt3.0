@@ -4,23 +4,6 @@ if(empty($_GET['id'])){
 	header('Location: .');
 	exit;
 }
-$dsatz=mysqli_fetch_assoc(mysqli_query($con,"SELECT * FROM archivalien WHERE ID=".$_GET['id']));
-if(empty($dsatz['Komponist'])){
-	$dsatz['Komponist']="unbekannt";
-}
-if(empty($dsatz['Dichter'])){
-	$dsatz['Dichter']='unbekannt';
-}
-if(empty($dsatz['Setzer'])){
-	$dsatz['Setzer']='unbekannt';
-}
-if(empty($dsatz['Verlag'])){
-	$dsatz['Verlag']='unbekannt';
-}
-if(empty($dsatz['Verfassungsdatum'])){
-	$dsatz['Verfassungsdatum']='unbekannt';
-}
-$dsatz['Signatur']=formatSig($dsatz['Signatur']);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -171,18 +154,42 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 										<span>Datenbank</span>
 										<h2>Details</h2>
 										<p class="fh5co-lead"><?php
-										switch($dsatz['Typus']){
-											case 'Handschrift':
-												echo "zur Handschrift";
-												break;
-											case 'Kopie von Handschrift':
-												echo "zur Kopie der Handschrift";
-												break;
-											case 'Druck':
-												echo "zum Druck";
-												break;
+										if((int)$_GET['id']>0){
+											$res=mysqli_query($con,"SELECT * FROM archivalien WHERE ID=".$_GET['id']);
+											if(mysqli_num_rows($res)>0){
+												$dsatz=mysqli_fetch_assoc($res);
+												if(empty($dsatz['Komponist'])){
+													$dsatz['Komponist']="unbekannt";
+												}
+												if(empty($dsatz['Dichter'])){
+													$dsatz['Dichter']='unbekannt';
+												}
+												if(empty($dsatz['Setzer'])){
+													$dsatz['Setzer']='unbekannt';
+												}
+												if(empty($dsatz['Verlag'])){
+													$dsatz['Verlag']='unbekannt';
+												}
+												if(empty($dsatz['Verfassungsdatum'])){
+													$dsatz['Verfassungsdatum']='unbekannt';
+												}
+												$dsatz['Signatur']=formatSig($dsatz['Signatur']);
+												switch($dsatz['Typus']){
+													case 'Handschrift':
+														echo "zur Handschrift";
+														break;
+													case 'Kopie von Handschrift':
+														echo "zur Kopie der Handschrift";
+														break;
+													case 'Druck':
+														echo "zum Druck";
+														break;
+												}
+												echo " &quot;".$dsatz['Titel']."&quot;";
+											}
+										}else{
+											echo "Nichts gefunden";
 										}
-										echo " &quot;".$dsatz['Titel']."&quot;";
 										?></p>
 									</div>
 								</div>
@@ -193,6 +200,7 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 				</div>
 			</aside>
 
+<?php if(isset($dsatz)){ ?>
 			<div id="fh5co-about">
 				<div class="container">
 					<div class="row animate-box">
@@ -264,7 +272,19 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 				</div>
 			</div>
 		</div>
-
+<?php }else{ ?>
+		<div id="fh5co-about">
+			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center animate-box">
+						<div class="about-content">
+							<p>Die eingegebene ID konnete in der Datenbank nicht gefunden werden.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<?php } ?>
 		<!-- jQuery -->
 		<script src="../js/jquery.min.js"></script>
 		<!-- jQuery Easing -->
