@@ -212,15 +212,15 @@ _idl.variant = "modal";
 									</div>
 								</div>
 							</div>
-
+<!--
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
 									<a href="#"><img class="img-responsive" src="images/blog/platz.jpg" alt=""></a>
 									<div class="blog-text">
-										<span class="posted_on">Nov. 15th</span>
+										<span class="posted_on">18. Sep. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
-										<h3><a href="#">Inspirational Website</a></h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<h3><a href="#">Tools - Teil I</a></h3>
+										<p>Das Handschriftenarchiv Dresdner Kreuzchor präsentiert die Tools, die es für einen modernen Archivbetrieb benutzt.</p>
 									</div>
 								</div>
 							</div>
@@ -232,10 +232,10 @@ _idl.variant = "modal";
 								<div class="fh5co-blog animate-box">
 									<a href="#"><img class="img-responsive" src="images/blog/platz.jpg" alt=""></a>
 									<div class="blog-text">
-										<span class="posted_on">Nov. 15th</span>
+										<span class="posted_on">18. Sep. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
-										<h3><a href="#">Inspirational Website</a></h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<h3><a href="#">ISIL Nummer</a></h3>
+										<p>Das Handschriftenarchiv in der Loge international genormter Archive</p>
 									</div>
 								</div>
 							</div>
@@ -255,6 +255,7 @@ _idl.variant = "modal";
 				</div>
 			</div>
 		</div>
+  -->
 
 	<div class="fh5co-counters" style="background-image: url(images/blog/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
 			<div class="fh5co-narrow-content animate-box">
