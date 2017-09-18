@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+require_once 'analytics.php';
+?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -6,10 +8,10 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Mediathek - Handschriftenarchiv Dresdner Kreuzchor</title>
+	<title>Gunter Groß erinnert sich - Handschriftenarchiv Dresdner Kreuzchor</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Die Mediathek des Handschriftenarchivs Dresdner Kreuzchor" />
-	<meta name="keywords" content="Mediathek, Archiv, Handschriftenarchiv, Kreuzchor" />
+	<meta name="description" content="Gunter Groß und der Dresdner Kreuzchor." />
+	<meta name="keywords" content="Gunter Groß, Archiv, Geschichte, Handschriftenarchiv, Kreuzchor, Dresden" />
 	<meta name="author" content="Handschriftenarchiv Dresdner Kreuzchor" />
 
   <!--
@@ -62,12 +64,6 @@
  <!--[if lt IE 9]>
  <script src="js/respond.min.js"></script>
  <![endif]-->
-
-
- <!--Plyr-->
- <script src="js/plyr.js"></script>
-<script> plyr.setup(document.querySelector('.js-player'), options);</script>
-<link rel="stylesheet" href="css/plyr.css">
 
  </head>
  <body>
@@ -156,15 +152,15 @@ _idl.variant = "modal";
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(images/mediathek/start.jpg);">
+			   	<li style="background-image: url(images/blog/gross/1.jpg);">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 			   				<div class="slider-text-inner">
 			   					<div class="desc">
-			   						<span>Bewegtbild</span>
-			   						<h2>Mediathek</h2>
-			   						<p class="fh5co-lead">Die Mediathek des Handschriftenarchis Dresdner Kreuzchor.</p>
+			   						<span>29. Jul. 2017</span>
+			   						<h2>Gunter Groß erinnert sicht</h2>
+			   						<p class="fh5co-lead">Gunter Groß: ein ehemaligen Kruzianer, Notenschreiber und Ratsdiskandist unter Rudolf Mauersberger.</p>
 			   					</div>
 			   				</div>
 			   			</div>
@@ -174,79 +170,57 @@ _idl.variant = "modal";
 		  	</div>
 		</aside>
 
+
 		<div id="fh5co-about">
 			<div class="container">
-				<div align="center">
-					<video poster="images/blog/start.jpg" controls style="width: 60%;">
-						<source src="http://archiv.handschriften.bplaced.de/videos/video-1.mp4" type="video/mp4">
-						</video>
-
-
-					<blockquote><p>
-								Das Projekt 3.0: Eine &raquo;Zur&uuml;ckbesinnung&laquo; auf den Kern des Archives. Mit neuer Webumgebung, durchsuchbarer Datenbank und regelm&auml;&szlig;igen Blogeintr&auml;gen. Der Imagefilm stellt das neu ver&ouml;ffentlichte Pilotprojekt des Handschriftenarchivs vor. <br> [Musik: Into the Light / Lizenzfreie Musik / www.EverMusic.de]
-							</p></blockquote><br><br>
-
-													<video><div data-type="vimeo" data-video-id="143418951"></div></video>
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center animate-box">
+						<div class="about-content">
+							<h2>Das sechste Schuljahr,...</h2>
+							<blockquote>
+								<p>...mein zweites Jahr im Kreuzchor, ging bereits zu Ende. Ich war dabei, nach der Probe im großen Gesangssaal die Noten in Ordnung zu bringen. Eben hatte sich herausgestellt, dass die Partitur des Mendelssohnschen Engelterzetts – es sollte am kommenden Tage bei einem „Geburtstagsständchen“ erklingen – fehlte. Nun war mir aufgetragen worden, eine neue Partitur aus den vorhandenen Stimmen zusammenzustellen, ein nicht ganz alltägliches Unterfangen für mich knapp Zwölfjährigen. Der Professor [Rudolf Mauersberger] hatte mich einmal im Klassenzimmer Noten schreiben sehen, war anscheinend zufrieden gewesen und hatte sich daran jetzt wieder erinnert. Ich durfte ihn nicht enttäuschen. Endlich, nach dreimaligem Ansetzen, gelang das Kunststück; ich war durch das Vertrauen, das der „Chef“ in mich setzte, über mich selbst hinausgewachsen. Glücklich stieg ich an jenem Abend ins Bett, nicht ahnend, dass dieses Notenblatt für meine gesamte Kruzianerzeit bestimmend werden sollte. Einige Tage später schon war ich als Notenschreiber bekannt. An Beschäftigung fehlte es nie; denn wo hundertdreißig Jungen täglich mehrere Stunden singen, verbraucht sich das Chormaterial unter der Hand. Bald jedoch wuchs mein Aufgabenbereich: Die Schütz-Tage des Kreuzchores nahten wieder. Unversehens war ich in den Strudel der Vorbereitungen mit einbezogen.</p>
+							</blockquote>
+							<img class="image-center" src="images/blog/gross/1.jpg" alt="Gunter Gross" style="width:600px;height:400px">
 							<br>
-							<iframe src="https://player.vimeo.com/video/223641172?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							<blockquote><p>
-								Das Handschriftenarchiv Dresdner Kreuzchor hat heute das Projekt 3.0 gestartet. Eine neue Philosophie eines Archives. Ab Herbst 2017&hellip;
-							</p></blockquote><br><br>
-							<iframe src="https://player.vimeo.com/video/223339906?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							<blockquote><p>
-								Die neue MySQL-Datenbank im Rahmen des Projekts 3.0 wird nun noch detailliertere Suchen erm&ouml;glichen. Und das alles in einem unkomplizierten Interface&hellip;
-							</p></blockquote><br><br>
-							<iframe src="https://player.vimeo.com/video/210479922?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							<blockquote><p>
-								Unter @NotenarchivDKC ist nun auch das Handschriftenarchiv Dresdner Kreuzchor auf Twitter zu finden. Hier das &raquo;Willkommens-Video&laquo;.
-							</p></blockquote><br><br>
-							<iframe src="https://player.vimeo.com/video/208001881?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							<blockquote><p>
-								Fr&uuml;hling im Handschriftenarchiv Dresdner Kreuzchor. Das Archiv stellt Noten und Handschriften im Bezug zu Fr&uuml;hling, Natur und Geschichte dar.
-							</p></blockquote><br><br>
-							<iframe src="https://player.vimeo.com/video/202945459?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							<blockquote><p>
-								Das Dresdner Requiem von Rudolf Mauersberger zum Gedenken an die Opfer des 13. Februar 1945.
-							</p></blockquote><br><br>
-							<iframe src="https://player.vimeo.com/video/191689285?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							<blockquote><p>
-								Das Handschriftenarchiv Dresdner Kreuzchor w&uuml;nscht frohe Weihnachten.
-							</p></blockquote><br><br>
-							<iframe src="https://player.vimeo.com/video/188418719?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							<blockquote><p>
-								Das Handschriftenarchiv Dresdner Kreuzchor in Verbidung mit der Stadt Dresden und dem Dresdker Kreuzchor.
-							</p></blockquote><br><br>
-							<iframe src="https://player.vimeo.com/video/185299720?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-							<blockquote><p>
-								&Uuml;ber die Zeit hat sich das Layout - haben sich die Logos - des Handschriftenarchivs Ge&auml;ndert. Der neue Film gibt einen kleinen, aber feinen &Uuml;berblick &uuml;ber die &raquo;Kleine Geschichte&hellip;&laquo;
-							</p></blockquote>
+							<blockquote>
+								<p>Ältere Kruzianer, die bisher bei solchen Gelegenheiten die Herstellung der Partituren und der Instrumentalstimmen besorgt hatten, waren als Abiturienten ausgeschieden; der damalige cantor famulus war durch die Schule gerade stark beansprucht – und ich kampierte als Bazillenträger einer harmlosen Darminfektion in der Krankenabteilung. Da mir nichts weiter fehlte als eine Beschäftigung, ergab sich bald, dass mit den Mahlzeiten, die mir unsere Hausmutter herüberbrachte, „Aufträge“ für mich als Notenschreiber kamen, und zwar vom Kantor persönlich. Standen doch diesmal die beiden noch nicht im Druck erschienen „politischen Musiken“ des Dresdner Altmeisters, Syncharma musicum und Teutoniam dudum, das eine davon für zwei bis drei Chöre und Instrumente, auf dem Programm. Ich schrieb zunächst vom Morgen bis zum Abend Instrumentalstimmen heraus, was für mich nicht so einfach war, denn die Noten mussten klar und weithin sichtbar geschrieben sein, und die Taktverteilung war so vorzunehmen, dass die Musiker das Notenbild leicht auffassen konnten. Beim Umwenden des Blattes musste gerade eine Pause oder lang ausgehalten Note stehen, damit nicht eine Koloratur oder in sich geschlossene Passage zerrissen wurde. Eines Tages kamen Schritte die „hintere Treppe“ herauf, die zu meiner „Burg“ führte. Es wurde an der verschlossenen Tür heftig geklinkt und geklopft, und vor mir stand der „Chef“. Er kam, um mit mir einige der bereits fertigen Stimmen durchzusprechen und zu korrigieren. Vor allem aber trug er eine völlig verschmierte und unübersichtliche Partitur bei sich. Das Werk (es handelte sich um Ist nicht Ephraim mein teurer Sohn?) lag in einer etwa um die Jahrhundertwende bearbeiteten Ausgabe vor, die bei dem heutigen Stand der Schütz-Forschung fast unbrauchbar war. Der Kantor hatte so viele Bemerkungen und Änderungen mit verschiedenfarbigen Stiften hineingeschrieben, dass er selbst kein klares Bild mehr von dem Ganzen hatte. Ich sollte also eine neue Partitur schreiben. Er erklärte mir den Aufbau des Werkes, die Notenwerte und die Instrumentierung so genau, dass ich meinte, nun könne mir kein Fehler unterlaufen. Es war merkwürdig und ist mir und anderen noch oft begegnet: Solange der Kantor neben einem stand, schien alles sonnenklar und leicht zu bewältigen. Dadurch traute man sich mehr zu, als man in Wirklichkeit leisten konnte. Die Schwierigkeiten begannen erst, wenn man mit seiner Aufgabe allein gelassen war. Da aber der Kantor ein gutes Ergebnis erwartete, strengte man sich an, bis es geschafft war.
+								</blockquote>
+									<img class="image-center" src="images/blog/gross/2.jpg" alt="Gunter Gross" style="width:404px;height:620px">
+								<br>
+								<blockquote>
+									<p>Die nächsten Schütz-Tage fanden im Juni 1960 anlässlich der dreißigjährigen Amtstätigkeit Rudolf Mauersbergers als Kreuzkantor statt. In der Vesper sollten Werke früherer Kreuzkantoren erklingen, insbesondere Motetten der beiden Kreuzkantoren, die Zeitgenossen von Heinrich Schütz waren. Professor Mauersberger teilte uns mit, dass in der Sächsischen Landesbibliothek noch Stimmenbücher lägen, in denen Chorwerke von Samuel Rüling und Michael Lohr enthalten wären. Er selbst hatte sie durchgesehen und sich notiert, was davon brauchbar war. Jetzt wurden der Präfekt und der cantor famulus, die beide der elften Klasse angehörten, damit beauftragt, Auszüge aus diesen Stimmenbüchern herzustellen (dabei waren einige Chorstimmen aus alten Schlüsseln in moderne·zu übertragen) und diese in einer vorläufigen Partitur zu vereinigen. Obwohl ich für eine solche Arbeit noch zu jung war, wurde ich doch „zum Anlernen“ und für kleine Hilfeleistungen mitgenommen. Später sollte ich die zur Vervielfältigung benötigten Reinschriften anfertigen. Es war für mich ein erhebendes Gefühl, mit dabei sein zu dürfen und an der Verwirklichung der Pläne unseres Kantors mitzuhelfen. Eine vollkommen neue und ungewohnte Arbeitsatmosphäre umgab mich in diesen Tagen. Ich befand mich zum ersten Male in einer wissenschaftlichen Bibliothek. Durch die feierliche Stille in den mit Büchern bis zur Decke angefüllten Räumen, die Ehrwürdigkeit der alten Notenschriften und durch die Achtung und Freundlichkeit, mit der die Bibliothekare uns Schülern begegneten, lernte ich indirekt begreifen, welche Bedeutung die große Schütz-Pflege unseres Chefs hat.
+</blockquote>
+<img class="image-center" src="images/blog/gross/3.jpg" alt="Gunter Gross" style="width:568px;height:382px">
+<br>
+<blockquote>
+									Aber ich begriff jetzt sehr gut, welche verantwortungsreiche Arbeit im Kreuzchor geleistet wird und was für eine hohe Verpflichtung ich übernahm, wenn ich die Nachfolge der damaligen Notenschreiber antreten wollte. So bedeutete es für mich als vierzehnjährigen Sopranisten ein besonderes Erlebnis, gerade noch kurz vor der Mutation am 13. Heinrich-Schütz-Fest in Stuttgart teilnehmen zu können. Als mir zu Beginn meines neunten Schuljahres das Amt des cantor famulus und Notenbibliothekars übertragen wurde, nahm ich mir vor, alle meine Kräfte daranzusetzen, unserem Kantor eine zuverlässige Hilfe zu werden.
+									</blockquote>
 						</div>
-
-
-
-			</div>
-		</div>
-
-
-
-		<div class="fh5co-counters" style="background-image: url(images/archiv/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
-			<div class="fh5co-narrow-content animate-box">
-				<div class="row" >
-					<div class="col-md-4 text-center">
-						<span class="fh5co-counter js-counters"><h2><font color="#ffffff">&nbsp;</font></h2></span>
-						<span class="fh5co-counter-label">&nbsp;</span>
-					</div>
-					<div class="col-md-4 text-center">
-						<span class="fh5co-counter js-counters"><h2><font color="#ffffff">&nbsp;</font></h2></span>
-						<span class="fh5co-counter-label">&nbsp;</span>
-					</div>
-					<div class="col-md-4 text-center">
-						<span class="fh5co-counter js-counters"><h2><font color="#ffffff">&nbsp;</font></h2></span>
-						<span class="fh5co-counter-label">&nbsp;</span>
 					</div>
 				</div>
 			</div>
 		</div>
+
+
+
+	<div class="fh5co-counters" style="background-image: url(images/blog/gross/3.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
+		<div class="fh5co-narrow-content animate-box">
+			<div class="row" >
+				<div class="col-md-4 text-center">
+					<span class="fh5co-counter js-counters"><h2><font color="#ffffff">Gunter Gross</font></h2></span>
+					<span class="fh5co-counter-label">Autor</span>
+				</div>
+				<div class="col-md-4 text-center">
+					<span class="fh5co-counter js-counters"><h2><font color="#ffffff">Information</font></h2></span>
+					<span class="fh5co-counter-label">Gunter Gross war Kruzianer, Notenbibliothekar [Ratser] und Notenschreiber unter Rudolf Mauersberger.</span>
+				</div>
+				<div class="col-md-4 text-center">
+					<span class="fh5co-counter js-counters"><h2><font color="#ffffff">29. Jul. 2017</font></h2></span>
+					<span class="fh5co-counter-label">letzte Änderung</span>
+				</div>
+			</div>
+		</div>
+	</div>
 	<footer>
 		<div id="footer">
 			<div class="container">

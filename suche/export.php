@@ -1,5 +1,5 @@
 <?php
-require_once "misc.php";
+require_once "../analytics.php";
 header("Content-Type: text/xml");
 header('Content-Disposition: attachment; filename="findbuch.xml"');
 // Platzhalter für den Identifier

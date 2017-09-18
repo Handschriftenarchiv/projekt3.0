@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+require_once '../analytics.php';
+?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">

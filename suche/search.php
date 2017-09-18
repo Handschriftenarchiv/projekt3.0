@@ -3,7 +3,7 @@ if(!isset($_GET['search'])){
 	header("Location: ./");
 	exit;
 }
-require_once "misc.php";
+require_once '../analytics.php';
 if(isset($_GET['js'])){
 	header("Content-Type: text/plain");
 	$s=mysqli_real_escape_string($con,$_GET['search']);
