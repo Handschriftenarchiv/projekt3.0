@@ -82,10 +82,10 @@ _idl.variant = "modal";
 		 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
 		 <div class="js-fullheight fh5co-table">
 			 <div class="fh5co-table-cell js-fullheight">
-				 <h1 class="text-center"><a class="fh5co-logo" href="index.html">Sprache</a></h1>
+				 <h1 class="text-center"><a class="fh5co-logo" href="index.php">Sprache</a></h1>
 				 <ul>
-					 <li><a href="index.html">Deutsch</a></li>
-					 <li><a href="/en/index.html">Englisch</a></li>
+					 <li><a href="index.php">Deutsch</a></li>
+					 <li><a href="/en/index.php">Englisch</a></li>
 				 </ul>
 				 <p class="fh5co-social-icon">
 					 <a href="https://twitter.com/NotenarchivDKC"><i class="icon-twitter2"></i></a>
@@ -102,14 +102,14 @@ _idl.variant = "modal";
 	 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
 	 <div class="js-fullheight fh5co-table">
 		 <div class="fh5co-table-cell js-fullheight">
-			 <h1 class="text-center"><a class="fh5co-logo" href="index.html">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
+			 <h1 class="text-center"><a class="fh5co-logo" href="index.php">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
 			 <ul>
-				 <li><a href="index.html">Willkommen</a></li>
-				 <li><a href="archiv.html">Archiv</a></li>
-				 <li><a href="blog.html">Blog</a></li>
-				 <li><a href="mediathek.html">Mediathek</a></li>
+				 <li><a href="index.php">Willkommen</a></li>
+				 <li><a href="archiv.php">Archiv</a></li>
+				 <li><a href="blog.php">Blog</a></li>
+				 <li><a href="mediathek.php">Mediathek</a></li>
 				 <li><a href="/suche/">Datenbank</a></li>
-				 <li><a href="impressum.html">Impressum</a></li>
+				 <li><a href="impressum.php">Impressum</a></li>
 				 <li><a href="kontakt.php">Kontakt</a></li>
 			 </ul>
 			 <p class="fh5co-social-icon">
@@ -131,7 +131,7 @@ _idl.variant = "modal";
 			 <div class="fh5co-navbar-brand">
 				 <div class="row">
 					 <div class="col-xs-6">
-						 <h1 class="text-left"><a class="fh5co-logo" href="index.html"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
+						 <h1 class="text-left"><a class="fh5co-logo" href="index.php"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
 					 </div>
 					 <div class="col-xs-6">
 						 <!--<p class="fh5co-social-icon text-right">
@@ -371,12 +371,12 @@ _idl.variant = "modal";
 					<div class="col-md-3 col-md-push-1">
 						<h3 class="section-title">Links</h3>
 						<ul>
-							<li><a href="index.html">Willkommen</a></li>
-							<li><a href="archiv.html">Archiv</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="mediathek.html">Mediathek</a></li>
+							<li><a href="index.php">Willkommen</a></li>
+							<li><a href="archiv.php">Archiv</a></li>
+							<li><a href="blog.php">Blog</a></li>
+							<li><a href="mediathek.php">Mediathek</a></li>
 							<li><a href="/suche/">Datenbank</a></li>
-							<li><a href="impressum.html">Impressum</a></li>
+							<li><a href="impressum.php">Impressum</a></li>
 							<li><a href="kontakt.php">Kontakt</a></li>
 						</ul>
 					</div>
@@ -412,7 +412,7 @@ _idl.variant = "modal";
 							<a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
 							<a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
 						</p>
-						<p>Copyright 2016 Handschriftenarchiv Dresdner Kreuzchor <a href="/impressum.html">Impressum</a> All Rights Reserved. </p>
+						<p>Copyright 2016 Handschriftenarchiv Dresdner Kreuzchor <a href="/impressum.php">Impressum</a> All Rights Reserved. </p>
 						<span class="notranslate" onmouseover="_tipon(this)" onmouseout="_tipoff()"><span class="google-src-text" style="direction: ltr; text-align: left"><a href=https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=de&ie=UTF8&prev=_t&rurl=translate.google.de&sl=en&sp=nmt4&tl=de&u=https://internetdefenseleague.org/&usg=ALkJrhjDQg4VshLY48zmtw4d205QQxxxMg target="_blank"><img src=images/internet.png alt="Mitglied in der Internet Defense League" width=115 height=115/></a></span>
 					</div>
 				</div>
