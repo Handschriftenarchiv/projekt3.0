@@ -414,7 +414,7 @@ _idl.variant = "modal";
 							<p>Copyright 2016 Handschriftenarchiv Dresdner Kreuzchor <a href="/impressum.php">Impressum</a> All Rights Reserved. </p>
 							<span class="notranslate" onmouseover="_tipon(this)" onmouseout="_tipoff()"><span class="google-src-text" style="direction: ltr; text-align: left"><a href=https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=de&ie=UTF8&prev=_t&rurl=translate.google.de&sl=en&sp=nmt4&tl=de&u=https://internetdefenseleague.org/&usg=ALkJrhjDQg4VshLY48zmtw4d205QQxxxMg target="_blank"><img src=images/internet.png alt="Mitglied in der Internet Defense League" width=115 height=115/></a></span>
 							<br>
-							<p style="color: #000;font-size: small;">v4.0.2</p>
+							<p style="color: #000;font-size: small;">v5.0.1</p>
 						</div>
 					</div>
 				</div>
