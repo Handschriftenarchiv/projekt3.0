@@ -70,10 +70,10 @@
 			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
 			<div class="js-fullheight fh5co-table">
 				<div class="fh5co-table-cell js-fullheight">
-					<h1 class="text-center"><a class="fh5co-logo" href="index.html">Sprache</a></h1>
+					<h1 class="text-center"><a class="fh5co-logo" href="index.php">Sprache</a></h1>
 					<ul>
-						<li><a href="index.html">Deutsch</a></li>
-						<li><a href="/en/index.html">Englisch</a></li>
+						<li><a href="index.php">Deutsch</a></li>
+						<li><a href="/en/index.php">Englisch</a></li>
 					</ul>
 					<p class="fh5co-social-icon">
 						<a href="https://twitter.com/NotenarchivDKC"><i class="icon-twitter2"></i></a>
@@ -90,14 +90,14 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
 		<div class="js-fullheight fh5co-table">
 			<div class="fh5co-table-cell js-fullheight">
-				<h1 class="text-center"><a class="fh5co-logo" href="index.html">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
+				<h1 class="text-center"><a class="fh5co-logo" href="index.php">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
 				<ul>
-					<li><a href="index.html">Willkommen</a></li>
-					<li><a href="archiv.html">Archiv</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="mediathek.html">Mediathek</a></li>
+					<li><a href="index.php">Willkommen</a></li>
+					<li><a href="archiv.php">Archiv</a></li>
+					<li><a href="blog.php">Blog</a></li>
+					<li><a href="mediathek.php">Mediathek</a></li>
 					<li><a href="/suche/">Datenbank</a></li>
-					<li><a href="impressum.html">Impressum</a></li>
+					<li><a href="impressum.php">Impressum</a></li>
 					<li><a href="kontakt.php">Kontakt</a></li>
 				</ul>
 				<p class="fh5co-social-icon">
@@ -116,7 +116,7 @@
 				<div class="fh5co-navbar-brand">
 					<div class="row">
 						<div class="col-xs-6">
-							<h1 class="text-left"><a class="fh5co-logo" href="index.html"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
+							<h1 class="text-left"><a class="fh5co-logo" href="index.php"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
 						</div>
 						<div class="col-xs-6">
 							<p class="fh5co-social-icon text-right">
@@ -178,23 +178,23 @@
 						<div class="col-md-3 col-md-push-1">
 							<h3 class="section-title">Links</h3>
 							<ul>
-								<li><a href="index.html">Willkommen</a></li>
-								<li><a href="archiv.html">Archiv</a></li>
-								<li><a href="blog.html">Blog</a></li>
-								<li><a href="mediathek.html">Mediathek</a></li>
+								<li><a href="index.php">Willkommen</a></li>
+								<li><a href="archiv.php">Archiv</a></li>
+								<li><a href="blog.php">Blog</a></li>
+								<li><a href="mediathek.php">Mediathek</a></li>
 								<li><a href="/suche/">Datenbank</a></li>
-								<li><a href="impressum.html">Impressum</a></li>
-								<li><a href="kontakt.html">Kontakt</a></li>
+								<li><a href="impressum.php">Impressum</a></li>
+								<li><a href="kontakt.php">Kontakt</a></li>
 							</ul>
 						</div>
 
 						<div class="col-md-3">
 							<h3 class="section-title">Recht</h3>
 							<ul>
-								<li><a href="/impressum.html">Impressum</a></li>
-								<li><a href="/impressum.html#recht">Rechtliche Informationen</a></li>
-								<li><a href="/impressum.html#daten">Datenschutz</a></li>
-								<li><a href="/archiv.html">Archivordnungen</a></li>
+								<li><a href="/impressum.php">Impressum</a></li>
+								<li><a href="/impressum.php#recht">Rechtliche Informationen</a></li>
+								<li><a href="/impressum.php#daten">Datenschutz</a></li>
+								<li><a href="/archiv.php">Archivordnungen</a></li>
 							</ul>
 						</div>
 						<div class="col-md-3">
@@ -221,7 +221,7 @@
 								<a href="https://vimeo.com/handschriftenarchiv"><i class="icon-vimeo"></i></a>
 								<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"><i class="icon-youtube"></i></a>
 							</p>
-							<p>Copyright 2016 Handschriftenarchiv Dresdner Kreuzchor <a href="/impressum.html">Impressum</a> All Rights Reserved. </p>
+							<p>Copyright 2016 Handschriftenarchiv Dresdner Kreuzchor <a href="/impressum.php">Impressum</a> All Rights Reserved. </p>
 						</div>
 					</div>
 				</div>
