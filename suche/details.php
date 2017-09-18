@@ -109,14 +109,14 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 	 	 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
 	 	 <div class="js-fullheight fh5co-table">
 	 		 <div class="fh5co-table-cell js-fullheight">
-	 			 <h1 class="text-center"><a class="fh5co-logo" href="index.html">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
+	 			 <h1 class="text-center"><a class="fh5co-logo" href="index.php">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
 	 			 <ul>
-	 				 <li><a href="../index.html">Willkommen</a></li>
-	 				 <li><a href="../archiv.html">Archiv</a></li>
-	 				 <li><a href="../blog.html">Blog</a></li>
-	 				 <li><a href="../mediathek.html">Mediathek</a></li>
+	 				 <li><a href="../index.php">Willkommen</a></li>
+	 				 <li><a href="../archiv.php">Archiv</a></li>
+	 				 <li><a href="../blog.php">Blog</a></li>
+	 				 <li><a href="../mediathek.php">Mediathek</a></li>
 	 				 <li><a href="/suche/">Datenbank</a></li>
-	 				 <li><a href="../impressum.html">Impressum</a></li>
+	 				 <li><a href="../impressum.php">Impressum</a></li>
 	 				 <li><a href="../kontakt.php">Kontakt</a></li>
 	 			 </ul>
 	 			 <p class="fh5co-social-icon">
@@ -138,7 +138,7 @@ $dsatz['Signatur']=formatSig($dsatz['Signatur']);
 					<div class="fh5co-navbar-brand">
 						<div class="row">
 							<div class="col-xs-6">
-								<h1 class="text-left"><a class="fh5co-logo" href="index.html"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
+								<h1 class="text-left"><a class="fh5co-logo" href="index.php"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
 							</div>
 							<div class="col-xs-6">
 								<!--
