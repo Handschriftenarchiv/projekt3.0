@@ -212,7 +212,7 @@ _idl.variant = "modal";
 									</div>
 								</div>
 							</div>
-<!--
+
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
 									<a href="#"><img class="img-responsive" src="images/blog/platz.jpg" alt=""></a>
@@ -255,7 +255,7 @@ _idl.variant = "modal";
 				</div>
 			</div>
 		</div>
-  -->
+
 
 	<div class="fh5co-counters" style="background-image: url(images/blog/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
 			<div class="fh5co-narrow-content animate-box">
