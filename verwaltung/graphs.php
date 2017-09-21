@@ -33,7 +33,6 @@ require_once '../analytics.php';
 						y: -3
 					}
 				},
-
 				yAxis: [{ // left y axis
 					title: {
 						text: null
@@ -74,22 +73,6 @@ require_once '../analytics.php';
 				plotOptions: {
 					series: {
 						cursor: 'pointer',
-						point: {
-							events: {
-								click: function (e) {
-									hs.htmlExpand(null, {
-										pageOrigin: {
-											x: e.pageX || e.clientX,
-											y: e.pageY || e.clientY
-										},
-										headingText: this.series.name,
-										maincontentText: Highcharts.dateFormat('%A, %b %e, %Y', this.x) + ':<br/> ' +
-											this.y + ' visits',
-										width: 200
-									});
-								}
-							}
-						},
 						marker: {
 							lineWidth: 1
 						}
