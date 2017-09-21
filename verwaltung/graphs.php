@@ -21,7 +21,7 @@ require_once '../analytics.php';
 					csv: "<?php echoData(); ?>"
 				},
 				title: {
-					text: 'Zugriffe pro Tag'
+					text: 'Zugriffe pro Tag',
 				},
 				xAxis: {
 					tickInterval: 7 * 24 * 3600 * 1000, // one week
@@ -62,10 +62,7 @@ require_once '../analytics.php';
 					allowDecimals: false
 				}],
 				legend: {
-					align: 'left',
-					verticalAlign: 'top',
-					y: 20,
-					floating: true,
+					verticalAlign: 'bottom',
 					borderWidth: 0
 				},
 				tooltip: {
@@ -81,15 +78,6 @@ require_once '../analytics.php';
 					}
 				},
 				series: <?php echoSeries(); ?>
-				// [{
-				// 	name: 'All visits',
-				// 	lineWidth: 4,
-				// 	marker: {
-				// 		radius: 4
-				// 	}
-				// }, {
-				// 	name: 'New visitors'
-				// }]
 			});
 		</script>
 	</body>
