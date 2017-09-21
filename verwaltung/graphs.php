@@ -12,54 +12,98 @@ require_once '../analytics.php';
 		<div id="chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
 		<script>
-			Highcharts.chart('chart', {
-				chart: {
-					type: 'column'
+			Highcharts.chart('chart',{
+				data:{
+					csv: "<?php echoData(); ?>"
 				},
 				title: {
-					text: 'Zugriffe auf Seiten pro Land'
+					text: 'Zugriffe pro Tag'
 				},
 				xAxis: {
-					categories: <?php
-						echo json_encode(getPages());
-					?>
+					tickInterval: 7 * 24 * 3600 * 1000, // one week
+					tickWidth: 0,
+					gridLineWidth: 1,
+					labels: {
+						align: 'left',
+						x: 3,
+						y: -3
+					}
 				},
-				yAxis: {
-					min: 0,
+
+				yAxis: [{ // left y axis
 					title: {
-						text: 'Anzahl Aufrufe'
+						text: null
 					},
-					stackLabels: {
-						enabled: true,
-						style: {
-							fontWeight: 'bold',
-							color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
-						}
-					}
-				},
+					labels: {
+						align: 'left',
+						x: 3,
+						y: 16,
+						format: '{value:.,0f}'
+					},
+					showFirstLabel: false
+				}, { // right y axis
+					linkedTo: 0,
+					gridLineWidth: 0,
+					opposite: true,
+					title: {
+						text: null
+					},
+					labels: {
+						align: 'right',
+						x: -3,
+						y: 16,
+						format: '{value:.,0f}'
+					},
+					showFirstLabel: false
+				}],
+
 				legend: {
-					align: 'center',
-					verticalAlign: 'bottom',
-					floating: false,
-					backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-					borderColor: '#CCC',
-					borderWidth: 1,
-					shadow: false
+					align: 'left',
+					verticalAlign: 'top',
+					y: 20,
+					floating: true,
+					borderWidth: 0
 				},
+
 				tooltip: {
-					headerFormat: '<b>{point.x}</b><br/>',
-					pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+					shared: true,
+					crosshairs: true
 				},
+
 				plotOptions: {
-					column: {
-						stacking: 'normal',
-						dataLabels: {
-							enabled: true,
-							color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+					series: {
+						cursor: 'pointer',
+						point: {
+							events: {
+								click: function (e) {
+									hs.htmlExpand(null, {
+										pageOrigin: {
+											x: e.pageX || e.clientX,
+											y: e.pageY || e.clientY
+										},
+										headingText: this.series.name,
+										maincontentText: Highcharts.dateFormat('%A, %b %e, %Y', this.x) + ':<br/> ' +
+											this.y + ' visits',
+										width: 200
+									});
+								}
+							}
+						},
+						marker: {
+							lineWidth: 1
 						}
 					}
 				},
-				series: <?php echo json_encode(getByCountry(),JSON_NUMERIC_CHECK|JSON_PRETTY_PRINT); ?>
+
+				series: [{
+					name: 'All visits',
+					lineWidth: 4,
+					marker: {
+						radius: 4
+					}
+				}, {
+					name: 'New visitors'
+				}]
 			});
 		</script>
 	</body>
