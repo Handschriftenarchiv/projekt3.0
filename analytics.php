@@ -24,7 +24,7 @@ function getPages(){
 
 function echoData(){
 	$con=dbCon();
-	$res=mysqli_query($con,"SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views FROM analytics GROUP BY page,dateCreated ORDER BY page,dateCreated ASC");
+	$res=mysqli_query($con,"SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views FROM analytics GROUP BY page,dateCreated ORDER BY dateCreated,page ASC");
 	echo 'Tag';
 	$pages=getPages();
 	foreach($pages as $page){
