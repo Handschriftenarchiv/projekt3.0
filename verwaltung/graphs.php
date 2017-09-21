@@ -43,7 +43,8 @@ require_once '../analytics.php';
 						y: 16,
 						format: '{value:.,0f}'
 					},
-					showFirstLabel: false
+					showFirstLabel: false,
+					allowDecimals: false
 				}, { // right y axis
 					linkedTo: 0,
 					gridLineWidth: 0,
@@ -57,7 +58,8 @@ require_once '../analytics.php';
 						y: 16,
 						format: '{value:.,0f}'
 					},
-					showFirstLabel: false
+					showFirstLabel: false,
+					allowDecimals: false
 				}],
 				legend: {
 					align: 'left',
