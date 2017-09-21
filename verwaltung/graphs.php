@@ -14,6 +14,9 @@ require_once '../analytics.php';
 
 		<script>
 			Highcharts.chart('chart',{
+				chart: {
+					zoomType: 'x'
+				},
 				data:{
 					csv: "<?php echoData(); ?>"
 				},
