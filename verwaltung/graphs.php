@@ -8,6 +8,7 @@ require_once '../analytics.php';
 	</head>
 	<body>
 		<script src="highcharts.js"></script>
+		<script src="highcharts-data.js"></script>
 
 		<div id="chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
@@ -56,7 +57,6 @@ require_once '../analytics.php';
 					},
 					showFirstLabel: false
 				}],
-
 				legend: {
 					align: 'left',
 					verticalAlign: 'top',
@@ -64,12 +64,10 @@ require_once '../analytics.php';
 					floating: true,
 					borderWidth: 0
 				},
-
 				tooltip: {
 					shared: true,
 					crosshairs: true
 				},
-
 				plotOptions: {
 					series: {
 						cursor: 'pointer',
@@ -94,16 +92,16 @@ require_once '../analytics.php';
 						}
 					}
 				},
-
-				series: [{
-					name: 'All visits',
-					lineWidth: 4,
-					marker: {
-						radius: 4
-					}
-				}, {
-					name: 'New visitors'
-				}]
+				series: <?php echoSeries(); ?>
+				// [{
+				// 	name: 'All visits',
+				// 	lineWidth: 4,
+				// 	marker: {
+				// 		radius: 4
+				// 	}
+				// }, {
+				// 	name: 'New visitors'
+				// }]
 			});
 		</script>
 	</body>
