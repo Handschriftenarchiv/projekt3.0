@@ -1,4 +1,4 @@
-# robots.txt fuer http://
+# robots.txt fuer http://archiv.handschriften.bplaced.de
 
 User-agent: *
 
@@ -8,3 +8,6 @@ Disallow: /suche/background.scharf.png
 Disallow: /suche/plus.svg
 Disallow: /suche/minus.svg
 Disallow: /suche/info.svg
+Disallow: /verwaltung/graphs.php
+Disallow: /verwaltung/index.php
+Disallow: /suche/config.php
