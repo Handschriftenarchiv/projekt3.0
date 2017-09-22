@@ -173,8 +173,6 @@ _idl.variant = "modal";
 		<div id="fh5co-about">
 			<div class="container">
 				<div align="center">
-
-
 							<iframe src="https://player.vimeo.com/video/225288372?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 							<blockquote><p>
 								Das Projekt 3.0: Eine &raquo;Zur&uuml;ckbesinnung&laquo; auf den Kern des Archives. Mit neuer Webumgebung, durchsuchbarer Datenbank und regelm&auml;&szlig;igen Blogeintr&auml;gen. Der Imagefilm stellt das neu ver&ouml;ffentlichte Pilotprojekt des Handschriftenarchivs vor. <br> [Musik: Into the Light / Lizenzfreie Musik / www.EverMusic.de]
