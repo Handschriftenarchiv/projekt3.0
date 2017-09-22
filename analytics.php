@@ -5,9 +5,18 @@ view();
 
 function view(){
 	$con=dbCon();
-	$ip=$_SERVER['REMOTE_ADDR'];
 	$page=$_SERVER['SCRIPT_NAME'];
-	$sql="INSERT INTO analytics(`page`)VALUES('$page')";
+	$sql='INSERT INTO analytics(`page`';
+	if(stripos($page,'not-found.php')>-1||stripos($page,'details.php')>-1){
+		$sql.=',`additional`';
+	}
+	$sql.=")VALUES('$page'";
+	if(stripos($page,'not-found.php')>-1){
+		$sql.="'$_SERVER[REQUEST_URI]'";
+	}elseif(stripos($page,'details.php')>-1){
+		$sql.="'$_GET[id]'";
+	}
+	$sql.=')';
 	mysqli_query($con,$sql);
 	mysqli_close($con);
 }
