@@ -152,15 +152,15 @@ _idl.variant = "modal";
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(../images/archiv/start.jpg);">
+			   	<li style="background-image: url(../images/verwaltung/start.jpg);">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 			   				<div class="slider-text-inner">
 			   					<div class="desc">
-			   						<span>Das Handschriftenarchiv Dresdner Kreuzchor</span>
-			   						<h2>Archiv</h2>
-			   						<p class="fh5co-lead">Über die Geschichte des Archivs und weitere Informationen</p>
+			   						<span>Interne Informationen</span>
+			   						<h2>Verwaltungsportal</h2>
+			   						<p class="fh5co-lead">Wichtige intere Informatione, Links</p>
 			   					</div>
 			   				</div>
 			   			</div>
@@ -176,77 +176,17 @@ _idl.variant = "modal";
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center animate-box">
 						<div class="about-content">
-							<h2>Das Archiv</h2>
-							<blockquote>
-								<p>Das Handschriftenarchiv Dresdner Kreuzchor - Eine Institution mit traditionsreicher Geschichte.<br><br> Das Archiv begründet seinen Bestand auf der Handschriftenarchivsammlung der Notenbiblothek des weltbrühmten Chores. Hier wurden Handschriften, Drucke und Kopien von Handschriften, aus dem ehemaligen Chorbetrieb des Kreuzchores, die aufgrund ihres Alters, neurer Ausgaben der Werke oder ihrem besonderen historischen Gehalt, der Sammlung beigefügt wurden. Diese stand lange Zeit unentdeckt in den Lagerräumen der Bibliothek auf dem Dachboden der Einrichtung.<br> Das Handschriftenarchiv Dresdner Kreuzchor wurde 2013 mit dem Anliegen gegründet, die Dokumente der Handschriftensammlung als Archivalien schematisch zu erfassen, zu digiztalisieren und diese besondere Geschichte der Öffentlichkeit zugänglich zu machen. In Kooperation mit der Notenbibliothek wurden die Handschriften und Drucke analog erfasst. Der Dresdner Kreuzchor unterstützte dieses Unternehmen jedoch nicht; zu groß seinen die Aufgaben des aktuellen Chorbetriebes. So arbeitete das Handschriftenarchiv von Anfang an auf ehrenamtlicher Basis.<br> Der Altersumfang der Werke umfasst rund 100 Jahre ud reicht noch weit in die Zeiten Mauersbergers hinein. Jedoch ist der Großteil des eigenlichen Bestandes im Jahr 1945, während des Feuersturms auf Dresden vernichtet wurden. So dominieren Archivalien aus den 60er, 70er und 80er Jahren.<br><br> Erste Versuche im Internet starte das Handschriftenarchiv 2014 mit einer Jimdo-Seite und einer Einführung in die traditionsreiche Geschichte des Dresdner Kreuzchores.<br> Seit 2016 hat das Handschriftenarchiv seine Web-Strategie gestartet. So gab es eine neue Website mit Online-Katalog, einen Newsletter und Beitragsfilme. Über die Plattform issuu.com bietet das Handschriftenarchiv an, Digitalisierungen zu interaktiv erleben und mit Musescore rekonstruiert das Handschriftenarchiv unbekannte Werke. Über Twitter, Vimeo, Youtube und Wikipedia hat das Handschriftenarchiv auch anschluss an die modernen sozialen Medien gefunden.<br> Im Herbst 2017, hat das Handschriftenarchiv das Projekt 3.0 gestartet, was eine Neu-Konzeption des Archivbetriebs einleitete. So wurde eine professionelle, archivarischen Anforderungen entsprechende Datenbank geschafft und eine neue, dem Archiv entsprechende, Website und Online-Präsenz entworfen.</p>
-							</blockquote>
+							<center>
+							<div class="form-group" style="position: center">
+								<input type="submit" value="Im Entstehen" class="btn-lable">
+							</div>
+						</center>
 						</div>
 					</div>
 				</div>
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<div id="dokumente">
-						<h2>Im Archiv</h2>
-						<p>Hier finden Sie Informationen zum Archivbesuch und unsere Archivordnung</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-3 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img class="img-responsive" src="../images/archiv/doc/doc1.jpg" alt="Dok1">
-							<h3>Benutzungsantrag</h3>
-							<strong class="role"><a href="../verwaltung/dokumente/benutzungsantrag.pdf">Download [319 KB]</a></strong>
-							<p>Sie wollen das Archiv besuchen? Dann senden Sie dieses Formular ausgefüllt an handschriftenarchiv[at]<br>protonmail.com</p>
-						</div>
-					</div>
-					<div class="col-sm-3 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img class="img-responsive" src="../images/archiv/doc/doc2.jpg" alt="Free HTML5 Templates by freeHTML5.co">
-							<h3>Benutzungsordnung</h3>
-							<strong class="role"><a href="../verwaltung/dokumente/benutzungsordnung.pdf">Download [220 KB]</a></strong>
-							<p>Die aktuelle Benutzungsordnung für das Handschriftenarchiv Dresdner Kreuzchor.</p>
-						</div>
-					</div>
-					<div class="col-sm-3 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img class="img-responsive" src="../images/archiv/doc/doc3.jpg" alt="Free HTML5 Templates by freeHTML5.co">
-							<h3>Kostenordnung</h3>
-							<strong class="role"><a href="../verwaltung/dokumente/kostenordnung.pdf">Download [208 KB]</a></strong>
-							<p>Die aktuelle Kostenordnung für das Handschriftenarchiv Dresdner Kreuzchor.</p>
-						</div>
-					</div>
-					<div class="col-sm-3 animate-box" data-animate-effect="fadeIn">
-						<div class="fh5co-staff">
-							<img class="img-responsive" src="../images/archiv/doc/doc4.jpg" alt="Free HTML5 Templates by freeHTML5.co">
-							<h3>Regelung zur Nutzung von Archivalien</h3>
-							<strong class="role"><a href="../verwaltung/dokumente/regelung.pdf">Download [211 KB]</a></strong>
-							<p>Die aktuellen Regelung zur Nutzung von Archivalien für das Handschriftenarchiv Dresdner Kreuzchor.</p>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 
-
-	<div class="fh5co-counters" style="background-image: url(../images/archiv/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
-		<div class="fh5co-narrow-content animate-box">
-			<div class="row" >
-				<div class="col-md-4 text-center">
-					<span class="fh5co-counter js-counters"><h2><font color="#ffffff">Adresse</font></h2></span>
-					<span class="fh5co-counter-label">Dornblüthstraße 4, 01277 Dresden<br>Deutschland</span>
-				</div>
-				<div class="col-md-4 text-center">
-					<span class="fh5co-counter js-counters"><h2><font color="#ffffff">Web</font></h2></span>
-					<span class="fh5co-counter-label">www.hsa.bplaced.com</span>
-				</div>
-				<div class="col-md-4 text-center">
-					<span class="fh5co-counter js-counters"><h2><font color="#ffffff">Mail</font></h2></span>
-					<span class="fh5co-counter-label">handschriftenarchiv<br>@protonmail.com</span>
-				</div>
-			</div>
-		</div>
-	</div>
 	<footer>
 		<div id="footer">
 			<div class="container">
