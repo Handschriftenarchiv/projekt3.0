@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Erstellungszeit: 22. Sep 2017 um 20:07
+-- Erstellungszeit: 22. Sep 2017 um 22:37
 -- Server Version: 5.5.33a-MariaDB
 -- PHP-Version: 5.6.30
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `archivalien` (
   `Audiolink` varchar(255) DEFAULT NULL,
   `Dokumentlink` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=141 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=148 ;
 
 --
 -- Daten für Tabelle `archivalien`
@@ -181,8 +181,15 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (133, 'Der wandernde Musikant', 'Felix Mendelssohn Bartholdy', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Partitur', 'Archiv', 'Kasten 9', 210908, NULL, NULL, NULL),
 (134, 'Mai', 'Ernst Pepping', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '25x Sopran<br>8x Alt<br>9x Tenor<br>9x Bass', 'Archiv', 'Kasten 9', 200909, NULL, NULL, NULL),
 (135, 'Im schönsten Wiesengrunde', 'Volksweise', 'Kruzianer', NULL, 'Rudolf Mauersberger', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Partitur<br>5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 9', 210910, NULL, NULL, NULL),
-(136, 'Die Fichte', 'Sergei Wassiljewitsch Rachmaninow', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Alt', 'Archiv', 'Kasten 9', 200911, NULL, NULL, NULL),
+(136, 'Die Fichte', 'Sergei Wassiljewitsch Rachmaninow', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Sopran<br>1x Alt', 'Archiv', 'Kasten 9', 200911, NULL, NULL, NULL),
 (137, 'Wie schön singt uns der Engelschar', 'Cornelius Freundt', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Partitur', 'Archiv', 'Kasten 9', 210913, NULL, NULL, NULL),
 (138, 'Lukaspassion', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Knabenchor<br>1x Männerchor', 'Archiv', 'Kasten 9', 200914, NULL, NULL, NULL),
-(139, 'Jan Hinnerk', 'Volksweise aus Hamburg', 'Siegfried Ochs', NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Alt<br>6x Tenor<br>6x Bass', 'Archiv', 'Kasten 8', 200802, 'in Hamburger Platt', NULL, NULL),
-(140, 'Zogen einst fünf wilde Schwäne', 'Volksweise', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '10x Alt<br>2x Männerchor', 'Archiv', 'Kasten 8', 200804, NULL, NULL, NULL);
+(139, 'Jan Hinnerk', 'Volksweise aus Hamburg', 'Siegfried Ochs', NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Alt<br>1x Tenor<br>1x Bass', 'Archiv', 'Kasten 8', 200802, 'in Hamburger Plattdeutsch', NULL, NULL),
+(140, 'Zogen einst fünf wilde Schwäne', 'Volksweise', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '10x Alt<br>2x Männerchor', 'Archiv', 'Kasten 8', 200804, NULL, NULL, NULL),
+(141, 'Die Fichte', 'Sergei Wassiljewitsch Rachmaninow', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt', 'Archiv', 'Kasten 9', 210912, NULL, NULL, NULL),
+(142, 'Jan Hinnerk', 'Volksweise aus Hamburg', 'Siegfried Ochs', NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', 210803, 'in Hamburger Plattdeutsch', NULL, NULL),
+(143, 'Wir werden säen, Weißrussen', 'S. Palonski', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Sopran<br>1x Alt<br>1x Tenor', 'Archiv', 'Kasten 8', 200805, NULL, NULL, NULL),
+(144, 'Wir werden säen, Weißrussen', 'S. Palonski', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>6x Bass', 'Archiv', 'Kasten 8', 210806, NULL, NULL, NULL),
+(145, 'Das Glöckchen', 'M. Anzeff', 'Kruzianer', 'Aleksey Nikolayevich Tolstoy', NULL, 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Solist<br>1x Sopran<br>1x Alt', 'Archiv', 'Kasten 8', 200807, NULL, NULL, NULL),
+(146, 'Das Glöckchen', 'M. Anzeff', 'Kruzianer', 'Aleksey Nikolayevich Tolstoy', NULL, 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '9x Sopran<br>9x Alt', 'Archiv', 'Kasten 8', 210808, NULL, NULL, NULL),
+(147, 'Das grüne Rauschen', 'Pavel Grigorievich Chesnokov', 'Kruzianer', NULL, NULL, 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Alt', 'Archiv', 'Kasten 8', 200809, 'auch 2 misslungene Kopien', NULL, NULL);
