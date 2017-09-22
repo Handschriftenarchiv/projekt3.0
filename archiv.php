@@ -193,7 +193,7 @@ _idl.variant = "modal";
 				<div class="row">
 					<div class="col-sm-3 animate-box" data-animate-effect="fadeIn">
 						<div class="fh5co-staff">
-							<img class="img-responsive" src="images/archiv/doc/doc1.jpg" alt="Free HTML5 Templates by freeHTML5.co">
+							<img class="img-responsive" src="images/archiv/doc/doc1.jpg" alt="Screenschot 1">
 							<h3>Benutzungsantrag</h3>
 							<strong class="role"><a href="../verwaltung/dokumente/benutzungsantrag.pdf">Download [319 KB]</a></strong>
 							<p>Sie wollen das Archiv besuchen? Dann senden Sie dieses Formular ausgefüllt an handschriftenarchiv[at]<br>protonmail.com</p>
@@ -201,7 +201,7 @@ _idl.variant = "modal";
 					</div>
 					<div class="col-sm-3 animate-box" data-animate-effect="fadeIn">
 						<div class="fh5co-staff">
-							<img class="img-responsive" src="images/archiv/doc/doc2.jpg" alt="Free HTML5 Templates by freeHTML5.co">
+							<img class="img-responsive" src="images/archiv/doc/doc2.jpg" alt="Screenschot 2">
 							<h3>Benutzungsordnung</h3>
 							<strong class="role"><a href="../verwaltung/dokumente/benutzungsordnung.pdf">Download [220 KB]</a></strong>
 							<p>Die aktuelle Benutzungsordnung für das Handschriftenarchiv Dresdner Kreuzchor.</p>
@@ -209,7 +209,7 @@ _idl.variant = "modal";
 					</div>
 					<div class="col-sm-3 animate-box" data-animate-effect="fadeIn">
 						<div class="fh5co-staff">
-							<img class="img-responsive" src="images/archiv/doc/doc3.jpg" alt="Free HTML5 Templates by freeHTML5.co">
+							<img class="img-responsive" src="images/archiv/doc/doc3.jpg" alt="Screenschot 3">
 							<h3>Kostenordnung</h3>
 							<strong class="role"><a href="../verwaltung/dokumente/kostenordnung.pdf">Download [208 KB]</a></strong>
 							<p>Die aktuelle Kostenordnung für das Handschriftenarchiv Dresdner Kreuzchor.</p>
@@ -217,7 +217,7 @@ _idl.variant = "modal";
 					</div>
 					<div class="col-sm-3 animate-box" data-animate-effect="fadeIn">
 						<div class="fh5co-staff">
-							<img class="img-responsive" src="images/archiv/doc/doc4.jpg" alt="Free HTML5 Templates by freeHTML5.co">
+							<img class="img-responsive" src="images/archiv/doc/doc4.jpg" alt="Screenschot 4">
 							<h3>Regelung zur Nutzung von Archivalien</h3>
 							<strong class="role"><a href="../verwaltung/dokumente/regelung.pdf">Download [211 KB]</a></strong>
 							<p>Die aktuellen Regelung zur Nutzung von Archivalien für das Handschriftenarchiv Dresdner Kreuzchor.</p>
