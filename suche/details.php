@@ -101,7 +101,7 @@ if(empty($_GET['id'])){
 	 			 <ul>
 	 				 <li><a href="../index.php">Willkommen</a></li>
 	 				 <li><a href="../archiv.php">Archiv</a></li>
-	 				 <li><a href="../blog.php">Blog</a></li>
+	 				 <li><a href="..//blog/">Blog</a></li>
 	 				 <li><a href="../mediathek.php">Mediathek</a></li>
 	 				 <li><a href="/suche/">Datenbank</a></li>
 	 				 <li><a href="../impressum.php">Impressum</a></li>
