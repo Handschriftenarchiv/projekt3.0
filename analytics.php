@@ -1,5 +1,5 @@
 <?php
-include 'suche/misc.php';
+require_once 'suche/misc.php';
 
 view();
 
