@@ -33,36 +33,103 @@ function getPages(){
 
 function echoData(){
 	$con=dbCon();
-	$res=mysqli_query($con,"SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views FROM analytics GROUP BY page,dateCreated ORDER BY dateCreated,page ASC");
-	echo 'Tag';
-	$pages=getPages();
-	foreach($pages as $page){
-		echo ",$page";
-	}
-	echo '\n';
-	$date="";
-	while($dsatz=mysqli_fetch_assoc($res)){
-		if($dsatz['dateCreated']!=$date){
-			if(!empty($val)){
-				echo implode(',',$val).'\n';
+	$sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional FROM analytics ";
+	if(isset($_GET['archivalien'])){
+		$sql.="WHERE page='/suche/details.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
+		$res=mysqli_query($con,$sql);
+		echo 'Tag';
+		$val=array();
+		while($dsatz=mysqli_fetch_assoc($res)){
+			if(!array_key_exists($dsatz['additional'],$val)){
+				$val[$dsatz['additional']]="";
 			}
-			foreach($pages as $page){
-				$val[$page]=0;
-			}
-			$date=$dsatz['dateCreated'];
-			echo date('j/n/y',strtotime($date)).',';
 		}
-		$val[$dsatz['page']]=$dsatz['views'];
+		$sql="SELECT ID,Titel FROM archivalien WHERE ID=";
+		$sql.=implode(' OR ID=',array_keys($val));
+		$res2=mysqli_query($con,$sql);
+		$documents=array();
+		while($dsatz=mysqli_fetch_assoc($res)){
+			$documents[$dsatz['ID']]=$dsatz['Titel'];
+		}
+		echo implode(',',$documents);
+		mysqli_data_seek($res,0);
+		$date="";
+		while($dsatz=mysqli_fetch_assoc($res)){
+			if($dsatz['dateCreated']!=$date){
+				if(!empty($val)){
+					echo implode(',',$val).'\n';
+				}
+				foreach($documents as $s){
+					$val[$s]=0;
+				}
+				$date=$dsatz['dateCreated'];
+				echo date('j/n/y',strtotime($date)).',';
+			}
+			$val[$dsatz['additional']]=$dsatz['views'];
+		}
+	}elseif(isset($_GET['notfound'])){
+		$sql.="GROUP BY page,dateCreated ORDER BY dateCreated,page ASC";
+		$res=mysqli_query($con,$sql);
+		echo 'Tag';
+		// TODO
+	}else{
+		$sql.="GROUP BY page,dateCreated ORDER BY dateCreated,page ASC";
+		$res=mysqli_query($con,$sql);
+		echo 'Tag';
+		$pages=getPages();
+		foreach($pages as $page){
+			echo ",$page";
+		}
+		echo '\n';
+		$date="";
+		while($dsatz=mysqli_fetch_assoc($res)){
+			if($dsatz['dateCreated']!=$date){
+				if(!empty($val)){
+					echo implode(',',$val).'\n';
+				}
+				foreach($pages as $page){
+					$val[$page]=0;
+				}
+				$date=$dsatz['dateCreated'];
+				echo date('j/n/y',strtotime($date)).',';
+			}
+			$val[$dsatz['page']]=$dsatz['views'];
+		}
 	}
 	echo implode(',',$val);
 	mysqli_close($con);
 }
 
 function echoSeries(){
-	$pages=getPages();
 	echo '[';
-	foreach($pages as $page){
-		echo "{name:\"$page\"},";
+	if(isset($_GET['archivalien'])){
+		$sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional FROM analytics "
+			."WHERE page='/suche/details.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
+		$con=dbCon();
+		$res=mysqli_query($con,$sql);
+		$val=array();
+		while($dsatz=mysqli_fetch_assoc($res)){
+			if(!array_key_exists($dsatz['additional'],$val)){
+				$val[$dsatz['additional']]="";
+			}
+		}
+		$sql="SELECT ID,Titel FROM archivalien WHERE ID=";
+		$sql.=implode(' OR ID=',array_keys($val));
+		$res2=mysqli_query($con,$sql);
+		$documents=array();
+		while($dsatz=mysqli_fetch_assoc($res)){
+			$documents[$dsatz['ID']]=$dsatz['Titel'];
+		}
+		foreach ($documents as $s){
+			echo "{name:\"$s\"},";
+		}
+	}elseif(isset($_GET['notfound'])){
+		// TODO
+	}else{
+		$pages=getPages();
+		foreach($pages as $s){
+			echo "{name:\"$s\"},";
+		}
 	}
 	echo ']';
 }
