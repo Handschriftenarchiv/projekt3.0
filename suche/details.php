@@ -155,6 +155,7 @@ if(empty($_GET['id'])){
 										<h2>Details</h2>
 										<p class="fh5co-lead"><?php
 										if((int)$_GET['id']>0){
+											require_once "../analytics.php";
 											$res=mysqli_query($con,"SELECT * FROM archivalien WHERE ID=".$_GET['id']);
 											if(mysqli_num_rows($res)>0){
 												$dsatz=mysqli_fetch_assoc($res);
