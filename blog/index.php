@@ -1,5 +1,5 @@
 <?php
-require_once 'analytics.php';
+require_once '../analytics.php';
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -40,26 +40,26 @@ require_once 'analytics.php';
  <meta name="twitter:card" content="" />
 
  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
- <link rel="shortcut icon" href="favicon.ico">
+ <link rel="shortcut icon" href="../favicon.ico">
 
  <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
 
  <!-- Animate.css -->
- <link rel="stylesheet" href="css/animate.css">
+ <link rel="stylesheet" href="../css/animate.css">
  <!-- Icomoon Icon Fonts-->
- <link rel="stylesheet" href="css/icomoon.css">
+ <link rel="stylesheet" href="../css/icomoon.css">
  <!-- Bootstrap  -->
- <link rel="stylesheet" href="css/bootstrap.css">
+ <link rel="stylesheet" href="../css/bootstrap.css">
 
  <!-- Flexslider  -->
- <link rel="stylesheet" href="css/flexslider.css">
+ <link rel="stylesheet" href="../css/flexslider.css">
 
- <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="../css/style.css">
 
 
  <!-- Modernizr JS -->
- <script src="js/modernizr-2.6.2.min.js"></script>
+ <script src="../js/modernizr-2.6.2.min.js"></script>
  <!-- FOR IE9 below -->
  <!--[if lt IE 9]>
  <script src="js/respond.min.js"></script>
@@ -102,15 +102,15 @@ _idl.variant = "modal";
 	 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
 	 <div class="js-fullheight fh5co-table">
 		 <div class="fh5co-table-cell js-fullheight">
-			 <h1 class="text-center"><a class="fh5co-logo" href="index.php">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
+			 <h1 class="text-center"><a class="fh5co-logo" href="../index.php">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
 			 <ul>
-				 <li><a href="index.php">Willkommen</a></li>
-				 <li><a href="archiv.php">Archiv</a></li>
-				 <li><a href="blog.php">Blog</a></li>
-				 <li><a href="mediathek.php">Mediathek</a></li>
-				 <li><a href="/suche/">Datenbank</a></li>
-				 <li><a href="impressum.php">Impressum</a></li>
-				 <li><a href="kontakt.php">Kontakt</a></li>
+				 <li><a href="../index.php">Willkommen</a></li>
+				 <li><a href="../archiv.php">Archiv</a></li>
+				 <li><a href="../blog.php">Blog</a></li>
+				 <li><a href="../mediathek.php">Mediathek</a></li>
+				 <li><a href="../suche/">Datenbank</a></li>
+				 <li><a href="../impressum.php">Impressum</a></li>
+				 <li><a href="../kontakt.php">Kontakt</a></li>
 			 </ul>
 			 <p class="fh5co-social-icon">
 				 <a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
@@ -131,7 +131,7 @@ _idl.variant = "modal";
 			 <div class="fh5co-navbar-brand">
 				 <div class="row">
 					 <div class="col-xs-6">
-						 <h1 class="text-left"><a class="fh5co-logo" href="index.php"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
+						 <h1 class="text-left"><a class="fh5co-logo" href="../index.php"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
 					 </div>
 					 <div class="col-xs-6">
 						 <!--<p class="fh5co-social-icon text-right">
@@ -152,7 +152,7 @@ _idl.variant = "modal";
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(images/blog/start.jpg);">
+			   	<li style="background-image: url(../images/blog/start.jpg);">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
@@ -177,7 +177,7 @@ _idl.variant = "modal";
 						<div class="row">
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="/behance.php"><img class="img-responsive" src="images/blog/behance/1.jpg" alt="Behance-Profil Screenshot"></a>
+									<a href="/behance.php"><img class="img-responsive" src="../images/blog/behance/1.jpg" alt="Behance-Profil Screenshot"></a>
 									<div class="blog-text">
 										<span class="posted_on">05 Aug. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
@@ -188,7 +188,7 @@ _idl.variant = "modal";
 							</div>
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="/gunter-gross.php"><img class="img-responsive" src="images/blog/gross/1.jpg" alt="Gunter Gross beim Notenschreiben"></a>
+									<a href="/gunter-gross.php"><img class="img-responsive" src="../images/blog/gross/1.jpg" alt="Gunter Gross beim Notenschreiben"></a>
 									<div class="blog-text">
 										<span class="posted_on">29. Jul. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i>Gunter Gross</span>
@@ -203,7 +203,7 @@ _idl.variant = "modal";
 						<div class="row">
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="/ratser-liste.php"><img class="img-responsive" src="images/blog/liste/1.svg" alt="Illustration Ratserliste"></a>
+									<a href="/ratser-liste.php"><img class="img-responsive" src="../images/blog/liste/1.svg" alt="Illustration Ratserliste"></a>
 									<div class="blog-text">
 										<span class="posted_on">18 Aug. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar, Wissneschaftliche Mitarbeiter</span>
@@ -215,7 +215,7 @@ _idl.variant = "modal";
 
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="#"><img class="img-responsive" src="images/blog/platz.jpg" alt=""></a>
+									<a href="#"><img class="img-responsive" src="../images/blog/platz.jpg" alt=""></a>
 									<div class="blog-text">
 										<span class="posted_on">18. Sep. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
@@ -230,7 +230,7 @@ _idl.variant = "modal";
 						<div class="row">
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="#"><img class="img-responsive" src="images/blog/platz.jpg" alt=""></a>
+									<a href="#"><img class="img-responsive" src="../images/blog/platz.jpg" alt=""></a>
 									<div class="blog-text">
 										<span class="posted_on">18. Sep. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
@@ -241,7 +241,7 @@ _idl.variant = "modal";
 							</div>
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="#"><img class="img-responsive" src="images/blog/platz.jpg" alt=""></a>
+									<a href="#"><img class="img-responsive" src="../images/blog/platz.jpg" alt=""></a>
 									<div class="blog-text">
 										<span class="posted_on">Nov. 15th</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
@@ -257,7 +257,7 @@ _idl.variant = "modal";
 		</div>
 
 
-	<div class="fh5co-counters" style="background-image: url(images/blog/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
+	<div class="fh5co-counters" style="background-image: url(../images/blog/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
 			<div class="fh5co-narrow-content animate-box">
 				<div class="row" >
 					<div class="col-md-4 text-center">
@@ -287,24 +287,24 @@ _idl.variant = "modal";
 						<div class="col-md-3 col-md-push-1">
 							<h3 class="section-title">Links</h3>
 							<ul>
-								<li><a href="index.php">Willkommen</a></li>
-								<li><a href="archiv.php">Archiv</a></li>
-								<li><a href="blog.php">Blog</a></li>
-								<li><a href="mediathek.php">Mediathek</a></li>
-								<li><a href="/suche/">Datenbank</a></li>
-								<li><a href="impressum.php">Impressum</a></li>
-								<li><a href="kontakt.php">Kontakt</a></li>
+								<li><a href="../index.php">Willkommen</a></li>
+								<li><a href="../archiv.php">Archiv</a></li>
+								<li><a href="../blog.php">Blog</a></li>
+								<li><a href="../mediathek.php">Mediathek</a></li>
+								<li><a href="../suche/">Datenbank</a></li>
+								<li><a href="../impressum.php">Impressum</a></li>
+								<li><a href="../kontakt.php">Kontakt</a></li>
 							</ul>
 						</div>
 
 						<div class="col-md-3">
 							<h3 class="section-title">Mitglied</h3>
 							<p>
-							<a href=https://www.deutsche-digitale-bibliothek.de/about-us/institutions/item/PXYIJUCJ654QX5KHG6E34VNE3UG3IXR2?query=Handschriftenarchiv+Dresdner+Kreuzchor target="_blank"><img src=images/ddb.png alt="Mitglied der Deutschen Digitalen Bibliothek" width=216 height=100 /></a>
+							<a href=https://www.deutsche-digitale-bibliothek.de/about-us/institutions/item/PXYIJUCJ654QX5KHG6E34VNE3UG3IXR2?query=Handschriftenarchiv+Dresdner+Kreuzchor target="_blank"><img src=../images/ddb.png alt="Mitglied der Deutschen Digitalen Bibliothek" width=216 height=100 /></a>
 						</div>
 						<div class="col-md-3">
 							<h3 class="section-title">Handschriftenarchiv 3.0</h3>
-							<img src="images/wrapper-img.gif" width=231 height=130>
+							<img src="../images/wrapper-img.gif" width=231 height=130>
 							<!--<form class="form-inline" id="fh5co-header-subscribe">
 								<div class="row">
 									<div class="col-md-12 col-md-offset-0">
@@ -329,7 +329,7 @@ _idl.variant = "modal";
 								<a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
 							</p>
 							<p>Copyright 2016 Handschriftenarchiv Dresdner Kreuzchor <a href="/impressum.php">Impressum</a> All Rights Reserved. </p>
-							<span class="notranslate" onmouseover="_tipon(this)" onmouseout="_tipoff()"><span class="google-src-text" style="direction: ltr; text-align: left"><a href=https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=de&ie=UTF8&prev=_t&rurl=translate.google.de&sl=en&sp=nmt4&tl=de&u=https://internetdefenseleague.org/&usg=ALkJrhjDQg4VshLY48zmtw4d205QQxxxMg target="_blank"><img src=images/internet.png alt="Mitglied in der Internet Defense League" width=115 height=115/></a></span>
+							<span class="notranslate" onmouseover="_tipon(this)" onmouseout="_tipoff()"><span class="google-src-text" style="direction: ltr; text-align: left"><a href=https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=de&ie=UTF8&prev=_t&rurl=translate.google.de&sl=en&sp=nmt4&tl=de&u=https://internetdefenseleague.org/&usg=ALkJrhjDQg4VshLY48zmtw4d205QQxxxMg target="_blank"><img src=../images/internet.png alt="Mitglied in der Internet Defense League" width=115 height=115/></a></span>
 						</div>
 					</div>
 				</div>
@@ -339,19 +339,19 @@ _idl.variant = "modal";
 	</div>
 
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="../js/jquery.waypoints.min.js"></script>
 	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
+	<script src="../js/jquery.countTo.js"></script>
 	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="../js/jquery.flexslider-min.js"></script>
 
 	<!-- Main JS (Do not remove) -->
-	<script src="js/main.js"></script>
+	<script src="../js/main.js"></script>
 	</body>
 </html>
