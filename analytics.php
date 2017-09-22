@@ -12,9 +12,9 @@ function view(){
 	}
 	$sql.=")VALUES('$page'";
 	if(stripos($page,'not-found.php')>-1){
-		$sql.="'$_SERVER[REQUEST_URI]'";
+		$sql.=",'$_SERVER[REQUEST_URI]'";
 	}elseif(stripos($page,'details.php')>-1){
-		$sql.="'$_GET[id]'";
+		$sql.=",'$_GET[id]'";
 	}
 	$sql.=')';
 	mysqli_query($con,$sql);
@@ -35,23 +35,52 @@ function echoData(){
 	$con=dbCon();
 	$sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional FROM analytics ";
 	if(isset($_GET['archivalien'])){
-		$sql.="WHERE page='/suche/details.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
+		$sql.="WHERE page like '%/details.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
 		$res=mysqli_query($con,$sql);
+		$resx=mysqli_store_result($con);
 		echo 'Tag';
-		$val=array();
+		$documents=array();
 		while($dsatz=mysqli_fetch_assoc($res)){
-			if(!array_key_exists($dsatz['additional'],$val)){
-				$val[$dsatz['additional']]="";
+			if(!array_key_exists($dsatz['additional'],$documents)){
+				$documents[$dsatz['additional']]="";
 			}
 		}
 		$sql="SELECT ID,Titel FROM archivalien WHERE ID=";
-		$sql.=implode(' OR ID=',array_keys($val));
+		$sql.=implode(' OR ID=',array_keys($documents));
 		$res2=mysqli_query($con,$sql);
-		$documents=array();
-		while($dsatz=mysqli_fetch_assoc($res)){
+		while($dsatz=mysqli_fetch_assoc($res2)){
 			$documents[$dsatz['ID']]=$dsatz['Titel'];
 		}
-		echo implode(',',$documents);
+		echo ','.implode(',',$documents).'\n';
+		mysqli_data_seek($res,0);
+		$date="";
+		while($dsatz=mysqli_fetch_assoc($res)){
+			if($dsatz['dateCreated']!=$date){
+				if(!empty($val)){
+					echo implode(',',$val).'\n';
+				}
+				foreach($documents as $s){
+					$val[$s]=0;
+				}
+				$date=$dsatz['dateCreated'];
+				echo date('j/n/y',strtotime($date)).',';
+			}
+			$val[$documents[$dsatz['additional']]]=$dsatz['views'];
+		}
+		echo implode(',',$val);
+	}elseif(isset($_GET['notfound'])){
+		$sql.="WHERE page like '%/not-found.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
+		$res=mysqli_query($con,$sql);
+		echo 'Tag';
+		// TODO
+		$documents=array();
+		while($dsatz=mysqli_fetch_assoc($res)){
+			if(!in_array($dsatz['additional'],$documents)){
+				$documents[]=$dsatz['additional'];
+				echo ','.$dsatz['additional'];
+			}
+		}
+		echo '\n';
 		mysqli_data_seek($res,0);
 		$date="";
 		while($dsatz=mysqli_fetch_assoc($res)){
@@ -67,11 +96,7 @@ function echoData(){
 			}
 			$val[$dsatz['additional']]=$dsatz['views'];
 		}
-	}elseif(isset($_GET['notfound'])){
-		$sql.="GROUP BY page,dateCreated ORDER BY dateCreated,page ASC";
-		$res=mysqli_query($con,$sql);
-		echo 'Tag';
-		// TODO
+		echo implode(',',$val);
 	}else{
 		$sql.="GROUP BY page,dateCreated ORDER BY dateCreated,page ASC";
 		$res=mysqli_query($con,$sql);
@@ -95,8 +120,8 @@ function echoData(){
 			}
 			$val[$dsatz['page']]=$dsatz['views'];
 		}
+		echo implode(',',$val);
 	}
-	echo implode(',',$val);
 	mysqli_close($con);
 }
 
