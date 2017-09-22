@@ -133,14 +133,6 @@ _idl.variant = "modal";
 						<div class="col-xs-6">
 							<h1 class="text-left"><a class="fh5co-logo" href="index.php"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
 						</div>
-						<div class="col-xs-6">
-							<p class="fh5co-social-icon text-right">
-								<a href="https://twitter.com/NotenarchivDKC"><i class="icon-twitter2"></i></a>
-								<a href="https://issuu.com/hsa6"><i class="icon-book"></i></a>
-								<a href="https://vimeo.com/handschriftenarchiv"><i class="icon-vimeo"></i></a>
-								<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"><i class="icon-youtube"></i></a>
-							</p>
-						</div>
 					</div>
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 				</div>
