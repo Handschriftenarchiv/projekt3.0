@@ -149,7 +149,7 @@ _idl.variant = "modal";
 			   					<div class="desc">
 			   						<span>interner Fehler:</span>
 			   						<h2>Seite nicht gefunden</h2>
-			   						<p>Es tut uns leid, aber wir konnten "<?php echo $_SERVER['REQUEST_URI']; ?>" leider nicht finden. Versuchen Sie es mit Links aus dem Menü</p>
+			   						<p>Es tut uns leid, aber wir konnten die von Ihnen gewünschte Seite <!-- "<?php echo $_SERVER['REQUEST_URI']; ?>" -->leider nicht finden. Versuchen Sie es mit Links aus dem Menü</p>
 			   					</div>
 			   				</div>
 			   			</div>
