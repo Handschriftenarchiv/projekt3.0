@@ -11,6 +11,7 @@ require_once '../analytics.php';
 		<script src="highcharts-data.js"></script>
 
 		<div id="chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
 
 		<script>
 			Highcharts.chart('chart',{
@@ -80,5 +81,49 @@ require_once '../analytics.php';
 				series: <?php echoSeries(); ?>
 			});
 		</script>
+		<style>
+		body {
+		  font-family: "Karla", Arial, sans-serif;
+		  line-height: 1.8;
+		  font-size: 20px;
+		  background: #f0f0f0;
+		  background-image: url(images/photography.png);
+		  font-weight: 300;
+		  overflow-x: hidden;
+		}
+		p, span {
+		  margin-bottom: 1.5em;
+		  font-size: 18px;
+		  color: #929292;
+		  font-weight: 300;
+		  font-family: "Karla", Arial, sans-serif;
+			text-decoration: none;
+			text-underline: none;
+		}
+		a {
+		  color: #5c5c5c;
+		  -webkit-transition: 0.5s;
+		  -o-transition: 0.5s;
+		  transition: 0.5s;
+			text-decoration: none;
+			text-underline: none;
+		}
+		a:hover {
+		  color: #000000;
+			text-decoration: none;
+			text-underline: none;
+		}
+		a:focus, a:active {
+		  outline: none;
+			text-decoration: none;
+			text-underline: none;
+		}
+		</style>
+		<center>
+		<p>
+		<a href="../index.php">Zurück zur Startseite</a><br>
+		<a href="index.php">Zurück zum Verwaltungsportal</a>
+	</p>
+</center>
 	</body>
 </html>
