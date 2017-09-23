@@ -176,17 +176,48 @@ _idl.variant = "modal";
 					<div class="col-md-3 col-md-push-1 animate-box">
 						<h3>Fehler-Kategorien</h3>
 						<ul class="contact-info">
-							<li><i class="icon-database"></i>Datenbankeintrag</li>
-							<li><i class="icon-pencil2"></i>Rechtschreibung</li>
-							<li><i class="icon-cog"></i>Fehlerhafte Funktion</li>
-							<li><i class="icon-circle"></i>Sonstige Fehler</li>
+							<style>
+								.toggle + label{
+									transition:color .5s;
+									color:#929292;
+								}
+								input.toggle:checked + label{
+									color:green;
+								}
+								.toggle + label>i::before{
+									transition:color .5s;
+									color:#929292;
+								}
+								input.toggle:checked + label>i::before{
+									color:green;
+								}
+							</style>
+							<li>
+								<input type="radio" style="display:none;" class="toggle" id="db" name="type" value="Datenbank"/>
+								<label for="db"><i class="icon-database"></i>Datenbankeintrag</label>
+							</li>
+							<li>
+								<input type="radio" style="display:none;" class="toggle" id="gram" name="type" value="Grammatik"/>
+								<label for="gram"><i class="icon-pencil2"></i>Rechtschreibung</label>
+							</li>
+							<li>
+								<input type="radio" style="display:none;" class="toggle" id="func" name="type" value="fehlerhafte Funktion"/>
+								<label for="func"><i class="icon-cog"></i>fehlerhafte Funktion</label>
+							</li>
+							<li>
+								<input type="radio" style="display:none;" class="toggle" id="misc" name="type" value="sonstiger Fehler"/>
+								<label for="misc"><i class="icon-bug"></i>sonstiger Fehler</label>
+							</li>
 						</ul>
 					</div>
 					<div class="col-md-7 col-md-push-1 animate-box">
 						<?php
-						$valid=!empty($_POST['location'])&&filter_var($_POST['location']);
+						$process=isset($_POST['location']);
+						$valid_location=!empty($_POST['location']);
+						$valid_mail=!empty($_POST['email'])&&filter_var($_POST['email'],FILTER_VALIDATE_EMAIL);
+						$valid=$valid_location&&$valid_mail;
 						if($process&&$valid){
-							$header="From: \"".str_replace('"',"",$_POST[name])."\" <$_POST[email]>\nContent-Type: text/plain\n";
+							$header="From: \"".str_replace(array('"',"'"),"",$_POST['name'])."\"<$_POST[email]>\nContent-Type: text/plain\n";
 							if(mail('handschriftenarchiv@protonmail.com','Fehlermeldung Kontakt - Handschriftenarchiv Dresdner Kreuzchor',$_POST['text'],$header)){
 								echo "<p>Der Fehler wurde gemeldet.</p>";
 								$mail=true;
@@ -202,22 +233,27 @@ _idl.variant = "modal";
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Fehlerkategorie" name="category" <?php if(isset($_POST['name'])){echo " value=\"$_POST[name]\"";}?>>
+										<input type="email" class="form-control" placeholder="Name (optional)" name="name" <?php if(isset($_POST['name'])){echo " value=\"$_POST[name]\"";}?>/>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Wo?" name="location" <?php if(isset($_POST['location'])){echo " value=\"$_POST[location]\"";}?>>
+										<input type="email" class="form-control" placeholder="E-Mail-Adresse (optional)" name="email" <?php if(isset($_POST['email'])){echo " value=\"$_POST[email]\"";}?>/>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea name="text" class="form-control" id="" cols="30" rows="7" placeholder="Fehler-Beschreibung" <?php if(isset($_POST['name'])){echo " value=\"$_POST[name]\"";}?>></textarea>
+										<input type="text" class="form-control" placeholder="Wo?" name="location" <?php if(isset($_POST['location'])){echo " value=\"$_POST[location]\"";}?>/>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<input type="submit" value="Fehler melden" class="btn btn-primary">
+										<textarea name="text" class="form-control" cols="30" rows="7" placeholder="Beschreibung des Fehlers"><?php if(isset($_POST['text'])){echo $_POST['text'];}?></textarea>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<button type="submit" class="btn btn-primary">Fehler melden</button>
 									</div>
 								</div>
 							</div>
@@ -259,16 +295,6 @@ _idl.variant = "modal";
 						<div class="col-md-3">
 							<h3 class="section-title">Handschriftenarchiv 3.0</h3>
 							<img src="../images/wrapper-img.gif" width=231 height=130>
-							<!--<form class="form-inline" id="fh5co-header-subscribe">
-								<div class="row">
-									<div class="col-md-12 col-md-offset-0">
-										<div class="form-group">
-											<input type="text" class="form-control" id="email" placeholder="Enter your email">
-											<button type="submit" class="btn btn-default"><i class="icon-paper-plane"></i></button>
-										</div>
-									</div>
-								</div>
-							</form>-->
 						</div>
 					</div>
 					<div class="row copy-right">
