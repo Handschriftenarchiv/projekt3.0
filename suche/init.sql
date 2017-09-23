@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `archivalien` (
   `Anzahl` varchar(255) NOT NULL,
   `Sammlung` enum('Introitensammlung','Archiv') NOT NULL DEFAULT 'Archiv',
   `Standort` varchar(50) NOT NULL,
-  `Signatur` int(6) NOT NULL,
+  `Signatur` int(6) NOT NULL UNIQUE,
   `Bemerkungen` text,
   `Audiolink` varchar(255) DEFAULT NULL,
   `Dokumentlink` varchar(255) DEFAULT NULL,
