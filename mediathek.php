@@ -173,7 +173,25 @@ _idl.variant = "modal";
 		<div id="fh5co-about">
 			<div class="container">
 				<div align="center">
-							<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 60%; height: 60%; }</style><div class='embed-container'><iframe src='http://player.vimeo.com/video/225288372?color=ffffff' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+							<style>
+							.embed-container {
+								position: relative;
+								padding-bottom: 56.25%;
+								height: 0;
+								overflow: hidden;
+								max-width: 100%;
+								}
+								.embed-container iframe, .embed-container object, .embed-container embed {
+									position: absolute;
+									top: 0;
+									left: 0;
+									width: 60%;
+									height: 60%;
+									}
+									</style>
+									<div class='embed-container' align="center">
+										<center><iframe src='http://player.vimeo.com/video/225288372?color=ffffff' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen align="center"></iframe></center>
+									</div>
 							<blockquote><p>
 								Das Projekt 3.0: Eine &raquo;Zur&uuml;ckbesinnung&laquo; auf den Kern des Archives. Mit neuer Webumgebung, durchsuchbarer Datenbank und regelm&auml;&szlig;igen Blogeintr&auml;gen. Der Imagefilm stellt das neu ver&ouml;ffentlichte Pilotprojekt des Handschriftenarchivs vor. <br> [Musik: Into the Light / Lizenzfreie Musik / www.EverMusic.de]
 							</p></blockquote><br><br>
