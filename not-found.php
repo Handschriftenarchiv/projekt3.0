@@ -40,26 +40,26 @@ require_once 'analytics.php';
  <meta name="twitter:card" content="" />
 
  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
- <link rel="shortcut icon" href="favicon.ico">
+ <link rel="shortcut icon" href="/favicon.ico">
 
  <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
 
  <!-- Animate.css -->
- <link rel="stylesheet" href="css/animate.css">
+ <link rel="stylesheet" href="/css/animate.css">
  <!-- Icomoon Icon Fonts-->
- <link rel="stylesheet" href="css/icomoon.css">
+ <link rel="stylesheet" href="/css/icomoon.css">
  <!-- Bootstrap  -->
- <link rel="stylesheet" href="css/bootstrap.css">
+ <link rel="stylesheet" href="/css/bootstrap.css">
 
  <!-- Flexslider  -->
- <link rel="stylesheet" href="css/flexslider.css">
+ <link rel="stylesheet" href="/css/flexslider.css">
 
- <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="/css/style.css">
 
 
  <!-- Modernizr JS -->
- <script src="js/modernizr-2.6.2.min.js"></script>
+ <script src="/js/modernizr-2.6.2.min.js"></script>
  <!-- FOR IE9 below -->
  <!--[if lt IE 9]>
  <script src="js/respond.min.js"></script>
@@ -104,13 +104,13 @@ _idl.variant = "modal";
 		 <div class="fh5co-table-cell js-fullheight">
 			 <h1 class="text-center"><a class="fh5co-logo" href="index.php">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
 			 <ul>
-				 <li><a href="index.php">Willkommen</a></li>
-				 <li><a href="archiv.php">Archiv</a></li>
+				 <li><a href="/index.php">Willkommen</a></li>
+				 <li><a href="/archiv.php">Archiv</a></li>
 				 <li><a href="/blog/">Blog</a></li>
-				 <li><a href="mediathek.php">Mediathek</a></li>
+				 <li><a href="/mediathek.php">Mediathek</a></li>
 				 <li><a href="/suche/">Datenbank</a></li>
-				 <li><a href="impressum.php">Impressum</a></li>
-				 <li><a href="kontakt.php">Kontakt</a></li>
+				 <li><a href="/impressum.php">Impressum</a></li>
+				 <li><a href="/kontakt.php">Kontakt</a></li>
 			 </ul>
 			 <p class="fh5co-social-icon">
 				 <a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
@@ -220,19 +220,19 @@ _idl.variant = "modal";
 </div>
 
 <!-- jQuery -->
-<script src="js/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
 <!-- jQuery Easing -->
-<script src="js/jquery.easing.1.3.js"></script>
+<script src="/js/jquery.easing.1.3.js"></script>
 <!-- Bootstrap -->
-<script src="js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <!-- Waypoints -->
-<script src="js/jquery.waypoints.min.js"></script>
+<script src="/js/jquery.waypoints.min.js"></script>
 <!-- Counters -->
-<script src="js/jquery.countTo.js"></script>
+<script src="/js/jquery.countTo.js"></script>
 <!-- Flexslider -->
-<script src="js/jquery.flexslider-min.js"></script>
+<script src="/js/jquery.flexslider-min.js"></script>
 
 <!-- Main JS (Do not remove) -->
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>
