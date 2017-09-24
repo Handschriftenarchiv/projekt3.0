@@ -678,7 +678,7 @@ header .fh5co-navbar-brand .fh5co-social-icon a {
   width: 65%;
   margin-bottom: 5em;
   min-height: 700px;
-  background: #fff url(../images/loader.gif) no-repeat center center;
+  /*background: #fff url(../images/loader.gif) no-repeat center center;*/
   z-index: 1;
 }
 @media screen and (max-width: 992px) {
