@@ -4,7 +4,6 @@ require_once 'suche/misc.php';
 view();
 
 function view(){
-	$con=dbCon();
 	$page=$_SERVER['SCRIPT_NAME'];
 	$sql='INSERT INTO analytics(`page`';
 	if(stripos($page,'not-found.php')>-1||stripos($page,'details.php')>-1){
@@ -17,6 +16,7 @@ function view(){
 		$sql.=",'$_GET[id]'";
 	}
 	$sql.=')';
+	$con=dbCon();
 	mysqli_query($con,$sql);
 	mysqli_close($con);
 }
@@ -24,20 +24,38 @@ function view(){
 function getPages(){
 	$con=dbCon();
 	$res=mysqli_query($con,"SELECT page FROM analytics GROUP BY page ORDER BY page ASC");
+	mysqli_close($con);
 	while($dsatz=mysqli_fetch_assoc($res)){
 		$val[]=$dsatz['page'];
 	}
-	mysqli_close($con);
 	return $val;
 }
 
-function echoData(){
+function hasData(){
+	global $analytics_sql;
 	$con=dbCon();
 	if(isset($_GET['archivalien'])){
-		$sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional,Titel FROM analytics "
+		$analytics_sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional,Titel FROM analytics "
 			."LEFT JOIN archivalien ON analytics.additional = archivalien.ID WHERE page like '%/details.php' "
 			."GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
-		$res=mysqli_query($con,$sql);
+	}elseif(isset($_GET['notfound'])){
+		$analytics_sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional FROM analytics "
+			."WHERE page like '%/not-found.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
+	}else{
+		$analytics_sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views FROM analytics "
+			."GROUP BY page,dateCreated ORDER BY dateCreated,page ASC";
+	}
+	$data=mysqli_num_rows(mysqli_query($con,$analytics_sql));
+	mysqli_close($con);
+}
+
+function echoData(){
+	global $analytics_sql; // set in hasData()
+	$con=dbCon();
+	if(isset($_GET['archivalien'])){
+		$res=mysqli_query($con,$analytics_sql);
+		if(mysqli_num_rows($res)==0)
+			return; // keine Daten
 		$resx=mysqli_store_result($con);
 		echo 'Tag';
 		while($dsatz=mysqli_fetch_assoc($res)){
@@ -61,9 +79,9 @@ function echoData(){
 		}
 		echo implode(',',$val);
 	}elseif(isset($_GET['notfound'])){
-		$sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional FROM analytics "
-			."WHERE page like '%/not-found.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
-		$res=mysqli_query($con,$sql);
+		$res=mysqli_query($con,$analytics_sql);
+		if(mysqli_num_rows($res)==0)
+			return; // keine Daten
 		echo 'Tag';
 		$documents=array();
 		while($dsatz=mysqli_fetch_assoc($res)){
@@ -90,9 +108,9 @@ function echoData(){
 		}
 		echo implode(',',$val);
 	}else{
-		$sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views FROM analytics"
-			."GROUP BY page,dateCreated ORDER BY dateCreated,page ASC";
-		$res=mysqli_query($con,$sql);
+		$res=mysqli_query($con,$analytics_sql);
+		if(mysqli_num_rows($res)==0)
+			return; // keine Daten
 		echo 'Tag';
 		$pages=getPages();
 		foreach($pages as $page){

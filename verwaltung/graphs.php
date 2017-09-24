@@ -5,8 +5,46 @@ require_once '../analytics.php';
 	<head>
 		<meta charset="utf-8">
 		<title>Auswertung Web-Traffic</title>
+		<style>
+		body {
+			font-family: "Karla", Arial, sans-serif;
+			line-height: 1.8;
+			font-size: 20px;
+			background: #f0f0f0;
+			font-weight: 300;
+			overflow-x: hidden;
+		}
+		p, span {
+			margin-bottom: 1.5em;
+			font-size: 18px;
+			color: #929292;
+			font-weight: 300;
+			font-family: "Karla", Arial, sans-serif;
+			text-decoration: none;
+			text-underline: none;
+		}
+		a {
+			color: #5c5c5c;
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+			text-decoration: none;
+			text-underline: none;
+		}
+		a:hover {
+			color: #000000;
+			text-decoration: none;
+			text-underline: none;
+		}
+		a:focus, a:active {
+			outline: none;
+			text-decoration: none;
+			text-underline: none;
+		}
+		</style>
 	</head>
 	<body>
+		<?php if(!hasData()){ ?>
 		<script src="highcharts.js"></script>
 		<script src="highcharts-data.js"></script>
 
@@ -81,58 +119,23 @@ require_once '../analytics.php';
 				series: <?php echoSeries(); ?>
 			});
 		</script>
-		<style>
-		body {
-		  font-family: "Karla", Arial, sans-serif;
-		  line-height: 1.8;
-		  font-size: 20px;
-		  background: #f0f0f0;
-		  background-image: url(images/photography.png);
-		  font-weight: 300;
-		  overflow-x: hidden;
-		}
-		p, span {
-		  margin-bottom: 1.5em;
-		  font-size: 18px;
-		  color: #929292;
-		  font-weight: 300;
-		  font-family: "Karla", Arial, sans-serif;
-			text-decoration: none;
-			text-underline: none;
-		}
-		a {
-		  color: #5c5c5c;
-		  -webkit-transition: 0.5s;
-		  -o-transition: 0.5s;
-		  transition: 0.5s;
-			text-decoration: none;
-			text-underline: none;
-		}
-		a:hover {
-		  color: #000000;
-			text-decoration: none;
-			text-underline: none;
-		}
-		a:focus, a:active {
-		  outline: none;
-			text-decoration: none;
-			text-underline: none;
-		}
-		</style>
+	<?php }else{ ?>
+		<h3>keine Daten</h3>
+	<?php } ?>
 		<center>
-		<p>
-		<a href="../index.php">Zurück zur Startseite</a><br>
-		<a href="index.php">Zurück zum Verwaltungsportal</a><br>
-		<?php if(isset($_GET['archivalien'])||isset($_GET['notfound'])){ ?>
-		<a href="graphs.php">Seitenzugriffe</a><br>
-		<?php }
-		if(!isset($_GET['notfound'])){ ?>
-		<a href="graphps.php?notfound">nicht gefundene Dokumente</a><br>
-		<?php }
-		if(!isset($_GET['archivalien'])){ ?>
-		<a href="graphs.php?archivalien">Zugriffe auf den Katalog</a>
-		<?php } ?>
-	</p>
-</center>
+			<p>
+				<a href="../index.php">Zurück zur Startseite</a><br>
+				<a href="index.php">Zurück zum Verwaltungsportal</a><br>
+				<?php if(isset($_GET['archivalien'])||isset($_GET['notfound'])){ ?>
+				<a href="graphs.php">Seitenzugriffe</a><br>
+				<?php }
+				if(!isset($_GET['notfound'])){ ?>
+				<a href="graphps.php?notfound">nicht gefundene Dokumente</a><br>
+				<?php }
+				if(!isset($_GET['archivalien'])){ ?>
+				<a href="graphs.php?archivalien">Zugriffe auf den Katalog</a>
+				<?php } ?>
+			</p>
+		</center>
 	</body>
 </html>
