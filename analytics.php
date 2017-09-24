@@ -33,23 +33,15 @@ function getPages(){
 
 function echoData(){
 	$con=dbCon();
-	$sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional FROM analytics ";
 	if(isset($_GET['archivalien'])){
-		$sql.="WHERE page like '%/details.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
+		$sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional,Titel FROM analytics "
+			."LEFT JOIN archivalien ON analytics.additional = archivalien.ID WHERE page like '%/details.php' "
+			."GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
 		$res=mysqli_query($con,$sql);
 		$resx=mysqli_store_result($con);
 		echo 'Tag';
-		$documents=array();
 		while($dsatz=mysqli_fetch_assoc($res)){
-			if(!array_key_exists($dsatz['additional'],$documents)){
-				$documents[$dsatz['additional']]="";
-			}
-		}
-		$sql="SELECT ID,Titel FROM archivalien WHERE ID=";
-		$sql.=implode(' OR ID=',array_keys($documents));
-		$res2=mysqli_query($con,$sql);
-		while($dsatz=mysqli_fetch_assoc($res2)){
-			$documents[$dsatz['ID']]=$dsatz['Titel'];
+			$documents[$dsatz['additional']]=$dsatz['Titel'];
 		}
 		echo ','.implode(',',$documents).'\n';
 		mysqli_data_seek($res,0);
@@ -59,20 +51,20 @@ function echoData(){
 				if(!empty($val)){
 					echo implode(',',$val).'\n';
 				}
-				foreach($documents as $s){
-					$val[$s]=0;
+				foreach(array_keys($documents) as $key){
+					$val[$key]=0;
 				}
 				$date=$dsatz['dateCreated'];
 				echo date('j/n/y',strtotime($date)).',';
 			}
-			$val[$documents[$dsatz['additional']]]=$dsatz['views'];
+			$val[$dsatz['additional']]=$dsatz['views'];
 		}
 		echo implode(',',$val);
 	}elseif(isset($_GET['notfound'])){
-		$sql.="WHERE page like '%/not-found.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
+		$sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional FROM analytics "
+			."WHERE page like '%/not-found.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
 		$res=mysqli_query($con,$sql);
 		echo 'Tag';
-		// TODO
 		$documents=array();
 		while($dsatz=mysqli_fetch_assoc($res)){
 			if(!in_array($dsatz['additional'],$documents)){
@@ -98,7 +90,8 @@ function echoData(){
 		}
 		echo implode(',',$val);
 	}else{
-		$sql.="GROUP BY page,dateCreated ORDER BY dateCreated,page ASC";
+		$sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views FROM analytics"
+			."GROUP BY page,dateCreated ORDER BY dateCreated,page ASC";
 		$res=mysqli_query($con,$sql);
 		echo 'Tag';
 		$pages=getPages();
