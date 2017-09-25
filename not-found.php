@@ -141,7 +141,7 @@ _idl.variant = "modal";
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(images/404.svg);">
+			   	<li style="background-image: url(/images/404.svg);">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
@@ -181,11 +181,11 @@ _idl.variant = "modal";
 					<div class="col-md-3">
 						<h3 class="section-title">Mitglied</h3>
 						<p>
-						<a href=https://www.deutsche-digitale-bibliothek.de/about-us/institutions/item/PXYIJUCJ654QX5KHG6E34VNE3UG3IXR2?query=Handschriftenarchiv+Dresdner+Kreuzchor target="_blank"><img src=images/ddb.png alt="Mitglied der Deutschen Digitalen Bibliothek" width=216 height=100 /></a>
+						<a href="https://www.deutsche-digitale-bibliothek.de/about-us/institutions/item/PXYIJUCJ654QX5KHG6E34VNE3UG3IXR2?query=Handschriftenarchiv+Dresdner+Kreuzchor" target="_blank"><img src="/images/ddb.png" alt="Mitglied der Deutschen Digitalen Bibliothek" width=216 height=100 /></a>
 					</div>
 					<div class="col-md-3">
 						<h3 class="section-title">Handschriftenarchiv 3.0</h3>
-						<img src="images/wrapper-img.gif" width=231 height=130>
+						<img src="/images/wrapper-img.gif" width=231 height=130>
 						<!--<form class="form-inline" id="fh5co-header-subscribe">
 							<div class="row">
 								<div class="col-md-12 col-md-offset-0">
@@ -210,7 +210,10 @@ _idl.variant = "modal";
 							<a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
 						</p>
 						<p>Copyright 2016 Handschriftenarchiv Dresdner Kreuzchor <a href="/impressum.php">Impressum</a> All Rights Reserved. </p>
-						<span class="notranslate" onmouseover="_tipon(this)" onmouseout="_tipoff()"><span class="google-src-text" style="direction: ltr; text-align: left"><a href=https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=de&ie=UTF8&prev=_t&rurl=translate.google.de&sl=en&sp=nmt4&tl=de&u=https://internetdefenseleague.org/&usg=ALkJrhjDQg4VshLY48zmtw4d205QQxxxMg target="_blank"><img src=images/internet.png alt="Mitglied in der Internet Defense League" width=115 height=115/></a></span>
+						<span class="notranslate" onmouseover="_tipon(this)" onmouseout="_tipoff()">
+						<span class="google-src-text" style="direction: ltr; text-align: left">
+						<a href=https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=de&ie=UTF8&prev=_t&rurl=translate.google.de&sl=en&sp=nmt4&tl=de&u=https://internetdefenseleague.org/&usg=ALkJrhjDQg4VshLY48zmtw4d205QQxxxMg target="_blank">
+						<img src="/images/internet.png" alt="Mitglied in der Internet Defense League" width=115 height=115/></a></span>
 					</div>
 				</div>
 			</div>
