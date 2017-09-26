@@ -233,7 +233,7 @@ _idl.variant = "modal";
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="email" class="form-control" placeholder="Name (optional)" name="name" <?php if(isset($_POST['name'])){echo " value=\"$_POST[name]\"";}?>/>
+										<input type="text" class="form-control" placeholder="Name (optional)" name="name" <?php if(isset($_POST['name'])){echo " value=\"$_POST[name]\"";}?>/>
 									</div>
 								</div>
 								<div class="col-md-6">
