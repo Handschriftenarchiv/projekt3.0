@@ -205,7 +205,7 @@ _idl.variant = "modal";
 								<label for="func"><i class="icon-cog"></i>fehlerhafte Funktion</label>
 							</li>
 							<li>
-								<input type="radio" style="display:none;" class="toggle" id="misc" name="type" value="sonstiger Fehler"/>
+								<input type="radio" style="display:none;" class="toggle" id="misc" name="type" value="sonstiger Fehler" checked="checked"/>
 								<label for="misc"><i class="icon-bug"></i>sonstiger Fehler</label>
 							</li>
 						</ul>
@@ -218,6 +218,10 @@ _idl.variant = "modal";
 						$valid=$valid_location&&$valid_mail;
 						if($process&&$valid){
 							$header="From: \"".str_replace(array('"',"'"),"",$_POST['name'])."\"<$_POST[email]>\nContent-Type: text/plain\n";
+							if(empty($_POST['name'])){
+								$_POST['name']='<kein Name>';
+							}
+							$text="Kategorie: $_POST[type]\nVon: $_POST[name]";	
 							if(mail('handschriftenarchiv@protonmail.com','Fehlermeldung Kontakt - Handschriftenarchiv Dresdner Kreuzchor',$_POST['text'],$header)){
 								echo "<p>Der Fehler wurde gemeldet.</p>";
 								$mail=true;
