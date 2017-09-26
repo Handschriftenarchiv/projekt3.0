@@ -182,14 +182,14 @@ _idl.variant = "modal";
 									color:#929292;
 								}
 								input.toggle:checked + label{
-									color:green;
+									color:#c39f00;
 								}
 								.toggle + label>i::before{
 									transition:color .5s;
 									color:#929292;
 								}
 								input.toggle:checked + label>i::before{
-									color:green;
+									color:#c39f00;
 								}
 							</style>
 							<li>
@@ -221,7 +221,7 @@ _idl.variant = "modal";
 							if(empty($_POST['name'])){
 								$_POST['name']='<kein Name>';
 							}
-							$text="Kategorie: $_POST[type]\nVon: $_POST[name]";	
+							$text="Kategorie: $_POST[type]\nVon: $_POST[name]";
 							if(mail('handschriftenarchiv@protonmail.com','Fehlermeldung Kontakt - Handschriftenarchiv Dresdner Kreuzchor',$_POST['text'],$header)){
 								echo "<p>Der Fehler wurde gemeldet.</p>";
 								$mail=true;
