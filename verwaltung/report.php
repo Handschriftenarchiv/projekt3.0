@@ -152,7 +152,7 @@ _idl.variant = "modal";
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(../images/kontakt/start.svg);">
+			   	<li style="background-image: url(../images/verwaltung/report/start.svg);">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
@@ -174,7 +174,7 @@ _idl.variant = "modal";
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-md-push-1 animate-box">
-						<h3>Fehler-Kategorien</h3>
+						<h4>Fehler-Kategorien</h4>
 						<ul class="contact-info">
 							<style>
 								.toggle + label{
@@ -226,7 +226,7 @@ _idl.variant = "modal";
 								echo "<p>Der Fehler wurde gemeldet.</p>";
 								$mail=true;
 							}else{
-								echo "<p>Der Fehöer konnte leider nicht gesendet werden.</p>";
+								echo "<p>Der Fehler konnte leider nicht gesendet werden.</p>";
 							}
 						}elseif($process){
 							echo "<p>Bitte geben Sie einen gültigen Ort ein!</p>";
