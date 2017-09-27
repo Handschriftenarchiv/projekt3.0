@@ -104,13 +104,13 @@ _idl.variant = "modal";
 		 <div class="fh5co-table-cell js-fullheight">
 			 <h1 class="text-center"><a class="fh5co-logo" href="../index.php">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
 			 <ul>
-				 <li><a href="../index.php">Willkommen</a></li>
-				 <li><a href="../archiv.php">Archiv</a></li>
-				 <li><a href="..//blog/">Blog</a></li>
-				 <li><a href="../mediathek.php">Mediathek</a></li>
+				 <li><a href="../index">Willkommen</a></li>
+				 <li><a href="../archiv">Archiv</a></li>
+				 <li><a href="../blog/">Blog</a></li>
+				 <li><a href="../mediathek">Mediathek</a></li>
 				 <li><a href="../suche/">Datenbank</a></li>
-				 <li><a href="../impressum.php">Impressum</a></li>
-				 <li><a href="../kontakt.php">Kontakt</a></li>
+				 <li><a href="../impressum">Impressum</a></li>
+				 <li><a href="../kontakt">Kontakt</a></li>
 			 </ul>
 			 <p class="fh5co-social-icon">
 				 <a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
@@ -281,13 +281,13 @@ _idl.variant = "modal";
 						<div class="col-md-3 col-md-push-1">
 							<h3 class="section-title">Links</h3>
 							<ul>
-								<li><a href="../index.php">Willkommen</a></li>
-								<li><a href="../archiv.php">Archiv</a></li>
-								<li><a href="../blog/">Blog</a></li>
-								<li><a href="../mediathek.php">Mediathek</a></li>
-								<li><a href="../suche/">Datenbank</a></li>
-								<li><a href="../impressum.php">Impressum</a></li>
-								<li><a href="../kontakt.php">Kontakt</a></li>
+								<li><a href="../index">Willkommen</a></li>
+			 				 <li><a href="../archiv">Archiv</a></li>
+			 				 <li><a href="../blog/">Blog</a></li>
+			 				 <li><a href="../mediathek">Mediathek</a></li>
+			 				 <li><a href="../suche/">Datenbank</a></li>
+			 				 <li><a href="../impressum">Impressum</a></li>
+			 				 <li><a href="../kontakt">Kontakt</a></li>
 							</ul>
 						</div>
 
