@@ -124,16 +124,16 @@ require_once '../analytics.php';
 	<?php } ?>
 		<center>
 			<p>
-				<a href="../index.php">Zurück zur Startseite</a><br>
-				<a href="index.php">Zurück zum Verwaltungsportal</a><br>
+				<a href="../.">Zurück zur Startseite</a><br>
+				<a href=".">Zurück zum Verwaltungsportal</a><br>
 				<?php if(isset($_GET['archivalien'])||isset($_GET['notfound'])){ ?>
-				<a href="graphs.php">Seitenzugriffe</a><br>
+				<a href="graphs">Seitenzugriffe</a><br>
 				<?php }
 				if(!isset($_GET['notfound'])){ ?>
-				<a href="graphps.php?notfound">nicht gefundene Dokumente</a><br>
+				<a href="graphs?notfound">nicht gefundene Dokumente</a><br>
 				<?php }
 				if(!isset($_GET['archivalien'])){ ?>
-				<a href="graphs.php?archivalien">Zugriffe auf den Katalog</a>
+				<a href="graphs?archivalien">Zugriffe auf den Katalog</a>
 				<?php } ?>
 			</p>
 		</center>
