@@ -48,7 +48,7 @@ require_once '../analytics.php';
 		<div id="details">
 			<img border="0" src="info.svg" id="details"/>
 			<div id="info">
-				<a href="http://archiv.handschriften.bplaced.de/">
+				<a href="http://archiv.handschriften.bplaced.de/suche/details.php?id=134">
 					<img border="0" src="background.scharf.png" style="border-radius: 5px;"/>
 					<p class="title">Mai</p>
 					<p class="composer">Ernst Pepping</p>
