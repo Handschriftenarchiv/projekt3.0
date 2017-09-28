@@ -193,8 +193,8 @@ _idl.variant = "modal";
 <img class="image-center" src="../images/blog/gross/3.jpg" alt="Gunter Gross" style="width:568px;height:382px">
 <br>
 <blockquote>
-									Aber ich begriff jetzt sehr gut, welche verantwortungsreiche Arbeit im Kreuzchor geleistet wird und was für eine hohe Verpflichtung ich übernahm, wenn ich die Nachfolge der damaligen Notenschreiber antreten wollte. So bedeutete es für mich als vierzehnjährigen Sopranisten ein besonderes Erlebnis, gerade noch kurz vor der Mutation am 13. Heinrich-Schütz-Fest in Stuttgart teilnehmen zu können. Als mir zu Beginn meines neunten Schuljahres das Amt des cantor famulus und Notenbibliothekars übertragen wurde, nahm ich mir vor, alle meine Kräfte daranzusetzen, unserem Kantor eine zuverlässige Hilfe zu werden.
-									</blockquote>
+									<p>Aber ich begriff jetzt sehr gut, welche verantwortungsreiche Arbeit im Kreuzchor geleistet wird und was für eine hohe Verpflichtung ich übernahm, wenn ich die Nachfolge der damaligen Notenschreiber antreten wollte. So bedeutete es für mich als vierzehnjährigen Sopranisten ein besonderes Erlebnis, gerade noch kurz vor der Mutation am 13. Heinrich-Schütz-Fest in Stuttgart teilnehmen zu können. Als mir zu Beginn meines neunten Schuljahres das Amt des cantor famulus und Notenbibliothekars übertragen wurde, nahm ich mir vor, alle meine Kräfte daranzusetzen, unserem Kantor eine zuverlässige Hilfe zu werden.
+								</p>	</blockquote>
 						</div>
 					</div>
 				</div>
