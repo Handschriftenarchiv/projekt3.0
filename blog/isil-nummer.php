@@ -152,7 +152,7 @@ _idl.variant = "modal";
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(../images/blog/gross/1.jpg);">
+			   	<li style="background-image: url(../images/blog/isil/1.svg);">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">

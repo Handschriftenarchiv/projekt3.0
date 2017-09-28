@@ -177,22 +177,22 @@ _idl.variant = "modal";
 						<div class="row">
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="behance.php"><img class="img-responsive" src="../images/blog/behance/1.jpg" alt="Behance-Profil Screenshot"></a>
+									<a href="behance"><img class="img-responsive" src="../images/blog/behance/1.jpg" alt="Behance-Profil Screenshot"></a>
 									<div class="blog-text">
 										<span class="posted_on">05 Aug. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
-										<h3><a href="/behance">Behance...</a></h3>
+										<h3><a href="behance">Behance...</a></h3>
 										<p>...und das Zusammenspiel von Archiv und Design. Über Behance und Github und deren Nutzen für das Handschritenarchiv.</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="gunter-gross.php"><img class="img-responsive" src="../images/blog/gross/1.jpg" alt="Gunter Gross beim Notenschreiben"></a>
+									<a href="gunter-gross"><img class="img-responsive" src="../images/blog/gross/1.jpg" alt="Gunter Gross beim Notenschreiben"></a>
 									<div class="blog-text">
 										<span class="posted_on">29. Jul. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i>Gunter Gross</span>
-										<h3><a href="/gunter-gross">Gunter Groß erinnert sich</a></h3>
+										<h3><a href="gunter-gross">Gunter Groß erinnert sich</a></h3>
 										<p>Gunter Groß: ein ehemaligen Kruzianer, Notenschreiber und Ratsdiskandist unter Rudolf Mauersberger.</p>
 									</div>
 								</div>
@@ -203,11 +203,11 @@ _idl.variant = "modal";
 						<div class="row">
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="ratser-liste.php"><img class="img-responsive" src="../images/blog/liste/1.svg" alt="Illustration Ratserliste"></a>
+									<a href="ratser-liste"><img class="img-responsive" src="../images/blog/liste/1.svg" alt="Illustration Ratserliste"></a>
 									<div class="blog-text">
 										<span class="posted_on">18 Aug. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar, Wissneschaftliche Mitarbeiter</span>
-										<h3><a href="/ratser-liste">Ratsdiskandisten von 1935 bis 2017</a></h3>
+										<h3><a href="ratser-liste">Ratsdiskandisten von 1935 bis 2017</a></h3>
 										<p>Hall of Fame der Notenbibliotheksgeschichte: Eine Übersicht über alle Notenschreiber und Notenbiblothekare, sogenannte Ratsdiskandisten von 1935 bis 2017.</p>
 									</div>
 								</div>
@@ -230,11 +230,11 @@ _idl.variant = "modal";
 						<div class="row">
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="#"><img class="img-responsive" src="../images/blog/platz.jpg" alt=""></a>
+									<a href="isil-nummer"><img class="img-responsive" src="../images/blog/isil/1.svg" alt=""></a>
 									<div class="blog-text">
-										<span class="posted_on">18. Sep. 2017</span>
+										<span class="posted_on">28. Sep. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
-										<h3><a href="#">ISIL Nummer</a></h3>
+										<h3><a href="isil-nummer">ISIL Nummer</a></h3>
 										<p>Das Handschriftenarchiv in der Loge international genormter Archive</p>
 									</div>
 								</div>
