@@ -181,7 +181,7 @@ _idl.variant = "modal";
 									<div class="blog-text">
 										<span class="posted_on">05 Aug. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
-										<h3><a href="behance.php">Behance...</a></h3>
+										<h3><a href="/behance">Behance...</a></h3>
 										<p>...und das Zusammenspiel von Archiv und Design. Über Behance und Github und deren Nutzen für das Handschritenarchiv.</p>
 									</div>
 								</div>
@@ -192,7 +192,7 @@ _idl.variant = "modal";
 									<div class="blog-text">
 										<span class="posted_on">29. Jul. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i>Gunter Gross</span>
-										<h3><a href="gunter-gross.php">Gunter Groß erinnert sich</a></h3>
+										<h3><a href="/gunter-gross">Gunter Groß erinnert sich</a></h3>
 										<p>Gunter Groß: ein ehemaligen Kruzianer, Notenschreiber und Ratsdiskandist unter Rudolf Mauersberger.</p>
 									</div>
 								</div>
@@ -207,8 +207,8 @@ _idl.variant = "modal";
 									<div class="blog-text">
 										<span class="posted_on">18 Aug. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar, Wissneschaftliche Mitarbeiter</span>
-										<h3><a href="ratser-liste.php">Ratsdiskandisten von 1935 bis 2017</a></h3>
-										<p>Eine Übersicht über alle Notenschreiber und Notenbiblothekare, sogenannte Ratsdiskandisten von 1935 bis 2017.</p>
+										<h3><a href="/ratser-liste">Ratsdiskandisten von 1935 bis 2017</a></h3>
+										<p>Hall of Fame der Notenbibliotheksgeschichte: Eine Übersicht über alle Notenschreiber und Notenbiblothekare, sogenannte Ratsdiskandisten von 1935 bis 2017.</p>
 									</div>
 								</div>
 							</div>
