@@ -215,12 +215,12 @@ _idl.variant = "modal";
 
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="#"><img class="img-responsive" src="../images/blog/platz.jpg" alt=""></a>
+									<a href="tools-1"><img class="img-responsive" src="../images/blog/tools/1/1.svg" alt=""></a>
 									<div class="blog-text">
-										<span class="posted_on">18. Sep. 2017</span>
+										<span class="posted_on">28. Sep. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
-										<h3><a href="#">Tools - Teil I</a></h3>
-										<p>Das Handschriftenarchiv Dresdner Kreuzchor präsentiert die Tools, die es für einen modernen Archivbetrieb benutzt.</p>
+										<h3><a href="tools-1">Protonmail</a></h3>
+										<p>Teil I der Serie "Die Tools des Handschriftenarchivs Dresdner Kreuzchor"</p>
 									</div>
 								</div>
 							</div>
