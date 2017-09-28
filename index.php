@@ -284,12 +284,12 @@ _idl.variant = "modal";
 					</div>
 					<div class="col-md-4">
 						<div class="fh5co-blog animate-box">
-							<a href="#"><img class="img-responsive" src="images/blog/platz.jpg" alt=""></a>
+							<a href="/blog/tools-1"><img class="img-responsive" src="images/blog/tools/1/1.svg" alt=""></a>
 							<div class="blog-text">
-								<span class="posted_on">Nov. 15th</span>
-								<span class="comment"><a href="">21<i class="icon-bubble"></i></a></span>
-								<h3><a href="#">Inspirational Website</a></h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+								<span class="posted_on">28. Sep 2017</span>
+								<span class="comment"><i class="icon-pencil"></i> Archivar</span>
+								<h3><a href="/blog/tools-1">Protonmail</a></h3>
+								<p>Teil I der Serie "Die Tools des Handschriftenarchivs Dresdner Kreuzchor"</p>
 							</div>
 						</div>
 					</div>
