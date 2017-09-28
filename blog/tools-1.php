@@ -152,13 +152,13 @@ _idl.variant = "modal";
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(../images/blog/gross/1.jpg);">
+			   	<li style="background-image: url(../images/blog/tools/1/1.svg);">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 			   				<div class="slider-text-inner">
 			   					<div class="desc">
-			   						<span>29. Jul. 2017</span>
+			   						<span>28. Sep. 2017</span>
 			   						<h2>Gunter Groß erinnert sicht</h2>
 			   						<p class="fh5co-lead">Gunter Groß: ein ehemaligen Kruzianer, Notenschreiber und Ratsdiskandist unter Rudolf Mauersberger.</p>
 			   					</div>
