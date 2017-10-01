@@ -192,7 +192,7 @@ _idl.variant = "modal";
 
 	<div class="container">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading" id="presse">
-				<h2>Presse- Mediakit</h2>
+				<h2>Presse- und Mediakit</h2>
 				<p>Um die Möglichkeit zu geben, das Projekt 3.0 und deren Inhalt weiterzuverbreiten, darüber zu berichten bzw. sich tiefgründiger mit diesem auseinanderzusetzten, gibt es an dieser Stelle die Möglichkeit sich den Presse- und Mediakit herunterzuladen.</p>
 				<br>
 				<p>Inhalt: Logo Handschriftenarchiv, Logo Projekt 3.0, Wallpaper Handschriftenarchiv, Screenshot Datenbank, Beispieldigitalisierung</p><br>
