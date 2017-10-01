@@ -158,9 +158,9 @@ _idl.variant = "modal";
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 			   				<div class="slider-text-inner">
 			   					<div class="desc">
-			   						<span>05. Aug. 2017</span>
+			   						<span>01. Okt. 2017</span>
 			   						<h2>Behance…</h2>
-			   						<p class="fh5co-lead">..und das Zusammenspiel von Archiv und Design. Über Behance und Github und deren Nutzen für das Handschritenarchiv.</p>
+			   						<p class="fh5co-lead">...als neues Soziales Netzwerk für das Handschriftenarchiv</p>
 			   					</div>
 			   				</div>
 			   			</div>
