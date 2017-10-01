@@ -318,11 +318,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #539DDB;
-  border: 2px solid #539DDB;
+  color: #c39f00;
+  border: 2px solid #c39f00;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #539DDB;
+  background: #c39f00;
   color: #fff !important;
 }
 
@@ -1085,7 +1085,7 @@ header .fh5co-navbar-brand .fh5co-social-icon a {
   color: rgba(0, 0, 0, 0.3);
 }
 .fh5co-blog .blog-text span.comment a i {
-  color: #539DDB;
+  color: #c39f00;
   padding-left: 7px;
 }
 .fh5co-blog .blog-text span.posted_on {
@@ -1226,7 +1226,7 @@ input[type="text"] {
 }
 #footer a:hover, #footer a:focus {
   text-decoration: none;
-  color: #539DDB;
+  color: #c39f00 !important;
 }
 #footer .form-inline .form-group {
   width: 100% !important;
@@ -1250,7 +1250,7 @@ input[type="text"] {
   right: 10px;
   border-top-left-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
-  background: #539DDB;
+  background: #c39f00;
   border: none;
 }
 #footer #fh5co-header-subscribe button i {

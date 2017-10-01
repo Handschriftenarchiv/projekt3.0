@@ -1,12 +1,12 @@
 $font-primary: 'Karla', Arial, sans-serif;
 $font-secondary: 'Playfair Display', Arial, serif;
 // Overrides
-$grid-gutter-width: 40px !default; 
+$grid-gutter-width: 40px !default;
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
-$brand-primary: #539DDB !default;
-$brand-secondary: #1fb5f6 !default; 
+$brand-primary: #c39f00 !default;
+$brand-secondary: #1fb5f6 !default;
 
 $brand-white: #fff;
 $brand-black: #000;
@@ -49,16 +49,16 @@ $form-group-margin-bottom: 30px !default;
           border-radius: $radius;
 }
 @mixin flex() {
-	display: -webkit-box;      
-  	display: -moz-box;         
-  	display: -ms-flexbox;      
-  	display: -webkit-flex;     
-  	display: flex;             
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
 }
 @mixin flexwrap() {
 	flex-wrap: wrap;
-	-webkit-flex-wrap: wrap; 
-	-moz-flex-wrap: wrap; 
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
 }
 
 @font-face {
@@ -73,7 +73,7 @@ $form-group-margin-bottom: 30px !default;
 }
 
 @mixin icomoon() {
-	
+
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -85,10 +85,10 @@ $form-group-margin-bottom: 30px !default;
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
+
 }
 
-// Import 
+// Import
 @import 'bootstrap/mixins';
 @import 'bootstrap/variables';
 
@@ -97,7 +97,7 @@ $form-group-margin-bottom: 30px !default;
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -128,7 +128,7 @@ body {
 		height: 100%;
 		overflow-y: hidden;
 	}
-}	
+}
 a {
 	color: $brand-primary;
 	@include transition(.5s);
@@ -304,7 +304,7 @@ h1, h2, h3, h4, h5, h6 {
 			}
 			@media screen and (max-width: $screen-sm) {
 				display: block;
-			}	
+			}
 		}
 	}
 	.fh5co-social-icon{
@@ -676,7 +676,7 @@ header{
   		top: 0px;
   		// margin-top: 2.5em;
   	}
-  
+
 }
 
 
@@ -699,7 +699,7 @@ header{
 	}
 	.flexslider {
 		border: none;
-		
+
 		z-index: 1;
 		margin-bottom: 0;
 
@@ -820,7 +820,7 @@ header{
 #fh5co-featured,
 #fh5co-about,
 #fh5co-blog,
-#fh5co-contact-section, 
+#fh5co-contact-section,
 #fh5co-work-section,
 #fh5co-about-section,
 #fh5co-map-section{
@@ -1011,7 +1011,7 @@ header{
 	margin-bottom: 5em;
 }
 
-.fh5co-staff { 
+.fh5co-staff {
 	// text-align: center;
 	margin-bottom: 30px;
 	img {
@@ -1160,7 +1160,7 @@ header{
 		a{
 			color: $brand-lighter;
 		}
-		
+
 	}
 }
 .form-control {
@@ -1172,10 +1172,10 @@ header{
 	border: none;
 	border: 2px solid rgba(0,0,0,.1);
 	font-size: 18px;
-	
+
 	font-weight: 300;
 	@include border-radius(4px);
-	
+
 	&:focus, &:active {
 		box-shadow: none;
 		border: 2px solid rgba(0,0,0,.8);
