@@ -538,7 +538,7 @@ _idl.variant = "modal";
 					<span class="fh5co-counter-label"><font color="#fff">Diese Liste enstand im Rahmen der Austellung "Die Notenbibliothe des Dresdner Kreuzchores" für die Kreuzkirche Dresden im Jahr 2016.</font></span>
 				</div>
 				<div class="col-md-4 text-center">
-					<span class="fh5co-counter js-counters"><h2><font color="#fff">18. Aug. 2017</font></h2></span>
+					<span class="fh5co-counter js-counters"><h2><font color="#fff">01. Okt. 2017</font></h2></span>
 					<span class="fh5co-counter-label"><font color="#fff">letzte Änderung</font></span>
 				</div>
 			</div>
