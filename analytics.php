@@ -45,8 +45,9 @@ function hasData(){
 		$analytics_sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views FROM analytics "
 			."GROUP BY page,dateCreated ORDER BY dateCreated,page ASC";
 	}
-	$data=mysqli_num_rows(mysqli_query($con,$analytics_sql));
+	$count=mysqli_num_rows(mysqli_query($con,$analytics_sql));
 	mysqli_close($con);
+	return $count;
 }
 
 function echoData(){
