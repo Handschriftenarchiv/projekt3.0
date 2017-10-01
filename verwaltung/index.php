@@ -160,7 +160,7 @@ _idl.variant = "modal";
 			   					<div class="desc">
 			   						<span>Interne Informationen</span>
 			   						<h2>Verwaltungsportal</h2>
-			   						<p class="fh5co-lead">Wichtige intere Informatione, Links</p>
+			   						<p class="fh5co-lead">Auswertung von Traffic und weitere Informationen</p>
 			   					</div>
 			   				</div>
 			   			</div>
@@ -169,21 +169,76 @@ _idl.variant = "modal";
 			  	</ul>
 		  	</div>
 		</aside>
-
-
-		<div id="fh5co-about">
+		<div id="fh5co-intro-section">
+				<div id="fh5co-blog" class="fh5co-bg-section">
 			<div class="container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center animate-box">
-						<div class="about-content">
-							<center>
-							<div class="form-group" style="position: center">
-								<input type="submit" value="Im Entstehen" class="btn-lable">
-							</div>
-						</center>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 animate-box text-center">
+						<center>
+						<div class="form-group" style="position: center">
+							<input type="submit" value="Beta Version 5.2.1" class="btn-lable">
+						</div>
+					</center>
+						<h2 class="intro-heading">Verwaltung</h2>
+						<p><span>Interne und weiterführende Kommunikation des Handschriftenarchivs Dresdner Kreuzchor.</span></p>
+						<blockquote>
+							<p>Diese Seite bietet die Möglichkeit Mitarbeitern des Archivs sowie Aussenstehenden die Möglichkeit sich tiefgehender über das Handschriftenarchiv zu informieren. So kann man die internen Website-Analytics einsehen aber auch den Presse- und Mediakit runterladen. Auch werden hier wichtige Informationen die interen Arbeit des Archivs betreffend publiziert, wie Daten oder Kontaktmöglichkeiten sowie weiterführende Links.</p>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading" id="presse">
+				<h2>Presse- Mediakit</h2>
+				<p>Um die Möglichkeit zu geben, das Projekt 3.0 und deren Inhalt weiterzuverbreiten, darüber zu berichten bzw. sich tiefgründiger mit diesem auseinanderzusetzten, gibt es an dieser Stelle die Möglichkeit sich den Presse- und Mediakit herunterzuladen.</p>
+				<br><br>
+				<p>Inhalt: Logo Handschriftenarchiv, Logo Projekt 3.0, Wallpaper Handschriftenarchiv, Screenshot Datenbank, Beispieldigitalisierung</p><br>
+				<a href="dokumante/presse.zip"target="_blank"><i class="icon-file-zip"></i> Presse.zip [3,4 MB]</a>
+				<br>
+				<a href="dokumante/imagefilm.mp4"target="_blank"><i class="icon-file-play"></i> Imagefilm.mp4 [3,4 MB]</a>
+			</div>
+	</div>
+
+	<div id="fh5co-blog" class="fh5co-bg-section">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Analytics und Webtraffic</h2>
+					<p>Interne Auswerung des Webtraffics des Online-Protals.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="fh5co-blog animate-box">
+						<a href="graphs"><img class="img-responsive" src="../images/verwaltung/1.svg" alt=""></a>
+						<div class="blog-text">
+							<h3><a href="graphs">Zugriffe auf die Website</a></h3>
+							<p>Auswertung der verschiedensten Zugriffe auf die Website.</p>
 						</div>
 					</div>
 				</div>
+				<div class="col-md-4">
+					<div class="fh5co-blog animate-box">
+						<a href="graphs?archivalien"><img class="img-responsive" src="../images/verwaltung/2.svg" alt=""></a>
+						<div class="blog-text">
+							<h3><a href="graphs?archivalien">Zugriffe auf den Katalog</a></h3>
+							<p>Auswertung der verschiedensten Zugriffe und Suchanfragen im Online-Katalog.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="fh5co-blog animate-box">
+						<a href="graphs?notfound"><img class="img-responsive" src="../images/verwaltung/3.svg" alt=""></a>
+						<div class="blog-text">
+							<h3><a href="graphs?notfound">Nicht gefundene Dokumente</a></h3>
+							<p>Übersicht über angeforderte, aber nicht existierende Seiten.</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
