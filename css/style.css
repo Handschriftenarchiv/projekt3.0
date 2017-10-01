@@ -1226,7 +1226,7 @@ input[type="text"] {
 }
 #footer a:hover, #footer a:focus {
   text-decoration: none;
-  color: #c39f00 !important;
+  color: #c39f00;
 }
 #footer .form-inline .form-group {
   width: 100% !important;
