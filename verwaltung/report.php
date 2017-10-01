@@ -263,6 +263,9 @@ _idl.variant = "modal";
 							</div>
 						</form>
 					<?php } ?>
+					<div>
+						<a href="https://protonmail.com/" target="_blank"><img src="/images/kontakt/protonmail.svg" width="174px" alt="Secured by ProtonMail"></a>
+					</div>
 					</div>
 				</div>
 			</div>
