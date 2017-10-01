@@ -182,7 +182,7 @@ _idl.variant = "modal";
 										<span class="posted_on">05 Aug. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
 										<h3><a href="behance">Behance...</a></h3>
-										<p>...und das Zusammenspiel von Archiv und Design. Über Behance und Github und deren Nutzen für das Handschritenarchiv.</p>
+										<p>...als neues Soziales Netzwerk für das Handschriftenarchiv</p>
 									</div>
 								</div>
 							</div>
@@ -205,8 +205,8 @@ _idl.variant = "modal";
 								<div class="fh5co-blog animate-box">
 									<a href="ratser-liste"><img class="img-responsive" src="../images/blog/liste/1.svg" alt="Illustration Ratserliste"></a>
 									<div class="blog-text">
-										<span class="posted_on">18 Aug. 2017</span>
-										<span class="comment"><i class="icon-pencil"></i> Archivar, Wissneschaftliche Mitarbeiter</span>
+										<span class="posted_on">01. Okt. 2017</span>
+										<span class="comment"><i class="icon-pencil"></i> Archivar, Wissenschaftliche Mitarbeiter</span>
 										<h3><a href="ratser-liste">Ratsdiskandisten von 1935 bis 2017</a></h3>
 										<p>Hall of Fame der Notenbibliotheksgeschichte: Eine Übersicht über alle Notenschreiber und Notenbiblothekare, sogenannte Ratsdiskandisten von 1935 bis 2017.</p>
 									</div>
@@ -257,24 +257,6 @@ _idl.variant = "modal";
 		</div>
 
 
-	<div class="fh5co-counters" style="background-image: url(../images/blog/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
-			<div class="fh5co-narrow-content animate-box">
-				<div class="row" >
-					<div class="col-md-4 text-center">
-						<span class="fh5co-counter js-counters"><h2><font color="#ffffff">&nbsp;</font></h2></span>
-						<span class="fh5co-counter-label">&nbsp;</span>
-					</div>
-					<div class="col-md-4 text-center">
-						<span class="fh5co-counter js-counters"><h2><font color="#ffffff">&nbsp;</font></h2></span>
-						<span class="fh5co-counter-label">&nbsp;</span>
-					</div>
-					<div class="col-md-4 text-center">
-						<span class="fh5co-counter js-counters"><h2><font color="#ffffff">&nbsp;</font></h2></span>
-						<span class="fh5co-counter-label">&nbsp;</span>
-					</div>
-				</div>
-			</div>
-		</div>
 		<footer>
 			<div id="footer">
 				<div class="container">
