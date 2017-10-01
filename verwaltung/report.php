@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once '../analytics.php';
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -247,7 +247,7 @@ _idl.variant = "modal";
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Wo?" name="location" <?php if(isset($_POST['location'])){echo " value=\"$_POST[location]\"";}elseif(isset($_GET['page'])){echo " value=\"$_POST[location]\"";}?>/>
+										<input type="text" class="form-control" placeholder="Wo?" name="location" <?php if(isset($_POST['location'])){echo " value=\"$_POST[location]\"";}elseif(isset($_GET['page'])){echo " value=\"$_GET[page]\"";}?>/>
 									</div>
 								</div>
 								<div class="col-md-12">
