@@ -209,6 +209,7 @@ _idl.variant = "modal";
 							<a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
 							<a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
 						</p>
+													<p><a href="/verwaltung/report"target="_blank"><i class="icon-bug"></i> Fehler melden</a></p>
 						<p>Copyright 2017 Handschriftenarchiv Dresdner Kreuzchor <a href="/impressum.php">Impressum</a> All Rights Reserved. </p>
 						<span class="notranslate" onmouseover="_tipon(this)" onmouseout="_tipoff()">
 						<span class="google-src-text" style="direction: ltr; text-align: left">

@@ -134,15 +134,9 @@ _idl.variant = "modal";
 							<h1 class="text-left"><a class="fh5co-logo" href="index.php"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
 						</div>
 						<div class="col-xs-6">
-							<!--<p class="fh5co-social-icon text-right">
-								<a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
-								<a href="https://issuu.com/hsa6"target="_blank"><i class="icon-book"></i></a>
-								<a href="https://vimeo.com/handschriftenarchiv"target="_blank"><i class="icon-vimeo"></i></a>
-								<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"target="_blank"><i class="icon-youtube"></i></a>
-								<a href="https://plus.google.com/108785494716898198379"target="_blank"><i class="icon-google"></i></a>
-								<a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
-								<a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
-							</p>-->
+						<!--	<p class="fh5co-social-icon text-right">
+
+						</p>-->
 						</div>
 					</div>
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
@@ -411,10 +405,9 @@ _idl.variant = "modal";
 								<a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
 								<a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
 							</p>
+							<p><a href="/verwaltung/report"target="_blank"><i class="icon-bug"></i> Fehler melden</a></p>
 							<p>Copyright 2017 Handschriftenarchiv Dresdner Kreuzchor <a href="/impressum.php">Impressum</a> All Rights Reserved. </p>
 							<span class="notranslate" onmouseover="_tipon(this)" onmouseout="_tipoff()"><span class="google-src-text" style="direction: ltr; text-align: left"><a href=https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=de&ie=UTF8&prev=_t&rurl=translate.google.de&sl=en&sp=nmt4&tl=de&u=https://internetdefenseleague.org/&usg=ALkJrhjDQg4VshLY48zmtw4d205QQxxxMg target="_blank"><img src=images/internet.png alt="Mitglied in der Internet Defense League" width=115 height=115/></a></span>
-							<br>
-							<p style="color: #000;font-size: small;">v5.0.2</p>
 						</div>
 					</div>
 				</div>
