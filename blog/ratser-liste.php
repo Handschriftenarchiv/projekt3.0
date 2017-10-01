@@ -331,6 +331,191 @@ _idl.variant = "modal";
 											<td class="ratser">Björn Tittelbach <br > Christoph Meißner <br> Jens Sembder <br> Albrecht Siegmund <br> Jens Winkelmann</td>
 											<td class="ratser"> - </td>
 										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1981/82</td>
+											<td class="ratser">Björn Tittelbach <br> Jens Sembder <br> Albrecht Siegmund <br> Jens Winkelmann</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1982/83</td>
+											<td class="ratser">Albrecht Siegmund <br> Jens Winkelmann <br> Björn Tittelbach <br> Jens Sembdner <br> Markus Deckert</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1983/84</td>
+											<td class="ratser">Markus Deckert <br> Sören Löscher <br> Joachim Zehme <br> Eckehard Stier</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1984/85</td>
+											<td class="ratser">Markus Deckert <br> Sören Löscher <br> Joachim Zehme <br> Eckehard Stier <br> Michael Koch <br> Michael Reich</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1985/86</td>
+											<td class="ratser">Michael Reich <br> Matthias Böhme <br> Eckehard Stier <br> Michael Koch <br> Helge Tittelbach</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1986/87</td>
+											<td class="ratser">Frank Reichenberger <br> Jan Leibnitz <br> Michael Koch <br> Helge Tittelbach</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1987/88</td>
+											<td class="ratser">Frank Reichenberger <br> Markus Begrich <br> Michael Koch <br> Helge Tittelbach</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1988/89</td>
+											<td class="ratser">Markus Begrich <br> Michael Koch <br> Helge Tittelbach <br> Florian Just</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1989/90</td>
+											<td class="ratser">Markus Begrich <br> Stephan Loges <br> Helge Tittelbach <br> Florian Just <br> Christian Illgen</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1990/91</td>
+											<td class="ratser">Stephan Loges <br> Michael Koch <br> Florian Just <br> Christian Illgen</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1991/92</td>
+											<td class="ratser">Michael Koch <br> Tarik Hofmann <br> Florian Just <br> Christian Illgen <br> Martin Schmidt</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1992/93</td>
+											<td class="ratser">Tarik Hofmann <br> André Podschun <br> Martin Schmidt <br> Christoph Klingner</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1993/94</td>
+											<td class="ratser">Tarik Hofmann <br> André Podschun <br> Martin Schmidt <br> Christoph Klingner</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1994/95</td>
+											<td class="ratser">André Podschun <br> Stefan Seibt <br> Martin Schmidt <br> Christoph Klingner</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1995/96</td>
+											<td class="ratser">Stefan Seibt <br> Sebastian Gableske <br> Christoph Klingner (Mutant) <br> Clemens Bosselmann <br> Benjamin Neidhold</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1996/97</td>
+											<td class="ratser">Sebastian Gableske <br> Clemens Bosselmann <br> Benjamin Neidhold <br> Martin Iwanczik <br> Friedrich Voigt <br> Philipp Fischer</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1997/98</td>
+											<td class="ratser">Benjamin Neidhold <br> Philipp Fischer <br> Clemens Bosselmann <br> Friedrich Voigt <br> Martin Sommer</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1998/99</td>
+											<td class="ratser">Philipp Fischer <br> Martin Sommer <br> Clemens Bosselmann <br> Friedrich Voigt <br> Hendrik Schmidt</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">1999/2000</td>
+											<td class="ratser">Martin Sommer <br> Martin Iwanczik <br> Alexander Födisch <br> Freidrich Voigt <br> Hendrik Schmidt <br> Richard Drechsler</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2000/01</td>
+											<td class="ratser">Martin Iwanczik <br> Alexander Födisch <br> Hendrik Schmidt <br> Richard Drechsler <br> Samuel Rabe</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2001/02</td>
+											<td class="ratser">Alexander Födisch <br> Stefan Bannert <br> Peter Vanselow <br> Richard Drechsler <br> Samuel Rabe <br> Hans Kenschke</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2002/03</td>
+											<td class="ratser">Stefan Bannert <br> Peter Vanselow <br> Martin Dobrev <br> Richard Drechsler <br> Samuel Rabe <br> Hans Kenschke</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2003/04</td>
+											<td class="ratser">Peter Vanselow <br> Martin Dobrev <br> Hendrik Schmidt <br> Hans Kenschke <br> Ryan Rönnqvist <br> Franz Göpner</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2004/05</td>
+											<td class="ratser">Martin Dobrev <br> Hendrik Schmidt <br> Samuel Rabe <br> Hans Kenschke <br> Ryan Rönnqvist <br> Franz Göpner</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2005/06</td>
+											<td class="ratser">Hendrik Schmidt <br> Samuel Rabe <br> Claus Straßner <br> Ryan Rönnqvist <br> Franz Göpner <br> Lukas Bürkner</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2006/07</td>
+											<td class="ratser"> Samuel Rabe <br> Claus Straßner <br> Hans Kenschke <br> Franz Göpner <br> Lukas Bürkner <br> Constantin Dörr</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2007/08</td>
+											<td class="ratser">Claus Straßner <br> Hans Kenschke <br> Johannes Park <br> Lukas Bürkner <br> Constantin Dörr <br> Vincent Hoppe</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2008/09</td>
+											<td class="ratser">Hans Kenschke <br> Johannes Park <br> Victor de Maizière <br> Marcel Gewalt <br> Constantin Dörr <br> Vincent Hoppe <br> John Albert Mattheus</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2009/10</td>
+											<td class="ratser">Victor de Maizière <br> Marcel Gewalt <br> Vincent Hoppe <br> John Albert Mattheus</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2010/11</td>
+											<td class="ratser">Victor de Maizière <br> Marcel Gewalt <br> Kjell Nürnberger <br> Vincent Hoppe <br> John Albert Mattheus <br> Julian Bandelow</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2011/12</td>
+											<td class="ratser">Marcel Gewalt <br> Kjell Nürnberger <br> Gregor Bromme <br> John Albert Mattheus <br> Julian Bandelow <br> Marc Eric Mitzscherling <br> Benjamin Stedtler</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2012/13</td>
+											<td class="ratser">Kjell Nürnberger <br> Gregor Bromme <br> Vincent Hoppe <br> Marc Eric Mitzscherling <br> Benjamin Stedtler</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2013/14</td>
+											<td class="ratser">Gregor Bromme <br> Vincent Hoppe <br> Anton Flämig <br> Marc Eric Mitzscherling <br> Benjamin Stedtler</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2014/15</td>
+											<td class="ratser">Vincent Hoppe <br> Anton Flämig <br> Julian Bandelow <br> Marc Eric Mitzscherling <br> Benjamin Stedtler <br> Benedikt Kalbhenn <br> Richard Naumburger</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2015/16</td>
+											<td class="ratser">Anton Flämig <br> Julian Bandelow <br> Benedikt Kalbhenn <br> Benjamin Taubert</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2016/17</td>
+											<td class="ratser">Anton Flämig <br> Julian Bandelow <br> Leon Benedict Winkler<br> Benedikt Kalbhenn <br> Benjamin Taubert</td>
+											<td class="ratser"> - </td>
+										</tr>
+										<tr style="text-align: left;">
+											<td class="ratser">2017/18</td>
+											<td class="ratser">Julian Bandelow <br> Leon Benedict Winkler<br> Benedikt Kalbhenn <br> Benjamin Taubert</td>
+											<td class="ratser"> - </td>
+										</tr>
 									</tbody>
 								</table>
 						</div>
