@@ -230,23 +230,23 @@ _idl.variant = "modal";
 						<div class="row">
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="isil-nummer"><img class="img-responsive" src="../images/blog/isil/1.svg" alt=""></a>
+									<a href="isil-nummer"><img class="img-responsive" src="../images/blog/isil/1.png" alt=""></a>
 									<div class="blog-text">
-										<span class="posted_on">28. Sep. 2017</span>
+										<span class="posted_on">07. Okt. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
 										<h3><a href="isil-nummer">ISIL Nummer</a></h3>
-										<p>Das Handschriftenarchiv in der Loge international genormter Archive</p>
+										<p>Das Handschriftenarchiv in der Loge international genormter Archive.</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="#"><img class="img-responsive" src="../images/blog/platz.jpg" alt=""></a>
+									<a href="datenbankentwicklung"><img class="img-responsive" src="../images/blog/datenbank.png" alt="Beta-Version"></a>
 									<div class="blog-text">
-										<span class="posted_on">Nov. 15th</span>
+										<span class="posted_on">07. Okt. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
-										<h3><a href="#">Get Free Template</a></h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+										<h3><a href="datenbankentwicklung">Zur Datenbank</a></h3>
+										<p>Aktuelle Information zu Online-Datenbank des Handschriftenarchivs.</p>
 									</div>
 								</div>
 							</div>
