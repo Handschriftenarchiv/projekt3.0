@@ -8,10 +8,10 @@ require_once '../analytics.php';
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tools des Archivs - Handschriftenarchiv Dresdner Kreuzchor</title>
+	<title>Datenbankentwicklung - Handschriftenarchiv Dresdner Kreuzchor</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Reihe: Tools eines Archivs. Teil Eins "/>
-	<meta name="keywords" content="Tools, Archiv, Geschichte, Handschriftenarchiv, Kreuzchor, Dresden, Protonmail" />
+	<meta name="description" content="Zur momentanen Entwicklung der Datenbank "/>
+	<meta name="keywords" content="Datenbank, Archiv, Geschichte, Handschriftenarchiv, Kreuzchor, Dresden, Mitteilung" />
 	<meta name="author" content="Handschriftenarchiv Dresdner Kreuzchor" />
 
   <!--
@@ -158,9 +158,9 @@ _idl.variant = "modal";
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 			   				<div class="slider-text-inner">
 			   					<div class="desc">
-			   						<span>02. Okt. 2017</span>
-			   						<h2>Tools I</h2>
-			   						<p class="fh5co-lead">Das Handschriftenarchiv präsentiert seine Arbeitsmittel.</p>
+			   						<span>07. Okt. 2017</span>
+			   						<h2>Zur Datenbank</h2>
+			   						<p class="fh5co-lead">Aktuelle Information zu Online-Datenbank des Handschriftenarchivs.</p>
 			   					</div>
 			   				</div>
 			   			</div>
@@ -171,35 +171,10 @@ _idl.variant = "modal";
 		</aside>
 		<div class="container">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Intro</h2>
-					<p>Im Rahmen der Protonmailnutzung und dem Projelkt 3.0 gibt dieser Film einen kleinen Überblick</p>
-					<br>
-					<iframe src="https://player.vimeo.com/video/228385931?color=fff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-				</div>
-		</div>
-				<div id="fh5co-blog" class="fh5co-bg-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 animate-box text-center">
-						<h2 class="intro-heading">Protonmail</h2>
-						<p><span>Der sichere E-Mail Anbieter aus der Schweiz.</span></p>
-						<blockquote>
-							<p>Das Handschriftenarchiv Dresdner Kreuzchor legt sehr viel Wert auf Datenschutz und ein freies Internt, da es selbst mehr eine Online-Einrichtung als eine "analoge" Institution ist. Umso schwieriger ist es jedoch diesen Anforderungen in der heutogen Zeit gerecht zu werden; einer Zeit, in der Goole oder auch die NSA auf der Suche nach immer neuem Datenmaterial ist.<br> Für eine sichere Unternehmens- und Kundenkommunikation nutzt das Handschriftenarchiv Dresdner Kreuzchor aus diesem Grund ProtonMail: Der E-Mail Anbieter ist in der Schweiz ansässig und betreibt auch dort seine Server. Somit unterliegt der Datenverkehr über diesen Dient den strengen Schweizer Datenschutzbedingungen. Desweiteren ist ProtonMail einer der Wenigen Mail-Anbieter, die auf das Prinzip  End-to-End-Verschlüsselung setzten. Das bedeutet, dass der gesamte Mail-Verkehr durch einmalig Vergebene Fingerprints verifiziert wird und auf der Strecke vom Sender zum Empfänger verschlüsselt und nur über diesen Fingerprint wieder entschlüsselt werden kann.</p>
-						</blockquote>
-						<a href="https://protonmail.com/" target="_blank"><img src="../images/kontakt/protonmail.svg" width="174px" alt="Secured by ProtonMail"></a><br>
-						<blockquote>
-							<p>
-								Ein weiterer Aspekt, warum das Handschriftenarchiv Dresdner Kreuzchor auf die Dienste von ProtonMail setzt ist der, dass dieser Mail-Abieter auch Free-Plans, kostenlose Accounts, anbietet. Da es sich ja beim Handschriftenarchiv um eine komplett ehrenamtliche Institution handelt, die ohne jegliches Budget operiert, ist das natürlich ein weiterer Aspekt, der für ProtonMail spricht:<br>Somit auf kostenlosem Wege, die Datensicherheit unserer Mitglieder, Kunden und Nutzer garantieren.</p>
-							</blockquote>
-							<a href="https://protonmail.com/" target="_blank"><img src="../images/blog/tools/1/3.png" width="4%" alt="Protonmail Logo-Klein"></a><br>
-							<blockquote>
-								<p>
-									Die Institutionskommunikation des Handschriftenarchivs verläuft somit komplett über <stong>handschriftenarchiv@protonmail.com</strong>. Auch die Kontaktformulare und Application zum Melden von Fehlern läuft über diese Adresse.</p>
-								</blockquote>
+					<h2>Hinweis:</h2>
+					<p>Im Rahmen der noch laufenden Benutzungsoptimierung sowie Verbesserung und Detaillierung der Datenbankeinträge, kann es vorkommen, dass es verfälschte Suchergebnisse gibt oder unvollständige Angaben zu einer Noten existieren. In solch einem Fall können Sie gerne den Link am Ende der Seite benutzen, um einen Fehler zu melden. Wir bemühen uns, die Arbeiten an der Datenbank so schnell wir möglich fertigzustellen, um ein unverfälschtes und detailliertes Suchergebnis bieten zu können.</p>
 					</div>
 				</div>
-			</div>
-		</div>
 	<footer>
 		<div id="footer">
 			<div class="container">
