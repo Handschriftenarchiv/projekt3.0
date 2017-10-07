@@ -170,6 +170,12 @@ if(isset($_GET['js'])){
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center animate-box">
 						<div class="about-content">
+							<center>
+							<div class="form-group" style="position: center">
+								<input type="submit" value="Beta Version" class="btn-lable">
+							</div>
+						</center>
+						<br>
 <?php
 if(!isset($_GET['mode'])){
 	$s=$_GET['search'];

@@ -241,7 +241,7 @@ _idl.variant = "modal";
 							</div>
 							<div class="col-md-12">
 								<div class="fh5co-blog animate-box">
-									<a href="datenbankentwicklung"><img class="img-responsive" src="../images/blog/datenbank.png" alt="Beta-Version"></a>
+									<a href="datenbankentwicklung"><img class="img-responsive" src="../images/blog/datenbank/1.png" alt="Beta-Version"></a>
 									<div class="blog-text">
 										<span class="posted_on">07. Okt. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
