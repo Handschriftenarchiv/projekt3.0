@@ -152,10 +152,24 @@ _idl.variant = "modal";
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 			   				<div class="slider-text-inner">
 			   					<div class="desc">
-			   						<span>07 Sept. 2017</span>
-			   						<h2>Willkommen zur ℬ  von Projekt 3.0</h2>
-			   						<p>Die Gesamt-Einrichtung Handschriftenarchiv Dresdner Kreuzchor wurde in den letzten 2 Monaten komplett modernisiert. Mit einer neuen Philosopie widmen wir uns unseren Aufgaben neu</p>
+			   						<span>10. Okt. 2017</span>
+			   						<h2>Beta-Version des Projekts 3.0</h2>
+			   						<p>Die Gesamt-Einrichtung Handschriftenarchiv Dresdner Kreuzchor wurde in den letzten 4 Monaten komplett modernisiert. Mit einer neuen Philosophie widmen wir uns unseren Aufgaben neu.</p>
 			   					</div>
+			   				</div>
+			   			</div>
+			   		</div>
+			   	</li>
+					<li style="background-image: url(images/index/slider/6.jpg);">
+			   		<div class="overlay-gradient"></div>
+			   		<div class="container">
+			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
+			   				<div class="slider-text-inner">
+			   					<div class="desc">
+			   						<span>10. Okt. 2017</span>
+				   					<h2>Handschriften Digital erleben</h2>
+				   					<p>Entdecken und Erleben Sie unsere Handschriften mit einem neuen Online-Katalog.</p>
+				   				</div>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -168,8 +182,7 @@ _idl.variant = "modal";
 			   					<div class="desc">
 			   						<span>10. Jun. 2017</span>
 				   					<h2>@NotenarchivDKC bei Twitter</h2>
-				   					<p>Das Handschriftenarchiv Dresdner Kreuzchor ist seit mehr als einem Monat auch im Social Web unterwegs. Bleiben Sie immer informiert.</p>
-
+				   					<p>Das Handschriftenarchiv Dresdner Kreuzchor ist seit mehreren Monaten auch im Social Web unterwegs. Bleiben Sie immer informiert une folgen Sie uns.</p>
 				   				</div>
 			   				</div>
 			   			</div>
