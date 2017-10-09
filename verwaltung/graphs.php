@@ -44,7 +44,7 @@ require_once '../analytics.php';
 		</style>
 	</head>
 	<body>
-		<?php if(!hasData()){ ?>
+		<?php if(hasData()){ ?>
 		<script src="highcharts.js"></script>
 		<script src="highcharts-data.js"></script>
 
