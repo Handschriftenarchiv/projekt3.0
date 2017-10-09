@@ -14,16 +14,6 @@
 
 /*Nachträglich eingefügte Style-Elemente*/
 
-div#branding{
-  visibility: hidden;
-  display: none;
-}
-
-.issuu-branding{
-  visibility: hidden;
-}
-
-
 /* =======================================================*/
 td.ratser, th.ratser {
   padding: 20px;
