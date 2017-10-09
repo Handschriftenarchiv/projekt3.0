@@ -60,7 +60,7 @@ function echoData(){
 		$resx=mysqli_store_result($con);
 		echo 'Tag';
 		while($dsatz=mysqli_fetch_assoc($res)){
-			$documents[$dsatz['additional']]=$dsatz['Titel'];
+			$documents[$dsatz['additional']]=addslashes($dsatz['Titel']);
 		}
 		echo ','.implode(',',$documents).'\n';
 		mysqli_data_seek($res,0);
