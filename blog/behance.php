@@ -200,27 +200,7 @@ _idl.variant = "modal";
 				</div>
 			</div>
 		</div>
-
-
-
-	<div class="fh5co-counters" style="background-image: url(../images/blog/behance/3.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
-		<div class="fh5co-narrow-content animate-box">
-			<div class="row" >
-				<div class="col-md-4 text-center">
-					<span class="fh5co-counter js-counters"><h2><font color="#ffffff">Archivar</font></h2></span>
-					<span class="fh5co-counter-label">Autor</span>
-				</div>
-				<div class="col-md-4 text-center">
-					<span class="fh5co-counter js-counters"><h2><font color="#ffffff">Information</font></h2></span>
-					<span class="fh5co-counter-label">Wir sind Archivare und Mitarbeiter des Handschriftenarchivs.</span>
-				</div>
-				<div class="col-md-4 text-center">
-					<span class="fh5co-counter js-counters"><h2><font color="#ffffff">05. Aug. 2017</font></h2></span>
-					<span class="fh5co-counter-label">letzte Änderung</span>
-				</div>
-			</div>
-		</div>
-	</div>
+		
 	<footer>
 		<div id="footer">
 			<div class="container">

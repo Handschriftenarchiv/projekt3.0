@@ -523,27 +523,6 @@ _idl.variant = "modal";
 				</div>
 			</div>
 		</div>
-
-
-
-	<div class="fh5co-counters" style="background-image: url(../images/blog/liste/2.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
-		<div class="fh5co-narrow-content animate-box">
-			<div class="row" >
-				<div class="col-md-4 text-center">
-					<span class="fh5co-counter js-counters"><h2><font color="#fff">Autor</font></h2></span>
-					<span class="fh5co-counter-label"><font color="#fff">Archivar, Frau Dr. Vera Keller</font></span>
-				</div>
-				<div class="col-md-4 text-center">
-					<span class="fh5co-counter js-counters"><h2><font color="#fff">Information</font></h2></span>
-					<span class="fh5co-counter-label"><font color="#fff">Diese Liste enstand im Rahmen der Austellung "Die Notenbibliothe des Dresdner Kreuzchores" für die Kreuzkirche Dresden im Jahr 2016.</font></span>
-				</div>
-				<div class="col-md-4 text-center">
-					<span class="fh5co-counter js-counters"><h2><font color="#fff">01. Okt. 2017</font></h2></span>
-					<span class="fh5co-counter-label"><font color="#fff">letzte Änderung</font></span>
-				</div>
-			</div>
-		</div>
-	</div>
 	<footer>
 		<div id="footer">
 			<div class="container">
