@@ -174,7 +174,7 @@ _idl.variant = "modal";
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-md-push-1 animate-box">
-						<h4>Fehler-Kategorien</h4>
+						<p>Fehler-Kategorie wählen:</p>
 						<ul class="contact-info">
 							<style>
 								.toggle + label{
