@@ -170,71 +170,83 @@ _idl.variant = "modal";
 		  	</div>
 		</aside>
 
+<?php
+$process=isset($_POST['location']);
+$valid_location=!empty($_POST['location']);
+$valid_mail=!empty($_POST['email'])&&filter_var($_POST['email'],FILTER_VALIDATE_EMAIL);
+$valid=$valid_location&&$valid_mail;
+if($process&&$valid){
+	$header="From: \"".str_replace(array('"',"'"),"",$_POST['name'])."\"<$_POST[email]>\nContent-Type: text/plain\n";
+	if(empty($_POST['name'])){
+		$_POST['name']='<kein Name>';
+	}
+	$text="Kategorie: $_POST[type]\nbetroffen ist: $_POST[location]\n$_POST[text]";
+	if(@mail('handschriftenarchiv@protonmail.com','Fehlermeldung Kontakt - Handschriftenarchiv Dresdner Kreuzchor',$text,$header)){
+		echo "<p>Der Fehler wurde gemeldet.</p>";
+		$mail=true;
+	?>
 		<div id="fh5co-contact-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-md-push-1 animate-box">
-						<p>Fehler-Kategorie wählen:</p>
-						<ul class="contact-info">
-							<style>
-								.toggle + label{
-									transition:color .5s;
-									color:#929292;
-								}
-								input.toggle:checked + label{
-									color:#c39f00;
-								}
-								.toggle + label>i::before{
-									transition:color .5s;
-									color:#929292;
-								}
-								input.toggle:checked + label>i::before{
-									color:#c39f00;
-								}
-							</style>
-							<li>
-								<input type="radio" style="display:none;" class="toggle" id="db" name="type" value="Datenbank"/>
-								<label for="db"><i class="icon-database"></i>Datenbankeintrag</label>
-							</li>
-							<li>
-								<input type="radio" style="display:none;" class="toggle" id="gram" name="type" value="Grammatik"/>
-								<label for="gram"><i class="icon-pencil2"></i>Rechtschreibung</label>
-							</li>
-							<li>
-								<input type="radio" style="display:none;" class="toggle" id="func" name="type" value="fehlerhafte Funktion"/>
-								<label for="func"><i class="icon-cog"></i>fehlerhafte Funktion</label>
-							</li>
-							<li>
-								<input type="radio" style="display:none;" class="toggle" id="misc" name="type" value="sonstiger Fehler" checked="checked"/>
-								<label for="misc"><i class="icon-bug"></i>sonstiger Fehler</label>
-							</li>
-						</ul>
+						<p>Der Fehler wurde gemeldet. Danke für Ihre Mithilfe zur Verbesserung unserer Webseite.</p>
 					</div>
-					<div class="col-md-7 col-md-push-1 animate-box">
-						<?php
-						$process=isset($_POST['location']);
-						$valid_location=!empty($_POST['location']);
-						$valid_mail=!empty($_POST['email'])&&filter_var($_POST['email'],FILTER_VALIDATE_EMAIL);
-						$valid=$valid_location&&$valid_mail;
-						if($process&&$valid){
-							$header="From: \"".str_replace(array('"',"'"),"",$_POST['name'])."\"<$_POST[email]>\nContent-Type: text/plain\n";
-							if(empty($_POST['name'])){
-								$_POST['name']='<kein Name>';
-							}
-							$text="Kategorie: $_POST[type]\nbetroffen ist: $_POST[location]\n$_POST[text]";
-							if(mail('handschriftenarchiv@protonmail.com','Fehlermeldung Kontakt - Handschriftenarchiv Dresdner Kreuzchor',$text,$header)){
-								echo "<p>Der Fehler wurde gemeldet.</p>";
-								$mail=true;
-							}else{
-								echo "<p>Der Fehler konnte leider nicht gesendet werden.</p>";
-							}
-						}elseif($process){
-							echo "<p>Bitte geben Sie einen gültigen Ort ein!</p>";
-						}
-						if(!isset($mail)){
-						?>
-						<form method="POST">
+				</div>
+			</div>
+		</div>
+<?php
+	}else{
+		$fail=true;
+	}
+}elseif($process){
+	echo "<p>Bitte geben Sie einen gültigen Ort ein!</p>";
+}
+if(!isset($mail)){
+?>
+		<form method="POST">
+			<div id="fh5co-contact-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-md-push-1 animate-box">
+							<p>Fehler-Kategorie wählen:</p>
+							<ul class="contact-info">
+								<style>
+									.toggle + label{
+										transition:color .5s;
+										color:#929292;
+									}
+									input.toggle:checked + label{
+										color:#c39f00;
+									}
+									.toggle + label>i::before{
+										transition:color .5s;
+										color:#929292;
+									}
+									input.toggle:checked + label>i::before{
+										color:#c39f00;
+									}
+								</style>
+								<li>
+									<input type="radio" style="display:none;" class="toggle" id="db" name="type" value="Datenbank"/>
+									<label for="db"><i class="icon-database"></i>Datenbankeintrag</label>
+								</li>
+								<li>
+									<input type="radio" style="display:none;" class="toggle" id="gram" name="type" value="Grammatik"/>
+									<label for="gram"><i class="icon-pencil2"></i>Rechtschreibung</label>
+								</li>
+								<li>
+									<input type="radio" style="display:none;" class="toggle" id="func" name="type" value="fehlerhafte Funktion"/>
+									<label for="func"><i class="icon-cog"></i>fehlerhafte Funktion</label>
+								</li>
+								<li>
+									<input type="radio" style="display:none;" class="toggle" id="misc" name="type" value="sonstiger Fehler" checked="checked"/>
+									<label for="misc"><i class="icon-bug"></i>sonstiger Fehler</label>
+								</li>
+							</ul>
+						</div>
+						<div class="col-md-7 col-md-push-1 animate-box">
 							<div class="row">
+								<?php if(isset($fail)){echo "<p>Es ist ein Fehler beim Übermitteln der Meldung aufgetreten.</p>";}?>
 								<div class="col-md-6">
 									<div class="form-group">
 										<input type="text" class="form-control" placeholder="Name (optional)" name="name" <?php if(isset($_POST['name'])){echo " value=\"$_POST[name]\"";}?>/>
@@ -261,15 +273,15 @@ _idl.variant = "modal";
 									</div>
 								</div>
 							</div>
-						</form>
-					<?php } ?>
-					<div>
-						<a href="https://protonmail.com/" target="_blank"><img src="/images/kontakt/protonmail.svg" width="174px" alt="Secured by ProtonMail"></a>
-					</div>
+						<div>
+							<a href="https://protonmail.com/" target="_blank"><img src="/images/kontakt/protonmail.svg" width="174px" alt="Secured by ProtonMail"></a>
+						</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</form>
+		<?php } ?>
 
 
 		<footer>
