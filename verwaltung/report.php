@@ -221,8 +221,8 @@ _idl.variant = "modal";
 							if(empty($_POST['name'])){
 								$_POST['name']='<kein Name>';
 							}
-							$text="Kategorie: $_POST[type]\nVon: $_POST[name]";
-							if(mail('handschriftenarchiv@protonmail.com','Fehlermeldung Kontakt - Handschriftenarchiv Dresdner Kreuzchor',$_POST['text'],$header)){
+							$text="Kategorie: $_POST[type]\nbetroffen ist: $_POST[location]\n$_POST[text]";
+							if(mail('handschriftenarchiv@protonmail.com','Fehlermeldung Kontakt - Handschriftenarchiv Dresdner Kreuzchor',$text,$header)){
 								echo "<p>Der Fehler wurde gemeldet.</p>";
 								$mail=true;
 							}else{
