@@ -173,18 +173,30 @@ _idl.variant = "modal";
 <?php
 $process=isset($_POST['location']);
 $valid_location=!empty($_POST['location']);
-$valid_mail=!empty($_POST['email'])&&filter_var($_POST['email'],FILTER_VALIDATE_EMAIL);
-$valid=$valid_location&&$valid_mail;
-if($process&&$valid){
-	$header="From: \"".str_replace(array('"',"'"),"",$_POST['name'])."\"<$_POST[email]>\nContent-Type: text/plain\n";
-	if(empty($_POST['name'])){
-		$_POST['name']='<kein Name>';
+$valid_mail=empty($_POST['email'])||filter_var($_POST['email'],FILTER_VALIDATE_EMAIL);
+if($process&&$valid_location&&$valid_mail){
+	str_replace(array('"',"'"),"",$_POST['name'])
+	if(!empty($_POST['email'])){
+		$header="From: ";
+		if(!empty($_POST['name'])){
+			$header.='"'.$_POST['name'].'"<'.$_POST['email'].'>';
+		}else{
+			$header.=$_POST['email'];
+		}
+		$header.="\n";
 	}
-	$text="Kategorie: $_POST[type]\nbetroffen ist: $_POST[location]\n$_POST[text]";
+	$header.="Content-Type: text/plain\n";
+	$text="Kategorie: $_POST[type]\nbetroffen ist: $_POST[location]\ngeschrieben von:";
+	if(!empty($_POST['name'])){
+		$text.=$_POST['name'];
+	}else{
+		$text.="<kein Name angegeben>";
+	}
+	$text.="\n$_POST[text]";
 	if(@mail('handschriftenarchiv@protonmail.com','Fehlermeldung Kontakt - Handschriftenarchiv Dresdner Kreuzchor',$text,$header)){
 		echo "<p>Der Fehler wurde gemeldet.</p>";
 		$mail=true;
-	?>
+?>
 		<div id="fh5co-contact-section">
 			<div class="container">
 				<div class="row">
@@ -198,8 +210,6 @@ if($process&&$valid){
 	}else{
 		$fail=true;
 	}
-}elseif($process){
-	echo "<p>Bitte geben Sie einen gültigen Ort ein!</p>";
 }
 if(!isset($mail)){
 ?>
@@ -246,7 +256,19 @@ if(!isset($mail)){
 						</div>
 						<div class="col-md-7 col-md-push-1 animate-box">
 							<div class="row">
-								<?php if(isset($fail)){echo "<p>Es ist ein Fehler beim Übermitteln der Meldung aufgetreten.</p>";}?>
+								<?php
+								if($process){
+									if(isset($fail)){
+										echo "<p>Es ist ein Fehler beim Übermitteln der Meldung aufgetreten.</p>";
+									}
+									if(!$valid_mail){
+										echo "<p>Bitte geben sie keine oder eine gültige E-Mail-Adresse an.</p>";
+									}
+									if(!$valid_location){
+										echo "<p>Bitte geben Sie den Ort bzw. die Seite an, auf der der Fehler passiert ist.</p>";
+									}
+								}
+								?>
 								<div class="col-md-6">
 									<div class="form-group">
 										<input type="text" class="form-control" placeholder="Name (optional)" name="name" <?php if(isset($_POST['name'])){echo " value=\"$_POST[name]\"";}?>/>
