@@ -175,7 +175,7 @@ $process=isset($_POST['location']);
 $valid_location=!empty($_POST['location']);
 $valid_mail=empty($_POST['email'])||filter_var($_POST['email'],FILTER_VALIDATE_EMAIL);
 if($process&&$valid_location&&$valid_mail){
-	str_replace(array('"',"'"),"",$_POST['name'])
+	str_replace(array('"',"'"),"",$_POST['name']);
 	if(!empty($_POST['email'])){
 		$header="From: ";
 		if(!empty($_POST['name'])){
