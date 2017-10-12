@@ -186,7 +186,7 @@ if($process&&$valid_location&&$valid_mail){
 		$header.="\n";
 	}
 	$header.="Content-Type: text/plain\n";
-	$text="Kategorie: $_POST[type]\nbetroffen ist: $_POST[location]\ngeschrieben von:";
+	$text="Kategorie: $_POST[type]\nOrt, an dem der Fehler aufgetreten ist: $_POST[location]\nFehler gemeldet von:";
 	if(!empty($_POST['name'])){
 		$text.=$_POST['name'];
 	}else{
@@ -194,14 +194,14 @@ if($process&&$valid_location&&$valid_mail){
 	}
 	$text.="\n$_POST[text]";
 	if(@mail('handschriftenarchiv@protonmail.com','Fehlermeldung Kontakt - Handschriftenarchiv Dresdner Kreuzchor',$text,$header)){
-		echo "<p>Der Fehler wurde gemeldet.</p>";
+		echo "<p></p>";
 		$mail=true;
 ?>
 		<div id="fh5co-contact-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-md-push-1 animate-box">
-						<p>Der Fehler wurde gemeldet. Danke für Ihre Mithilfe zur Verbesserung unserer Webseite.</p>
+						<p>Der Fehler wurde gemeldet. Danke für Ihre Mithilfe zur Verbesserung unserer Services.</p>
 					</div>
 				</div>
 			</div>
@@ -265,7 +265,7 @@ if(!isset($mail)){
 										echo "<p>Bitte geben sie keine oder eine gültige E-Mail-Adresse an.</p>";
 									}
 									if(!$valid_location){
-										echo "<p>Bitte geben Sie den Ort bzw. die Seite an, auf der der Fehler passiert ist.</p>";
+										echo "<p>Bitte geben Sie den Ort bzw. die Seite an, auf der sich der Fehler befindet.</p>";
 									}
 								}
 								?>
