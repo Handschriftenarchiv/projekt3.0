@@ -11,7 +11,7 @@ require_once "analytics.php";
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Willkommen - Handschriftenarchiv Dresdner Kreuzchor</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Offizielle Website des Handschriftenarchiv Dresdner Kreuzchor" />
+	<meta name="description" content="Das Handschriftenarchiv Dresdner Kreuzchor sammelt, archiviert, digitalisiert und bereitet alte Drucke, Handschriften und Kopien des Dresdner Kreuzchores auf." />
 	<meta name="keywords" content="Handschrift, Kreuzchor, Geschichte, Archiv, Dresden" />
 	<meta name="author" content="Handschriftenarchiv Dresdner Kreuzchor" />
 
@@ -422,7 +422,7 @@ _idl.variant = "modal";
 							<p><a href="/verwaltung/report"target="_blank"><i class="icon-bug"></i> Fehler melden</a></p>
 							<p>Copyright 2017 Handschriftenarchiv Dresdner Kreuzchor <a href="/impressum.php">Impressum</a> Alle Rechte vorbehalten. </p>
 							<span class="notranslate" onmouseover="_tipon(this)" onmouseout="_tipoff()"><span class="google-src-text" style="direction: ltr; text-align: left"><a href=https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=de&ie=UTF8&prev=_t&rurl=translate.google.de&sl=en&sp=nmt4&tl=de&u=https://internetdefenseleague.org/&usg=ALkJrhjDQg4VshLY48zmtw4d205QQxxxMg target="_blank"><img src=images/internet.png alt="Mitglied in der Internet Defense League" width=115 height=115/></a></span>
-							
+
 							<div id="google_translate_element" style="align:center;"></div><script type="text/javascript">
 							function googleTranslateElementInit() {
 							  new google.translate.TranslateElement({pageLanguage: 'de', includedLanguages: 'en,es,fi,fr,it,ja,ru,zh-CN', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
