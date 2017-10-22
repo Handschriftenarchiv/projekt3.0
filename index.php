@@ -1,4 +1,4 @@
-<?php
+git<?php
 require_once "analytics.php";
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -10,7 +10,7 @@ require_once "analytics.php";
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Willkommen - Handschriftenarchiv Dresdner Kreuzchor</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Offizielle Website des Handschriftenarchiv Dresdner Kreuzchor" />
+	<meta name="description" content="Das Handschriftenarchiv Dresdner Kreuzchor sammelt, archiviert, digitalisiert und bereitet alte Drucke, Handschriften und Kopien des Dresdner Kreuzchores auf." />
 	<meta name="keywords" content="Handschrift, Kreuzchor, Geschichte, Archiv, Dresden" />
 	<meta name="author" content="Handschriftenarchiv Dresdner Kreuzchor" />
 
