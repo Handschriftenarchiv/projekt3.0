@@ -270,9 +270,9 @@ _idl.variant = "modal";
 							<ul>
                 <li><a href="../index">Willkommen</a></li>
        				 <li><a href="../archiv">Archiv</a></li>
-       				 <li><a href="../blog/">Blog</a></li>
        				 <li><a href="../mediathek">Mediathek</a></li>
        				 <li><a href="../suche/">Datenbank</a></li>
+               <li><a href="/verwaltung#presse">Mediakit</a></li>
        				 <li><a href="../impressum">Impressum</a></li>
        				 <li><a href="../kontakt">Kontakt</a></li>
 							</ul>

@@ -378,11 +378,11 @@ _idl.variant = "modal";
 						<div class="col-md-3 col-md-push-1">
 							<h3 class="section-title">Links</h3>
 							<ul>
-								<li><a href=".">Willkommen</a></li>
 								<li><a href="/archiv">Archiv</a></li>
 								<li><a href="/blog/">Blog</a></li>
 								<li><a href="/mediathek">Mediathek</a></li>
 								<li><a href="/suche/">Datenbank</a></li>
+								<li><a href="/verwaltung#presse">Mediakit</a></li>
 								<li><a href="/impressum">Impressum</a></li>
 								<li><a href="/kontakt">Kontakt</a></li>
 							</ul>
