@@ -192,6 +192,7 @@ _idl.variant = "modal";
 		 				 <li><a href="../blog/">Blog</a></li>
 		 				 <li><a href="../mediathek">Mediathek</a></li>
 		 				 <li><a href="../suche/">Datenbank</a></li>
+						 <li><a href="/verwaltung#presse">Mediakit</a></li>
 		 				 <li><a href="../impressum">Impressum</a></li>
 		 				 <li><a href="../kontakt">Kontakt</a></li>
 						</ul>
