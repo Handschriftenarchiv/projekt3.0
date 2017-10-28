@@ -26,6 +26,28 @@ table.ratser {
   font-weight: 300;
   font-family: "Karla", Arial, sans-serif;
 }
+
+div.author{
+height: 100%;
+width: 100%;
+border-width: 0px;
+border-radius: 2px;
+border-style: solid;
+background-color: #f2f2f2
+}
+
+table.author {
+  color: #929292;
+  margin-bottom: 1.5em;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Karla", Arial, sans-serif;
+}
+
+td.author, th.author {
+  padding: 20px;
+  align-content: center;
+}
 /* ======================================================= */
 
 body {
