@@ -173,16 +173,16 @@ _idl.variant = "modal";
 		<div id="fh5co-blog" class="fh5co-bg-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4">
+          <div class="col-md-4">
 						<div class="row">
 							<div class="col-md-12">
                 <div class="fh5co-blog animate-box">
-									<a href="datenbankentwicklung"><img class="img-responsive" src="../images/blog/datenbank/1.png" alt="Beta-Version"></a>
+									<a href="netzneutralitaet"><img class="img-responsive" src="../images/blog/netzneutralitaet/1.png" alt="Wallpaper Netneutrality"></a>
 									<div class="blog-text">
-										<span class="posted_on">07. Okt. 2017</span>
+										<span class="posted_on">03. Nov. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
-										<h3><a href="datenbankentwicklung">Zur Datenbank</a></h3>
-										<p>Aktuelle Information zu Online-Datenbank des Handschriftenarchivs.</p>
+										<h3><a href="netzneutralitaet">Netzneutralität</a></h3>
+										<p>Das Handschriftenarchiv Dresdner Kreuzchor und der Kampf für die Netzneutralität.</p>
 									</div>
 								</div>
 							</div>
@@ -194,6 +194,17 @@ _idl.variant = "modal";
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
 										<h3><a href="isil-nummer">ISIL Nummer</a></h3>
 										<p>Das Handschriftenarchiv in der Loge international genormter Archive.</p>
+									</div>
+								</div>
+							</div>
+              <div class="col-md-12">
+                <div class="fh5co-blog animate-box">
+									<a href="datenbankentwicklung"><img class="img-responsive" src="../images/blog/datenbank/1.png" alt="Beta-Version"></a>
+									<div class="blog-text">
+										<span class="posted_on">07. Okt. 2017</span>
+										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
+										<h3><a href="datenbankentwicklung">Zur Datenbank</a></h3>
+										<p>Aktuelle Information zu Online-Datenbank des Handschriftenarchivs.</p>
 									</div>
 								</div>
 							</div>
