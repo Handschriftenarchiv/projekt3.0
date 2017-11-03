@@ -176,12 +176,29 @@ _idl.variant = "modal";
 				<div class="col-md-8 col-md-offset-2 animate-box text-center">
 					<h2 class="intro-heading"> Netzneutralität - Was ist das?</h2>
 					<blockquote>
-					<p>Netzneutralität [engl.: netneutrality] beschreibt Grundsätzlich die Gleichbehandlung bei der Übertragung  von Daten über das Internet. Das heißt, dass alle Daten die wir über das Internet anfordern und zum Weiterverarbeiten senden, bestenfalls bei allen Internetdienstleistern mit der beispielsweise der gleichen Geschwindigkeit übertragen werden. Aufgrund der immer weiter steigenden Menge an zu verarbeitenden Daten, wollen die Internetanbieter jedoch, die Netzneutralität einschränken bzw. wie eventuell bald in den Vereinigten Staaten komplett abschaffen. Dies hätte zur Folge, dass man Internet in verschiedenen Qualitätsstufen kaufen müsste, damit die Anbieter ihre Kosten für den Kapazitätsausbau zu decken. Kauft man das „Internetpaket“ des Anbieters nicht, so muss man mit sehr langsamen und eingeschränkten Internetverbindungen rechnen.
-					<br>
-					Ein weiteres enormes Problem, dass mit dieser radikalen Änderung der Nutzungsmöglichkeiten des Internets verbunden ist, lautet befürchtete Monopolstellung großer Unternehmen. So können diese die Internetdienstleister dafür bezahlen, ihre Dienste, die des zahlenden Unternehmens, mit einer besseren Qualität oder Geschwindigkeit zu übertragen als die des Konkurrenten, der ein beispielsweise gleiches Produkt anbietet. Ebenfalls befürchten Kritiker, dass im Falle der Abschaffung der Netzneutralität, die geregelten Datenströme auch als Zensur des Staates missbraucht werden können. So können, wie auch im vorherigen Beispiel genannt, systemkritische Texte, Reden, Inhalte, etc. langsamer bzw. mit schlechterer Qualität übertragen werden.
-					<br>
-					Dieses Thema beschäftig nicht nur die Verbraucher, sonder gehört mittlerweile auch schon dem öffentlichen Diskurs der Europäischen Union und auch anderen politischen Institutionen in den Vereinigten Staaten an. </p>
-				</blockquote>
+						<p>
+							Netzneutralität [engl.: net neutrality] beschreibt grundsätzlich die Gleichbehandlung
+							bei der Übertragung  von Daten über das Internet. Das heißt, dass alle Daten,
+							die wir über das Internet anfordern und zum Weiterverarbeiten senden,
+							bestenfalls bei allen Internetdienstleistern mit beispielsweise der gleichen Geschwindigkeit übertragen werden.
+							Aufgrund der immer weiter steigenden Menge an zu verarbeitenden Daten wollen die Internetanbieter jedoch
+							die Netzneutralität einschränken und schlussendlich vielleicht - wie eventuell bald in den Vereinigten Staaten - komplett abschaffen.
+							Dies hätte zur Folge, dass man einen Internet-Anschluss in verschiedenen Qualitätsstufen kaufen müsste,
+							so muss man mit sehr langsamen und eingeschränkten Internetverbindungen rechnen.
+							damit die Anbieter ihre Kosten für den Kapazitätsausbau decken können. Kauft man das „Internetpaket“ des Anbieters nicht,
+							<br>
+							Verbunden mit dieser radikalen Änderung der Nutzungsmöglichkeiten des Internets ist ein weiteres gefürchtetes Problem:
+							Monopolstellung großer Unternehmen. So können diese die Internetdienstleister dafür bezahlen, ihre Dienste,
+							nämlich die des zahlenden Unternehmens, mit einer besseren Qualität oder Geschwindigkeit zu übertragen als die der Konkurrenz,
+							die ein gleiches bzw. ähnliches Produkt anbietet. Ebenfalls befürchten Kritiker, dass im Falle der Abschaffung der Netzneutralität
+							die geregelten Datenströme auch durch Staaten als Zensurmöglichkeit missbraucht werden können. So können,
+							wie auch im vorherigen Beispiel genannt, systemkritische Texte, Reden, Inhalte, etc. langsamer bzw.
+							mit schlechterer Qualität übertragen werden.
+							<br>
+							Dieses Thema beschäftig nicht nur die Verbraucher, sonder gehört mittlerweile auch schon zum öffentlichen Diskurs
+							der Europäischen Union und auch politischer Institutionen in den Vereinigten Staaten.
+						</p>
+					</blockquote>
 				</div>
 			</div>
 		</div>
