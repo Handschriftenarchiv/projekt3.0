@@ -178,7 +178,7 @@ _idl.variant = "modal";
 						<div class="about-content">
 							<h2>Mitteilung:</h2>
 							<blockquote>
-								<p>Seit dem 18. September besitzt das Handschriftenarchiv Dresdner Kreuzchor eine ISIL-Nummer. Diese wird offiziell von der Sigelstelle der Deutschen Staatsbibliothek in Berlin vergeben und dient dazu ein Archiv, mittels einer Nummerfolge, eindeutig in der internationalen Archivlandschft zu indentifizieren.</p>
+								<p>Seit dem 18. September besitzt das Handschriftenarchiv Dresdner Kreuzchor eine ISIL-Nummer. Diese wird offiziell von der Sigelstelle der Deutschen Staatsbibliothek in Berlin vergeben und dient dazu ein Archiv, mittels einer Nummerfolge, eindeutig in der internationalen Archivlandschaft zu indentifizieren.</p>
 							</blockquote>
 							<center>
 								<br>
