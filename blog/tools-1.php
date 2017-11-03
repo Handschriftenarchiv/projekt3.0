@@ -191,7 +191,7 @@ _idl.variant = "modal";
 								auf der Suche nach immer neuem Datenmaterial sind.<br>
 								Für eine sichere Unternehmens- und Kundenkommunikation nutzt das Handschriftenarchiv Dresdner Kreuzchor
 								aus diesem Grund ProtonMail: Der E-Mail Anbieter ist in der Schweiz ansässig und betreibt auch dort seine Server.
-								Somit unterliegt der Datenverkehr über diesen Dient den strengen Schweizer Datenschutzbedingungen.
+								Somit unterliegt der Datenverkehr über diesen Dienst den strengen Schweizer Datenschutzbedingungen.
 								Desweiteren ist ProtonMail einer der wenigen Mail-Anbieter, die auf das Prinzip der End-to-End-Verschlüsselung setzen.
 								Das bedeutet, dass der gesamte Mail-Verkehr durch einmalig vergebene Fingerprints verifiziert wird und auf der Strecke
 								vom Sender zum Empfänger verschlüsselt und nur über diesen Fingerprint wieder entschlüsselt werden kann.
