@@ -177,11 +177,11 @@ _idl.variant = "modal";
 						<div class="row">
 							<div class="col-md-12">
                 <div class="fh5co-blog animate-box">
-									<a href="netzneutralitaet"><img class="img-responsive" src="../images/blog/netzneutralitaet/1.png" alt="Wallpaper Netneutrality"></a>
+									<a href="netzneutralität"><img class="img-responsive" src="../images/blog/netzneutralitaet/1.png" alt="Wallpaper Netneutrality"></a>
 									<div class="blog-text">
 										<span class="posted_on">03. Nov. 2017</span>
 										<span class="comment"><i class="icon-pencil"></i> Archivar</span>
-										<h3><a href="netzneutralitaet">Netzneutralität</a></h3>
+										<h3><a href="netzneutralität">Netzneutralität</a></h3>
 										<p>Das Handschriftenarchiv Dresdner Kreuzchor und der Kampf für die Netzneutralität.</p>
 									</div>
 								</div>
