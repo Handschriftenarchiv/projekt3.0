@@ -178,7 +178,15 @@ _idl.variant = "modal";
 						<div class="about-content">
 							<h2>Das Archiv</h2>
 							<blockquote>
-								<p>Das Handschriftenarchiv Dresdner Kreuzchor - Eine Institution mit traditionsreicher Geschichte.<br><br> Das Archiv begründet seinen Bestand auf der Handschriftenarchivsammlung der Notenbiblothek des weltbrühmten Chores. Hier wurden Handschriften, Drucke und Kopien von Handschriften, aus dem ehemaligen Chorbetrieb des Kreuzchores, die aufgrund ihres Alters, neurer Ausgaben der Werke oder ihrem besonderen historischen Gehalt, der Sammlung beigefügt wurden. Diese stand lange Zeit unentdeckt in den Lagerräumen der Bibliothek auf dem Dachboden der Einrichtung.<br> Das Handschriftenarchiv Dresdner Kreuzchor wurde 2013 mit dem Anliegen gegründet, die Dokumente der Handschriftensammlung als Archivalien schematisch zu erfassen, zu digiztalisieren und diese besondere Geschichte der Öffentlichkeit zugänglich zu machen. In Kooperation mit der Notenbibliothek wurden die Handschriften und Drucke analog erfasst. Der Dresdner Kreuzchor unterstützte dieses Unternehmen jedoch nicht; zu groß seinen die Aufgaben des aktuellen Chorbetriebes. So arbeitete das Handschriftenarchiv von Anfang an auf ehrenamtlicher Basis.<br> Der Altersumfang der Werke umfasst rund 100 Jahre ud reicht noch weit in die Zeiten Mauersbergers hinein. Jedoch ist der Großteil des eigenlichen Bestandes im Jahr 1945, während des Feuersturms auf Dresden vernichtet wurden. So dominieren Archivalien aus den 60er, 70er und 80er Jahren.<br><br> Erste Versuche im Internet starte das Handschriftenarchiv 2014 mit einer Jimdo-Seite und einer Einführung in die traditionsreiche Geschichte des Dresdner Kreuzchores.<br> Seit 2016 hat das Handschriftenarchiv seine Web-Strategie gestartet. So gab es eine neue Website mit Online-Katalog, einen Newsletter und Beitragsfilme. Über die Plattform issuu.com bietet das Handschriftenarchiv an, Digitalisierungen zu interaktiv erleben und mit Musescore rekonstruiert das Handschriftenarchiv unbekannte Werke. Über Twitter, Vimeo, Youtube und Wikipedia hat das Handschriftenarchiv auch anschluss an die modernen sozialen Medien gefunden.<br> Im Herbst 2017, hat das Handschriftenarchiv das Projekt 3.0 gestartet, was eine Neu-Konzeption des Archivbetriebs einleitete. So wurde eine professionelle, archivarischen Anforderungen entsprechende Datenbank geschafft und eine neue, dem Archiv entsprechende, Website und Online-Präsenz entworfen.</p>
+								<p>Das Handschriftenarchiv Dresdner Kreuzchor - Eine Institution die traditionsreiche Geschichte verwahrt<br><br>
+
+Das Archiv begründet seinen Bestand auf der Handschriftensammlung der Notenbibliothek des weltberühmten Dresdner Kreuzchores. Hier wurden Handschriften, Drucke und Kopien von Handschriften, aus dem ehemaligen Chorbetrieb des Kreuzchores, aufgrund ihres Alters, neuerer Ausgaben der Werke oder ihrem besonderen historischen Gehalt wegen, dieser Sammlung beigefügt. Diese stand lange Zeit unentdeckt in den Lagerräumen der Bibliothek auf dem Dachboden der Einrichtung.
+Das Handschriftenarchiv Dresdner Kreuzchor wurde 2013 mit dem Anliegen gegründet, die Dokumente der Handschriftensammlung als Archivalien schematisch zu erfassen, zu digitalisieren und diese besondere Geschichte der Öffentlichkeit auf einfachem Wege zugänglich zu machen. In Kooperation mit der Notenbibliothek wurden die Handschriften und Drucke analog erfasst. Der Dresdner Kreuzchor unterstützte dieses Unternehmen jedoch nicht; zu groß seinen die Aufgaben des aktuellen Chorbetriebes. So arbeitet das Handschriftenarchiv auf ehrenamtlicher Basis.<br>
+Der Altersumfang der Werke umfasst rund 100 Jahre und reicht noch weit in die Zeiten des Kantors Rudolf Mauersbergers hinein. Jedoch ist der Großteil des eigentlichen Bestandes im Jahr 1945, während des Feuersturms auf Dresden, vernichtet worden. So dominieren Archivalien aus den 1960er, 1970er und 1980er Jahren.
+<br><br>
+Erste Versuche im Internet startete das Handschriftenarchiv 2014 mit einer Jimdo-Seite und einer Einführung in die traditionsreiche Geschichte des Dresdner Kreuzchores.
+Seit 2016 hat das Handschriftenarchiv seine Web-Strategie gestartet: so gab es eine neue Website mit Online-Katalog, einen Newsletter und Beitragsfilme. Über die Plattform issuu.com bietet das Handschriftenarchiv an, Digitalisierungen interaktiv zu erleben und mit Musescore rekonstruiert das Archiv unbekannte Werke. Über Twitter, Vimeo, Youtube und Wikipedia hat das Handschriftenarchiv auch Anschluss an die modernen sozialen Medien gefunden.
+Im Herbst 2017, hat das Handschriftenarchiv das »Projekt 3.0«, als Neu-Konzeption des öffentlichen Auftritts und der internen Erfassung, gestartet. So wurde eine professionelle, den archivarischen Anforderungen entsprechende Datenbank geschafft und eine neue, dem Archiv angepasste, Website und Online-Präsenz entworfen.</p>
 							</blockquote>
 						</div>
 					</div>
@@ -223,26 +231,6 @@ _idl.variant = "modal";
 							<p>Die aktuellen Regelung zur Nutzung von Archivalien für das Handschriftenarchiv Dresdner Kreuzchor.</p>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="fh5co-counters" style="background-image: url(images/archiv/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
-		<div class="fh5co-narrow-content animate-box">
-			<div class="row" >
-				<div class="col-md-4 text-center">
-					<span class="fh5co-counter js-counters"><h2><font color="#ffffff">Adresse</font></h2></span>
-					<span class="fh5co-counter-label">Dornblüthstraße 4, 01277 Dresden<br>Deutschland</span>
-				</div>
-				<div class="col-md-4 text-center">
-					<span class="fh5co-counter js-counters"><h2><font color="#ffffff">Web</font></h2></span>
-					<span class="fh5co-counter-label">www.hsa.bplaced.com</span>
-				</div>
-				<div class="col-md-4 text-center">
-					<span class="fh5co-counter js-counters"><h2><font color="#ffffff">Mail</font></h2></span>
-					<span class="fh5co-counter-label">handschriftenarchiv<br>@protonmail.com</span>
 				</div>
 			</div>
 		</div>
