@@ -180,6 +180,9 @@ _idl.variant = "modal";
 							<blockquote>
 								<p>…aber dieser Blogeintrag wird noch überarbeitet. Aufgrund von neuen im Vordergrund stehenden Aufgaben, wie der Komplett-Überarbeitung der Datenbank, sind manche Aufgabe in den Hintergrund gerückt. Bitte gedulden Sie sich noch ein wenig. Wir werden über Twitter informieren, wenn dieser Blogeintrag für Sie veröffentlicht wurde.</p>
 							</blockquote>
+							<br>
+							<br>
+							<a href="."><p>Zurück zur Eintrags-Übersicht</p></a>
 						</div>
 					</div>
 				</div>
