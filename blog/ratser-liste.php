@@ -517,7 +517,8 @@ _idl.variant = "modal";
 											<td class="ratser"> - </td>
 										</tr>
 									</tbody>
-								</table>
+								</table><br><br><a href="."><p>Zurück zur Eintrags-Übersicht</p></a>
+
 						</div>
 					</div>
 				</div>
