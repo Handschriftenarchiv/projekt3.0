@@ -308,36 +308,36 @@ _idl.variant = "modal";
 			<div class="container">
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Werke</h2>
-						<p>Das Handschriftenarchiv Dresdner Kreuzchor digitalisiert. Unsere besondersten Werke...</p>
+						<h2>Einblick</h2>
+						<p>Einblick in den Bestand des Handschriftenarchivs Dresdner Kreuzchor</p>
 					</div>
 				</div>
 				<div id="werk">
 				<div class="row">
 					<div class="col-md-4 text-center animate-box">
-						<div class="work" style="background-image: url(images/index/werke/1.jpg);">
-							<a href="#werk" class="view">
+						<div class="work" style="background-image: url(images/archiv/werke/1.jpg);">
+							<a href="/suche/details.php?id=3" class="view">
 								<span>Der Faulbeerbaum - Alexander Tichonowitsch Gretschaninow</span>
 							</a>
 						</div>
 					</div>
 					<div class="col-md-8 text-center animate-box">
-						<div class="work" style="background-image: url(images/index/werke/2.jpg);">
-							<a href="#werk" class="view">
+						<div class="work" style="background-image: url(images/archiv/werke/2.jpg);">
+							<a href="/suche/details.php?id=1" class="view">
 								<span>Gott der Herr ist Sonn und Schild - Johann Sebastian Bach</span>
 							</a>
 						</div>
 					</div>
 					<div class="col-md-7 text-center animate-box">
-						<div class="work" style="background-image: url(images/index/werke/3.jpg);">
-							<a href="#werk" class="view">
+						<div class="work" style="background-image: url(images/archiv/werke/3.jpg);">
+							<a href="/suche/details.php?id=182" class="view">
 								<span>Magnificat - Franz Schubert</span>
 							</a>
 						</div>
 					</div>
 					<div class="col-md-5 text-center animate-box">
-						<div class="work" style="background-image: url(images/index/werke/4.jpg);">
-							<a href="#werk" class="view">
+						<div class="work" style="background-image: url(images/archiv/werke/4.jpg);">
+							<a href="/suche/details.php?id=213" class="view">
 								<span>Verstohlen geht der Mond auf - Johannes Brahms</span>
 							</a>
 						</div>

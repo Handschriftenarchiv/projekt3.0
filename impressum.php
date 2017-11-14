@@ -227,6 +227,9 @@ _idl.variant = "modal";
 							<blockquote>
 								<p>Server: Kosteloser Domain-Service von <a href="http://bplaced.net/" target="_blank">Bplaced</a>.<br> <i>Server-Standort: Österreich</i></p>
 							</blockquote>
+							<blockquote>
+								<p>Wir danken allen weiteren Mitwirkenden, die auf GitHub mitgearbeitet haben, dieses Projekt zu realisieren.</p>
+							</blockquote>
 							<br>
 							<div id="archiv-daten">
 							<h2>Urheberrecht im Archiv</h2>
