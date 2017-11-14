@@ -4,7 +4,7 @@ the directory in which the dictionaries reside in
 
 standard is 'lang'
 */
-$dict_dir='../lang';
+$dict_dir='lang';
 /*
 language to use by default
 NULL or unset means to use the language provided by the browser
