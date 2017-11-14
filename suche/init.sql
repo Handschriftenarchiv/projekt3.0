@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS `archivalien` (
   `Bemerkungen` text,
   `Audiolink` varchar(255) DEFAULT NULL,
   `Dokumentlink` varchar(255) DEFAULT NULL,
+  `LegalDigital` tinyint(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
