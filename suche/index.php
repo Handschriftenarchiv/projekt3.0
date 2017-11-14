@@ -1,10 +1,11 @@
 <?php
 require_once '../analytics.php';
+require_once '../translate.php';
 ?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Datenbank - Handschriftenarchiv Dresdner Kreuzchor</title>
+		<title><?php echo __('db');?> - <?php echo __('hsa')?></title>
 		<link rel="shortcut icon" href="../favicon.ico"/>
 		<link rel="stylesheet" type="text/css" href="index.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
@@ -22,7 +23,7 @@ require_once '../analytics.php';
 			<form method="GET" action="search.php" autocomplete="off" onsubmit="return checkSubmit(0);">
 				<input type="search" list="suggestions" name="search" id="searchBox" style="width:80%" oninput="lookup();"/>
 				<div id="livesearch"></div><br>
-				<input type="submit" value="Suchen" style="float:right;margin-top:7%;margin-right:10%;"/>
+				<input type="submit" value=<?php echo __('src!')?> style="float:right;margin-top:7%;margin-right:10%;"/>
 			</form>
 		</div>
 		<div id="search-b">
