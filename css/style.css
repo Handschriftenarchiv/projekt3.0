@@ -36,6 +36,7 @@ border-style: solid;
 background-color: #f2f2f2
 }
 
+
 table.author {
   color: #929292;
   margin-bottom: 1.5em;
@@ -48,6 +49,7 @@ td.author, th.author {
   padding: 20px;
   align-content: center;
 }
+
 /* ======================================================= */
 
 body {
