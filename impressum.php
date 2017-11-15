@@ -1,5 +1,6 @@
 <?php
 require_once "analytics.php";
+require_once "translate.php";
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -8,7 +9,7 @@ require_once "analytics.php";
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Impressum - Handschriftenarchiv Dresdner Kreuzchor</title>
+	<title><?php echo __('sitenotice');?> - <?php echo __('hsa'); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Impressum des Handschriftenarchiv Dresder Kreuzchor" />
 	<meta name="keywords" content="Impressum, Archiv, Kreuchor, Dresdner, Handschriften" />
@@ -104,13 +105,13 @@ _idl.variant = "modal";
 		 <div class="fh5co-table-cell js-fullheight">
 			 <h1 class="text-center"><a class="fh5co-logo" href="index.php">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
 			 <ul>
-				 <li><a href=".">Willkommen</a></li>
-				 <li><a href="/archiv">Archiv</a></li>
-				 <li><a href="/blog/">Blog</a></li>
-				 <li><a href="/mediathek">Mediathek</a></li>
-				 <li><a href="/suche/">Datenbank</a></li>
-				 <li><a href="/impressum">Impressum</a></li>
-				 <li><a href="/kontakt">Kontakt</a></li>
+				 <li><a href="."><?php echo __('welcome');?></a></li>
+				 <li><a href="/archiv"><?php echo __('archive');?></a></li>
+				 <li><a href="/blog/"><?php echo __('blog');?></a></li>
+				 <li><a href="/mediathek"><?php echo __('medialib');?></a></li>
+				 <li><a href="/suche/"><?php echo __('db');?></a></li>
+				 <li><a href="/impressum"><?php echo __('sitenotice');?></a></li>
+				 <li><a href="/kontakt"><?php echo __('contact');?></a></li>
 			 </ul>
 			 <p class="fh5co-social-icon">
 				 <a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
@@ -158,8 +159,8 @@ _idl.variant = "modal";
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 			   				<div class="slider-text-inner">
 			   					<div class="desc">
-			   						<span>Rechtliches, Copyright, Verantwortung</span>
-			   						<h2>Impressum</h2>
+			   						<span><?php echo __('sitenotice-top');?></span>
+			   						<h2><?php echo __('sitenotice');?></h2>
 			   						<p class="fh5co-lead">Das Impressum des Handschriftenarchivs. Hier finden Sie Kontakt Daten, Rechtliche und Datenschutz-Hinweise und Copyright-Informationen.</a></p>
 			   					</div>
 			   				</div>
@@ -173,126 +174,7 @@ _idl.variant = "modal";
 
 		<div id="fh5co-about">
 			<div class="container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center animate-box">
-						<div class="about-content">
-							<h2>Impressum</h2>
-							<h3>Herausgeber:</h3>
-							<blockquote>
-								<p>Handschriftenarchiv Dresdner Kreuzchor <br> <i>Privatprojekt von Marc Eric Mitzscherling</i></p>
-							</blockquote>
-							<br>
-							<h3>Leitung/Verantwortung:</h3>
-							<blockquote>
-								<p>Marc Eric Mitzscherling<br> <i>Archivleiter, Archivar, Ansprechpartner</i></p>
-							</blockquote>
-							<br>
-							<h3>Mitarbeiter</h3>
-							<blockquote>
-								<p>Johann Galle<br> <i>Programmiertechnischer Support, Digitale Datenübernahme</i></p>
-							</blockquote>
-							<blockquote>
-								<p>Dr. Vera Keller<br> <i>Wissenschaftliche Beratung und Betreuung</i></p>
-							</blockquote>
-							<blockquote>
-								<p>Annett Schmerler<br> <i>Standort-Verwaltung, Wissenschaftliche Beratung</i></p>
-							</blockquote>
-							<br>
-							<h3>Kontakt</h3>
-							<blockquote>
-								<p>Marc Eric Mitzscherling<br> <i>Webmaster</i></p>
-							</blockquote>
-							<blockquote>
-								<p>E-Mail<br> <i>handschriftenarchiv[ät]protonmail.com</i></p>
-							</blockquote>
-							<blockquote>
-								<p>Adresse<br> <i>Dornblüthstraße 4, 01277 Dresden, Deutschland</i></p>
-							</blockquote>
-							<blockquote>
-								<p>Telefon<br> <i><span>0351</span><span>3153572</span></i></p>
-							</blockquote>
-							<br>
-							<h3>Standort</h3>
-							<blockquote>
-								<p>Archiv des Evangelischen Kreuzgymnasiums Dresden und des Dresdner Kreuzchores<br> <i>Stadtarchiv Dresden</i></p>
-							</blockquote>
-							<br>
-							<h3>Website</h3>
-							<blockquote>
-								<p>Grundausstattung, Website-Basis<br> <i><a href="http://freehtml5.co" target="_blank">FreeHTML5.co</a></i></p>
-							</blockquote>
-							<blockquote>
-								<p>Inhalte (Bilder, Texte, Audio-Datein, Video-Datein, etc.)<br> <i>Marc Eric Mitzscherling, Handschriftenarchiv Dresdner Kreuzchor</i></p>
-							</blockquote>
-							<blockquote>
-								<p>Server: Kosteloser Domain-Service von <a href="http://bplaced.net/" target="_blank">Bplaced</a>.<br> <i>Server-Standort: Österreich</i></p>
-							</blockquote>
-							<blockquote>
-								<p>Wir danken allen weiteren Mitwirkenden, die auf GitHub mitgearbeitet haben, dieses Projekt zu realisieren.</p>
-							</blockquote>
-							<br>
-							<div id="archiv-daten">
-							<h2>Urheberrecht im Archiv</h2>
-							<h3>Datenschutz der Archivalien</h3>
-							<blockquote>
-								<p>Das Handschriftenarchiv Dresdner Kreuzchor nimmt  den Urheber- und Datenschutz im Bezug auf Archivalien und  Digitalisierungen sehr ernst. Nach dem Archivgesetz des Freistaates Sachsen (SächsArchivG) vom 01. Februar 2014 § 10 Abs. 1 dürfen Archivalien erst 30 Jahre nach der Entstehung veröffentlicht werden, sofern sich das Archivgut nicht auf natürliche Personen bezieht. Zweites wurde vom Handschriftenarchiv ausgeschlossen, da es sich im Archivgut um Noten, Drucke und Handschriften handelt, die für die täglichen Chor- und Probengebrauch des Dresdner Kreuzchores und nicht für eine einzelne Person geschaffen wurden. Als Urheber gilt im Handschriftenarchiv Dresdner Kreuzchor der Komponist des jeweiligen Werkes. Für den Fall das der Urheber bzw. das Entstehungsdatum ermittelt werden konnte gilt das Sächsische Archiv Gesetz in seiner letzten Ausgabe vom 01. Februar 2014.  Nach § 6 Abs. 3  SächsArchivG hat jedermann Recht, zu erfahren, ob im Archivgut Daten zu seiner Person enthalten sind, soweit diese Bestände erfasst sind. <br> Aufgrund dieser Regelungen veröffentlicht das Handschriftenarchiv alle Handschriften, Drucke und Noten im Allgemeinen als Datenbankeintrag und als Digitalisierung. Dies geschieht unter der der Creative Commons Lizenz <strong>by-sa 4.0</strong> . Der Notenschreiber hat als Urheber keine Rechtsanspruch!</p>
-							</blockquote>
-							<br>
-							</div>
-							<div id="recht">
-							<h2>Rechtliche Hinweise</h2>
-							<h3>1. Haftungsbeschränkung</h3>
-							<blockquote>
-								<p>Die Inhalte des Internetauftritts wurden mit größtmöglicher Sorgfalt und nach bestem Gewissen erstellt. Dennoch übernimmt der Anbieter dieser Webseite keine Gewähr für die Aktualität, Vollständigkeit und Richtigkeit der bereitgestellten Seiten und Inhalte.<br> Als Diensteanbieter ist der Anbieter dieser Webseite gemäß § 7 Abs. 1 TMG für eigene Inhalte und bereitgestellte Informationen auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich; nach den §§ 8 bis 10 TMG jedoch nicht verpflichtet, die übermittelten oder gespeicherten fremden Informationen zu überwachen. Eine Entfernung oder Sperrung dieser Inhalte erfolgt umgehend ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung. Eine Haftung ist erst ab dem Zeitpunkt der Kenntniserlangung möglich.</p>
-							</blockquote>
-							<br>
-							<h3>2. Externe Links</h3>
-							<blockquote>
-								<p>Die Webseite enthält sog. „externe Links“ (Verlinkungen) zu anderen Webseiten, auf deren Inhalt der Anbieter der Webseite keinen Einfluss hat. Aus diesem Grund kann der Anbieter für diese Inhalte auch keine Gewähr übernehmen.<br> Für die Inhalte und Richtigkeit der bereitgestellten Informationen ist der jeweilige Anbieter der verlinkten Webseite verantwortlich. Zum Zeitpunkt der Verlinkung waren keine Rechtsverstöße erkennbar. Bei Bekanntwerden einer solchen Rechtsverletzung wird der Link umgehend entfernen.</p>
-							</blockquote>
-							<br>
-							<h3>3. Urheberrecht/Leistungsschutzrecht</h3>
-							<blockquote>
-								<p>Die auf dieser Webseite veröffentlichten Inhalte, Werke und bereitgestellten Informationen unterliegen dem deutschen Urheberrecht und Leistungsschutzrecht. Jede Art der Vervielfältigung, Bearbeitung, Verbreitung, Einspeicherung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedarf der vorherigen schriftlichen Zustimmung des jeweiligen Rechteinhabers. Das unerlaubte Kopieren/Speichern der bereitgestellten Informationen auf diesen Webseiten ist nicht gestattet und strafbar. <br><br>Das Handschriftenarchiv begrüßt es ausdrücklich, wenn Sie Dokumente zitieren und Links auf diese Website setzen, solange Sie kenntlich machen, dass es sich um Inhalte der Website des Handschriftenarchivs handelt und diese Inhalte nicht in Verbindung mit Inhalten Dritter gebracht werden, die den Interessen des Handschriftenarchivs widersprechen. <br><br> Für das Urheberrecht an Archivalien nehmen Sie bitte den Punkt "Urheberrecht im Archiv" zur Kenntnis. Wenn Sie Informationen oder Medien für anderweitige Zwecke, wie zum Beispiel Medienberichte benötigen, kontaktieren Sie uns. Wir werden Ihnen ein Presse-Kit Paket mit gewünschtem Material bereitstellen, was dann auch, nach Absprache mit dem Archivar, für Ihre Zwecke frei verwendet werden kann und nicht unter dieses Urheberrechtserklärungen fällt.</p>
-							</blockquote>
-							<br>
-							</div>
-							<div id="daten">
-							<h2>Datenschutz</h2>
-							<h3>Einführung</h3>
-							<blockquote>
-								<p>Das Handschriftenarchiv Dresdner Kreuzchor nimmt den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung nicht an Dritte weitergegeben. Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.</p>
-							</blockquote>
-							<br>
-							<h3>Cookies</h3>
-							<blockquote>
-								<p>Das Handschriftenarchiv Dresdner Kreuzchor verwendet teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert. Die meisten der von uns verwendeten Cookies sind so genannte „Session-Cookies“. Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Andere Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese löschen. Diese Cookies ermöglichen es uns, Ihren Browser beim nächsten Besuch wiederzuerkennen. Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalität dieser Website eingeschränkt sein. </p>
-							</blockquote>
-							<br>
-							<h3>Kontaktformular</h3>
-							<blockquote>
-								<p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Es werden keine weiteren Daten (IP-Adresse, etc.), als die im visull sichtbaren Kontaktformular erhoben.</p>
-							</blockquote>
-							<br>
-							<h3>Google Analytics</h3>
-							<blockquote>
-								<p>Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist die Google Inc., 1600 Amphitheatre Parkway Mountain View, CA 94043, USA. <br> Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. („Google“). Google Analytics verwendet sog. „Cookies“, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert. Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite, wird Ihre IP-Adresse von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: http://tools.google.com/dlpage/gaoptout. Nähere Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter den Google Analytics Bedingungen bzw. unter der Google Analytics Übersicht. Wir weisen Sie darauf hin, dass auf dieser Webseite Google Analytics um den Code „gat._anonymizeIp();“ erweitert wurde, um eine anonymisierte Erfassung von IP-Adressen (sog. IP-Masking) zu gewährleisten.</p>
-							</blockquote>
-							<br>
-							<h3>Twitter</h3>
-							<blockquote>
-								<p>Wir haben auf unserer Webseite auch den Webmessagedienst twitter.com integriert. Dieser wird durch die Twitter Inc., 1355 Market St, Suite 900, San Francisco, CA 94103, USA bereitgestellt. Twitter bietet die sog. „Tweet“ – Funktion an. Damit kann man 140 Zeichen lange Nachrichten auch mit Webseitenlinks in seinem eigenen Twitteraccount veröffentlichen. Wenn Sie die „Tweet“-Funktion von Twitter auf unseren Webseiten nutzen, wird die jeweilige Webseite mit Ihrem Account auf Twitter verknüpft und dort ggf. öffentlich bekannt gegeben. Hierbei werden auch Daten an Twitter übertragen. Von dem Inhalt der übermittelten Daten und deren Nutzung durch Twitter erhalten wir keine Kenntnis. Konsultieren Sie daher für weitere Informationen die Datenschutzerklärung von Twitter: http://twitter.com/privacyTwitter bietet Ihnen unter nachfolgendem Link die Möglichkeit, Ihre Datenschutzeinstellungen selbst festzulegen: http://twitter.com/account/settings.</p>
-							</blockquote>
-							<br>
-							<h3>Auskunft, Löschung, Sperrung</h3>
-							<blockquote>
-								<p>Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse oder E-Mail-Adresse an uns wenden.</p>
-							</blockquote>
-							<br>
-							</div>
-						</div>
-					</div>
-				</div>
+				<?php echo __page('sitenotice');?>
 
 				<footer>
 					<div id="footer">

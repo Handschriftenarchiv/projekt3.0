@@ -98,3 +98,17 @@ function language_switcher(){
 	}
 	echo '</div>';
 }
+
+function __page($page,$lang=null){
+	global $use_lang;
+	global $dict_dir;
+	if(empty($lang)){
+		$lang=$use_lang;
+	}
+	/*
+	TODO: überprüfen, ob diese ÜBersetzung verfügbar
+	falls nicht verfügbar, alternative Sprache wählen
+	*/
+	$path=$dict_dir.DIRECTORY_SEPARATOR.'page-translations'.DIRECTORY_SEPARATOR.$page.DIRECTORY_SEPARATOR.$lang;
+	return file_get_contents($path);
+}
