@@ -31,7 +31,7 @@ function dictionary_setup($strict=false){
 	$template=file($dict_dir.DIRECTORY_SEPARATOR.'dictionary',FILE_IGNORE_NEW_LINES);
 	$dir=scandir($dict_dir);
 	foreach($dir as $f){
-		if($f=='.'||$f=='..'||$f=='dictionary') continue;
+		if($f=='.'||$f=='..'||$f=='dictionary'||!is_file($dict_dir.DIRECTORY_SEPARATOR.$f)) continue;
 		$dictionary_file=file($dict_dir.DIRECTORY_SEPARATOR.$f,FILE_IGNORE_NEW_LINES);
 		for($i=0;$i<count($dictionary_file);$i++){
 			$key=$template[$i];
