@@ -1,16 +1,19 @@
 <IfModule mod_rewrite.c>
   RewriteEngine on
+  # URLs ohne Dateierweiterung zur entsprechenden Datei weiterleiten
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} (.+)/$
   RewriteRule "^" "%1" [L,R]
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}.php -f
   RewriteRule ^(.*)$ $1.php
+  # nicht gefundene Dateien an not-found.php weiterleiten
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^.*$ not-found.php [L]
 </IfModule>
 <IfModule mod_expires.c>
+  # Caching anktivieren
   ExpiresActive On
   ExpiresDefault "access plus 1 seconds"
   ExpiresByType text/html "access plus 1 seconds"
