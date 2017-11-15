@@ -1,5 +1,6 @@
 <?php
 require_once "analytics.php";
+require_once "translate.php";
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -8,7 +9,7 @@ require_once "analytics.php";
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Impressum - Handschriftenarchiv Dresdner Kreuzchor</title>
+	<title><?php echo __('sitenotice');?> - <?php echo __('hsa'); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Impressum des Handschriftenarchiv Dresder Kreuzchor" />
 	<meta name="keywords" content="Impressum, Archiv, Kreuchor, Dresdner, Handschriften" />
@@ -104,13 +105,13 @@ _idl.variant = "modal";
 		 <div class="fh5co-table-cell js-fullheight">
 			 <h1 class="text-center"><a class="fh5co-logo" href="index.php">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
 			 <ul>
-				 <li><a href=".">Willkommen</a></li>
-				 <li><a href="/archiv">Archiv</a></li>
-				 <li><a href="/blog/">Blog</a></li>
-				 <li><a href="/mediathek">Mediathek</a></li>
-				 <li><a href="/suche/">Datenbank</a></li>
-				 <li><a href="/impressum">Impressum</a></li>
-				 <li><a href="/kontakt">Kontakt</a></li>
+				 <li><a href="."><?php echo __('welcome');?></a></li>
+				 <li><a href="/archiv"><?php echo __('archive');?></a></li>
+				 <li><a href="/blog/"><?php echo __('blog');?></a></li>
+				 <li><a href="/mediathek"><?php echo __('medialib');?></a></li>
+				 <li><a href="/suche/"><?php echo __('db');?></a></li>
+				 <li><a href="/impressum"><?php echo __('sitenotice');?></a></li>
+				 <li><a href="/kontakt"><?php echo __('contact');?></a></li>
 			 </ul>
 			 <p class="fh5co-social-icon">
 				 <a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
@@ -158,8 +159,8 @@ _idl.variant = "modal";
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 			   				<div class="slider-text-inner">
 			   					<div class="desc">
-			   						<span>Rechtliches, Copyright, Verantwortung</span>
-			   						<h2>Impressum</h2>
+			   						<span><?php echo __('sitenotice-top');?></span>
+			   						<h2><?php echo __('sitenotice');?></h2>
 			   						<p class="fh5co-lead">Das Impressum des Handschriftenarchivs. Hier finden Sie Kontakt Daten, Rechtliche und Datenschutz-Hinweise und Copyright-Informationen.</a></p>
 			   					</div>
 			   				</div>
