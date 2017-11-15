@@ -24,7 +24,7 @@ $strict=false;
 
 dictionary_setup($strict);
 
-function dictionary_setup($strict=false){
+function dictionary_setup($strict){
 	global $dict_dir;
 	global $use_lang;
 	global $dictionary;
@@ -47,13 +47,15 @@ function dictionary_setup($strict=false){
 			}
 		}elseif(isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])){
 			//selects the users preferred language (from browser settings)
-			$langs=explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE']);
-			foreach($langs as $l){
-				if(language_supported($l)){
-					$use_lang=$l;
-					break;
-				}
-			}
+            $langs=split(";",$_SERVER['HTTP_ACCEPT_LANGUAGE']);
+            foreach ($langs as $l){
+                $h=split(",", $l);
+                $h1=(string)$h[1];
+                if (language_supported(substr($h1, 0, 2))){
+                    $use_lang=substr($h1, 0, 2);
+                    break;
+                }
+            }
 		}
 	}else{
 		if($use_lang==null){
@@ -70,7 +72,7 @@ function language_supported($lang){
 /*
 the actual translating function
 */
-function __($translate,$lang=null){
+function __($translate){
 	global $use_lang;
 	global $dictionary;
 	if(empty($lang)){
