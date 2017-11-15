@@ -62,8 +62,8 @@ function dictionary_setup($strict=false){
 }
 
 function language_supported($lang){
-	global $dict_dir;
-	return file_exists($dict_dir.DIRECTORY_SEPARATOR.$lang);
+	global $dictionary;
+	return array_key_exists($lang,$dictionary);
 }
 
 /*
