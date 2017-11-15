@@ -12,6 +12,7 @@ be careful though: if an unsupported language is supplied by the browser all cal
 
 can't be null if $strict is set to true
 */
+$default='de';
 $use_lang='de';
 /*
 wheter the translator module should be set up strict, meaning it stays with the default language
@@ -103,19 +104,19 @@ function language_supported_for_page($lang,$page){
 }
 
 function __page($page,$lang=null){
-	global $use_lang;
+	global $default;
 	global $dict_dir;
 	if(empty($lang)){
 		$lang=$use_lang;
 	}
 	if(!language_supported_for_page($lang,$page)){
-		$lang=$use_lang;
+		$lang=$default;
 	}
 	$path=$dict_dir.DIRECTORY_SEPARATOR.'page-translations'.DIRECTORY_SEPARATOR.$page.DIRECTORY_SEPARATOR.$lang;
 	if(is_file($path)){
 		return file_get_contents($path);
 	}else{
 		// an error occured or default translation is missing
-		return '';
+		return 'An error occured. We\'re sorry for the inconvenience.';
 	}
 }
