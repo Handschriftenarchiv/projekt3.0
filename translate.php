@@ -108,10 +108,14 @@ function __page($page,$lang=null){
 	if(empty($lang)){
 		$lang=$use_lang;
 	}
-	/*
-	TODO: überprüfen, ob diese ÜBersetzung verfügbar
-	falls nicht verfügbar, alternative Sprache wählen
-	*/
+	if(!language_supported_for_page($lang,$page)){
+		$lang=$use_lang;
+	}
 	$path=$dict_dir.DIRECTORY_SEPARATOR.'page-translations'.DIRECTORY_SEPARATOR.$page.DIRECTORY_SEPARATOR.$lang;
-	return file_get_contents($path);
+	if(is_file($path)){
+		return file_get_contents($path);
+	}else{
+		// an error occured or default translation is missing
+		return '';
+	}
 }
