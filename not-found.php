@@ -157,7 +157,7 @@ _idl.variant = "modal";
 			  	</ul>
 		  	</div>
 		</aside>
-	<?php echo __('footer');?>
+	<?php echo __page('footer');?>
 
 </div>
 

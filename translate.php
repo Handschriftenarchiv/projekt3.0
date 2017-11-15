@@ -99,16 +99,21 @@ function language_switcher(){
 }
 
 function language_supported_for_page($lang,$page){
+	global $dict_dir;
 	$path=$dict_dir.DIRECTORY_SEPARATOR.'page-translations'.DIRECTORY_SEPARATOR.$page.DIRECTORY_SEPARATOR.$lang;
 	return file_exists($path)&&is_file($path);
 }
 
 function __page($page,$lang=null){
 	global $default;
+	global $use_lang;
 	global $dict_dir;
 	if(empty($lang)){
 		$lang=$use_lang;
 	}
+	echo "<!--";
+	var_dump(language_supported_for_page($lang,$page));
+	echo "-->";
 	if(!language_supported_for_page($lang,$page)){
 		$lang=$default;
 	}
