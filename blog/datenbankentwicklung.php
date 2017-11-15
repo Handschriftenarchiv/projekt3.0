@@ -173,10 +173,52 @@ _idl.variant = "modal";
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Hinweis:</h2>
 					<p>Im Rahmen der noch laufenden Benutzungsoptimierung sowie Verbesserung und Detaillierung der Datenbankeinträge, kann es vorkommen, dass es verfälschte Suchergebnisse gibt oder unvollständige Angaben zu einer Noten existieren. So kann e beispielsweise passieren, dass nur unvollständige oder visuell nicht ansprechnde Digitalisate angezeigt werden. Für dieses Fall nutzen Sie bitte am Ende der Wesbite unserern Link zu issuu.com wo alle Digitalisierungen veröffentlicht werden. In solch einem Fall können Sie gerne den Link am Ende der Seite benutzen, um einen Fehler zu melden. Wir bemühen uns, die Arbeiten an der Datenbank so schnell wir möglich fertigzustellen, um ein unverfälschtes und detailliertes Suchergebnis bieten zu können.</p>
-					<br><br>
-					<a href="."><p>Zurück zur Eintrags-Übersicht</p></a>
+					<br>
+					<div class="author">
+					<img src="../images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
+					<center>
+						<table class="author">
+							<tbody align="center">
+								</tr>
+								<tr style="text-align: center;">
+									<td class="author"><strong>Marc Eric Mitzscherling</strong></td>
+									<td class="author"><strong> </strong></td>
+									<td class="author"><strong></strong></td>
+									<td class="author"><strong> </strong></td>
+									<td class="author"><strong>Archivar</strong></td>
+								</tr>
+								<tr style="text-align: center;">
+									<td class="author">Autor</td>
+									<td class="author"><strong> </strong></td>
+									<td class="author"></td>
+									<td class="author"><strong> </strong></td>
+									<td class="author">Veröffentlicher</td>
+								</tr>
+							</tbody>
+						</table>
+
+					<!--<div class="links-social">
+						<a href="http://twitter.com/share?text=Blog%20@NotenarchivDKC:%20Gunter%20Gross%20erinnert%20sich&url=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-twitter-with-circle"></i></a>
+						<a href="https://plus.google.com/share?url=http://archiv.handschriften.bplaced.de/blog/gunter-gross/" target="_blank"><i class="icon-google-with-circle"></i></a>
+						<a href="http://www.facebook.com/sharer.php?u=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-facebook-with-circle"></i></a>
+					</div>-->
+					</div>
+					<br>
+					<table class="author" media="screen">
+						<tbody align="center">
+							</tr>
+							<tr style="align: center;">
+								<td class="author"><a style='font-family:"Karla",Arial,serif;' href="behance" class="btn btn-primary">← Vorheriger Blogeintrag</a></td>
+								<td class="author"><strong> </strong></td>
+								<td class="author"><a style='font-family:"Karla",Arial,serif;' href="." class="btn btn-primary">Zur Eintragsübersicht</a></td>
+								<td class="author"><strong> </strong></td>
+								<td class="author"><a style='font-family:"Karla",Arial,serif;' href="netzneutralität" class="btn btn-primary">Nächster Blogeintrag →</a></td>
+						</tbody>
+					</table>
+					</center>
 					</div>
 				</div>
+
 	<footer>
 		<div id="footer">
 			<div class="container">

@@ -103,7 +103,7 @@ _idl.variant = "modal";
 	 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
 	 <div class="js-fullheight fh5co-table">
 		 <div class="fh5co-table-cell js-fullheight">
-			 <h1 class="text-center"><a class="fh5co-logo" href="index.php">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
+			 <h1 class="text-center"><a class="fh5co-logo" href="index.php"><?php echo __('hsa');?></a></h1>
 			 <ul>
 				 <li><a href="."><?php echo __('welcome');?></a></li>
 				 <li><a href="/archiv"><?php echo __('archive');?></a></li>
@@ -161,7 +161,7 @@ _idl.variant = "modal";
 			   					<div class="desc">
 			   						<span><?php echo __('sitenotice-top');?></span>
 			   						<h2><?php echo __('sitenotice');?></h2>
-			   						<p class="fh5co-lead">Das Impressum des Handschriftenarchivs. Hier finden Sie Kontakt Daten, Rechtliche und Datenschutz-Hinweise und Copyright-Informationen.</a></p>
+			   						<p class="fh5co-lead"><?php echo __('sitenotice-btm');?></a></p>
 			   					</div>
 			   				</div>
 			   			</div>
@@ -176,66 +176,7 @@ _idl.variant = "modal";
 			<div class="container">
 				<?php echo __page('sitenotice');?>
 
-				<footer>
-					<div id="footer">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-3">
-									<h3 class="section-title">Über das HSA</h3>
-									<p>Das Handschriftenarchiv Dresdner Kreuzchor sammelt, archiviert, digitalisiert und bereitet alte Drucke, Handschriften und Kopien des Dresdner Kreuzchores auf.</p>
-								</div>
-
-								<div class="col-md-3 col-md-push-1">
-									<h3 class="section-title">Links</h3>
-									<ul>
-										<li><a href=".">Willkommen</a></li>
-										<li><a href="/archiv">Archiv</a></li>
-										<li><a href="/blog/">Blog</a></li>
-										<li><a href="/mediathek">Mediathek</a></li>
-										<li><a href="/suche/">Datenbank</a></li>
-										<li><a href="/verwaltung#presse">Mediakit</a></li>
-										<li><a href="/kontakt">Kontakt</a></li>
-									</ul>
-								</div>
-
-								<div class="col-md-3">
-									<h3 class="section-title">Mitglied</h3>
-									<p>
-									<a href=https://www.deutsche-digitale-bibliothek.de/about-us/institutions/item/PXYIJUCJ654QX5KHG6E34VNE3UG3IXR2?query=Handschriftenarchiv+Dresdner+Kreuzchor target="_blank"><img src=images/ddb.png alt="Mitglied der Deutschen Digitalen Bibliothek" width=216 height=100 /></a>
-								</div>
-								<div class="col-md-3">
-									<h3 class="section-title">Handschriftenarchiv 3.0</h3>
-									<img src="images/wrapper-img.gif" width=231 height=130>
-									<!--<form class="form-inline" id="fh5co-header-subscribe">
-										<div class="row">
-											<div class="col-md-12 col-md-offset-0">
-												<div class="form-group">
-													<input type="text" class="form-control" id="email" placeholder="Enter your email">
-													<button type="submit" class="btn btn-default"><i class="icon-paper-plane"></i></button>
-												</div>
-											</div>
-										</div>
-									</form>-->
-								</div>
-							</div>
-							<div class="row copy-right">
-								<div class="col-md-6 col-md-offset-3 text-center">
-									<p class="fh5co-social-icon">
-										<a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
-										<a href="https://issuu.com/hsa6"target="_blank"><i class="icon-book"></i></a>
-										<a href="https://vimeo.com/handschriftenarchiv"target="_blank"><i class="icon-vimeo"></i></a>
-										<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"target="_blank"><i class="icon-youtube"></i></a>
-										<a href="https://plus.google.com/108785494716898198379"target="_blank"><i class="icon-google"></i></a>
-										<a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
-										<a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
-									</p>
-									<p>Copyright 2017 Handschriftenarchiv Dresdner Kreuzchor <a href="/impressum.php">Impressum</a> Alle Rechte vorbehalten. </p>
-									<span class="notranslate" onmouseover="_tipon(this)" onmouseout="_tipoff()"><span class="google-src-text" style="direction: ltr; text-align: left"><a href=https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=de&ie=UTF8&prev=_t&rurl=translate.google.de&sl=en&sp=nmt4&tl=de&u=https://internetdefenseleague.org/&usg=ALkJrhjDQg4VshLY48zmtw4d205QQxxxMg target="_blank"><img src=images/internet.png alt="Mitglied in der Internet Defense League" width=115 height=115/></a></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</footer>
+				<?php echo __page('footer');?>
 
 			</div>
 

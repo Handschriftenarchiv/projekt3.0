@@ -2,12 +2,11 @@
   RewriteEngine on
   # abschließendes Slash entfernen
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_URI} (.+)/$
-  RewriteRule "^" "%1" [L,R]
+  RewriteRule ^(.*)/$ /$1 [L,R]
   # URLs ohne Dateierweiterung zur entsprechenden Datei weiterleiten
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}.php -f
-  RewriteRule ^(.*)$ $1.php
+  RewriteRule ^(.*)$ $1.php [L]
   # nicht gefundene Dateien an not-found.php weiterleiten
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d

@@ -12,7 +12,8 @@ be careful though: if an unsupported language is supplied by the browser all cal
 
 can't be null if $strict is set to true
 */
-$use_lang='en';
+$default='de';
+$use_lang='de';
 /*
 wheter the translator module should be set up strict, meaning it stays with the default language
 if set on false your users might get a better user experience
@@ -64,8 +65,8 @@ function dictionary_setup($strict){
 }
 
 function language_supported($lang){
-	global $dict_dir;
-	return file_exists($dict_dir.DIRECTORY_SEPARATOR.$lang);
+	global $dictionary;
+	return array_key_exists($lang,$dictionary);
 }
 
 /*
@@ -99,16 +100,30 @@ function language_switcher(){
 	echo '</div>';
 }
 
+function language_supported_for_page($lang,$page){
+	global $dict_dir;
+	$path=$dict_dir.DIRECTORY_SEPARATOR.'page-translations'.DIRECTORY_SEPARATOR.$page.DIRECTORY_SEPARATOR.$lang;
+	return file_exists($path)&&is_file($path);
+}
+
 function __page($page,$lang=null){
+	global $default;
 	global $use_lang;
 	global $dict_dir;
 	if(empty($lang)){
 		$lang=$use_lang;
 	}
-	/*
-	TODO: überprüfen, ob diese ÜBersetzung verfügbar
-	falls nicht verfügbar, alternative Sprache wählen
-	*/
+	echo "<!--";
+	var_dump(language_supported_for_page($lang,$page));
+	echo "-->";
+	if(!language_supported_for_page($lang,$page)){
+		$lang=$default;
+	}
 	$path=$dict_dir.DIRECTORY_SEPARATOR.'page-translations'.DIRECTORY_SEPARATOR.$page.DIRECTORY_SEPARATOR.$lang;
-	return file_get_contents($path);
+	if(is_file($path)){
+		return file_get_contents($path);
+	}else{
+		// an error occured or default translation is missing
+		return 'An error occured. We\'re sorry for the inconvenience.';
+	}
 }

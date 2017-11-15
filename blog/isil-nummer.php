@@ -188,8 +188,50 @@ _idl.variant = "modal";
 						</center>
 							<blockquote>
 								<p>Das Handschriftenarchiv benötigt die ISIL-Nummer unteranderem, um seine Digtalisate der Deutschen Digitalen Biblithek und dem Archivportal-D zur Verfügung zu stellen.<br> <strong> Die ISIL Nummer des Handschriftenarchivs Dresdner Kreuzchor aus Dresden lautet DE-2535.</strong></p>
-							</blockquote><br><br><a href="."><p>Zurück zur Eintrags-Übersicht</p></a>
+							</blockquote>
 						</div>
+						<div class="author">
+						<img src="../images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
+						<center>
+							<table class="author">
+								<tbody align="center">
+									</tr>
+									<tr style="text-align: center;">
+										<td class="author"><strong>Marc Eric Mitzscherling</strong></td>
+										<td class="author"><strong> </strong></td>
+										<td class="author"><strong></strong></td>
+										<td class="author"><strong> </strong></td>
+										<td class="author"><strong>Archivar</strong></td>
+									</tr>
+									<tr style="text-align: center;">
+										<td class="author">Autor</td>
+										<td class="author"><strong> </strong></td>
+										<td class="author"></td>
+										<td class="author"><strong> </strong></td>
+										<td class="author">Veröffentlicher</td>
+									</tr>
+								</tbody>
+							</table>
+
+						<!--<div class="links-social">
+							<a href="http://twitter.com/share?text=Blog%20@NotenarchivDKC:%20Gunter%20Gross%20erinnert%20sich&url=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-twitter-with-circle"></i></a>
+							<a href="https://plus.google.com/share?url=http://archiv.handschriften.bplaced.de/blog/gunter-gross/" target="_blank"><i class="icon-google-with-circle"></i></a>
+							<a href="http://www.facebook.com/sharer.php?u=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-facebook-with-circle"></i></a>
+						</div>-->
+						</div>
+						<br>
+						<table class="author" media="screen">
+							<tbody align="center">
+								</tr>
+								<tr style="align: center;">
+									<td class="author"><a style='font-family:"Karla",Arial,serif;' href="gunter-gross" class="btn btn-primary">← Vorheriger Blogeintrag</a></td>
+									<td class="author"><strong> </strong></td>
+									<td class="author"><a style='font-family:"Karla",Arial,serif;' href="." class="btn btn-primary">Zur Eintragsübersicht</a></td>
+									<td class="author"><strong> </strong></td>
+									<td class="author"><a style='font-family:"Karla",Arial,serif;' href="tools-1" class="btn btn-primary">Nächster Blogeintrag →</a></td>
+							</tbody>
+						</table>
+						</center>
 					</div>
 				</div>
 			</div>
