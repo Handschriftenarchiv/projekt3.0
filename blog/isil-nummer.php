@@ -188,7 +188,7 @@ _idl.variant = "modal";
 						</center>
 							<blockquote>
 								<p>Das Handschriftenarchiv benötigt die ISIL-Nummer unteranderem, um seine Digtalisate der Deutschen Digitalen Biblithek und dem Archivportal-D zur Verfügung zu stellen.<br> <strong> Die ISIL Nummer des Handschriftenarchivs Dresdner Kreuzchor aus Dresden lautet DE-2535.</strong></p>
-							</blockquote><br><br><a href="."><p>Zurück zur Eintrags-Übersicht</p></a>
+							</blockquote>
 						</div>
 					</div>
 				</div>

@@ -232,7 +232,7 @@ _idl.variant = "modal";
 													<br>
 													Damit das Handschriftenarchiv Dresdner Kreuzchor auch in Zukunft in keinem „Internet-Paket“ von Internetanbietern zu kaufen ist, kämpfen wir mit für ein Neutales Netz! Wenn wir auch Sie von der Wichtigkeit dieses Themas überzeugen konnten klicken Sie einfach am Ende der Seite auf den Internet-Defense-League-Schild und treten Sie der League bei.
 												</p>
-											</blockquote><br><br><a href="."><p>Zurück zur Eintrags-Übersicht</p></a>
+											</blockquote>
 					</div>
 				</div>
 			</div>

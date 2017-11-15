@@ -215,7 +215,7 @@ _idl.variant = "modal";
 								Die Institutionskommunikation des Handschriftenarchivs verläuft somit komplett über <stong>handschriftenarchiv@protonmail.com</strong>.
 								Auch die Kontaktformulare und Anwendung zum Melden von Fehlern läuft über diese Adresse.
 							</p>
-						</blockquote><br><br><br><br><a href="."><p>Zurück zur Eintrags-Übersicht</p></a>
+						</blockquote><br><br>
 					</div>
 				</div>
 			</div>
