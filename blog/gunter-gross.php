@@ -231,11 +231,11 @@ _idl.variant = "modal";
 							<tbody align="center">
 								</tr>
 								<tr style="align: center;">
-									<td class="author"><a style='font-family:"Karla",Arial,serif;' href="#" class="btn btn-primary">← Vorheriger Blogeintrag</a></td>
+									<td class="author"><a style='font-family:"Karla",Arial,serif;' href="gunter-gross" class="btn btn-primary">← Vorheriger Blogeintrag</a></td>
 									<td class="author"><strong> </strong></td>
 									<td class="author"><a style='font-family:"Karla",Arial,serif;' href="." class="btn btn-primary">Zur Eintragsübersicht</a></td>
 									<td class="author"><strong> </strong></td>
-									<td class="author"><a style='font-family:"Karla",Arial,serif;' href="#" class="btn btn-primary">Nächster Blogeintrag →</a></td>
+									<td class="author"><a style='font-family:"Karla",Arial,serif;' href="isil-nummer" class="btn btn-primary">Nächster Blogeintrag →</a></td>
 							</tbody>
 						</table>
 						</center>
