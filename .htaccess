@@ -1,9 +1,10 @@
 <IfModule mod_rewrite.c>
   RewriteEngine on
-  # URLs ohne Dateierweiterung zur entsprechenden Datei weiterleiten
+  # abschließendes Slash entfernen
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} (.+)/$
   RewriteRule "^" "%1" [L,R]
+  # URLs ohne Dateierweiterung zur entsprechenden Datei weiterleiten
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}.php -f
   RewriteRule ^(.*)$ $1.php
