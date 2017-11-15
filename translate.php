@@ -97,6 +97,11 @@ function language_switcher(){
 	echo '</div>';
 }
 
+function language_supported_for_page($lang,$page){
+	$path=$dict_dir.DIRECTORY_SEPARATOR.'page-translations'.DIRECTORY_SEPARATOR.$page.DIRECTORY_SEPARATOR.$lang;
+	return file_exists($path)&&is_file($path);
+}
+
 function __page($page,$lang=null){
 	global $use_lang;
 	global $dict_dir;
