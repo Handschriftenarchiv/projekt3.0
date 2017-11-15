@@ -147,9 +147,7 @@ _idl.variant = "modal";
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 			   				<div class="slider-text-inner">
 			   					<div class="desc">
-			   						<span>interner Fehler:</span>
-			   						<h2>Seite nicht gefunden</h2>
-			   						<p>Es tut uns leid, aber wir konnten die von Ihnen gewünschte Seite <!-- "<?php echo $_SERVER['REQUEST_URI']; ?>" -->leider nicht finden. Versuchen Sie es mit Links aus dem Menü</p>
+			   						<?php echo __page('404');?>
 			   					</div>
 			   				</div>
 			   			</div>
