@@ -194,7 +194,7 @@ _idl.variant = "modal";
 <br>
 <blockquote>
 									<p>Aber ich begriff jetzt sehr gut, welche verantwortungsreiche Arbeit im Kreuzchor geleistet wird und was für eine hohe Verpflichtung ich übernahm, wenn ich die Nachfolge der damaligen Notenschreiber antreten wollte. So bedeutete es für mich als vierzehnjährigen Sopranisten ein besonderes Erlebnis, gerade noch kurz vor der Mutation am 13. Heinrich-Schütz-Fest in Stuttgart teilnehmen zu können. Als mir zu Beginn meines neunten Schuljahres das Amt des cantor famulus und Notenbibliothekars übertragen wurde, nahm ich mir vor, alle meine Kräfte daranzusetzen, unserem Kantor eine zuverlässige Hilfe zu werden.
-								</p>	</blockquote><br><br><a href="."><p>Zurück zur Eintrags-Übersicht</p></a>
+								</p>	</blockquote>
 						</div>
 						<div class="author">
 						<!--<img src="../images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;" vertical-align:"middle" align="left">-->

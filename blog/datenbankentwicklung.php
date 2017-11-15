@@ -173,8 +173,6 @@ _idl.variant = "modal";
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Hinweis:</h2>
 					<p>Im Rahmen der noch laufenden Benutzungsoptimierung sowie Verbesserung und Detaillierung der Datenbankeinträge, kann es vorkommen, dass es verfälschte Suchergebnisse gibt oder unvollständige Angaben zu einer Noten existieren. So kann e beispielsweise passieren, dass nur unvollständige oder visuell nicht ansprechnde Digitalisate angezeigt werden. Für dieses Fall nutzen Sie bitte am Ende der Wesbite unserern Link zu issuu.com wo alle Digitalisierungen veröffentlicht werden. In solch einem Fall können Sie gerne den Link am Ende der Seite benutzen, um einen Fehler zu melden. Wir bemühen uns, die Arbeiten an der Datenbank so schnell wir möglich fertigzustellen, um ein unverfälschtes und detailliertes Suchergebnis bieten zu können.</p>
-					<br><br>
-					<a href="."><p>Zurück zur Eintrags-Übersicht</p></a>
 					</div>
 				</div>
 	<footer>
