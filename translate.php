@@ -12,7 +12,7 @@ be careful though: if an unsupported language is supplied by the browser all cal
 
 can't be null if $strict is set to true
 */
-$use_lang='de';
+$use_lang='en';
 /*
 wheter the translator module should be set up strict, meaning it stays with the default language
 if set on false your users might get a better user experience
@@ -23,7 +23,7 @@ $strict=false;
 
 dictionary_setup($strict);
 
-function dictionary_setup($strict=false){
+function dictionary_setup($strict){
 	global $dict_dir;
 	global $use_lang;
 	global $dictionary;
@@ -31,7 +31,7 @@ function dictionary_setup($strict=false){
 	$template=file($dict_dir.DIRECTORY_SEPARATOR.'dictionary',FILE_IGNORE_NEW_LINES);
 	$dir=scandir($dict_dir);
 	foreach($dir as $f){
-		if($f=='.'||$f=='..'||$f=='dictionary') continue;
+		if($f=='.'||$f=='..'||$f=='dictionary'||!is_file($dict_dir.DIRECTORY_SEPARATOR.$f)) continue;
 		$dictionary_file=file($dict_dir.DIRECTORY_SEPARATOR.$f,FILE_IGNORE_NEW_LINES);
 		for($i=0;$i<count($dictionary_file);$i++){
 			$key=$template[$i];
@@ -46,13 +46,15 @@ function dictionary_setup($strict=false){
 			}
 		}elseif(isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])){
 			//selects the users preferred language (from browser settings)
-			$langs=explode(',',$_SERVER['HTTP_ACCEPT_LANGUAGE']);
-			foreach($langs as $l){
-				if(language_supported($l)){
-					$use_lang=$l;
-					break;
-				}
-			}
+            $langs=split(";",$_SERVER['HTTP_ACCEPT_LANGUAGE']);
+            foreach ($langs as $l){
+                $h=split(",", $l);
+                $h1=(string)$h[1];
+                if (language_supported(substr($h1, 0, 2))){
+                    $use_lang=substr($h1, 0, 2);
+                    break;
+                }
+            }
 		}
 	}else{
 		if($use_lang==null){
@@ -69,7 +71,7 @@ function language_supported($lang){
 /*
 the actual translating function
 */
-function __($translate,$lang=null){
+function __($translate){
 	global $use_lang;
 	global $dictionary;
 	if(empty($lang)){
