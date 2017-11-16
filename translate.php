@@ -47,15 +47,16 @@ function dictionary_setup($strict){
 			}
 		}elseif(isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])){
 			//selects the users preferred language (from browser settings)
-            $langs=split(";",$_SERVER['HTTP_ACCEPT_LANGUAGE']);
-            foreach ($langs as $l){
-                $h=split(",", $l);
-                $h1=(string)$h[1];
-                if (language_supported(substr($h1, 0, 2))){
-                    $use_lang=substr($h1, 0, 2);
-                    break;
-                }
-            }
+			$langs=split("[,;]",$_SERVER['HTTP_ACCEPT_LANGUAGE']);
+			foreach ($langs as $l){
+				if($l[0]=='q'&&$l[1]=='='){
+					// this is a quality code; skip it
+					continue;
+				}else if(language_supported($l)){
+					$use_lang=$l;
+					break;
+				}
+			}
 		}
 	}else{
 		if($use_lang==null){
