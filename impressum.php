@@ -136,7 +136,7 @@ require_once "translate.php";
 									<div class="desc">
 										<span><?php echo __('sitenotice-top');?></span>
 										<h2><?php echo __('sitenotice');?></h2>
-										<p class="fh5co-lead"><?php echo __('sitenotice-btm');?></a></p>
+										<p class="fh5co-lead"><?php echo __('sitenotice-lead');?></a></p>
 									</div>
 								</div>
 							</div>
