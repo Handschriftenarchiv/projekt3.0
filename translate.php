@@ -22,12 +22,15 @@ if set on false your users might get a better user experience
 */
 $strict=false;
 
+$dictionary_setup_done=false;
+
 dictionary_setup($strict);
 
 function dictionary_setup($strict){
 	global $dict_dir;
 	global $use_lang;
 	global $dictionary;
+	global $dictionary_setup_done;
 	$dictionary=array();
 	$template=file($dict_dir.DIRECTORY_SEPARATOR.'dictionary',FILE_IGNORE_NEW_LINES);
 	$dir=scandir($dict_dir);
@@ -63,11 +66,17 @@ function dictionary_setup($strict){
 			die('multilang error: strict mode, but no language provided');
 		}
 	}
+	$dictionary_setup_done=true;
 }
 
 function language_supported($lang){
 	global $dictionary;
-	return array_key_exists($lang,$dictionary);
+	global $dictionary_setup_done;
+	if($dictionary_setup_done){
+		return array_key_exists($lang,$dictionary);
+	}else{
+		return file_exists('lang'.DIRECTORY_SEPARATOR.$lang);
+	}
 }
 
 /*
