@@ -72,10 +72,11 @@ function dictionary_setup($strict){
 function language_supported($lang){
 	global $dictionary;
 	global $dictionary_setup_done;
+	global $dict_dir;
 	if($dictionary_setup_done){
 		return array_key_exists($lang,$dictionary);
 	}else{
-		return file_exists('lang'.DIRECTORY_SEPARATOR.$lang);
+		return file_exists($dict_dir.DIRECTORY_SEPARATOR.$lang);
 	}
 }
 
@@ -124,7 +125,15 @@ function __page($page,$lang=null){
 		$lang=$use_lang;
 	}
 	if(!language_supported_for_page($lang,$page)){
-		$lang=$default;
+		if(strlen($lang)>2){
+			// check if language without region code is available
+			$lang=substr($lang,0,2);
+			if(!language_supported_for_page($lang,$page)){
+				$lang=$default;
+			}
+		}else{
+			$lang=$default;
+		}
 	}
 	$path=$dict_dir.DIRECTORY_SEPARATOR.'page-translations'.DIRECTORY_SEPARATOR.$page.DIRECTORY_SEPARATOR.$lang;
 	if(is_file($path)){
