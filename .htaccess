@@ -3,11 +3,15 @@
   # abschließendes Slash entfernen
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.*)/$ /$1 [L,R]
-  # standardmäßig zu /de weiterleiten
-  # für hauptverzeichnis
+  # Hauptverzeichnis standardmäßig zu /de weiterleiten
   RewriteRule ^/?$ de [L,R]
-  RewriteCond ^
   # Sprachattribut herausfinden
+  RewriteCond %{REQUEST_FILENAME} !-d
+  # noch keine GET-parameter
+  RewriteRule ^/(.+?)/([^?]*)$ /$2?lang=$1 [L]
+  RewriteCond %{REQUEST_FILENAME} !-d
+  # es gibt bereits GET-parameter; als neuen parameter anhängen
+  RewriteRule ^/(.+?)/(.*)$ /$2&lang=$1 [L]
   # URLs ohne Dateierweiterung zur entsprechenden Datei weiterleiten
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}.php -f
