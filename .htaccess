@@ -3,6 +3,11 @@
   # abschließendes Slash entfernen
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.*)/$ /$1 [L,R]
+  # standardmäßig zu /de weiterleiten
+  # für hauptverzeichnis
+  RewriteRule ^/?$ de [L,R]
+  RewriteCond ^
+  # Sprachattribut herausfinden
   # URLs ohne Dateierweiterung zur entsprechenden Datei weiterleiten
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}.php -f
