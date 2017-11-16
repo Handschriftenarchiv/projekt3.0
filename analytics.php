@@ -17,8 +17,12 @@ function view(){
 	}
 	$sql.=')';
 	$con=dbCon();
-	mysqli_query($con,$sql);
-	mysqli_close($con);
+	if(!@mysqli_query($con,$sql)){
+		// Fehler mit Datenbank-Verbindung
+		echo '<!-- Datenbank-Fehler analytics.php -->';
+	}else{
+		mysqli_close($con);
+	}
 }
 
 function getPages(){
