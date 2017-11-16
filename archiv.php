@@ -1,5 +1,6 @@
 <?php
 require_once 'analytics.php';
+require_once 'translate.php';
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -8,7 +9,7 @@ require_once 'analytics.php';
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Archiv - Handschriftenarchiv Dresdner Kreuzchor</title>
+		<title><?php echo __('archive');?> - <?php echo __('hsa');?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Das Handschriftenarchiv Dresdner Kreuzchor: Geschichte, Fakten, Organisation und weitere Informationen." />
 		<meta name="keywords" content="Besuch, Archiv, Geschichte, Handschriftenarchiv, Kreuzchor, Dresden" />
