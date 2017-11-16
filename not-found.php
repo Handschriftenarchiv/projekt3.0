@@ -7,64 +7,64 @@ require_once 'translate.php';
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>404 - <?php echo __('hsa');?></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Seite nicht gefunden" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="Handschriftenarchiv Dresdner Kreuzchor" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>404 - <?php echo __('hsa');?></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Seite nicht gefunden" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Handschriftenarchiv Dresdner Kreuzchor" />
 
-	<!--
-	//////////////////////////////////////////////////////
+		<!--
+		//////////////////////////////////////////////////////
 
-	FREE HTML5 TEMPLATE
-	DESIGNED & DEVELOPED by FREEHTML5.CO
+		FREE HTML5 TEMPLATE
+		DESIGNED & DEVELOPED by FREEHTML5.CO
 
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
+		Website: 		http://freehtml5.co/
+		Email: 			info@freehtml5.co
+		Twitter: 		http://twitter.com/fh5co
+		Facebook: 		https://www.facebook.com/fh5co
 
-	//////////////////////////////////////////////////////
-	-->
+		//////////////////////////////////////////////////////
+		-->
 
-	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+		<!-- Facebook and Twitter integration -->
+		<meta property="og:title" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content=""/>
+		<meta property="og:site_name" content=""/>
+		<meta property="og:description" content=""/>
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" content="" />
+		<meta name="twitter:card" content="" />
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="/favicon.ico">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="shortcut icon" href="/favicon.ico">
 
-	<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
 
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="/css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="/css/icomoon.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="/css/bootstrap.css">
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="/css/animate.css">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="/css/icomoon.css">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="/css/bootstrap.css">
 
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="/css/flexslider.css">
+		<!-- Flexslider  -->
+		<link rel="stylesheet" href="/css/flexslider.css">
 
-	<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/style.css">
 
 
-	<!-- Modernizr JS -->
-	<script src="/js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+		<!-- Modernizr JS -->
+		<script src="/js/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
 
 	</head>
 	<body>
@@ -114,13 +114,13 @@ require_once 'translate.php';
 						<li><a href="/kontakt">Kontakt</a></li>
 					</ul>
 					<p class="fh5co-social-icon">
-						<a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
-						<a href="https://issuu.com/hsa6"target="_blank"><i class="icon-book"></i></a>
-						<a href="https://vimeo.com/handschriftenarchiv"target="_blank"><i class="icon-vimeo"></i></a>
-						<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"target="_blank"><i class="icon-youtube"></i></a>
-						<a href="https://plus.google.com/108785494716898198379"target="_blank"><i class="icon-google"></i></a>
-						<a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
-						<a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
+						<a href="https://twitter.com/NotenarchivDKC" target="_blank"><i class="icon-twitter2"></i></a>
+						<a href="https://issuu.com/hsa6" target="_blank"><i class="icon-book"></i></a>
+						<a href="https://vimeo.com/handschriftenarchiv" target="_blank"><i class="icon-vimeo"></i></a>
+						<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw" target="_blank"><i class="icon-youtube"></i></a>
+						<a href="https://plus.google.com/108785494716898198379" target="_blank"><i class="icon-google"></i></a>
+						<a href="https://github.com/handschriftenarchiv" target="_blank"><i class="icon-github2"></i></a>
+						<a href="https://be.net/handschriftenarchiv" target="_blank"><i class="icon-behance"></i></a>
 					</p>
 				</div>
 			</div>
