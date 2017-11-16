@@ -7,11 +7,9 @@
   RewriteRule ^/?$ de [L,R]
   # Sprachattribut herausfinden
   RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
   # noch keine GET-parameter
-  RewriteRule ^/(.+?)/([^?]*)$ /$2?lang=$1 [L]
-  RewriteCond %{REQUEST_FILENAME} !-d
-  # es gibt bereits GET-parameter; als neuen parameter anhängen
-  RewriteRule ^/(.+?)/(.*)$ /$2&lang=$1 [L]
+  RewriteRule ^/(.+?)/([^?]*)$ $2?lang=$1 [L,QSA]
   # URLs ohne Dateierweiterung zur entsprechenden Datei weiterleiten
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME}.php -f
