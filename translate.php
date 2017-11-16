@@ -113,9 +113,6 @@ function __page($page,$lang=null){
 	if(empty($lang)){
 		$lang=$use_lang;
 	}
-	echo "<!--";
-	var_dump(language_supported_for_page($lang,$page));
-	echo "-->";
 	if(!language_supported_for_page($lang,$page)){
 		$lang=$default;
 	}
