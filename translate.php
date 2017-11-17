@@ -4,7 +4,7 @@ the directory in which the dictionaries reside in
 
 standard is 'lang'
 */
-$dict_dir='lang';
+$dict_dir='/users/handschriften/www/archiv/lang';
 /*
 language to use by default
 NULL or unset means to use the language provided by the browser
@@ -32,6 +32,10 @@ function dictionary_setup($strict){
 	global $dictionary;
 	global $dictionary_setup_done;
 	$dictionary=array();
+	if(!@file_exists($dict_dir.DIRECTORY_SEPARATOR.'dictionary')){
+		echo '<!-- Translate: Datei "'.$dict_dir.DIRECTORY_SEPARATOR.'dictionary" nicht gefunden -->';
+		return;
+	}
 	$template=file($dict_dir.DIRECTORY_SEPARATOR.'dictionary',FILE_IGNORE_NEW_LINES);
 	$dir=scandir($dict_dir);
 	foreach($dir as $f){

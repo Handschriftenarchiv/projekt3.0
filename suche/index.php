@@ -23,7 +23,7 @@ require_once '../translate.php';
 			<form method="GET" action="search.php" autocomplete="off" onsubmit="return checkSubmit(0);">
 				<input type="search" list="suggestions" name="search" id="searchBox" style="width:80%" oninput="lookup();"/>
 				<div id="livesearch"></div><br>
-				<input type="submit" value=<?php echo __('src!')?> style="float:right;margin-top:7%;margin-right:10%;"/>
+				<input type="submit" value="<?php echo __('src!')?>" style="float:right;margin-top:7%;margin-right:10%;"/>
 			</form>
 		</div>
 		<div id="search-b">
