@@ -2,17 +2,17 @@
   RewriteEngine on
   # abschließendes Slash entfernen
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)/$ /$1 [L,R]
+  RewriteRule ^(.*)/$ /$1 [L]
+  # URLs ohne Dateierweiterung zur entsprechenden Datei weiterleiten
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}.php -f
+  RewriteRule ^(.*)$ $1.php [L]
   # Sprachattribut darf noch nicht bekannt sein, sonst Endlosschleife!
   RewriteCond %{QUERY_STRING} !lang=
   # Sprachattribut herausfinden
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^(de|en)(-[a-z]{2})?(/(.*))?$ $3?lang=$1$2 [L,NC]
-  # URLs ohne Dateierweiterung zur entsprechenden Datei weiterleiten
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME}.php -f
-  RewriteRule ^(.*)$ $1.php [L]
+  RewriteRule ^(.+?)(/(.*))?$ $2?lang=$1 [QSA,L]
   # nicht gefundene Dateien an not-found.php weiterleiten
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
