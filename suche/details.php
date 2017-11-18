@@ -1,5 +1,6 @@
 <?php
 require_once "misc.php";
+require_once "../translate.php";
 if(empty($_GET['id'])){
 	header('Location: .');
 	exit;
@@ -11,7 +12,7 @@ if(empty($_GET['id'])){
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-		<title>Datenbankergebniss - Handschriftenarchiv Dresdner Kreuzchor</title>
+		<title><?php echo __('db');?> - <?php echo __('hsa');?></title>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -93,32 +94,7 @@ if(empty($_GET['id'])){
 		<![endif]-->
 	</head>
 	<body>
-		<nav id="fh5co-main-nav" role="navigation">
-	 	 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
-	 	 <div class="js-fullheight fh5co-table">
-	 		 <div class="fh5co-table-cell js-fullheight">
-	 			 <h1 class="text-center"><a class="fh5co-logo" href="index.php">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
-	 			 <ul>
-	 				 <li><a href="../index.php">Willkommen</a></li>
-	 				 <li><a href="../archiv.php">Archiv</a></li>
-	 				 <li><a href="..//blog/">Blog</a></li>
-	 				 <li><a href="../mediathek.php">Mediathek</a></li>
-	 				 <li><a href="/suche/">Datenbank</a></li>
-	 				 <li><a href="../impressum.php">Impressum</a></li>
-	 				 <li><a href="../kontakt.php">Kontakt</a></li>
-	 			 </ul>
-	 			 <p class="fh5co-social-icon">
-	 				 <a href="https://twitter.com/NotenarchivDKC" target="_blank"><i class="icon-twitter2"></i></a>
-	 				 <a href="https://issuu.com/hsa6" target="_blank"><i class="icon-book"></i></a>
-	 				 <a href="https://vimeo.com/handschriftenarchiv" target="_blank"><i class="icon-vimeo"></i></a>
-	 				 <a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw" target="_blank"><i class="icon-youtube"></i></a>
-	 				 <a href="https://plus.google.com/108785494716898198379" target="_blank"><i class="icon-google"></i></a>
-	 				 <a href="https://github.com/handschriftenarchiv" target="_blank"><i class="icon-github2"></i></a>
-	 				 <a href="https://be.net/handschriftenarchiv" target="_blank"><i class="icon-behance"></i></a>
-	 			 </p>
-	 		 </div>
-	 	 </div>
-	  </nav>
+		<?php __page('nav');?>
 
 		<div id="fh5co-page">
 			<header>
@@ -151,7 +127,7 @@ if(empty($_GET['id'])){
 							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 								<div class="slider-text-inner">
 									<div class="desc">
-										<span>Datenbank</span>
+										<span><?php echo __('db');?></span>
 										<h2>Details</h2>
 										<p class="fh5co-lead"><?php
 										if((int)$_GET['id']>0){
@@ -217,8 +193,8 @@ if(empty($_GET['id'])){
 								<h2><?php echo $dsatz['Titel']; ?></h2>
 								<h3><?php echo $dsatz['Komponist']; ?></h3>
 								<table style="margin:auto;">
-									<tr><th>Titel:&nbsp;</th><td><?php echo $dsatz['Titel'];?></td></tr>
-									<tr><th>Komponist:&nbsp;</th><td><?php echo $dsatz['Komponist']; ?></td></tr>
+									<tr><th><?php echo __('title');?>:&nbsp;</th><td><?php echo $dsatz['Titel'];?></td></tr>
+									<tr><th><?php echo __('comp');?>:&nbsp;</th><td><?php echo $dsatz['Komponist']; ?></td></tr>
 									<?php
 									if(!empty($dsatz['Bearbeiter'])){
 										echo "<tr><th>Bearbeiter:&nbsp;</th><td>".$dsatz['Bearbeiter'].'</td></tr>';
@@ -279,7 +255,7 @@ if(empty($_GET['id'])){
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center animate-box">
 						<div class="about-content">
-							<p>Die eingegebene ID konnete in der Datenbank nicht gefunden werden.</p>
+							<p>Die eingegebene ID konnte in der Datenbank nicht gefunden werden.</p>
 						</div>
 					</div>
 				</div>
