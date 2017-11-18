@@ -12,12 +12,12 @@ require_once '../translate.php';
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400" rel="stylesheet">
 		<!-- Icomoon Icon Fonts-->
 		<link rel="stylesheet" href="css/icomoon.css">
-		<script type="text/javascript" src="search.js"></script>
+		<script type="text/javascript" src="/suche/search.js"></script>
 		<script type="text/html" id="template">
 		</script>
 	</head>
 	<body onload="start()">
-		<a href=".."><img border="0" src="../favicon.ico" id="icon"/></a>
+		<a href=".."><img border="0" src="/favicon.ico" id="icon"/></a>
 		<div id="search">
 			<span style="font-size:16pt;">Volltext-Suche</span>
 			<form method="GET" action="search.php" autocomplete="off" onsubmit="return checkSubmit(0);">
@@ -47,10 +47,10 @@ require_once '../translate.php';
 		</div>
 
 		<div id="details">
-			<img border="0" src="info.svg" id="details"/>
+			<img border="0" src="/images/database/info.svg" id="details"/>
 			<div id="info">
 				<a href="http://archiv.handschriften.bplaced.de/suche/details.php?id=134">
-					<img border="0" src="background.scharf.png" style="border-radius: 5px;"/>
+					<img border="0" src="/images/database/background.scharf.png" style="border-radius: 5px;"/>
 					<p class="title">Mai</p>
 					<p class="composer">Ernst Pepping</p>
 				</a>
@@ -59,19 +59,19 @@ require_once '../translate.php';
 
 		<datalist id="suggestions"></datalist>
 		<!-- jQuery -->
-		<script src="../js/jquery.min.js"></script>
+		<script src="/js/jquery.min.js"></script>
 		<!-- jQuery Easing -->
-		<script src="../js/jquery.easing.1.3.js"></script>
+		<script src="/js/jquery.easing.1.3.js"></script>
 		<!-- Bootstrap -->
-		<script src="../js/bootstrap.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
 		<!-- Waypoints -->
-		<script src="../js/jquery.waypoints.min.js"></script>
+		<script src="/js/jquery.waypoints.min.js"></script>
 		<!-- Counters -->
-		<script src="../js/jquery.countTo.js"></script>
+		<script src="/js/jquery.countTo.js"></script>
 		<!-- Flexslider -->
-		<script src="../js/jquery.flexslider-min.js"></script>
+		<script src="/js/jquery.flexslider-min.js"></script>
 
 		<!-- Main JS (Do not remove) -->
-		<script src="../js/main.js"></script>
+		<script src="/js/main.js"></script>
 	</body>
 </html>
