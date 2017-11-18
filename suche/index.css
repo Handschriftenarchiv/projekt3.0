@@ -17,7 +17,7 @@ body:after{
 	bottom: 0;
 	right: 0;
 	opacity:0.5;
-	background: url('background.png');
+	background: url('/images/database/background.png');
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -72,13 +72,13 @@ input,select,button{
 	font-family:"Karla";
 }
 .remove{
-	background-image:url(minus.svg);
+	background-image:url('/images/database/minus.svg');
 }
 #add{
-	background-image:url(plus.svg);
+	background-image:url('/images/database/plus.svg');
 }
 .go{
-	background-image:url(enter.svg);
+	background-image:url('/images/database/enter.svg');
 	width:5em;
 	float:right;
 	margin-right:45%;
