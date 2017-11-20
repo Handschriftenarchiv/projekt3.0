@@ -87,7 +87,7 @@ function language_supported($lang){
 /*
 the actual translating function
 */
-function __($translate){
+function __($translate,$lang=null){
 	global $use_lang;
 	global $dictionary;
 	if(empty($lang)){
