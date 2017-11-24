@@ -47,10 +47,10 @@ require_once '../translate.php';
 		</div>
 
 		<div id="details">
-			<img border="0" src="/images/database/info.svg" id="details"/>
+			<img border="0" src="../images/database/info.svg" id="details"/>
 			<div id="info">
 				<a href="http://archiv.handschriften.bplaced.de/suche/details.php?id=134">
-					<img border="0" src="/images/database/background.scharf.png" style="border-radius: 5px;"/>
+					<img border="0" src="../images/database/background.scharf.png" style="border-radius: 5px;"/>
 					<p class="title">Mai</p>
 					<p class="composer">Ernst Pepping</p>
 				</a>
