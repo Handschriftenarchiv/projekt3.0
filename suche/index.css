@@ -17,7 +17,7 @@ body:after{
 	bottom: 0;
 	right: 0;
 	opacity:0.5;
-	background: url('/images/database/background.png');
+	background: url('../images/database/background.png');
 	background-repeat:no-repeat;
 	background-size:cover;
 }
