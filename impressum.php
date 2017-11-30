@@ -79,7 +79,7 @@ require_once "translate.php";
 			})();
 		</script>
 
-		<?php echo __page('nav');?>
+		<?php echo __chunk('nav');?>
 
 		<div id="fh5co-page">
 			<header>
@@ -130,8 +130,8 @@ require_once "translate.php";
 		<div id="fh5co-about">
 			<div class="container">
 <?php
-echo __page('sitenotice');
-echo __page('footer');
+echo __chunk('sitenotice');
+echo __chunk('footer');
 ?>
 			</div>
 		</div>

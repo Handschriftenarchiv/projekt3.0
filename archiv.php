@@ -99,7 +99,7 @@ require_once 'translate.php';
 			</div>
 		</nav>
 -->
-		<?php echo __page('nav');?>
+		<?php echo __chunk('nav');?>
 
 		<div id="fh5co-page">
 			<header>
@@ -147,8 +147,8 @@ require_once 'translate.php';
 			</aside>
 
 <?php
-echo __page('archiv');
-echo __page('footer');
+echo __chunk('archiv');
+echo __chunk('footer');
 ?>
 
 	</div>

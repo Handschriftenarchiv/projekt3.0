@@ -100,7 +100,7 @@ require_once 'translate.php';
 			</div>
 		</nav>
 -->
-		<?php echo __page('nav');?>
+		<?php echo __chunk('nav');?>
 
 	<div id="fh5co-page">
 		<header>
