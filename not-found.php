@@ -99,7 +99,7 @@ require_once 'translate.php';
 			</div>
 		</nav>
 -->
-		<?php echo __page('nav');?>
+		<?php echo __chunk('nav');?>
 
 		<div id="fh5co-page">
 			<header>
@@ -124,7 +124,7 @@ require_once 'translate.php';
 								<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 									<div class="slider-text-inner">
 										<div class="desc">
-											<?php echo __page('404');?>
+											<?php echo __chunk('404');?>
 										</div>
 									</div>
 								</div>
@@ -133,7 +133,7 @@ require_once 'translate.php';
 					</ul>
 				</div>
 			</aside>
-			<?php echo __page('footer');?>
+			<?php echo __chunk('footer');?>
 		</div>
 
 		<!-- jQuery -->

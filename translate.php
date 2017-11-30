@@ -103,43 +103,45 @@ function language_switcher(){
 	echo '<div id="lang-switcher">';
 	foreach(array_keys($dictionary) as $lang){
 		$language=$dictionary[$lang]['language'];
-		echo '<a href="'.$_SERVER['REQUEST_URI'];
-		/*
-		Don't cause errors if REQUEST_URI already contains a query string!
-		If the uri already contains a query string, we just append the attributes with a ampersand.
-		Otherwise we have to add our query with a question mark.
-		*/
-		echo (strpos($_SERVER['REQUEST_URI'],'?'))?'&':'?';
-		echo "lang=$lang\">$language</a>&nbsp;";
+		echo '<a href="';
+		// check if REQUEST_URI already contains a lang GET parameter
+		$count=0;
+		$_SERVER['REQUEST_URI']=preg_replace('~(&|\?)lang=.*?($|&)~',$_SERVER['REQUEST_URI'],'$1lang='.$lang.'$2',-1,$count);
+		echo $_SERVER['REQUEST_URI'];
+		if($count==0){
+			/*
+			Don't cause errors if REQUEST_URI already contains a query string!
+			If the uri already contains a query string, we just append the attributes with a ampersand.
+			Otherwise we have to add our query with a question mark.
+			*/
+			echo (strpos($_SERVER['REQUEST_URI'],'?'))?'&':'?';
+			echo "lang=$lang";
+		}
+		echo "\">$language</a>&nbsp;";
 	}
 	echo '</div>';
 }
 
-function language_supported_for_page($lang,$page){
+function language_supported_for_chunk($lang,$chunk){
 	global $dict_dir;
-	$path=$dict_dir.DIRECTORY_SEPARATOR.'page-translations'.DIRECTORY_SEPARATOR.$page.DIRECTORY_SEPARATOR.$lang;
+	$path=$dict_dir.DIRECTORY_SEPARATOR.'chunk-translations'.DIRECTORY_SEPARATOR.$chunk.DIRECTORY_SEPARATOR.$lang;
 	return file_exists($path)&&is_file($path);
 }
 
-function __page($page,$lang=null){
+function __chunk($chunk,$lang=null){
 	global $default;
 	global $use_lang;
 	global $dict_dir;
 	if(empty($lang)){
 		$lang=$use_lang;
 	}
-	if(!language_supported_for_page($lang,$page)){
-		if(strlen($lang)>2){
-			// check if language without region code is available
-			$lang=substr($lang,0,2);
-			if(!language_supported_for_page($lang,$page)){
-				$lang=$default;
-			}
-		}else{
-			$lang=$default;
-		}
+	while(strlen($lang)>2&&!language_supported_for_chunk($lang,$chunk)){
+		$lang=substr($lang,0,strrpos($lang,'-'));
 	}
-	$path=$dict_dir.DIRECTORY_SEPARATOR.'page-translations'.DIRECTORY_SEPARATOR.$page.DIRECTORY_SEPARATOR.$lang;
+	if(!language_supported_for_chunk($lang,$chunk)){
+		$lang=$default;
+	}
+	$path=$dict_dir.DIRECTORY_SEPARATOR.'chunk-translations'.DIRECTORY_SEPARATOR.$chunk.DIRECTORY_SEPARATOR.$lang;
 	if(is_file($path)){
 		return file_get_contents($path);
 	}else{
