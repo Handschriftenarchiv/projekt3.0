@@ -211,17 +211,18 @@ _idl.variant = "modal";
 						</div>-->
 						</div>
 						<br>
-						<table class="author" media="screen">
-							<tbody align="center">
-								</tr>
-								<tr style="align: center;">
-									<td class="author"><a style='font-family:"Karla",Arial,serif;' href="tools-1" class="btn btn-primary">← Vorheriger Blogeintrag</a></td>
-									<td class="author"><strong> </strong></td>
-									<td class="author"><a style='font-family:"Karla",Arial,serif;' href="." class="btn btn-primary">Zur Eintragsübersicht</a></td>
-									<td class="author"><strong> </strong></td>
-									<td class="author"><a style='font-family:"Karla",Arial,serif;' href="datenbankentwicklung" class="btn btn-primary">Nächster Blogeintrag →</a></td>
-							</tbody>
-						</table>
+						<style>
+						#navigation{
+							display:flex;
+							flex-direction: row;
+							justify-content: space-evenly;
+						}
+						</style>
+						<div id="navigation">
+<a style='font-family:"Karla",Arial,serif;' href="tools-1" class="btn btn-primary"> ← </a>
+<a style='font-family:"Karla",Arial,serif;' href="." class="btn btn-primary"><i class="icon-home"></i></a>
+<a style='font-family:"Karla",Arial,serif;' href="datenbankentwicklung" class="btn btn-primary"> → </a>
+						</div>
 						</center>
 					</div>
 				</div>
