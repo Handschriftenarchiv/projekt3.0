@@ -94,7 +94,7 @@ if(empty($_GET['id'])){
 		<![endif]-->
 	</head>
 	<body>
-		<?php __chunk('nav');?>
+		<?php echo __chunk('nav');?>
 
 		<div id="fh5co-page">
 			<header>
