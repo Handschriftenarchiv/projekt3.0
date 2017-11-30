@@ -134,7 +134,7 @@ require_once '../analytics.php';
 									<div class="fh5co-blog animate-box">
 										<a href="netzneutralität"><img class="img-responsive" src="../images/blog/netzneutralitaet/1.png" alt="Wallpaper Netneutrality"></a>
 										<div class="blog-text">
-											<span class="posted_on">03. Nov. 2017</span>
+											<span class="posted_on">03. 11. 2017</span>
 											<span class="comment"><i class="icon-pencil"></i> Archivar</span>
 											<h3><a href="netzneutralität">Netzneutralität</a></h3>
 											<p>Das Handschriftenarchiv Dresdner Kreuzchor und der Kampf für die Netzneutralität.</p>
@@ -145,7 +145,7 @@ require_once '../analytics.php';
 									<div class="fh5co-blog animate-box">
 										<a href="isil-nummer"><img class="img-responsive" src="../images/blog/isil/1.png" alt=""></a>
 										<div class="blog-text">
-											<span class="posted_on">07. Okt. 2017</span>
+											<span class="posted_on">07. 10. 2017</span>
 											<span class="comment"><i class="icon-pencil"></i> Archivar</span>
 											<h3><a href="isil-nummer">ISIL Nummer</a></h3>
 											<p>Das Handschriftenarchiv in der Loge international genormter Archive.</p>
@@ -156,7 +156,7 @@ require_once '../analytics.php';
 									<div class="fh5co-blog animate-box">
 										<a href="datenbankentwicklung"><img class="img-responsive" src="../images/blog/datenbank/1.png" alt="Beta-Version"></a>
 										<div class="blog-text">
-											<span class="posted_on">07. Okt. 2017</span>
+											<span class="posted_on">07. 10. 2017</span>
 											<span class="comment"><i class="icon-pencil"></i> Archivar</span>
 											<h3><a href="datenbankentwicklung">Zur Datenbank</a></h3>
 											<p>Aktuelle Information zu Online-Datenbank des Handschriftenarchivs.</p>
@@ -171,7 +171,7 @@ require_once '../analytics.php';
 									<div class="fh5co-blog animate-box">
 										<a href="ratser-liste"><img class="img-responsive" src="/images/blog/liste/1.svg" alt="Illustration Ratserliste"></a>
 										<div class="blog-text">
-											<span class="posted_on">01. Okt. 2017</span>
+											<span class="posted_on">01. 10. 2017</span>
 											<span class="comment"><i class="icon-pencil"></i> Archivar, Wissenschaftliche Mitarbeiter</span>
 											<h3><a href="ratser-liste">Ratsdiskandisten von 1935 bis 2017</a></h3>
 											<p>Hall of Fame der Notenbibliotheksgeschichte: Eine Übersicht über alle Notenschreiber und Notenbiblothekare, sogenannte Ratsdiskandisten von 1935 bis 2017.</p>
@@ -182,7 +182,7 @@ require_once '../analytics.php';
 									<div class="fh5co-blog animate-box">
 										<a href="tools-1"><img class="img-responsive" src="/images/blog/tools/1/1.svg" alt=""></a>
 										<div class="blog-text">
-											<span class="posted_on">28. Sep. 2017</span>
+											<span class="posted_on">28. 09. 2017</span>
 											<span class="comment"><i class="icon-pencil"></i> Archivar</span>
 											<h3><a href="tools-1">Protonmail</a></h3>
 											<p>Teil I der Serie "Die Tools des Handschriftenarchivs Dresdner Kreuzchor"</p>
@@ -197,7 +197,7 @@ require_once '../analytics.php';
 									<div class="fh5co-blog animate-box">
 										<a href="gunter-gross"><img class="img-responsive" src="/images/blog/gross/1.jpg" alt="Gunter Gross beim Notenschreiben"></a>
 										<div class="blog-text">
-											<span class="posted_on">29. Jul. 2017</span>
+											<span class="posted_on">29. 07. 2017</span>
 											<span class="comment"><i class="icon-pencil"></i>Gunter Gross</span>
 											<h3><a href="gunter-gross">Gunter Groß erinnert sich</a></h3>
 											<p>Gunter Groß: ein ehemaligen Kruzianer, Notenschreiber und Ratsdiskandist unter Rudolf Mauersberger.</p>
@@ -208,7 +208,7 @@ require_once '../analytics.php';
 									<div class="fh5co-blog animate-box">
 										<a href="behance"><img class="img-responsive" src="/images/blog/behance/1.jpg" alt="Behance-Profil Screenshot"></a>
 										<div class="blog-text">
-											<span class="posted_on">05 Aug. 2017</span>
+											<span class="posted_on">05. 08. 2017</span>
 											<span class="comment"><i class="icon-pencil"></i> Archivar</span>
 											<h3><a href="behance">Behance...</a></h3>
 											<p>...als neues Soziales Netzwerk für das Handschriftenarchiv</p>
