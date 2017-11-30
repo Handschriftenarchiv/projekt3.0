@@ -22,10 +22,7 @@
 							elem.classList.remove('selected');
 						}
 						evt.target.classList.add('selected');
-						$.ajax({
-							url:"back.php",
-							data:"chunk="+evt.target.innerHTML
-						}).done((data)=>{
+						getText("back.php?chunk="+evt.target.innerHTML,(data)=>{
 							document.getElementById('text').value=data;
 							saved=true;
 						});
