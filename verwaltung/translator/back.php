@@ -1,11 +1,8 @@
 <?php
-include "..".DIRECTORY_SEPARATOR."translate.php";
+include "../../translate.php";
 if(isset($_GET['langs'])){
 	header("Content-type:application/json");
 	echo json_encode($dictionary);
-}elseif(isset($_GET['keys'])){
-	header("Content-type: application/json");
-	echo json_encode(array_keys($dictionary[array_keys($dictionary)[0]]));
 }elseif(isset($_GET['chunks'])){
 	header("Content-Type: application/json");
 	$path=$dict_dir.DIRECTORY_SEPARATOR.'chunk-translations';
