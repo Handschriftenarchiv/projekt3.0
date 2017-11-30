@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Translator"
+AuthUserFile /users/handschriften/www/archiv/verwaltung/translator/.htpasswd
+Require valid-user
