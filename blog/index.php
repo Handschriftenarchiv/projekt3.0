@@ -113,9 +113,9 @@ require_once '../analytics.php';
 								<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 									<div class="slider-text-inner">
 										<div class="desc">
-											<span>Lesen Sie unseren Blog</span>
+											<span><?php echo __('blog-top');?></span>
 											<h2><?php echo __('blog');?></h2>
-											<p class="fh5co-lead">Hier schreibt das Handschriftenarchiv über Noten, Komponisten und Geschichte.</p>
+											<p class="fh5co-lead"><?php echo __('blog-lead');?></p>
 										</div>
 									</div>
 								</div>
