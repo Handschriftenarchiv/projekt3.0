@@ -2,33 +2,39 @@
 
 (function(){
 	getJSON("back.php?langs",(data)=>{
-		var aLang='';
-		for (var lang in data) {
-			var h = document.createElement("th");
-			h.innerHTML = lang;
-			document.getElementById("tb-head").append(h);
-			aLang=lang;
-		}
-		// extract keys from data
 		var keys=[];
-		for (var key in data[aLang]) {
-			keys.push(key);
-		}
-		// populate table body
-		keys.forEach((key)=>{
-			var h = document.createElement("tr");
-			h.setAttribute("id", key);
-			var h1 = document.createElement("td");
-			h1.innerHTML = key;
-			h1.setAttribute("contenteditable", "true");
-			h.appendChild(h1);
-			for (var lang in data){
-				h1 = document.createElement("td");
-				h1.innerHTML = data[lang][key];
-				h1.setAttribute("contenteditable", "true");
-				h.appendChild(h1);
+		for (var lang in data) {
+			var th = document.createElement("th");
+			th.innerHTML = lang;
+			document.getElementById("tb-head").append(th);
+			if(keys.length==0){
+				// extract keys from data
+				for(var key in data[lang]){
+					keys.push(key);
+				}
 			}
-			document.getElementById("tbody").appendChild(h)
+		}
+		var tabIndex=1;
+		// populate table body
+		keys.forEach(key=>{
+			var tr = document.createElement("tr");
+			// tr.setAttribute("id",key);
+			var td = document.createElement("td");
+			td.innerHTML = key;
+			td.setAttribute("contenteditable", "true");
+			td.setAttribute("tabIndex",tabIndex);
+			tr.appendChild(td);
+			var langNo=1;
+			for(var lang in data){
+				td = document.createElement("td");
+				td.innerHTML = data[lang][key];
+				td.setAttribute("contenteditable","true");
+				td.setAttribute("tabIndex",tabIndex+langNo*Object.keys(data[lang]).length);
+				tr.appendChild(td);
+				langNo++;
+			}
+			document.getElementById("tbody").appendChild(tr);
+			tabIndex++;
 		});
 	});
 })();
