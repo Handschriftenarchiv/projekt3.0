@@ -1,4 +1,7 @@
 <?php
+// erst versuchen, zu richtiger Datei zu vermitteln
+
+
 require_once 'analytics.php';
 require_once 'translate.php';
 ?><!DOCTYPE html>
