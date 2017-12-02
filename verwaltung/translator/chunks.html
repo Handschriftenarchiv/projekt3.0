@@ -4,130 +4,26 @@
 		<meta charset="utf-8">
 		<title>chunk translation tool</title>
 		<script src="resources/ajax.js"></script>
-		<script>
-		var saved=true;
-		(function(){
-			getJSON("back.php?chunks",(data)=>{
-				data.forEach((el)=>{
-					var li = document.createElement('li');
-					li.innerHTML = el;
-					li.onclick = (evt) => {
-						if(!saved){
-							if(!confirm("really switch without saving?")){
-								return;
-							}
-						}
-						var elems=document.querySelectorAll(".selected");
-						for (elem of elems) {
-							elem.classList.remove('selected');
-						}
-						evt.target.classList.add('selected');
-						getText("back.php?chunk="+evt.target.innerHTML,(data)=>{
-							document.getElementById('text').value=data;
-							saved=true;
-						});
-					};
-					document.getElementById("chunk-list").appendChild(li);
-				});
-			});
-		})();
-		function save(){
-			var data = {
-				type:"chunk",
-				name:document.getElementsByClassName('selected')[0].innerHTML,
-				text:document.getElementById('text').value
-			};
-			postJSON("back.php",data,r=>{
-				if(r=="OK"){
-					saved=true;
-				}else{
-					document.querySelector('.selected').innerHTML=prompt(r);
-				}
-			});
-		}
-		function newChunk(){
-			if(!saved){
-				if(!confirm("really switch without saving?")){
-					return;
-				}
-			}
-			var elems=document.querySelectorAll(".selected");
-			for(var elem of elems){
-				elem.classList.remove('selected');
-			}
-			var li=document.createElement('li');
-			li.innerHTML=prompt("Name for new chunk?");
-			// check that name does not exist already
-			elems=document.querySelectorAll("#chunk-list li");
-			for(var elem of elems){
-				if(elem.innerHTML===li.innerHTML){
-					alert('that name exists already');
-					return;
-				}
-			}
-			li.classList.add('selected');
-			document.getElementById('chunk-list').appendChild(li);
-			document.getElementById('text').value="";
-			// new chunk was created locally but not on server
-			saved=false;
-		}
-		</script>
-		<style>
-			*{
-				margin: 0;
-				padding: 0;
-			}
-			html,body{
-				height:100%;
-			}
-			#chunk-list{
-				border-right: 1px solid black;
-				float:left;
-				box-sizing: border-box;
-				width:10%;
-				height:90%;
-				list-style: none;
-				padding-top: 10px;
-				overflow-y: auto;
-			}
-			#chunk-list li{
-				box-sizing: border-box;
-				padding:0 10px;
-			}
-			#chunk-list li.selected{
-				background-color: gray;
-			}
-			#text{
-				float:right;
-				box-sizing: border-box;
-				width:90%;
-				height:90%;
-				padding: 5px;
-				resize: none;
-				overflow: scroll;
-			}
-			#save,#add{
-				box-sizing: border-box;
-				outline:none;
-				border:none;
-				border-top:1px solid black;
-				background:gray;
-				height:10%;
-			}
-			#save{
-				width:90%;
-			}
-			#add{
-				float:left;
-				width:10%;
-				border-right: 1px solid black;
-			}
-		</style>
+		<script src="resources/chunks.js"></script>
+		<link rel="stylesheet" href="resources/chunks.css">
 	</head>
 	<body>
-		<ul id="chunk-list"></ul>
-		<textarea contenteditable="true" id="text" oninput="saved=false;"></textarea>
+		<aside>
+			<a href="index.html" style="margin:10px;">dictionary</a>
+			<ul id="chunk-list"></ul>
+		</aside>
+		<textarea id="text" oninput="setSaved(false)"></textarea>
 		<button type="button" onclick="newChunk()" id="add">+</button>
 		<button type="button" onclick="save()" id="save">save</button>
+		<div id="floatingBarsG">
+			<div class="blockG" id="rotateG_01"></div>
+			<div class="blockG" id="rotateG_02"></div>
+			<div class="blockG" id="rotateG_03"></div>
+			<div class="blockG" id="rotateG_04"></div>
+			<div class="blockG" id="rotateG_05"></div>
+			<div class="blockG" id="rotateG_06"></div>
+			<div class="blockG" id="rotateG_07"></div>
+			<div class="blockG" id="rotateG_08"></div>
+		</div>
 	</body>
 </html>
