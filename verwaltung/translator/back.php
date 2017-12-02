@@ -58,7 +58,8 @@ function save($data){
 			file_put_contents($path,implode("\n",$value));
 		}
 	}elseif($data->type=='chunk'){
-		$c=substr_count($data->name,'/');
+		$name=explode('/',$data->name);
+		$c=count($name)-1;
 		if($c>1){
 			echo "Error: Too many slashes. Only chunk names with exactly one slash are allowed!";
 			exit;
@@ -66,7 +67,6 @@ function save($data){
 			echo "Error: Not enough slashes. Only chunk names with exactly one slash are allowed!";
 			exit;
 		}
-		$name=explode($data->name,'/');
 		$path=$dict_dir.DIRECTORY_SEPARATOR.'chunk-translations'.DIRECTORY_SEPARATOR.$name[0];
 		/*
 		make sure said chunk already exists
