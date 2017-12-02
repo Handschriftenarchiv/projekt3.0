@@ -1,5 +1,5 @@
 <?php
-include "../../translate.php";
+include "..".DIRECTORY_SEPARATOR."translate.php";
 if(isset($_GET['langs'])){
 	header("Content-type:application/json");
 	echo json_encode($dictionary);
@@ -58,7 +58,15 @@ function save($data){
 			file_put_contents($path,implode("\n",$value));
 		}
 	}elseif($data->type=='chunk'){
-		$name=explode('/',$data->name);
+		$c=substr_count($data->name,'/');
+		if($c>1){
+			echo "Error: Too many slashes. Only chunk names with exactly one slash are allowed!";
+			exit;
+		}elseif($c<1){
+			echo "Error: Not enough slashes. Only chunk names with exactly one slash are allowed!";
+			exit;
+		}
+		$name=explode($data->name,'/');
 		$path=$dict_dir.DIRECTORY_SEPARATOR.'chunk-translations'.DIRECTORY_SEPARATOR.$name[0];
 		/*
 		make sure said chunk already exists
@@ -69,5 +77,6 @@ function save($data){
 		}
 		$path=$dict_dir.DIRECTORY_SEPARATOR.'chunk-translations'.DIRECTORY_SEPARATOR.$data->name;
 		file_put_contents($path,$data->text);
+		echo "OK";
 	}
 }
