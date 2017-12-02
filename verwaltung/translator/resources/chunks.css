@@ -1,3 +1,61 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	height:100%;
+}
+
+#chunk-list{
+	border-right: 1px solid black;
+	float:left;
+	box-sizing: border-box;
+	width:10%;
+	height:90%;
+	list-style: none;
+	padding-top: 10px;
+	overflow-y: auto;
+}
+
+#chunk-list li{
+	box-sizing: border-box;
+	padding:0 10px;
+}
+
+#chunk-list li.selected{
+	background-color: gray;
+}
+
+#text{
+	float:right;
+	box-sizing: border-box;
+	width:90%;
+	height:90%;
+	padding: 5px;
+	resize: none;
+	overflow: scroll;
+}
+
+#save,#add{
+	box-sizing: border-box;
+	outline:none;
+	border:none;
+	border-top:1px solid black;
+	background:gray;
+	height:10%;
+}
+
+#save{
+	width:90%;
+}
+
+#add{
+	float:left;
+	width:10%;
+	border-right: 1px solid black;
+}
+
 #floatingBarsG{
 	position:absolute;
 	bottom:50%;
