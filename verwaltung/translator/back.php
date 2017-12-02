@@ -1,5 +1,5 @@
 <?php
-include "..".DIRECTORY_SEPARATOR."translate.php";
+include "../../translate.php";
 if(isset($_GET['langs'])){
 	header("Content-type:application/json");
 	echo json_encode($dictionary);
