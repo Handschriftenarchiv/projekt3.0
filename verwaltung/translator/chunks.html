@@ -12,6 +12,8 @@
 					var li = document.createElement('li');
 					li.innerHTML = el;
 					li.onclick = (evt) => {
+						// switch on loader animation
+						document.getElementById("floatingBarsG").style.display="block";
 						if(!saved){
 							if(!confirm("really switch without saving?")){
 								return;
@@ -25,19 +27,27 @@
 						getText("back.php?chunk="+evt.target.innerHTML,(data)=>{
 							document.getElementById('text').value=data;
 							saved=true;
+							// switch off loader animation
+							document.getElementById("floatingBarsG").style.display="none";
 						});
 					};
 					document.getElementById("chunk-list").appendChild(li);
 				});
+				// switch off loader animation
+				document.getElementById("floatingBarsG").style.display="none";
 			});
 		})();
 		function save(){
+			// switch on loader animation
+			document.getElementById("floatingBarsG").style.display="block";
 			var data = {
 				type:"chunk",
 				name:document.getElementsByClassName('selected')[0].innerHTML,
 				text:document.getElementById('text').value
 			};
 			postJSON("back.php",data,r=>{
+				// switch off loader animation
+				document.getElementById("floatingBarsG").style.display="none";
 				if(r=="OK"){
 					saved=true;
 				}else{
@@ -123,11 +133,22 @@
 				border-right: 1px solid black;
 			}
 		</style>
+		<link rel="stylesheet" href="resources/loader.css">
 	</head>
 	<body>
 		<ul id="chunk-list"></ul>
 		<textarea contenteditable="true" id="text" oninput="saved=false;"></textarea>
 		<button type="button" onclick="newChunk()" id="add">+</button>
 		<button type="button" onclick="save()" id="save">save</button>
+		<div id="floatingBarsG">
+			<div class="blockG" id="rotateG_01"></div>
+			<div class="blockG" id="rotateG_02"></div>
+			<div class="blockG" id="rotateG_03"></div>
+			<div class="blockG" id="rotateG_04"></div>
+			<div class="blockG" id="rotateG_05"></div>
+			<div class="blockG" id="rotateG_06"></div>
+			<div class="blockG" id="rotateG_07"></div>
+			<div class="blockG" id="rotateG_08"></div>
+		</div>
 	</body>
 </html>
