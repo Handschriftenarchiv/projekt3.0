@@ -37,7 +37,39 @@
 				name:document.getElementsByClassName('selected')[0].innerHTML,
 				text:document.getElementById('text').value
 			};
-			postJSON("back.php",data,()=>{saved=true;});
+			postJSON("back.php",data,r=>{
+				if(r=="OK"){
+					saved=true;
+				}else{
+					document.querySelector('.selected').innerHTML=prompt(r);
+				}
+			});
+		}
+		function newChunk(){
+			if(!saved){
+				if(!confirm("really switch without saving?")){
+					return;
+				}
+			}
+			var elems=document.querySelectorAll(".selected");
+			for(var elem of elems){
+				elem.classList.remove('selected');
+			}
+			var li=document.createElement('li');
+			li.innerHTML=prompt("Name for new chunk?");
+			// check that name does not exist already
+			elems=document.querySelectorAll("#chunk-list li");
+			for(var elem of elems){
+				if(elem.innerHTML===li.innerHTML){
+					alert('that name exists already');
+					return;
+				}
+			}
+			li.classList.add('selected');
+			document.getElementById('chunk-list').appendChild(li);
+			document.getElementById('text').value="";
+			// new chunk was created locally but not on server
+			saved=false;
 		}
 		</script>
 		<style>
@@ -53,9 +85,14 @@
 				float:left;
 				box-sizing: border-box;
 				width:10%;
-				height:100%;
-				padding: 10px;
+				height:90%;
 				list-style: none;
+				padding-top: 10px;
+				overflow-y: auto;
+			}
+			#chunk-list li{
+				box-sizing: border-box;
+				padding:0 10px;
 			}
 			#chunk-list li.selected{
 				background-color: gray;
@@ -69,20 +106,28 @@
 				resize: none;
 				overflow: scroll;
 			}
-			#save{
+			#save,#add{
 				box-sizing: border-box;
 				outline:none;
 				border:none;
 				border-top:1px solid black;
 				background:gray;
-				width:90%;
 				height:10%;
+			}
+			#save{
+				width:90%;
+			}
+			#add{
+				float:left;
+				width:10%;
+				border-right: 1px solid black;
 			}
 		</style>
 	</head>
 	<body>
 		<ul id="chunk-list"></ul>
 		<textarea contenteditable="true" id="text" oninput="saved=false;"></textarea>
+		<button type="button" onclick="newChunk()" id="add">+</button>
 		<button type="button" onclick="save()" id="save">save</button>
 	</body>
 </html>
