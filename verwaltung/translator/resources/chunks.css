@@ -7,7 +7,7 @@ html,body{
 	height:100%;
 }
 
-#chunk-list{
+aside{
 	border-right: 1px solid black;
 	float:left;
 	box-sizing: border-box;
@@ -35,6 +35,8 @@ html,body{
 	padding: 5px;
 	resize: none;
 	overflow: scroll;
+	border: none;
+	outline: none;
 }
 
 #save,#add{

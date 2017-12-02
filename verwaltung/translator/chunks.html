@@ -8,8 +8,11 @@
 		<link rel="stylesheet" href="resources/chunks.css">
 	</head>
 	<body>
-		<ul id="chunk-list"></ul>
-		<textarea contenteditable="true" id="text" oninput="setSaved(false);"></textarea>
+		<aside>
+			<a href="index.html" style="margin:10px;">dictionary</a>
+			<ul id="chunk-list"></ul>
+		</aside>
+		<textarea id="text" oninput="setSaved(false)"></textarea>
 		<button type="button" onclick="newChunk()" id="add">+</button>
 		<button type="button" onclick="save()" id="save">save</button>
 		<div id="floatingBarsG">
