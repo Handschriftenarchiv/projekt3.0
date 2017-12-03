@@ -4,7 +4,7 @@ the directory in which the dictionaries reside in
 
 standard is 'lang'
 */
-$dict_dir='/users/handschriften/www/archiv/lang';
+$dict_dir=$_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'lang';
 /*
 language to use by default
 NULL or unset means to use the language provided by the browser
