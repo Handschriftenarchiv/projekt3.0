@@ -48,20 +48,20 @@ require_once 'translate.php';
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
 
 		<!-- Animate.css -->
-		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="/css/animate.css">
 		<!-- Icomoon Icon Fonts-->
-		<link rel="stylesheet" href="css/icomoon.css">
+		<link rel="stylesheet" href="/css/icomoon.css">
 		<!-- Bootstrap  -->
-		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="/css/bootstrap.css">
 
 		<!-- Flexslider  -->
-		<link rel="stylesheet" href="css/flexslider.css">
+		<link rel="stylesheet" href="/css/flexslider.css">
 
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="/css/style.css">
 
 
 		<!-- Modernizr JS -->
-		<script src="js/modernizr-2.6.2.min.js"></script>
+		<script src="/js/modernizr-2.6.2.min.js"></script>
 		<!-- FOR IE9 below -->
 		<!--[if lt IE 9]>
 		<script src="js/respond.min.js"></script>
@@ -108,7 +108,7 @@ require_once 'translate.php';
 				<div class="fh5co-navbar-brand">
 					<div class="row">
 						<div class="col-xs-6">
-							<h1 class="text-left"><a class="fh5co-logo" href="index.php"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
+							<h1 class="text-left"><a class="fh5co-logo" href="/"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
 						</div>
 						<div class="col-xs-6">
 							<!--<p class="fh5co-social-icon text-right">
@@ -129,7 +129,7 @@ require_once 'translate.php';
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-					<li style="background-image: url(images/kontakt/start.svg);">
+					<li style="background-image: url(/images/kontakt/start.svg);">
 						<div class="overlay-gradient"></div>
 						<div class="container">
 							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
@@ -275,19 +275,19 @@ require_once 'translate.php';
 	</div>
 
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="/js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="/js/jquery.waypoints.min.js"></script>
 	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
+	<script src="/js/jquery.countTo.js"></script>
 	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="/js/jquery.flexslider-min.js"></script>
 
 	<!-- Main JS (Do not remove) -->
-	<script src="js/main.js"></script>
+	<script src="/js/main.js"></script>
 	</body>
 </html>
