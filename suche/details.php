@@ -94,7 +94,7 @@ require_once "../translate.php";
 		<![endif]-->
 	</head>
 	<body>
-		<?php echo __chunk('nav');?>
+		<?php include '../lang/nav.php';?>
 
 		<div id="fh5co-page">
 			<header>
