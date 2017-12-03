@@ -41,29 +41,29 @@ require_once "translate.php";
 	<meta name="twitter:card" content="" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href="/favicon.ico">
 
 	<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
 
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="/css/animate.css">
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="/css/icomoon.css">
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="/css/bootstrap.css">
 
 	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="/css/flexslider.css">
 
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/css/style.css">
 
 
 	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="/js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
+	<script src="/js/respond.min.js"></script>
 	<![endif]-->
 
 	</head>
@@ -86,7 +86,7 @@ _idl.variant = "modal";
 				<div class="fh5co-navbar-brand">
 					<div class="row">
 						<div class="col-xs-6">
-							<h1 class="text-left"><a class="fh5co-logo" href="index.php"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
+							<h1 class="text-left"><a class="fh5co-logo" href="/<?php echo $use_lang; ?>/"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
 						</div>
 						<div class="col-xs-6">
 						<!--	<p class="fh5co-social-icon text-right">
@@ -101,7 +101,7 @@ _idl.variant = "modal";
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(images/index/slider/5.jpg);">
+			   	<li style="background-image: url(/images/index/slider/5.jpg);">
 			   		<div class="overlay-gradient"></div>
 			   		<div class="container">
 			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
@@ -224,33 +224,33 @@ _idl.variant = "modal";
 				<div class="row">
 					<div class="col-md-4">
 						<div class="fh5co-blog animate-box">
-							<a href="/blog/ratser-liste"><img class="img-responsive" src="images/blog/liste/1.svg" alt=""></a>
+							<a href="blog/ratser-liste"><img class="img-responsive" src="/images/blog/liste/1.svg" alt=""></a>
 							<div class="blog-text">
 								<span class="posted_on">01. 10. 2017</span>
 								<span class="comment"><i class="icon-pencil"></i> Archivar, Wissenschaftliche Mitarbeiter</span>
-								<h3><a href="/blog/ratser-liste">Ratsdiskandisten von 1935 bis 2017</a></h3>
+								<h3><a href="blog/ratser-liste">Ratsdiskandisten von 1935 bis 2017</a></h3>
 								<p>Hall of Fame der Notenbibliotheksgeschichte: Eine Übersicht über alle Notenschreiber und Notenbiblothekare, sogenannte Ratsdiskandisten von 1935 bis 2017.</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="fh5co-blog animate-box">
-							<a href="/blog/gunter-gross"><img class="img-responsive" src="images/blog/gross/1.jpg" alt=""></a>
+							<a href="blog/gunter-gross"><img class="img-responsive" src="/images/blog/gross/1.jpg" alt=""></a>
 							<div class="blog-text">
 								<span class="posted_on">29. 07. 2017</span>
 								<span class="comment"><i class="icon-pencil"></i> Gunter Gross</span>
-								<h3><a href="/blog/gunter-gross">Gunter Groß erinnert sich</a></h3>
+								<h3><a href="blog/gunter-gross">Gunter Groß erinnert sich</a></h3>
 								<p>Gunter Groß: ein ehemaligen Kruzianer, Notenschreiber und Ratsdiskandist unter Rudolf Mauersberger.</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="fh5co-blog animate-box">
-							<a href="/blog/tools-1"><img class="img-responsive" src="images/blog/tools/1/1.svg" alt=""></a>
+							<a href="blog/tools-1"><img class="img-responsive" src="/images/blog/tools/1/1.svg" alt=""></a>
 							<div class="blog-text">
 								<span class="posted_on">28. 09. 2017</span>
 								<span class="comment"><i class="icon-pencil"></i> Archivar</span>
-								<h3><a href="/blog/tools-1">Protonmail</a></h3>
+								<h3><a href="blog/tools-1">Protonmail</a></h3>
 								<p>Teil I der Serie "Die Tools des Handschriftenarchivs Dresdner Kreuzchor"</p>
 							</div>
 						</div>
@@ -271,28 +271,28 @@ _idl.variant = "modal";
 				<div class="row">
 					<div class="col-md-4 text-center animate-box">
 						<div class="work" style="background-image: url(images/archiv/werke/1.jpg);">
-							<a href="/suche/details.php?id=3" class="view">
+							<a href="suche/details?id=3" class="view">
 								<span>Der Faulbeerbaum - Alexander Tichonowitsch Gretschaninow</span>
 							</a>
 						</div>
 					</div>
 					<div class="col-md-8 text-center animate-box">
 						<div class="work" style="background-image: url(images/archiv/werke/2.jpg);">
-							<a href="/suche/details.php?id=1" class="view">
+							<a href="suche/details?id=1" class="view">
 								<span>Gott der Herr ist Sonn und Schild - Johann Sebastian Bach</span>
 							</a>
 						</div>
 					</div>
 					<div class="col-md-7 text-center animate-box">
 						<div class="work" style="background-image: url(images/archiv/werke/3.jpg);">
-							<a href="/suche/details.php?id=182" class="view">
+							<a href="suche/details?id=182" class="view">
 								<span>Magnificat - Franz Schubert</span>
 							</a>
 						</div>
 					</div>
 					<div class="col-md-5 text-center animate-box">
 						<div class="work" style="background-image: url(images/archiv/werke/4.jpg);">
-							<a href="/suche/details.php?id=213" class="view">
+							<a href="suche/details.php?id=213" class="view">
 								<span>Verstohlen geht der Mond auf - Johannes Brahms</span>
 							</a>
 						</div>
@@ -326,19 +326,19 @@ _idl.variant = "modal";
 	</div>
 
 	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
+	<script src="/js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="/js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="/js/jquery.waypoints.min.js"></script>
 	<!-- Counters -->
-	<script src="js/jquery.countTo.js"></script>
+	<script src="/js/jquery.countTo.js"></script>
 	<!-- Flexslider -->
-	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="/js/jquery.flexslider-min.js"></script>
 
 	<!-- Main JS (Do not remove) -->
-	<script src="js/main.js"></script>
+	<script src="/js/main.js"></script>
 	</body>
 </html>
