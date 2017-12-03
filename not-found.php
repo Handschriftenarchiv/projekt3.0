@@ -31,6 +31,12 @@ if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 			include $path;
 			exit;
 		}
+	}elseif(file_exists($path.'.php')){
+		$path.=".php";
+		chdir(substr($path,0,strrpos($path,'/')));
+		$_SERVER['SCRIPT_NAME']=substr($path,strlen($home)-1);
+		include $path;
+		exit;
 	}
 }
 
