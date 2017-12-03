@@ -1,18 +1,12 @@
 RewriteEngine On
 RewriteBase /
-DirectorySlash Off
-RewriteRule ^(.*)/$ /$1 [L]
+DirectorySlash On
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.+)$ /$1.php [L]
-RewriteCond %{QUERY_STRING} !lang=
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+?)(/.*)?$ $2?lang=$1 [QSA,PT,L]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^(.*)$ /$1/index.php [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^.*$ /not-found.php [L]
+
 <filesMatch "\.(jpe?g|png|gif|ico|svg)$">
 Header set Cache-Control "max-age=2628000, public"
 </filesMatch>

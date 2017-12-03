@@ -1,4 +1,39 @@
 <?php
+// erst versuchen, zu richtiger Datei zu vermitteln
+$urip=explode('/',$_SERVER['REQUEST_URI']);
+// Array säubern
+$urip=array_values(array_filter($urip,function($value){return $value !== '';}));
+// mögliche Ursache: Anfrage enthält Sprache
+if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
+	// Umleitung 'hinter den Kulissen'
+	// Sprache in GET-Parameter einfangen
+	$_GET['lang']=$urip[0];
+	// Pfad finden
+	array_shift($urip);
+	$path=$_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.implode(DIRECTORY_SEPARATOR,$urip);
+	if(file_exists($path)){
+		if(is_dir($path)){
+			chdir($path);
+			// find index file
+			$files=scandir($path);
+			foreach ($files as $f) {
+				if(substr($f,0,5)=='index'){
+					$path.=DIRECTORY_SEPARATOR.$f;
+					break;
+				}
+			}
+			$_SERVER['SCRIPT_NAME']=substr($path,strlen($home));
+			include $path;
+			exit;
+		}else{
+			chdir(substr($path,0,strrpos($path,'/')));
+			$_SERVER['SCRIPT_NAME']=substr($path,strlen($home)-1);
+			include $path;
+			exit;
+		}
+	}
+}
+
 require_once 'analytics.php';
 require_once 'translate.php';
 ?><!DOCTYPE html>
