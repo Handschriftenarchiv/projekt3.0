@@ -115,9 +115,9 @@ require_once 'translate.php';
 							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 								<div class="slider-text-inner">
 									<div class="desc">
-										<span>Kontaktinformationen</span>
+										<span><?php echo __('contact-top'); ?></span>
 										<h2><?php echo __('contact'); ?></h2>
-										<p class="fh5co-lead">Bleiben Sie mit uns in Verbindung. Schreiben Sie uns.</p>
+										<p class="fh5co-lead"><?php echo __('contact-lead'); ?></p>
 									</div>
 								</div>
 							</div>
@@ -131,7 +131,7 @@ require_once 'translate.php';
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-md-push-1 animate-box">
-						<h3>Kontaktangaben</h3>
+						<h3><?php echo __('contact-top'); ?></h3>
 						<ul class="contact-info">
 							<li><i class="icon-location-pin"></i>Dornblüthstraße 4, 01277 Dresden, Deutschland</li>
 							<li><i class="icon-phone2"></i><span>0351</span><span>3153572</span></li>
@@ -146,13 +146,13 @@ require_once 'translate.php';
 						if($process&&$valid){
 							$header="From: \"".str_replace('"',"",$_POST[name])."\" <$_POST[email]>\nContent-Type: text/plain\n";
 							if(mail('handschriftenarchiv@protonmail.com','Anfrage Kontakt - Handschriftenarchiv Dresdner Kreuzchor',$_POST['text'],$header)){
-								echo "<p>Ihre Nachricht wurde erfolgreich an uns versandt. Wir werden Ihnen so schnell wie möglich antworten.</p>";
+								echo "<p>".__('mail-success')."</p>";
 								$mail=true;
 							}else{
-								echo "<p>Leider konnte Ihre Nachricht nicht versendet werden.</p>";
+								echo "<p>".__('mail-fail')."</p>";
 							}
 						}elseif($process){
-							echo "<p>Bitte geben Sie eine gültige E-Mail-Adresse ein!</p>";
+							echo "<p>".__('mail-enter-addr')."</p>";
 						}
 						if(!isset($mail)){
 						?>
@@ -160,29 +160,29 @@ require_once 'translate.php';
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Name" name="name"<?php if(isset($_POST['name'])){echo " value=\"$_POST[name]\"";}?>>
+										<input type="text" class="form-control" placeholder="<?php echo __('name'); ?>" name="name"<?php if(isset($_POST['name'])){echo " value=\"$_POST[name]\"";}?>>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="E-Mail" name="email"<?php if(isset($_POST['email'])){echo " value=\"$_POST[email]\"";}?>>
+										<input type="text" class="form-control" placeholder="<?php echo __('mail-addr'); ?>" name="email"<?php if(isset($_POST['email'])){echo " value=\"$_POST[email]\"";}?>>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea name="text" class="form-control" id="" cols="30" rows="7" placeholder="Nachricht"><?php if(isset($_POST['text'])){echo $_POST['text'];}?></textarea>
+										<textarea name="text" class="form-control" id="" cols="30" rows="7" placeholder="<?php echo __('msg'); ?>"><?php if(isset($_POST['text'])){echo $_POST['text'];}?></textarea>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<input type="submit" value="Nachricht senden" class="btn btn-primary">
+										<input type="submit" value="<?php echo __('mail-send'); ?>" class="btn btn-primary">
 									</div>
 								</div>
 							</div>
 						</form>
 						<?php } ?>
 						<div>
-							<a href="https://protonmail.com/" target="_blank"><img src="/images/kontakt/protonmail.svg" width="174px" alt="Secured by ProtonMail"></a>
+							<a href="https://protonmail.com/" target="_blank"><img src="/images/kontakt/protonmail.svg" width="174px" alt="<?php echo __('mail-secured'); ?>"></a>
 						</div>
 					</div>
 				</div>
