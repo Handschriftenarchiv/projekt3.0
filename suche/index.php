@@ -6,18 +6,18 @@ require_once '../translate.php';
 	<head>
 		<meta charset="utf-8">
 		<title><?php echo __('db');?> - <?php echo __('hsa')?></title>
-		<link rel="shortcut icon" href="../favicon.ico"/>
-		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<link rel="shortcut icon" href="/favicon.ico"/>
+		<link rel="stylesheet" type="text/css" href="/suche/index.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400" rel="stylesheet">
 		<!-- Icomoon Icon Fonts-->
-		<link rel="stylesheet" href="css/icomoon.css">
+		<link rel="stylesheet" href="/css/icomoon.css">
 		<script type="text/javascript" src="/suche/search.js"></script>
 		<script type="text/html" id="template">
 		</script>
 	</head>
 	<body onload="start()">
-		<a href=".."><img border="0" src="/favicon.ico" id="icon"/></a>
+		<a href="/<?php echo $use_lang; ?>"><img border="0" src="/favicon.ico" id="icon"/></a>
 		<div id="search">
 			<span style="font-size:16pt;"><?php echo __('fulltextsrc');?></span>
 			<form method="GET" action="search.php" autocomplete="off" onsubmit="return checkSubmit(0);">
@@ -47,10 +47,10 @@ require_once '../translate.php';
 		</div>
 
 		<div id="details">
-			<img border="0" src="../images/database/info.svg" id="details"/>
+			<img border="0" src="/images/database/info.svg" id="details"/>
 			<div id="info">
-				<a href="http://archiv.handschriften.bplaced.de/suche/details.php?id=134">
-					<img border="0" src="../images/database/background.scharf.png" style="border-radius: 5px;"/>
+				<a href="details?id=134">
+					<img border="0" src="/images/database/background.scharf.png" style="border-radius: 5px;"/>
 					<p class="title">Mai</p>
 					<p class="composer">Ernst Pepping</p>
 				</a>
