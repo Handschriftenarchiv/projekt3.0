@@ -6,6 +6,9 @@ $urip=array_values(array_filter($urip,function($value){return $value !== '';}));
 // mögliche Ursache: Anfrage enthält Sprache
 if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 	// Umleitung 'hinter den Kulissen'
+	if(count($urip)==1&&substr($_SERVER['REQUEST_URI'],-1)!='/'){
+		header("Location: $_SERVER[REQUEST_URI]/");
+	}
 	// Sprache in GET-Parameter einfangen
 	$_GET['lang']=$urip[0];
 	// Pfad finden
