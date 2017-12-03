@@ -1,11 +1,16 @@
 <?php
 // erst versuchen, zu richtiger Datei zu vermitteln
+// GET-Parameter entfernen
+$_SERVER['REQUEST_URI']=strtok($_SERVER['REQUEST_URI'],'?');
 $urip=explode('/',$_SERVER['REQUEST_URI']);
 // Array säubern
 $urip=array_values(array_filter($urip,function($value){return $value !== '';}));
 // mögliche Ursache: Anfrage enthält Sprache
 if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 	// Umleitung 'hinter den Kulissen'
+	if(count($urip)==1&&substr($_SERVER['REQUEST_URI'],-1)!='/'){
+		header("Location: $_SERVER[REQUEST_URI]/");
+	}
 	// Sprache in GET-Parameter einfangen
 	$_GET['lang']=$urip[0];
 	// Pfad finden
@@ -17,8 +22,8 @@ if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 			// find index file
 			$files=scandir($path);
 			foreach ($files as $f) {
-				if(substr($f,0,5)=='index'){
-					$path.=$f;
+				if($f=='index.php'||$f=='index.html'){
+					$path.=DIRECTORY_SEPARATOR.$f;
 					break;
 				}
 			}
@@ -26,14 +31,14 @@ if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 			include $path;
 			exit;
 		}else{
-			chdir(substr($path,0,strrpos($path,'/')));
+			chdir(substr($path,0,strrpos($path,DIRECTORY_SEPARATOR)));
 			$_SERVER['SCRIPT_NAME']=substr($path,strlen($_SERVER['DOCUMENT_ROOT'])-1);
 			include $path;
 			exit;
 		}
 	}elseif(file_exists($path.'.php')){
 		$path.=".php";
-		chdir(substr($path,0,strrpos($path,'/')));
+		chdir(substr($path,0,strrpos($path,DIRECTORY_SEPARATOR)));
 		$_SERVER['SCRIPT_NAME']=substr($path,strlen($_SERVER['DOCUMENT_ROOT'])-1);
 		include $path;
 		exit;
@@ -119,28 +124,8 @@ require_once 'translate.php';
 					document.getElementsByTagName('body')[0].appendChild(idl);
 			})();
 		</script>
-<!--
-		<nav id="fh5co-main-nav" role="navigation">
-			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
-			<div class="js-fullheight fh5co-table">
-				<div class="fh5co-table-cell js-fullheight">
-					<h1 class="text-center"><a class="fh5co-logo" href="index.php">Sprache</a></h1>
-					<ul>
-						<li><a href="index.php">Deutsch</a></li>
-						<li><a href="/en/index.php">Englisch</a></li>
-					</ul>
-					<p class="fh5co-social-icon">
-						<a href="https://twitter.com/NotenarchivDKC"><i class="icon-twitter2"></i></a>
 
-						<a href="https://issuu.com/hsa6"><i class="icon-book"></i></a>
-						<a href="https://vimeo.com/handschriftenarchiv"><i class="icon-vimeo"></i></a>
-						<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"><i class="icon-youtube"></i></a>
-					</p>
-				</div>
-			</div>
-		</nav>
--->
-		<?php echo __chunk('nav');?>
+		<?php include "lang/nav.php";?>
 
 		<div id="fh5co-page">
 			<header>

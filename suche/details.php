@@ -1,10 +1,10 @@
 <?php
-require_once "misc.php";
-require_once "../translate.php";
 if(empty($_GET['id'])){
 	header('Location: .');
 	exit;
 }
+require_once "misc.php";
+require_once "../translate.php";
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -94,7 +94,7 @@ if(empty($_GET['id'])){
 		<![endif]-->
 	</head>
 	<body>
-		<?php echo __chunk('nav');?>
+		<?php include '../lang/nav.php';?>
 
 		<div id="fh5co-page">
 			<header>
