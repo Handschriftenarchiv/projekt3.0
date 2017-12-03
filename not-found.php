@@ -18,23 +18,23 @@ if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 			$files=scandir($path);
 			foreach ($files as $f) {
 				if(substr($f,0,5)=='index'){
-					$path.=DIRECTORY_SEPARATOR.$f;
+					$path.=$f;
 					break;
 				}
 			}
-			$_SERVER['SCRIPT_NAME']=substr($path,strlen($home));
+			$_SERVER['SCRIPT_NAME']=substr($path,strlen($_SERVER['DOCUMENT_ROOT']));
 			include $path;
 			exit;
 		}else{
 			chdir(substr($path,0,strrpos($path,'/')));
-			$_SERVER['SCRIPT_NAME']=substr($path,strlen($home)-1);
+			$_SERVER['SCRIPT_NAME']=substr($path,strlen($_SERVER['DOCUMENT_ROOT'])-1);
 			include $path;
 			exit;
 		}
 	}elseif(file_exists($path.'.php')){
 		$path.=".php";
 		chdir(substr($path,0,strrpos($path,'/')));
-		$_SERVER['SCRIPT_NAME']=substr($path,strlen($home)-1);
+		$_SERVER['SCRIPT_NAME']=substr($path,strlen($_SERVER['DOCUMENT_ROOT'])-1);
 		include $path;
 		exit;
 	}
