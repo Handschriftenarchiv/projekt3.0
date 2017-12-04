@@ -4,7 +4,8 @@ the directory in which the dictionaries reside in
 
 standard is 'lang'
 */
-$dict_dir='/users/handschriften/www/archiv/lang';
+// $dict_dir='/users/handschriften/www/archiv/lang';
+$dict_dir='C:\xampp\htdocs\hsa\lang';
 /*
 language to use by default
 NULL or unset means to use the language provided by the browser
@@ -144,6 +145,42 @@ function __chunk($chunk,$lang=null){
 	$path=$dict_dir.DIRECTORY_SEPARATOR.'chunk-translations'.DIRECTORY_SEPARATOR.$chunk.DIRECTORY_SEPARATOR.$lang;
 	if(is_file($path)){
 		return file_get_contents($path);
+	}else{
+		// an error occured or default translation is missing
+		return 'An error occured. We\'re sorry for the inconvenience.';
+	}
+}
+
+function __blog_prev($name,$lang=null){
+	global $default;
+	global $use_lang;
+	global $dict_dir;
+	$chunk="blog-${name}-prev";
+	if(empty($lang)){
+		$lang=$use_lang;
+	}
+	while(strlen($lang)>2&&!language_supported_for_chunk($lang,$chunk)){
+		$lang=substr($lang,0,strrpos($lang,'-'));
+	}
+	if(!language_supported_for_chunk($lang,$chunk)){
+		$lang=$default;
+	}
+	$path=$dict_dir.DIRECTORY_SEPARATOR.'chunk-translations'.DIRECTORY_SEPARATOR.$chunk.DIRECTORY_SEPARATOR.$lang;
+	if(is_file($path)){
+		$data=file($path);
+		/*
+		<a href="behance"><img class="img-responsive" src="/images/blog/behance/1.jpg" alt="Behance-Profil Screenshot"></a>
+		*/
+		$i=0;
+		$html='<div class="col-md-12"><div class="fh5co-blog animate-box">';
+		$html.="<a href=\"/$use_lang/blog/$name\"><img class=\"img-responsive\" src=\"".$data[$i++]."\" alt=\"".$data[$i++]."\"/></a>";
+		$html.='<div class="blog-text">';
+		$html.="<span class=\"posted_on\">".$data[$i++]."</span>";
+		$html.="<span class=\"comment\"><i class=\"icon-pencil\"></i> ".$data[$i++]."</span>";
+		$html.="<h3><a href=\"/$use_lang/blog/$name\">".$data[$i++]."</a></h3>";
+		$html.='<p>'.implode(array_slice($data,$i)).'</p>';
+		$html.='</div></div></div>';
+		return $html;
 	}else{
 		// an error occured or default translation is missing
 		return 'An error occured. We\'re sorry for the inconvenience.';
