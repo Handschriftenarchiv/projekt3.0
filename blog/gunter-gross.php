@@ -66,7 +66,7 @@ require_once '../translate.php';
 				document.getElementsByTagName('body')[0].appendChild(idl);
 			})();
 		</script>
-		<?php echo __chunk('nav'); ?>
+		<?php include "../lang/nav.php"; ?>
 
 	<div id="fh5co-page">
 		<header>
@@ -93,7 +93,7 @@ require_once '../translate.php';
 			</div>
 		</header>
 
-		<?php echo __chunk('blog-guntergros'); ?>
+		<?php echo __chunk('blog-gunter-gross'); ?>
 
 		<style>
 		#fh5co-about{
