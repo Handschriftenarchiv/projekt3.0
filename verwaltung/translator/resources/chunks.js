@@ -1,6 +1,6 @@
 var saved=true;
 (function(){
-	getJSON("back.php?chunks",(data)=>{
+	getJSON("/verwaltung/translator/back.php?chunks",(data)=>{
 		data.forEach(el=>{
 			var li = document.createElement('li');
 			li.innerHTML = el;
@@ -16,7 +16,7 @@ var saved=true;
 				}catch(e){}
 				// select new item
 				evt.target.classList.add('selected');
-				getText("back.php?chunk="+evt.target.innerHTML,text=>{
+				getText("/verwaltung/translator/back.php?chunk="+evt.target.innerHTML,text=>{
 					// load chunk content
 					document.getElementById('text').value=text;
 					// this chunk is now synced with the server
@@ -40,7 +40,7 @@ function save(){
 		name:document.querySelector('.selected').innerHTML,
 		text:document.getElementById('text').value
 	};
-	postJSON("back.php",data,r=>{
+	postJSON("/verwaltung/translator/back.php",data,r=>{
 		if(r=="OK"){
 			// saving went fine
 			setSaved(true);
