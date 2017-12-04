@@ -1,7 +1,7 @@
 // setup table head
 
 (function(){
-	getJSON("back.php?langs",(data)=>{
+	getJSON("/verwaltung/translator/back.php?langs",(data)=>{
 		var keys=[];
 		for (var lang in data) {
 			var th = document.createElement("th");
@@ -42,7 +42,7 @@
 // functions for user action
 
 function save(){
-	postTable("back.php",document.querySelector('table'));
+	postTable("/verwaltung/translator/back.php",document.querySelector('table'));
 }
 
 function newLanguage(){

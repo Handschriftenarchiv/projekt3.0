@@ -79,7 +79,7 @@ require_once '../translate.php';
 			})();
 		</script>
 
-		<?php echo __chunk('nav'); ?>
+		<?php include "../lang/nav.php"; ?>
 
 		<div id="fh5co-page">
 			<header>

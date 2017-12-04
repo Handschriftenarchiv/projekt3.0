@@ -78,28 +78,7 @@ require_once 'translate.php';
 				document.getElementsByTagName('body')[0].appendChild(idl);
 			})();
 		</script>
-<!--
-		<nav id="fh5co-main-nav" role="navigation">
-			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
-			<div class="js-fullheight fh5co-table">
-				<div class="fh5co-table-cell js-fullheight">
-					<h1 class="text-center"><a class="fh5co-logo" href="index.php">Sprache</a></h1>
-					<ul>
-						<li><a href="index.php">Deutsch</a></li>
-						<li><a href="/en/index.php">Englisch</a></li>
-					</ul>
-					<p class="fh5co-social-icon">
-						<a href="https://twitter.com/NotenarchivDKC"><i class="icon-twitter2"></i></a>
-
-						<a href="https://issuu.com/hsa6"><i class="icon-book"></i></a>
-						<a href="https://vimeo.com/handschriftenarchiv"><i class="icon-vimeo"></i></a>
-						<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"><i class="icon-youtube"></i></a>
-					</p>
-				</div>
-			</div>
-		</nav>
--->
-		<?php echo __chunk('nav');?>
+		<?php include "lang/nav.php"?>
 
 		<div id="fh5co-page">
 			<header>
