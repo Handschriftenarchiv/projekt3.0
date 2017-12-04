@@ -150,7 +150,7 @@ function __chunk($chunk,$lang=null){
 	}
 }
 
-function __blog_prev($name,$lang=null){
+function __blog_prev($name,$col_width='12',$lang=null){
 	global $default;
 	global $use_lang;
 	global $dict_dir;
@@ -171,7 +171,7 @@ function __blog_prev($name,$lang=null){
 		<a href="behance"><img class="img-responsive" src="/images/blog/behance/1.jpg" alt="Behance-Profil Screenshot"></a>
 		*/
 		$i=0;
-		$html='<div class="col-md-12"><div class="fh5co-blog animate-box">';
+		$html="<div class=\"col-md-$col_width\"><div class=\"fh5co-blog animate-box\">";
 		$html.="<a href=\"/$use_lang/blog/$name\"><img class=\"img-responsive\" src=\"".$data[$i++]."\" alt=\"".$data[$i++]."\"/></a>";
 		$html.='<div class="blog-text">';
 		$html.="<span class=\"posted_on\">".$data[$i++]."</span>";

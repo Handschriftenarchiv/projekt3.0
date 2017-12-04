@@ -131,21 +131,27 @@ require_once '../translate.php';
 					<div class="row">
 						<div class="col-md-4">
 							<div class="row">
-								<?php echo __blog_prev('netzneutralitaet'); ?>
-								<?php echo __blog_prev('isil-nummer'); ?>
-								<?php echo __blog_prev('datenbankentwicklung'); ?>
+								<?php
+								echo __blog_prev('netzneutralitaet')
+									.__blog_prev('isil-nummer')
+									.__blog_prev('datenbankentwicklung');
+								?>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="row">
-								<?php echo __blog_prev('ratser-liste'); ?>
-								<?php echo __blog_prev('tools-1'); ?>
+								<?php
+								echo __blog_prev('ratser-liste')
+									.__blog_prev('tools-1');
+								?>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="row">
-								<?php echo __blog_prev('gunter-gross'); ?>
-								<?php echo __blog_prev('behance'); ?>
+								<?php
+								echo __blog_prev('gunter-gross')
+									.__blog_prev('behance');
+								?>
 							</div>
 						</div>
 					</div>
