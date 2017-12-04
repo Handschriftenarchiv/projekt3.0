@@ -27,18 +27,7 @@ require_once "translate.php";
 	Facebook: 		https://www.facebook.com/fh5co
 
 	//////////////////////////////////////////////////////
-	 -->
-
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+	-->
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
@@ -183,10 +172,6 @@ _idl.variant = "modal";
 
 		<div id="fh5co-featured">
 			<div class="container-fluid">
-				<!--
-				<a class="twitter-timeline" data-lang="de" data-link-color="#929292" data-tweet-limit="3" data-width= "800"
-  data-height="300"href="https://twitter.com/NotenarchivDKC">Tweets by NotenarchivDKC</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
--->
 				<div class="row">
 					<div class="row animate-box">
 						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
@@ -222,39 +207,11 @@ _idl.variant = "modal";
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4">
-						<div class="fh5co-blog animate-box">
-							<a href="/blog/ratser-liste"><img class="img-responsive" src="images/blog/liste/1.svg" alt=""></a>
-							<div class="blog-text">
-								<span class="posted_on">01. 10. 2017</span>
-								<span class="comment"><i class="icon-pencil"></i> Archivar, Wissenschaftliche Mitarbeiter</span>
-								<h3><a href="/blog/ratser-liste">Ratsdiskandisten von 1935 bis 2017</a></h3>
-								<p>Hall of Fame der Notenbibliotheksgeschichte: Eine Übersicht über alle Notenschreiber und Notenbiblothekare, sogenannte Ratsdiskandisten von 1935 bis 2017.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="fh5co-blog animate-box">
-							<a href="/blog/gunter-gross"><img class="img-responsive" src="images/blog/gross/1.jpg" alt=""></a>
-							<div class="blog-text">
-								<span class="posted_on">29. 07. 2017</span>
-								<span class="comment"><i class="icon-pencil"></i> Gunter Gross</span>
-								<h3><a href="/blog/gunter-gross">Gunter Groß erinnert sich</a></h3>
-								<p>Gunter Groß: ein ehemaligen Kruzianer, Notenschreiber und Ratsdiskandist unter Rudolf Mauersberger.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="fh5co-blog animate-box">
-							<a href="/blog/tools-1"><img class="img-responsive" src="images/blog/tools/1/1.svg" alt=""></a>
-							<div class="blog-text">
-								<span class="posted_on">28. 09. 2017</span>
-								<span class="comment"><i class="icon-pencil"></i> Archivar</span>
-								<h3><a href="/blog/tools-1">Protonmail</a></h3>
-								<p>Teil I der Serie "Die Tools des Handschriftenarchivs Dresdner Kreuzchor"</p>
-							</div>
-						</div>
-					</div>
+					<?php
+					echo __blog_prev('ratser-liste','4')
+						.__blog_prev('gunter-gross','4')
+						.__blog_prev('tools-1','4');
+					?>
 				</div>
 			</div>
 		</div>
