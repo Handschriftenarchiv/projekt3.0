@@ -131,70 +131,21 @@ require_once '../translate.php';
 					<div class="row">
 						<div class="col-md-4">
 							<div class="row">
-								<div class="col-md-12">
-									<div class="fh5co-blog animate-box">
-										<a href="netzneutralität"><img class="img-responsive" src="/images/blog/netzneutralitaet/1.png" alt="Wallpaper Netneutrality"></a>
-										<div class="blog-text">
-											<?php echo __chunk('blog-netneutrality-prev'); ?>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="fh5co-blog animate-box">
-										<a href="isil-nummer"><img class="img-responsive" src="/images/blog/isil/1.png" alt=""></a>
-										<div class="blog-text">
-											<?php echo __chunk('blog-isil-prev'); ?>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="fh5co-blog animate-box">
-										<a href="datenbankentwicklung"><img class="img-responsive" src="/images/blog/datenbank/1.png" alt="Beta-Version"></a>
-										<div class="blog-text">
-											<?php echo __chunk('blog-db-prev'); ?>
-										</div>
-									</div>
-								</div>
+								<?php echo __blog_prev('netzneutralitaet'); ?>
+								<?php echo __blog_prev('isil-nummer'); ?>
+								<?php echo __blog_prev('datenbankentwicklung'); ?>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="row">
-								<div class="col-md-12">
-									<div class="fh5co-blog animate-box">
-										<a href="ratser-liste"><img class="img-responsive" src="/images/blog/liste/1.svg" alt="Illustration Ratserliste"></a>
-										<div class="blog-text">
-											<?php echo __chunk('blog-ratser-prev'); ?>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="fh5co-blog animate-box">
-										<a href="tools-1"><img class="img-responsive" src="/images/blog/tools/1/1.svg" alt=""></a>
-										<div class="blog-text">
-											<?php echo __chunk('blog-tools1-prev'); ?>
-										</div>
-									</div>
-								</div>
+								<?php echo __blog_prev('ratser-liste'); ?>
+								<?php echo __blog_prev('tools-1'); ?>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="row">
-								<div class="col-md-12">
-									<div class="fh5co-blog animate-box">
-										<a href="gunter-gross"><img class="img-responsive" src="/images/blog/gross/1.jpg" alt="Gunter Gross beim Notenschreiben"></a>
-										<div class="blog-text">
-											<?php echo __chunk('blog-guntergros-prev'); ?>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="fh5co-blog animate-box">
-										<a href="behance"><img class="img-responsive" src="/images/blog/behance/1.jpg" alt="Behance-Profil Screenshot"></a>
-										<div class="blog-text">
-											<?php echo __chunk('blog-behance-prev'); ?>
-										</div>
-									</div>
-								</div>
+								<?php echo __blog_prev('gunter-gross'); ?>
+								<?php echo __blog_prev('behance'); ?>
 							</div>
 						</div>
 					</div>
