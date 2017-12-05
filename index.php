@@ -300,19 +300,37 @@ _idl.variant = "modal";
 			</div>
 		</div>
 
+		<?php
+			// Counter-Werte abfragen
+			require_once "suche/misc.php";
+			$res=mysqli_query($con,"SELECT Typus,COUNT(*) as c FROM archivalien GROUP BY Typus");
+			// Anzahl Handschriften
+			$h=0;
+			$kvh=0;
+			// Anzahl Kopien
+			// Anzahl Drucke
+			$d=0;
+			while($data=mysqli_fetch_assoc($res)){
+				switch($data['Typus']){
+				case 'Handschrift':$h=$data['c'];break;
+				case 'Kopie von Handschrift':$kvh=$data['c'];break;
+				case 'Druck':$d=$data['c'];break;
+				}
+			}
+		?>
 		<div class="fh5co-counters" style="background-image: url(/images/index/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
 			<div class="fh5co-narrow-content animate-box">
 				<div class="row" >
 					<div class="col-md-4 text-center">
-						<span class="fh5co-counter js-counter" data-from="0" data-to="90" data-speed="5000" data-refresh-interval="40"></span>
+						<span class="fh5co-counter js-counter" data-from="0" data-to="<?php echo $h; ?>" data-speed="5000" data-refresh-interval="40"></span>
 						<span class="fh5co-counter-label"><?php echo __('h-pl'); ?></span>
 					</div>
 					<div class="col-md-4 text-center">
-						<span class="fh5co-counter js-counter" data-from="0" data-to="289" data-speed="5000" data-refresh-interval="40"></span>
+						<span class="fh5co-counter js-counter" data-from="0" data-to="<?php echo $kvh; ?>" data-speed="5000" data-refresh-interval="40"></span>
 						<span class="fh5co-counter-label"><?php echo __('kvh-pl'); ?></span>
 					</div>
 					<div class="col-md-4 text-center">
-						<span class="fh5co-counter js-counter" data-from="0" data-to="20" data-speed="5000" data-refresh-interval="40"></span>
+						<span class="fh5co-counter js-counter" data-from="0" data-to="<?php echo $d; ?>" data-speed="5000" data-refresh-interval="40"></span>
 						<span class="fh5co-counter-label"><?php echo __('d-pl'); ?></span>
 					</div>
 				</div>
