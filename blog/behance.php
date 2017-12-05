@@ -77,53 +77,7 @@ _idl.variant = "modal";
 	 document.getElementsByTagName('body')[0].appendChild(idl);
 })();
 </script>
-<!--
-	 <nav id="fh5co-main-nav" role="navigation">
-		 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
-		 <div class="js-fullheight fh5co-table">
-			 <div class="fh5co-table-cell js-fullheight">
-				 <h1 class="text-center"><a class="fh5co-logo" href="index.php">Sprache</a></h1>
-				 <ul>
-					 <li><a href="index.php">Deutsch</a></li>
-					 <li><a href="/en/index.php">Englisch</a></li>
-				 </ul>
-				 <p class="fh5co-social-icon">
-					 <a href="https://twitter.com/NotenarchivDKC"><i class="icon-twitter2"></i></a>
-
-					 <a href="https://issuu.com/hsa6"><i class="icon-book"></i></a>
-					 <a href="https://vimeo.com/handschriftenarchiv"><i class="icon-vimeo"></i></a>
-					 <a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"><i class="icon-youtube"></i></a>
-				 </p>
-			 </div>
-		 </div>
-	 </nav>
--->
- <nav id="fh5co-main-nav" role="navigation">
-	 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
-	 <div class="js-fullheight fh5co-table">
-		 <div class="fh5co-table-cell js-fullheight">
-			 <h1 class="text-center"><a class="fh5co-logo" href="../index.php">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
-			 <ul>
-				 <li><a href="../index">Willkommen</a></li>
-				 <li><a href="../archiv">Archiv</a></li>
-				 <li><a href="../blog/">Blog</a></li>
-				 <li><a href="../mediathek">Mediathek</a></li>
-				 <li><a href="../suche/">Datenbank</a></li>
-				 <li><a href="../impressum">Impressum</a></li>
-				 <li><a href="../kontakt">Kontakt</a></li>
-			 </ul>
-			 <p class="fh5co-social-icon">
-				 <a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
-				 <a href="https://issuu.com/hsa6"target="_blank"><i class="icon-book"></i></a>
-				 <a href="https://vimeo.com/handschriftenarchiv"target="_blank"><i class="icon-vimeo"></i></a>
-				 <a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"target="_blank"><i class="icon-youtube"></i></a>
-				 <a href="https://plus.google.com/108785494716898198379"target="_blank"><i class="icon-google"></i></a>
-				 <a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
-				 <a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
-			 </p>
-		 </div>
-	 </div>
- </nav>
+<?php include "../lang/nav.php"; ?>
 
  <div id="fh5co-page">
 	 <header>
@@ -149,84 +103,24 @@ _idl.variant = "modal";
 			 </div>
 		 </div>
 	 </header>
-		<aside id="fh5co-hero" class="js-fullheight">
-			<div class="flexslider js-fullheight">
-				<ul class="slides">
-			   	<li style="background-image: url(../images/blog/behance/2.jpg);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container">
-			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
-			   				<div class="slider-text-inner">
-			   					<div class="desc">
-			   						<span>01. Okt. 2017</span>
-			   						<h2>Behance…</h2>
-			   						<p class="fh5co-lead">...als neues Soziales Netzwerk für das Handschriftenarchiv</p>
-			   					</div>
-			   				</div>
-			   			</div>
-			   		</div>
-			   	</li>
-			  	</ul>
-		  	</div>
-		</aside>
 
+		<?php echo __chunk('behance'); ?>
 
-		<div id="fh5co-about">
-			<div class="container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center animate-box">
-						<div class="about-content">
-							<h2>Entschuldigung,</h2>
-							<blockquote>
-								<p>…aber dieser Blogeintrag wird noch überarbeitet. Aufgrund von neuen im Vordergrund stehenden Aufgaben, wie der Komplett-Überarbeitung der Datenbank, sind manche Aufgabe in den Hintergrund gerückt. Bitte gedulden Sie sich noch ein wenig. Wir werden über Twitter informieren, wenn dieser Blogeintrag für Sie veröffentlicht wurde.</p>
-							</blockquote>
-						</div>
-						<div class="author">
-						<img src="../images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
-						<center>
-							<table class="author">
-								<tbody align="center">
-									</tr>
-									<tr style="text-align: center;">
-										<td class="author"><strong>Marc Eric Mitzscherling</strong></td>
-										<td class="author"><strong> </strong></td>
-										<td class="author"><strong></strong></td>
-										<td class="author"><strong> </strong></td>
-										<td class="author"><strong>Archivar</strong></td>
-									</tr>
-									<tr style="text-align: center;">
-										<td class="author">Autor</td>
-										<td class="author"><strong> </strong></td>
-										<td class="author"></td>
-										<td class="author"><strong> </strong></td>
-										<td class="author">Veröffentlicher</td>
-									</tr>
-								</tbody>
-							</table>
-
-						<!--<div class="links-social">
-							<a href="http://twitter.com/share?text=Blog%20@NotenarchivDKC:%20Gunter%20Gross%20erinnert%20sich&url=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-twitter-with-circle"></i></a>
-							<a href="https://plus.google.com/share?url=http://archiv.handschriften.bplaced.de/blog/gunter-gross/" target="_blank"><i class="icon-google-with-circle"></i></a>
-							<a href="http://www.facebook.com/sharer.php?u=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-facebook-with-circle"></i></a>
-						</div>-->
-						</div>
-						<br>
-						<style>
-						#navigation{
-							display:flex;
-							flex-direction: row;
-							justify-content: space-evenly;
-						}
-						</style>
-						<div id="navigation">
-<a style='font-family:"Karla",Arial,serif;' href="tools-1" class="btn btn-primary"> ← </a>
-<a style='font-family:"Karla",Arial,serif;' href="." class="btn btn-primary"><i class="icon-home"></i></a>
-<a style='font-family:"Karla",Arial,serif;' href="datenbankentwicklung" class="btn btn-primary"> → </a>
-						</div>
-						</center>
-					</div>
-				</div>
-			</div>
+		<style>
+		#fh5co-about{
+			padding-bottom: 0;
+		}
+		#navigation{
+			display:flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			padding-bottom: 5em;
+		}
+		</style>
+		<div id="navigation">
+			<a href="tools-1" class="btn btn-primary"> ← </a>
+			<a href="." class="btn btn-primary"><i class="icon-home"></i></a>
+			<a href="datenbankentwicklung" class="btn btn-primary"> → </a>
 		</div>
 
 	<footer>
