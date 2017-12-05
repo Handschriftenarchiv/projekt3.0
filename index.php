@@ -201,7 +201,7 @@ _idl.variant = "modal";
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 						<h2><?php echo __('blog'); ?></h2>
-						<p><?php echo __('blog-lead'); ?></p>
+						<p><?php echo __('blog-lead'); ?> <a href="blog"><?php echo __('more'); ?></a></p>
 					</div>
 				</div>
 				<div class="row">
