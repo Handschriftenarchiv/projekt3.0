@@ -27,7 +27,7 @@
 			var langNo=1;
 			for(var lang in data){
 				td = document.createElement("td");
-				td.innerHTML = data[lang][key];
+				td.textContent = data[lang][key];
 				td.setAttribute("contenteditable","true");
 				td.setAttribute("tabIndex",tabIndex+langNo*Object.keys(data[lang]).length);
 				tr.appendChild(td);
