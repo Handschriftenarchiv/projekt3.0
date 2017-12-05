@@ -1,0 +1,57 @@
+<aside id="fh5co-hero" class="js-fullheight">
+	<div class="flexslider js-fullheight">
+		<ul class="slides">
+			<li style="background-image: url(../images/blog/behance/2.jpg);">
+				<div class="overlay-gradient"></div>
+				<div class="container">
+					<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
+						<div class="slider-text-inner">
+							<div class="desc">
+								<span>01. Okt. 2017</span>
+								<h2>Behance…</h2>
+								<p class="fh5co-lead">...als neues Soziales Netzwerk für das Handschriftenarchiv</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</aside>
+<div id="fh5co-about">
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center animate-box">
+				<div class="about-content">
+					<h2>Entschuldigung,</h2>
+					<blockquote>
+						<p>…aber dieser Blogeintrag wird noch überarbeitet. Aufgrund von neuen im Vordergrund stehenden Aufgaben, wie der Komplett-Überarbeitung der Datenbank, sind manche Aufgabe in den Hintergrund gerückt. Bitte gedulden Sie sich noch ein wenig. Wir werden über Twitter informieren, wenn dieser Blogeintrag für Sie veröffentlicht wurde.</p>
+					</blockquote>
+				</div>
+				<div class="author">
+					<img src="../images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
+					<table class="author">
+						<tbody align="center">
+							</tr>
+							<tr style="text-align: center;">
+								<td class="author"><strong>Marc Eric Mitzscherling</strong></td>
+								<td class="author"><strong> </strong></td>
+								<td class="author"><strong></strong></td>
+								<td class="author"><strong> </strong></td>
+								<td class="author"><strong>Archivar</strong></td>
+							</tr>
+							<tr style="text-align: center;">
+								<td class="author">Autor</td>
+								<td class="author"><strong> </strong></td>
+								<td class="author"></td>
+								<td class="author"><strong> </strong></td>
+								<td class="author">Veröffentlicher</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+</div>
