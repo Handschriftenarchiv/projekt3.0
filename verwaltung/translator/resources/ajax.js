@@ -53,7 +53,7 @@ function postTable(url,table){
 	// get table head columns and convert HTMLCollection to array
 	var elems=[].slice.call(table.querySelector('#tb-head').children);
 	for(var elem of elems){
-		columns.push(elem.innerHTML);
+		columns.push(elem.textContent);
 	}
 	var tableData=[];
 	elems=[].slice.call(table.querySelectorAll('tbody>tr'));
@@ -61,7 +61,7 @@ function postTable(url,table){
 		var row={};
 		var cols=[].slice.call(elem.querySelectorAll('td'));
 		for(var i=0;i<columns.length;i++){
-			row[columns[i]]=cols[i].innerHTML;
+			row[columns[i]]=cols[i].textContent;
 		}
 		tableData.push(row);
 	}
