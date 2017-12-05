@@ -115,7 +115,7 @@ _idl.variant = "modal";
 							</div>
 						</div>
 					</li>
-						<li style="background-image: url(images/index/slider/6.jpg);">
+						<li style="background-image: url(/images/index/slider/6.jpg);">
 						<div class="overlay-gradient"></div>
 						<div class="container">
 							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
@@ -129,7 +129,7 @@ _idl.variant = "modal";
 							</div>
 						</div>
 					</li>
-					<li style="background-image: url(images/index/slider/2.jpg);">
+					<li style="background-image: url(/images/index/slider/2.jpg);">
 						<div class="overlay-gradient"></div>
 						<div class="container">
 							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
@@ -143,7 +143,7 @@ _idl.variant = "modal";
 							</div>
 						</div>
 					</li>
-					<li style="background-image: url(images/index/slider/4.jpg);">
+					<li style="background-image: url(/images/index/slider/4.jpg);">
 						<div class="overlay-gradient"></div>
 						<div class="container">
 							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
@@ -268,28 +268,28 @@ _idl.variant = "modal";
 				<div id="werk">
 				<div class="row">
 					<div class="col-md-4 text-center animate-box">
-						<div class="work" style="background-image: url(images/archiv/werke/1.jpg);">
+						<div class="work" style="background-image: url(/images/archiv/werke/1.jpg);">
 							<a href="suche/details?id=3" class="view">
 								<span>Der Faulbeerbaum - Alexander Tichonowitsch Gretschaninow</span>
 							</a>
 						</div>
 					</div>
 					<div class="col-md-8 text-center animate-box">
-						<div class="work" style="background-image: url(images/archiv/werke/2.jpg);">
+						<div class="work" style="background-image: url(/images/archiv/werke/2.jpg);">
 							<a href="suche/details?id=1" class="view">
 								<span>Gott der Herr ist Sonn und Schild - Johann Sebastian Bach</span>
 							</a>
 						</div>
 					</div>
 					<div class="col-md-7 text-center animate-box">
-						<div class="work" style="background-image: url(images/archiv/werke/3.jpg);">
+						<div class="work" style="background-image: url(/images/archiv/werke/3.jpg);">
 							<a href="suche/details?id=182" class="view">
 								<span>Magnificat - Franz Schubert</span>
 							</a>
 						</div>
 					</div>
 					<div class="col-md-5 text-center animate-box">
-						<div class="work" style="background-image: url(images/archiv/werke/4.jpg);">
+						<div class="work" style="background-image: url(/images/archiv/werke/4.jpg);">
 							<a href="suche/details.php?id=213" class="view">
 								<span>Verstohlen geht der Mond auf - Johannes Brahms</span>
 							</a>
@@ -300,7 +300,7 @@ _idl.variant = "modal";
 			</div>
 		</div>
 
-		<div class="fh5co-counters" style="background-image: url(images/index/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
+		<div class="fh5co-counters" style="background-image: url(/images/index/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
 			<div class="fh5co-narrow-content animate-box">
 				<div class="row" >
 					<div class="col-md-4 text-center">
