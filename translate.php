@@ -176,6 +176,8 @@ function __blog_prev($name,$col_width='12',$lang=null){
 		$html.='<div class="blog-text">';
 		$html.="<span class=\"posted_on\">".$data[$i++]."</span>";
 		$html.="<span class=\"comment\"><i class=\"icon-pencil\"></i> ".$data[$i++]."</span>";
+		// Links für vorhergehenden und folgenden Blogeintrag überspringen
+		$i+=2;
 		$html.="<h3><a href=\"/$use_lang/blog/$name\">".$data[$i++]."</a></h3>";
 		$html.='<p>'.implode(array_slice($data,$i)).'</p>';
 		$html.='</div></div></div>';

@@ -42,7 +42,19 @@ if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 		$_SERVER['SCRIPT_NAME']=substr($path,strlen($_SERVER['DOCUMENT_ROOT'])-1);
 		include $path;
 		exit;
+	}else if(strtolower($urip[0])=='blog'){
+		// Blog-Artikel
+		chdir($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'blog');
+		$_SERVER['SCRIPT_NAME']="/blog/blog.php";
+		include "blog/blog.php";
+		exit;
 	}
+}else if(strtolower($urip[0])=='blog'){
+	// Blog-Artikel
+	chdir($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'blog');
+	$_SERVER['SCRIPT_NAME']="/blog/blog.php";
+	include "blog/blog.php";
+	exit;
 }
 
 require_once 'analytics.php';
