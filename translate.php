@@ -167,9 +167,6 @@ function __blog_prev($name,$col_width='12',$lang=null){
 	$path=$dict_dir.DIRECTORY_SEPARATOR.'chunk-translations'.DIRECTORY_SEPARATOR.$chunk.DIRECTORY_SEPARATOR.$lang;
 	if(is_file($path)){
 		$data=file($path);
-		/*
-		<a href="behance"><img class="img-responsive" src="/images/blog/behance/1.jpg" alt="Behance-Profil Screenshot"></a>
-		*/
 		$i=0;
 		$html="<div class=\"col-md-$col_width\"><div class=\"fh5co-blog animate-box\">";
 		$html.="<a href=\"/$use_lang/blog/$name\"><img class=\"img-responsive\" src=\"".$data[$i++]."\" alt=\"".$data[$i++]."\"/></a>";
