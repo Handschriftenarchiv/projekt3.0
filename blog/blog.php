@@ -1,9 +1,22 @@
 <?php
 $blog_entry=explode('blog/',$_SERVER['REQUEST_URI'])[1];
-echo "<!-- $blog_entry -->";
 require_once "../translate.php";
-$data=preg_split('~[\r\n]+~',__chunk("blog-${blog_entry}-prev"));
-$title=$data[4];
+$data=json_decode(file_get_contents('entries.json'),true);
+foreach($data as $key => $value){
+	if($value['title']==$blog_entry){
+		$index=$key;
+		break;
+	}
+}
+$index--;
+if($index<0){
+	$index+=count($data);
+}
+$translation=preg_split('~[\r\n]+~',__chunk("blog-${blog_entry}-prev"));
+$title=$translation[2];
+$prev=$data[$index]['title'];
+$index=($index+2)%count($data);
+$next=$data[$index]['title'];
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -34,7 +47,7 @@ $title=$data[4];
 		-->
 
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="shortcut icon" href="/favicon.ico">
 
 		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
@@ -112,9 +125,9 @@ $title=$data[4];
 			}
 			</style>
 			<div id="navigation">
-				<a href="tools-1" class="btn btn-primary"> ← </a>
-				<a href="." class="btn btn-primary"><i class="icon-home"></i></a>
-				<a href="datenbankentwicklung" class="btn btn-primary"> → </a>
+				<a href="<?php echo $prev; ?>" class="btn btn-primary"> ← </a>
+				<a href="/<?php echo $_use_lang; ?>/blog" class="btn btn-primary"><i class="icon-home"></i></a>
+				<a href="<?php echo $next; ?>" class="btn btn-primary"> → </a>
 			</div>
 
 			<?php echo __chunk('footer'); ?>
@@ -122,19 +135,19 @@ $title=$data[4];
 		</div>
 
 		<!-- jQuery -->
-		<script src="../js/jquery.min.js"></script>
+		<script src="/js/jquery.min.js"></script>
 		<!-- jQuery Easing -->
-		<script src="../js/jquery.easing.1.3.js"></script>
+		<script src="/js/jquery.easing.1.3.js"></script>
 		<!-- Bootstrap -->
-		<script src="../js/bootstrap.min.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
 		<!-- Waypoints -->
-		<script src="../js/jquery.waypoints.min.js"></script>
+		<script src="/js/jquery.waypoints.min.js"></script>
 		<!-- Counters -->
-		<script src="../js/jquery.countTo.js"></script>
+		<script src="/js/jquery.countTo.js"></script>
 		<!-- Flexslider -->
-		<script src="../js/jquery.flexslider-min.js"></script>
+		<script src="/js/jquery.flexslider-min.js"></script>
 
 		<!-- Main JS (Do not remove) -->
-		<script src="../js/main.js"></script>
+		<script src="/js/main.js"></script>
 	</body>
 </html>

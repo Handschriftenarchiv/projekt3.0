@@ -4,7 +4,8 @@ the directory in which the dictionaries reside in
 
 standard is 'lang'
 */
-$dict_dir=$_SERVER['DOCUMENT_ROOT'].'/lang';
+// $dict_dir=$_SERVER['DOCUMENT_ROOT'].'/lang';
+$dict_dir='C:\xampp\htdocs\hsa\lang';
 /*
 language to use by default
 NULL or unset means to use the language provided by the browser
@@ -166,17 +167,21 @@ function __blog_prev($name,$col_width='12',$lang=null){
 	}
 	$path=$dict_dir.DIRECTORY_SEPARATOR.'chunk-translations'.DIRECTORY_SEPARATOR.$chunk.DIRECTORY_SEPARATOR.$lang;
 	if(is_file($path)){
-		$data=file($path);
-		$i=0;
+		$translation=file($path);
+		$data=json_decode(file_get_contents('entries.json'),true);
+		foreach($data as $key=>$value){
+			if($value['title']==$name){
+				$data=$data[$key];
+				break;
+			}
+		}
 		$html="<div class=\"col-md-$col_width\"><div class=\"fh5co-blog animate-box\">";
-		$html.="<a href=\"/$use_lang/blog/$name\"><img class=\"img-responsive\" src=\"".$data[$i++]."\" alt=\"".$data[$i++]."\"/></a>";
+		$html.="<a href=\"/$use_lang/blog/$name\"><img class=\"img-responsive\" src=\"".$data['thumbnail']."\" alt=\"".$translation[0]."\"/></a>";
 		$html.='<div class="blog-text">';
-		$html.="<span class=\"posted_on\">".$data[$i++]."</span>";
-		$html.="<span class=\"comment\"><i class=\"icon-pencil\"></i> ".$data[$i++]."</span>";
-		// Links für vorhergehenden und folgenden Blogeintrag überspringen
-		$i+=2;
-		$html.="<h3><a href=\"/$use_lang/blog/$name\">".$data[$i++]."</a></h3>";
-		$html.='<p>'.implode(array_slice($data,$i)).'</p>';
+		$html.="<span class=\"posted_on\">".$data['pubDate']."</span>";
+		$html.="<span class=\"comment\"><i class=\"icon-pencil\"></i> ".$translation[1]."</span>";
+		$html.="<h3><a href=\"/$use_lang/blog/$name\">".$translation[2]."</a></h3>";
+		$html.='<p>'.implode(array_slice($translation,3)).'</p>';
 		$html.='</div></div></div>';
 		return $html;
 	}else{
