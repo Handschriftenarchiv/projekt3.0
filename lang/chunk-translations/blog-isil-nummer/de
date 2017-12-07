@@ -1,0 +1,85 @@
+<aside id="fh5co-hero" class="js-fullheight">
+	<div class="flexslider js-fullheight">
+		<ul class="slides">
+		<li style="background-image: url(../images/blog/isil/1.png);">
+			<div class="overlay-gradient"></div>
+			<div class="container">
+				<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
+					<div class="slider-text-inner">
+						<div class="desc">
+							<span>07. Okt. 2017</span>
+							<h2>ISIL Nummer</h2>
+							<p class="fh5co-lead">Das Handschriftenarchiv in der Loge international genormter Archive.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+		</ul>
+	</div>
+</aside>
+<div id="fh5co-about">
+	<div class="container">
+		<div class="row animate-box">
+			<div class="col-md-8 col-md-offset-2 text-center animate-box">
+				<div class="about-content">
+					<h2>Mitteilung:</h2>
+					<blockquote>
+						<p>Seit dem 18. September besitzt das Handschriftenarchiv Dresdner Kreuzchor eine ISIL-Nummer. Diese wird offiziell von der Sigelstelle der Deutschen Staatsbibliothek in Berlin vergeben und dient dazu ein Archiv, mittels einer Nummerfolge, eindeutig in der internationalen Archivlandschaft zu indentifizieren.</p>
+					</blockquote>
+					<center>
+						<br>
+					<blockquote class="twitter-tweet" data-lang="de"><p lang="de" dir="ltr">Es ist soweit: das <a href="https://twitter.com/NotenarchivDKC?ref_src=twsrc%5Etfw">@NotenarchivDKC</a> wurde von der <a href="https://twitter.com/sbb_news?ref_src=twsrc%5Etfw">@sbb_news</a> mit einer ISIL-Nummer versehen: <a href="https://twitter.com/hashtag/weltweit?src=hash&amp;ref_src=twsrc%5Etfw">#weltweit</a> <a href="https://twitter.com/hashtag/genormt?src=hash&amp;ref_src=twsrc%5Etfw">#genormt</a> 🥂 😄<a href="https://t.co/RIOqAovUSM">https://t.co/RIOqAovUSM</a> <a href="https://t.co/8GKUZzV31v">pic.twitter.com/8GKUZzV31v</a></p>&mdash; Handschriftenarchiv (@NotenarchivDKC) <a href="https://twitter.com/NotenarchivDKC/status/909860172046258176?ref_src=twsrc%5Etfw">18. September 2017</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+					<br>
+					<br>
+				</center>
+					<blockquote>
+						<p>Das Handschriftenarchiv benötigt die ISIL-Nummer unteranderem, um seine Digtalisate der Deutschen Digitalen Biblithek und dem Archivportal-D zur Verfügung zu stellen.<br> <strong> Die ISIL Nummer des Handschriftenarchivs Dresdner Kreuzchor aus Dresden lautet DE-2535.</strong></p>
+					</blockquote>
+				</div>
+				<div class="author">
+				<img src="../images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
+				<center>
+					<table class="author">
+						<tbody align="center">
+							</tr>
+							<tr style="text-align: center;">
+								<td class="author"><strong>Marc Eric Mitzscherling</strong></td>
+								<td class="author"><strong> </strong></td>
+								<td class="author"><strong></strong></td>
+								<td class="author"><strong> </strong></td>
+								<td class="author"><strong>Archivar</strong></td>
+							</tr>
+							<tr style="text-align: center;">
+								<td class="author">Autor</td>
+								<td class="author"><strong> </strong></td>
+								<td class="author"></td>
+								<td class="author"><strong> </strong></td>
+								<td class="author">Veröffentlicher</td>
+							</tr>
+						</tbody>
+					</table>
+
+				<!--<div class="links-social">
+					<a href="http://twitter.com/share?text=Blog%20@NotenarchivDKC:%20Gunter%20Gross%20erinnert%20sich&url=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-twitter-with-circle"></i></a>
+					<a href="https://plus.google.com/share?url=http://archiv.handschriften.bplaced.de/blog/gunter-gross/" target="_blank"><i class="icon-google-with-circle"></i></a>
+					<a href="http://www.facebook.com/sharer.php?u=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-facebook-with-circle"></i></a>
+				</div>-->
+				</div>
+				<br>
+				<table class="author" media="screen">
+					<tbody align="center">
+						</tr>
+						<tr style="align: center;">
+							<td class="author"><a style='font-family:"Karla",Arial,serif;' href="gunter-gross" class="btn btn-primary">← Vorheriger Blogeintrag</a></td>
+							<td class="author"><strong> </strong></td>
+							<td class="author"><a style='font-family:"Karla",Arial,serif;' href="." class="btn btn-primary">Zur Eintragsübersicht</a></td>
+							<td class="author"><strong> </strong></td>
+							<td class="author"><a style='font-family:"Karla",Arial,serif;' href="tools-1" class="btn btn-primary">Nächster Blogeintrag →</a></td>
+					</tbody>
+				</table>
+				</center>
+			</div>
+		</div>
+	</div>
+</div>
