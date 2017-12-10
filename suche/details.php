@@ -191,7 +191,7 @@ require_once "../translate.php";
 								text-align:left;}
 								</style>
 								<h2><?php echo $dsatz['Titel']; ?></h2>
-								<h3><?php echo $dsatz['Komponist']; ?></h3>
+								<h3><i><?php echo $dsatz['Komponist']; ?></i></h3>
 								<table style="margin:auto;">
 									<tr><th><?php echo __('title');?>:&nbsp;</th><td><?php echo $dsatz['Titel'];?></td></tr>
 									<tr><th><?php echo __('comp');?>:&nbsp;</th><td><?php echo $dsatz['Komponist']; ?></td></tr>
