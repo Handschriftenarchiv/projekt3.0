@@ -1,7 +1,7 @@
 <aside id="fh5co-hero" class="js-fullheight">
 	<div class="flexslider js-fullheight">
 		<ul class="slides">
-			<li style="background-image: url(../images/blog/behance/2.jpg);">
+			<li style="background-image: url(/images/blog/behance/2.jpg);">
 				<div class="overlay-gradient"></div>
 				<div class="container">
 					<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
@@ -29,7 +29,7 @@
 					</blockquote>
 				</div>
 				<div class="author">
-					<img src="../images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
+					<img src="/images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
 					<table class="author">
 						<tbody align="center">
 							</tr>
