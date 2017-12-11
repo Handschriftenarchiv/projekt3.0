@@ -129,31 +129,16 @@ require_once '../translate.php';
 			<div id="fh5co-blog" class="fh5co-bg-section">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-4">
-							<div class="row">
-								<?php
-								echo __blog_prev('netzneutralitaet')
-									.__blog_prev('isil-nummer')
-									.__blog_prev('datenbankentwicklung');
-								?>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<?php
-								echo __blog_prev('ratser-liste')
-									.__blog_prev('tools-1');
-								?>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<?php
-								echo __blog_prev('gunter-gross')
-									.__blog_prev('behance');
-								?>
-							</div>
-						</div>
+						<?php
+						$entries=json_decode(file_get_contents('entries.json'),true);
+						for($j=0;$j*3<count($entries);$j++){
+							echo '<div class="col-md-4"><div class="row">';
+							for($i=0;$j+$i<count($entries);$i+=3){
+								echo __blog_prev($entries[$j+$i]['title']);
+							}
+							echo '</div></div>';
+						}
+						?>
 					</div>
 				</div>
 			</div>
