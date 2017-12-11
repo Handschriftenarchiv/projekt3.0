@@ -1,7 +1,7 @@
 <aside id="fh5co-hero" class="js-fullheight">
 	<div class="flexslider js-fullheight">
 		<ul class="slides">
-		<li style="background-image: url(../images/blog/netzneutralitaet/1.png);">
+		<li style="background-image: url(/images/blog/netzneutralitaet/1.png);">
 			<div class="overlay-gradient"></div>
 			<div class="container">
 				<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
@@ -79,7 +79,7 @@
 				</blockquote>
 				<br />
 				<div class="author" style="background-color: #ffffff;">
-				<img src="../images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
+				<img src="/images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
 					<table class="author">
 						<tbody align="center">
 							<tr style="text-align: center;">

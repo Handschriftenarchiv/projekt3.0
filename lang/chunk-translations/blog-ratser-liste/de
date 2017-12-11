@@ -1,7 +1,7 @@
 <aside id="fh5co-hero" class="js-fullheight">
 	<div class="flexslider js-fullheight">
 		<ul class="slides">
-		<li style="background-image: url(../images/blog/liste/1.svg);">
+		<li style="background-image: url(/images/blog/liste/1.svg);">
 			<div class="overlay-gradient"></div>
 			<div class="container">
 				<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
@@ -370,8 +370,6 @@
 
 				</div>
 				<div class="author">
-				<!--<img src="../images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;" vertical-align:"middle" align="left">-->
-				<center>
 					<table class="author">
 						<tbody align="center">
 							</tr>
