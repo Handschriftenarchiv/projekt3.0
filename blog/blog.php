@@ -126,7 +126,7 @@ $next=$data[$index]['title'];
 			</style>
 			<div id="navigation">
 				<a href="<?php echo $prev; ?>" class="btn btn-primary"> ← </a>
-				<a href="/<?php echo $_use_lang; ?>/blog" class="btn btn-primary"><i class="icon-home"></i></a>
+				<a href="/<?php echo $use_lang; ?>/blog" class="btn btn-primary"><i class="icon-home"></i></a>
 				<a href="<?php echo $next; ?>" class="btn btn-primary"> → </a>
 			</div>
 
