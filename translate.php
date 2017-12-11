@@ -168,7 +168,7 @@ function __blog_prev($name,$col_width='12',$lang=null){
 	$path=$dict_dir.DIRECTORY_SEPARATOR.'chunk-translations'.DIRECTORY_SEPARATOR.$chunk.DIRECTORY_SEPARATOR.$lang;
 	if(is_file($path)){
 		$translation=file($path);
-		$data=json_decode(file_get_contents('entries.json'),true);
+		$data=json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/blog/entries.json'),true);
 		foreach($data as $key=>$value){
 			if($value['title']==$name){
 				$data=$data[$key];
