@@ -1,4 +1,5 @@
 <?php
+require_once 'translate.php';
 // erst versuchen, zu richtiger Datei zu vermitteln
 // GET-Parameter entfernen
 $_SERVER['REQUEST_URI']=strtok($_SERVER['REQUEST_URI'],'?');
@@ -43,22 +44,27 @@ if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 		include $path;
 		exit;
 	}else if(strtolower($urip[0])=='blog'){
+		array_shift($urip);
+		if(file_exists($dict_dir."/chunk-translations/blog-".implode($urip))){
+			// Blog-Artikel
+			chdir($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'blog');
+			$_SERVER['SCRIPT_NAME']="/blog/blog.php";
+			include "blog/blog.php";
+			exit;
+		}
+	}
+}else if(strtolower($urip[0])=='blog'){
+	array_shift($urip);
+	if(file_exists($dict_dir."/chunk-translations/blog-".implode($urip))){
 		// Blog-Artikel
 		chdir($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'blog');
 		$_SERVER['SCRIPT_NAME']="/blog/blog.php";
 		include "blog/blog.php";
 		exit;
 	}
-}else if(strtolower($urip[0])=='blog'){
-	// Blog-Artikel
-	chdir($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'blog');
-	$_SERVER['SCRIPT_NAME']="/blog/blog.php";
-	include "blog/blog.php";
-	exit;
 }
 
 require_once 'analytics.php';
-require_once 'translate.php';
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
