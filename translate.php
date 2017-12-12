@@ -4,7 +4,8 @@ the directory in which the dictionaries reside in
 
 standard is 'lang'
 */
-$dict_dir=$_SERVER['DOCUMENT_ROOT'].'/lang';
+// $dict_dir=$_SERVER['DOCUMENT_ROOT'].'/lang';
+$dict_dir='C:\xampp\htdocs\hsa\lang';
 /*
 language to use by default
 NULL or unset means to use the language provided by the browser
@@ -144,6 +145,45 @@ function __chunk($chunk,$lang=null){
 	$path=$dict_dir.DIRECTORY_SEPARATOR.'chunk-translations'.DIRECTORY_SEPARATOR.$chunk.DIRECTORY_SEPARATOR.$lang;
 	if(is_file($path)){
 		return file_get_contents($path);
+	}else{
+		// an error occured or default translation is missing
+		return 'An error occured. We\'re sorry for the inconvenience.';
+	}
+}
+
+function __blog_prev($name,$col_width='12',$lang=null){
+	global $default;
+	global $use_lang;
+	global $dict_dir;
+	$chunk="blog-${name}-prev";
+	if(empty($lang)){
+		$lang=$use_lang;
+	}
+	while(strlen($lang)>2&&!language_supported_for_chunk($lang,$chunk)){
+		$lang=substr($lang,0,strrpos($lang,'-'));
+	}
+	if(!language_supported_for_chunk($lang,$chunk)){
+		$lang=$default;
+	}
+	$path=$dict_dir.DIRECTORY_SEPARATOR.'chunk-translations'.DIRECTORY_SEPARATOR.$chunk.DIRECTORY_SEPARATOR.$lang;
+	if(is_file($path)){
+		$translation=file($path);
+		$data=json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/blog/entries.json'),true);
+		foreach($data as $key=>$value){
+			if($value['title']==$name){
+				$data=$data[$key];
+				break;
+			}
+		}
+		$html="<div class=\"col-md-$col_width\"><div class=\"fh5co-blog animate-box\">";
+		$html.="<a href=\"/$use_lang/blog/$name\"><img class=\"img-responsive\" src=\"".$data['thumbnail']."\" alt=\"".$translation[0]."\"/></a>";
+		$html.='<div class="blog-text">';
+		$html.="<span class=\"posted_on\">".$data['pubDate']."</span>";
+		$html.="<span class=\"comment\"><i class=\"icon-pencil\"></i> ".$translation[1]."</span>";
+		$html.="<h3><a href=\"/$use_lang/blog/$name\">".$translation[2]."</a></h3>";
+		$html.='<p>'.implode(array_slice($translation,3)).'</p>';
+		$html.='</div></div></div>';
+		return $html;
 	}else{
 		// an error occured or default translation is missing
 		return 'An error occured. We\'re sorry for the inconvenience.';
