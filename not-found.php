@@ -1,5 +1,4 @@
 <?php
-require_once 'translate.php';
 // erst versuchen, zu richtiger Datei zu vermitteln
 // GET-Parameter entfernen
 $_SERVER['REQUEST_URI']=strtok($_SERVER['REQUEST_URI'],'?');
@@ -44,6 +43,7 @@ if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 		include $path;
 		exit;
 	}else if(strtolower($urip[0])=='blog'){
+		require_once 'translate.php';
 		array_shift($urip);
 		if(file_exists($dict_dir."/chunk-translations/blog-".implode($urip))){
 			// Blog-Artikel
@@ -54,6 +54,7 @@ if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 		}
 	}
 }else if(strtolower($urip[0])=='blog'){
+	require_once 'translate.php';
 	array_shift($urip);
 	if(file_exists($dict_dir."/chunk-translations/blog-".implode($urip))){
 		// Blog-Artikel
@@ -64,6 +65,7 @@ if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 	}
 }
 
+require_once 'translate.php';
 require_once 'analytics.php';
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
