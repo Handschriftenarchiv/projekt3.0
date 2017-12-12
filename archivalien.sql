@@ -352,7 +352,7 @@ INSERT INTO `analytics` (`page`, `created`, `additional`) VALUES
 ('/index.php', '2017-10-20 18:01:30', NULL),
 ('/index.php', '2017-10-20 18:01:41', NULL),
 ('/index.php', '2017-10-20 18:01:54', NULL);
-INSERT INTO `analytics` (`id`, `page`, `created`, `additional`) VALUES
+INSERT INTO `analytics` (`page`, `created`, `additional`) VALUES
 ('/index.php', '2017-10-20 18:02:05', NULL),
 ('/index.php', '2017-10-20 18:02:14', NULL),
 ('/index.php', '2017-10-20 18:02:28', NULL),
