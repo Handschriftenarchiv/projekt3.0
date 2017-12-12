@@ -8,6 +8,11 @@ foreach($data as $key => $value){
 		break;
 	}
 }
+if(!isset($index)){
+	// Blog-Artikel existiert nicht
+	require_once '../not-found.php';
+	exit;
+}
 $index--;
 if($index<0){
 	$index+=count($data);
