@@ -78,7 +78,7 @@ require_once 'translate.php';
 				document.getElementsByTagName('body')[0].appendChild(idl);
 			})();
 		</script>
-		<?php include "/lang/nav.php"?>
+		<?php include "lang/nav.php"?>
 
 		<div id="fh5co-page">
 			<header>
