@@ -29,19 +29,8 @@ require_once 'translate.php';
 		//////////////////////////////////////////////////////
 		-->
 
-		<!-- Facebook and Twitter integration -->
-		<meta property="og:title" content=""/>
-		<meta property="og:image" content=""/>
-		<meta property="og:url" content=""/>
-		<meta property="og:site_name" content=""/>
-		<meta property="og:description" content=""/>
-		<meta name="twitter:title" content="" />
-		<meta name="twitter:image" content="" />
-		<meta name="twitter:url" content="" />
-		<meta name="twitter:card" content="" />
-
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="shortcut icon" href="/favicon.ico">
 
 		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
@@ -87,7 +76,7 @@ require_once 'translate.php';
 					<div class="fh5co-navbar-brand">
 						<div class="row">
 							<div class="col-xs-6">
-								<h1 class="text-left"><a class="fh5co-logo" href="index.php"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
+								<h1 class="text-left"><a class="fh5co-logo" href=".."><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
 							</div>
 							<div class="col-xs-6">
 								<!--<p class="fh5co-social-icon text-right">
@@ -108,7 +97,7 @@ require_once 'translate.php';
 			<aside id="fh5co-hero" class="js-fullheight">
 				<div class="flexslider js-fullheight">
 					<ul class="slides">
-					<li style="background-image: url(images/mediathek/start.jpg);">
+					<li style="background-image: url(/images/mediathek/start.jpg);">
 						<div class="overlay-gradient"></div>
 						<div class="container">
 							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
@@ -189,7 +178,7 @@ require_once 'translate.php';
 				</div>
 			</div>
 
-			<div class="fh5co-counters" style="background-image: url(images/archiv/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
+			<div class="fh5co-counters" style="background-image: url(/images/archiv/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
 				<div class="fh5co-narrow-content animate-box">
 					<div class="row" >
 						<div class="col-md-4 text-center">
