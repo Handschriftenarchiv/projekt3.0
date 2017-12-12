@@ -8,10 +8,10 @@ require_once '../analytics.php';
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Ratsdiskandisten von 1935 bis 2017 - Handschriftenarchiv Dresdner Kreuzchor</title>
+	<title>Ratsdiskantisten von 1935 bis 2017 - Handschriftenarchiv Dresdner Kreuzchor</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Eine Übersicht über alle Notenschreiber und Notenbiblothekare, sogenannte Ratsdiskandisten von 1935 bis 2017." />
-	<meta name="keywords" content="Ratser, Ratsdiskandisten, Archiv, Geschichte, Handschriftenarchiv, Kreuzchor, Dresden" />
+	<meta name="description" content="Eine Übersicht über alle Notenschreiber und Notenbiblothekare, sogenannte Ratsdiskantisten von 1935 bis 2017." />
+	<meta name="keywords" content="Ratser, Ratsdiskantisten, Archiv, Geschichte, Handschriftenarchiv, Kreuzchor, Dresden" />
 	<meta name="author" content="Handschriftenarchiv Dresdner Kreuzchor" />
 
   <!--
@@ -159,8 +159,8 @@ _idl.variant = "modal";
 			   				<div class="slider-text-inner">
 			   					<div class="desc">
 			   						<span>18 Aug. 2017</span>
-			   						<h2>Ratsdiskandisten von 1935 bis 2017</h2>
-			   						<p class="fh5co-lead">Eine Übersicht über alle Notenschreiber und Notenbiblothekare, sogenannte Ratsdiskandisten von 1935 bis 2017.</p>
+			   						<h2>Ratsdiskantisten von 1935 bis 2017</h2>
+			   						<p class="fh5co-lead">Eine Übersicht über alle Notenschreiber und Notenbiblothekare, sogenannte Ratsdiskantisten von 1935 bis 2017.</p>
 			   					</div>
 			   				</div>
 			   			</div>
