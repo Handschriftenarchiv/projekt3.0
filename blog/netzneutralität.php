@@ -169,11 +169,8 @@ _idl.variant = "modal";
 				</ul>
 			</div>
 		</aside>
-
-		<div id="fh5co-blog" class="fh5co-bg-section">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 animate-box text-center">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2 class="intro-heading"> Netzneutralität - Was ist das?</h2>
 					<blockquote>
 						<p>
@@ -199,16 +196,8 @@ _idl.variant = "modal";
 							der Europäischen Union und auch politischer Institutionen in den Vereinigten Staaten.
 						</p>
 					</blockquote>
-				</div>
-			</div>
-		</div>
-	</div>
-<br>
-<br>
-<br>
-<br>
-		<div class="container">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<br>
+					<br>
 					<h2 class="intro-heading">Was hat das Handschriftenarchiv damit zu tun?</h2>
 											<blockquote>
 												<p>
@@ -218,69 +207,62 @@ _idl.variant = "modal";
 													Käme es zum Fall der Netzneutralität, würde das für unsere Institution bedeuten, noch weniger auffindbar und nutzbar im Netz zu sein, da schon die Produkte großer Firmen und Internet-Dienstleistungen auf den vorderen Plätzen der Übertragungsqualität agieren würden. Ein kleines Stück Geschichte würde wieder ein bisschen weiter in den Hintergrund gerückt. Und nicht nur so beim Handschriftenarchiv Dresdner Kreuzchor, sondern auch bei anderen Institutionen, egal ob Archiv oder nicht, wird es so sein, immer wieder ein Stück in den Hintergrund zu geraten und somit ein differenziertes Bild einer potentiellen Internetrecherche nicht mehr möglich!
 												</p>
 											</blockquote>
+											<br>
+											<br>
+											<h2 class="intro-heading">Was tut das Handschriftenarchiv Dresdner Kreuzchor?</h2>
+																<blockquote>
+																	<p>
+																		Aus diesem Grund ist das Handschriftenarchiv ab Herbst 2017 im Rahmen des Projekts 3.0 der Internet Defense League [https://www.internetdefenseleague.org/] beigetreten. Dies setzt sich für die Netzneutralität (vor allen Dingen in den USA) ein, und Versucht über die Mitglieder des League auf das Problem aufmerksam zu machen, von dem viele noch nicht einmal ahnen.
+																		<br>
+																		Damit das Handschriftenarchiv Dresdner Kreuzchor auch in Zukunft in keinem „Internet-Paket“ von Internetanbietern zu kaufen ist, kämpfen wir mit für ein Neutales Netz! Wenn wir auch Sie von der Wichtigkeit dieses Themas überzeugen konnten klicken Sie einfach am Ende der Seite auf den Internet-Defense-League-Schild und treten Sie der League bei.
+																	</p>
+																</blockquote>
+																<br>
+																<div class="author">
+																<img src="../images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
+																<center>
+																	<table class="author">
+																		<tbody align="center">
+																			</tr>
+																			<tr style="text-align: center;">
+																				<td class="author"><strong>Marc Eric Mitzscherling</strong></td>
+																				<td class="author"><strong> </strong></td>
+																				<td class="author"><strong></strong></td>
+																				<td class="author"><strong> </strong></td>
+																				<td class="author"><strong>Archivar</strong></td>
+																			</tr>
+																			<tr style="text-align: center;">
+																				<td class="author">Autor</td>
+																				<td class="author"><strong> </strong></td>
+																				<td class="author"></td>
+																				<td class="author"><strong> </strong></td>
+																				<td class="author">Veröffentlicher</td>
+																			</tr>
+																		</tbody>
+																	</table>
+
+																<!--<div class="links-social">
+																	<a href="http://twitter.com/share?text=Blog%20@NotenarchivDKC:%20Gunter%20Gross%20erinnert%20sich&url=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-twitter-with-circle"></i></a>
+																	<a href="https://plus.google.com/share?url=http://archiv.handschriften.bplaced.de/blog/gunter-gross/" target="_blank"><i class="icon-google-with-circle"></i></a>
+																	<a href="http://www.facebook.com/sharer.php?u=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-facebook-with-circle"></i></a>
+																</div>-->
+																</div>
+																<br>
+																<table class="author" media="screen">
+																	<tbody align="center">
+																		</tr>
+																		<tr style="align: center;">
+																			<td class="author"><a style='font-family:"Karla",Arial,serif;' href="datenbankentwicklung" class="btn btn-primary">← Vorheriger Blogeintrag</a></td>
+																			<td class="author"><strong> </strong></td>
+																			<td class="author"><a style='font-family:"Karla",Arial,serif;' href="." class="btn btn-primary">Zur Eintragsübersicht</a></td>
+																			<td class="author"><strong> </strong></td>
+																			<td class="author"><a style='font-family:"Karla",Arial,serif;' href="ratser-liste" class="btn btn-primary">Nächster Blogeintrag →</a></td>
+																	</tbody>
+																</table>
+																</center>
 				</div>
 			</div>
 
-			<div id="fh5co-blog" class="fh5co-bg-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 animate-box text-center">
-						<h2 class="intro-heading">Was tut das Handschriftenarchiv Dresdner Kreuzchor?</h2>
-											<blockquote>
-												<p>
-													Aus diesem Grund ist das Handschriftenarchiv ab Herbst 2017 im Rahmen des Projekts 3.0 der Internet Defense League [https://www.internetdefenseleague.org/] beigetreten. Dies setzt sich für die Netzneutralität (vor allen Dingen in den USA) ein, und Versucht über die Mitglieder des League auf das Problem aufmerksam zu machen, von dem viele noch nicht einmal ahnen.
-													<br>
-													Damit das Handschriftenarchiv Dresdner Kreuzchor auch in Zukunft in keinem „Internet-Paket“ von Internetanbietern zu kaufen ist, kämpfen wir mit für ein Neutales Netz! Wenn wir auch Sie von der Wichtigkeit dieses Themas überzeugen konnten klicken Sie einfach am Ende der Seite auf den Internet-Defense-League-Schild und treten Sie der League bei.
-												</p>
-											</blockquote>
-											<br>
-											<div class="author" style="background-color: #ffffff;">
-											<img src="../images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
-											<center>
-												<table class="author">
-													<tbody align="center">
-														</tr>
-														<tr style="text-align: center;">
-															<td class="author"><strong>Marc Eric Mitzscherling</strong></td>
-															<td class="author"><strong> </strong></td>
-															<td class="author"><strong></strong></td>
-															<td class="author"><strong> </strong></td>
-															<td class="author"><strong>Archivar</strong></td>
-														</tr>
-														<tr style="text-align: center;">
-															<td class="author">Autor</td>
-															<td class="author"><strong> </strong></td>
-															<td class="author"></td>
-															<td class="author"><strong> </strong></td>
-															<td class="author">Veröffentlicher</td>
-														</tr>
-													</tbody>
-												</table>
-
-											<!--<div class="links-social">
-												<a href="http://twitter.com/share?text=Blog%20@NotenarchivDKC:%20Gunter%20Gross%20erinnert%20sich&url=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-twitter-with-circle"></i></a>
-												<a href="https://plus.google.com/share?url=http://archiv.handschriften.bplaced.de/blog/gunter-gross/" target="_blank"><i class="icon-google-with-circle"></i></a>
-												<a href="http://www.facebook.com/sharer.php?u=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-facebook-with-circle"></i></a>
-											</div>-->
-											</div>
-											<br>
-											<table class="author" media="screen">
-												<tbody align="center">
-													</tr>
-													<tr style="align: center;">
-														<td class="author"><a style='font-family:"Karla",Arial,serif;' href="datenbankentwicklung" class="btn btn-primary">← Vorheriger Blogeintrag</a></td>
-														<td class="author"><strong> </strong></td>
-														<td class="author"><a style='font-family:"Karla",Arial,serif;' href="." class="btn btn-primary">Zur Eintragsübersicht</a></td>
-														<td class="author"><strong> </strong></td>
-														<td class="author"><a style='font-family:"Karla",Arial,serif;' href="ratser-liste" class="btn btn-primary">Nächster Blogeintrag →</a></td>
-												</tbody>
-											</table>
-											</center>
-					</div>
-				</div>
-			</div>
-
-		</div>
 
 	<footer>
 		<div id="footer">
