@@ -4,8 +4,7 @@ the directory in which the dictionaries reside in
 
 standard is 'lang'
 */
-// $dict_dir=$_SERVER['DOCUMENT_ROOT'].'/lang';
-$dict_dir='C:\xampp\htdocs\hsa\lang';
+$dict_dir=$_SERVER['DOCUMENT_ROOT'].'/lang';
 /*
 language to use by default
 NULL or unset means to use the language provided by the browser
