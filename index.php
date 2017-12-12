@@ -96,23 +96,19 @@ _idl.variant = "modal";
 							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 								<div class="slider-text-inner">
 									<div class="desc">
-										<span>10. 10. 2017</span>
-										<h2>Beta-Version des Projekts 3.0</h2>
-										<p>Die Gesamt-Einrichtung Handschriftenarchiv Dresdner Kreuzchor wurde in den letzten 4 Monaten komplett modernisiert. Mit einer neuen Philosophie widmen wir uns unseren Aufgaben neu.</p>
+										<?php echo __chunk('index-0'); ?>
 									</div>
 								</div>
 							</div>
 						</div>
 					</li>
-						<li style="background-image: url(/images/index/slider/6.jpg);">
+					<li style="background-image: url(/images/index/slider/6.jpg);">
 						<div class="overlay-gradient"></div>
 						<div class="container">
 							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 								<div class="slider-text-inner">
 									<div class="desc">
-										<span>10. 10. 2017</span>
-										<h2>Handschriften Digital erleben</h2>
-										<p>Entdecken und Erleben Sie unsere Handschriften mit einem neuen Online-Katalog.</p>
+										<?php echo __chunk('index-1'); ?>
 									</div>
 								</div>
 							</div>
@@ -124,9 +120,7 @@ _idl.variant = "modal";
 							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 								<div class="slider-text-inner">
 									<div class="desc">
-										<span>10. 06. 2017</span>
-										<h2>@NotenarchivDKC bei Twitter</h2>
-										<p>Das Handschriftenarchiv Dresdner Kreuzchor ist seit mehreren Monaten auch im Social Web unterwegs. Bleiben Sie immer informiert une folgen Sie uns.</p>
+										<?php echo __chunk('index-2'); ?>
 									</div>
 								</div>
 							</div>
@@ -138,9 +132,7 @@ _idl.variant = "modal";
 							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 								<div class="slider-text-inner">
 									<div class="desc">
-										<span>10. 09. 2017</span>
-										<h2>Neuer Imagefilm für das Projekt 3.0 im Jahr 2017</h2>
-										<p>Im Rahmen des Projekts 3.0 wurde ein neuer Imagefilm auf der Grundlage unsere neuen Archiv-Philosophie produziert.</p>
+										<?php echo __chunk('index-3'); ?>
 									</div>
 								</div>
 							</div>
