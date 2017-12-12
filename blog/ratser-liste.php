@@ -176,9 +176,9 @@ _idl.variant = "modal";
 				<div class="row animate-box">
 					<div class="col-md-8 col-md-offset-2 text-center animate-box">
 						<div class="about-content">
-							<h2>Ratser [auch: Ratsdiskandist]</h2>
+							<h2>Ratser [auch: Ratsdiskantist]</h2>
 							<blockquote>
-								<p>Der Aufgabenbereich der Ratser umfasst die Notenbibliothek des Dresdner Kreuzchors. Zu den Aufgaben gehören das Sortieren und Ordnen der Noten ebenso wie dere Vorbeireitung für Proben und Auftritte. So sind Sie beispielsweise dafür zuständig, dass die richtigen Werke in die Konzertmappe kommen. <br> In den letzten Jahren hatte traditionell drei Männer- und zwei Knabenchoristen dieses Amt inne. Der Amtsnahme Ratser oder auch Ratsdiskandist steht wörtlich für den ersten Sopranisten, der früher für seine hervorgehobene Stellung vom Rat der Stadt bescheiden entloht wurde. Der Chef der Ratser ist der sogenannte "cantor famulus", lateinisch für Kantorendiener. Dieser ist heute dafür verantwortlich, dass die Noten zu den Auftritten vollständig sind und das die Notenmappe des Kreuzkantors zur Aufführung auf dessen Pult liegt.</p>
+								<p>Der Aufgabenbereich der Ratser umfasst die Notenbibliothek des Dresdner Kreuzchors. Zu den Aufgaben gehören das Sortieren und Ordnen der Noten ebenso wie dere Vorbeireitung für Proben und Auftritte. So sind Sie beispielsweise dafür zuständig, dass die richtigen Werke in die Konzertmappe kommen. <br> In den letzten Jahren hatte traditionell drei Männer- und zwei Knabenchoristen dieses Amt inne. Der Amtsnahme Ratser oder auch Ratsdiskantist steht wörtlich für den ersten Sopranisten, der früher für seine hervorgehobene Stellung vom Rat der Stadt bescheiden entloht wurde. Der Chef der Ratser ist der sogenannte "cantor famulus", lateinisch für Kantorendiener. Dieser ist heute dafür verantwortlich, dass die Noten zu den Auftritten vollständig sind und das die Notenmappe des Kreuzkantors zur Aufführung auf dessen Pult liegt.</p>
 							</blockquote>
 							<br>
 								<table class="ratser">
