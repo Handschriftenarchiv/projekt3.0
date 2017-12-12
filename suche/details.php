@@ -133,7 +133,7 @@ require_once "../translate.php";
 										if((int)$_GET['id']>0){
 											require_once "../analytics.php";
 											$res=mysqli_query($con,"SELECT * FROM archivalien WHERE ID=".$_GET['id']);
-											if(mysqli_num_rows($res)>0){
+											if($res&&mysqli_num_rows($res)>0){
 												$dsatz=mysqli_fetch_assoc($res);
 												if(empty($dsatz['Komponist'])){
 													$dsatz['Komponist']="unbekannt";
