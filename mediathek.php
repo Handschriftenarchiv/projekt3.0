@@ -137,6 +137,11 @@ require_once 'translate.php';
 										<div class='embed-container' align="center" style="position: absolute">
 											<center><iframe src='http://player.vimeo.com/video/225288372?color=ffffff' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen align="center"></iframe></center>
 										</div>-->
+
+										<iframe src="https://player.vimeo.com/video/247134754?color=ffffff" width="640" height="360" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen align="center"></iframe>
+								<blockquote><p>
+									Scannen im Archiv… <br>Pünktlich zu Weihnachten widmen wir uns der einen Seite im Arbeitsalltag, die unabdinglich und doch zeitfressend ist: Das Kopieren! Wir wünschen frohe Weihnachten und nicht mehr all zu viele Stunden am Kopierer dieses Jahr 😃.
+								</p></blockquote><br><br>
 										<iframe src='http://player.vimeo.com/video/225288372?color=ffffff' width="640" height="360" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen align="center"></iframe>
 								<blockquote><p>
 									Das Projekt 3.0: Eine &raquo;Zur&uuml;ckbesinnung&laquo; auf den Kern des Archives. Mit neuer Webumgebung, durchsuchbarer Datenbank und regelm&auml;&szlig;igen Blogeintr&auml;gen. Der Imagefilm stellt das neu ver&ouml;ffentlichte Pilotprojekt des Handschriftenarchivs vor. <br> [Musik: Into the Light / Lizenzfreie Musik / www.EverMusic.de]
