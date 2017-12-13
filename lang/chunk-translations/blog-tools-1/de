@@ -1,7 +1,7 @@
 <aside id="fh5co-hero" class="js-fullheight">
 	<div class="flexslider js-fullheight">
 		<ul class="slides">
-			<li style="background-image: url(../images/blog/tools/1/1.svg);">
+			<li style="background-image: url(/images/blog/tools/1/1.svg);">
 				<div class="overlay-gradient"></div>
 				<div class="container">
 					<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
@@ -44,7 +44,7 @@
 					denn die meisten anderen E-Mail-Anbieter unterstützen diese Methode der verschlüsselung nicht.
 				</p>
 			</blockquote>
-			<a href="https://protonmail.com/" target="_blank"><img src="../images/kontakt/protonmail.svg" width="174px" alt="Secured by ProtonMail"></a><br>
+			<a href="https://protonmail.com/" target="_blank"><img src="/images/kontakt/protonmail.svg" width="174px" alt="Secured by ProtonMail"></a><br>
 			<blockquote>
 				<p>
 					Ein weiterer Aspekt, warum das Handschriftenarchiv Dresdner Kreuzchor auf die Dienste von ProtonMail setzt ist der,
@@ -54,7 +54,7 @@
 					Somit auf kostenlosem Wege, die Datensicherheit unserer Mitglieder, Kunden und Nutzer garantieren.
 				</p>
 			</blockquote>
-			<a href="https://protonmail.com/" target="_blank"><img src="../images/blog/tools/1/3.png" width="4%" alt="Protonmail Logo-Klein"></a><br>
+			<a href="https://protonmail.com/" target="_blank"><img src="/images/blog/tools/1/3.png" width="4%" alt="Protonmail Logo-Klein"></a><br>
 			<blockquote>
 				<p>
 					Die Institutionskommunikation des Handschriftenarchivs verläuft somit komplett über <stong>handschriftenarchiv@protonmail.com</strong>.
@@ -62,7 +62,7 @@
 				</p>
 			</blockquote><br><br>
 			<div class="author">
-			<img src="../images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
+			<img src="/images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
 			<center>
 				<table class="author">
 					<tbody align="center">
