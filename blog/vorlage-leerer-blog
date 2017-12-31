@@ -1,0 +1,31 @@
+<aside id="fh5co-hero" class="js-fullheight">
+	<div class="flexslider js-fullheight">
+		<ul class="slides">
+			<li style="background-image: url(/images/blog/platz.jpg);">
+				<div class="overlay-gradient"></div>
+				<div class="container">
+					<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
+						<div class="slider-text-inner">
+							<div class="desc">
+								<span>27. Dez. 2017</span>
+								<h2>Jahresrückblick 2017</h2>
+								<p class="fh5co-lead">Was für ein Jahr: Projekt 3.0, Digitalisierung und noch mehr…</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			</ul>
+		</div>
+</aside>
+<div class="container">
+		<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+			<h2>Titel durch klicken hinzufügen</h2>
+			<p>Ein wundervoller Untertitel</p>
+			<blockquote>
+				<p>
+					Entschuldigen Sie, aber dieser Blogartikel wird momentan noch verfasst. Wenn Sie die Vorfreude schon quält, schauen Sie doch einfach bei <a href="http://twitter.com/notenarchivdkc" target="_blank">@NotenarchivDKC</a> vorbei. Dort werden Sie dann zeitgleich zur Veröffentlichung informiert.
+				</p>
+			</blockquote>
+			</div>
+		</div>
