@@ -1,0 +1,31 @@
+<aside id="fh5co-hero" class="js-fullheight">
+	<div class="flexslider js-fullheight">
+		<ul class="slides">
+			<li style="background-image: url(/images/blog/platz.jpg);">
+				<div class="overlay-gradient"></div>
+				<div class="container">
+					<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
+						<div class="slider-text-inner">
+							<div class="desc">
+								<span>01. Jan. 2018</span>
+								<h2>Vorschau  für 2018</h2>
+								<p class="fh5co-lead">Unsere Vorschau mit Plänen, Träumen und Vorstellungen für das neue Jahr 2018…</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			</ul>
+		</div>
+</aside>
+<div class="container">
+		<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+			<h2>Ein neues Jahr…</h2>
+			<p>… und viele <i>neue</i> Vorsätze und Pläne.</p>
+			<blockquote>
+				<p>
+					Text durch klicken hinzufügen… - Dieser Blogartikel wird momentan noch verfasst. Haben sie bitte noch ein bisschen Geduld, bis es so weit ist. Am besten schauen Sie einfach auf <a href="http://twitter.com/notenarchivdkc" target="_blank">@NotenarchivDKC</a> vorbei. Dort werden wir Sie sofort informieren, wenn dieser Blogartikel (mit Text) veröffentlicht wurde…
+				</p>
+			</blockquote>
+		</div>
+	</div>
