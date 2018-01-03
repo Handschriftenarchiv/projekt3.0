@@ -131,10 +131,11 @@ require_once '../translate.php';
 					<div class="row">
 						<?php
 						$entries=json_decode(file_get_contents('entries.json'),true);
-						for($j=0;$j*3<count($entries);$j++){
+						$entries_per_column=ceil(count($entries)/3);
+						for($row=0;$row*$entries_per_column<count($entries);$row++){
 							echo '<div class="col-md-4"><div class="row">';
-							for($i=0;$j+$i<count($entries);$i+=3){
-								echo __blog_prev($entries[$j+$i]['title']);
+							for($column=0;$row+$column<count($entries);$column+=3){
+								echo __blog_prev($entries[$column+$row]['title']);
 							}
 							echo '</div></div>';
 						}
