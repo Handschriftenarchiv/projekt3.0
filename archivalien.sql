@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `archivalien` (
   `Standort` varchar(50) NOT NULL,
   `Bemerkungen` text,
   `Audiolink` varchar(255) DEFAULT NULL,
-  `Dokumentlink` varchar(255) DEFAULT NULL,
+  `Dokumentlink` text DEFAULT NULL,
   `Signatur` int(6) DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=259 ;
