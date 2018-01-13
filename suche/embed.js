@@ -24,9 +24,11 @@ for(var i=0;i<d.length;i++){
 	request.onreadystatechange=function(){
 		if(this.readyState==4&&this.status==200){
 			var json=JSON.parse(this.responseText);
-			var img=document.createElement('img');
-			img.src=json.thumbnail_url;
-			this.domelem.appendChild(img);
+			var div=document.createElement('div');
+			div.className="bg-img";
+			div.style.backgroundImage="url("+json.thumbnail_url+")";
+			this.domelem.appendChild(div);
+			// console.log(this.domelem.width);
 		}
 	}
 	request.open('GET',url,true);
