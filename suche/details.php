@@ -224,11 +224,11 @@ require_once "../translate.php";
 									if(!empty($dsatz['Dokumentlink'])){
 										$docs=explode(' ',$dsatz['Dokumentlink']);
 										echo "<tr><th rowspan=\"".count($docs)."\">Digitalisate:&nbsp;</th><td class=\"d\">";
-										echo "<div class=\"digitalisat\"><div class=\"text\"><a href=\"https://issuu.com/hsa6/docs/".array_shift($docs)."\">$dsatz[Titel] auf Issuu</a></div></div></td></tr>";
+										echo "<div class=\"digitalisat\"><a href=\"https://issuu.com/hsa6/docs/".array_shift($docs)."\">Digitalisat auf Issuu</a></div></td></tr>";
 											// ."<iframe width=\"50%\" height=\"394\" src=\"".array_shift($docs)."\" frameborder=\"0\" allowfullscreen>"
 											// ."Ihr Browser unterstützt leider keine iframes.<br>Wir können ihnen leider keine Digitalisate anzeigen.</iframe></td></tr>";
 										foreach($docs as $doc){
-											echo "<tr><td><div class=\"digitalisat\"><a href=\"https://issuu.com/hsa6/docs/$doc\"></a></div></td></tr>";
+											echo "<tr><td><div class=\"digitalisat\"><a href=\"https://issuu.com/hsa6/docs/$doc\">Digitalisat auf Issuu</a></div></td></tr>";
 											// echo "<tr><td><iframe width=\"50%\" height=\"394\" src=\"$doc\" frameborder=\"0\" allowfullscreen></iframe></td></tr>";
 										}
 									}
@@ -298,15 +298,13 @@ require_once "../translate.php";
 				position:relative;
 				margin:10px;
 			}
-			.digitalisat .text{
-				padding:10px;
+			.digitalisat a{
+				display: block;
+				padding: 10px;
 				text-align: center;
 				background-color: rgba(0,0,0,.4);
 				border-radius: 4px;
-			}
-			.digitalisat .text a:link{
-				/* funktionniert nicht: */
-				color: #fff !important;
+				color: #ffffff;
 			}
 			.digitalisat .bg-img{
 				z-index: -1;
