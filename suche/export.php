@@ -54,7 +54,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 						<origination label="Autor"><?php echo $dsatz['Komponist']?></origination>
 						<physdesc>
 <?php
-$norm_type="";
+$norm_type="Sonstige";
 switch($dsatz['Typus']){
 	case 'Handschrift':$norm_type='Handschriften';break;
 /* ?! */case 'Kopie von Handschrift':$norm_type='Sonstige';break;
