@@ -2,7 +2,7 @@
 require_once "../analytics.php";
 header("Content-Type: text/xml");
 header('Content-Disposition: attachment; filename="findbuch.xml"');
-// Platzhalter für den Identifier
+// ISIL-Nummer
 $ident="DE-2535";
 echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
@@ -26,7 +26,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 			<repository>
 				<corpname role="Sonstige">Handschriftenarchiv Dresdner Kreuzchor</corpname>
 				<address>
-					<adressline>Dornblüthstraße 4,01277 Dresden,handschriftenarchiv@protonmail.com</adressline>
+					<addressline>Dornblüthstraße 4,01277 Dresden,handschriftenarchiv@protonmail.com</addressline>
 				</address>
 				<extref xlink:role="url_archive" xlink:href="archiv.handschriften.bplaced.com">Website des Handschriftenarchiv Dresdner Kreuzchor</extref>
 			</repository>
@@ -37,7 +37,8 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 		<dsc>
 			<c level="collection" id="HSA-Bestand">
 				<did>
-					<unitid>HSA-Bestand</unitid>
+					<unittitle>HSA-Bestand</unittitle>
+					<unitid><?php echo $ident; ?></unitid>
 					<!-- evtl. <origination>Dresdner Kreuzchor</origination> -->
 				</did>
 <?php
