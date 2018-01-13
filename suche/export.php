@@ -95,7 +95,7 @@ switch($dsatz['Typus']){
 		echo "der Handschrift";
 		break;
 	case 'Kopie von Handschrift':
-		echo "der Kopie der Handschrift";
+		echo "der Kopie einer Handschrift";
 		break;
 	case 'Druck':
 		echo "des Druckes";
