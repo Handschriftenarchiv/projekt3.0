@@ -1,13 +1,15 @@
 <?php
 require_once "../analytics.php";
+// Dafür sorgen, dass der Seiten-Inhalt als XML-Datei heruntergeladen wird
 header("Content-Type: text/xml");
 header('Content-Disposition: attachment; filename="findbuch.xml"');
 // ISIL-Nummer
 $ident="DE-2535";
+// muss mit echo ausgegeben werden, da ein '<?' sonst einen öffnenden PHP-Block symbolisieren würde
 echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
-<ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd">
-	<eadheader>
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd" audience="external">
+	<eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b" repositoryencoding="iso15511" scriptencoding="iso15924">
 		<eadid mainagencycode="DE-ISIL"><?php echo $ident;?></eadid>
 		<filedesc>
 			<titlestmt>
@@ -32,7 +34,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 			</repository>
 		</did>
 		<otherfindaid>
-			<extref xlink:role="url_findbuch" xlink:href="archiv.handschriften.bplaced.de/suche/export.php">Findbuch Handschriftenarchiv Dresdner Kreuzchor</extref>
+			<extref xlink:role="url_findbuch" xlink:href="archiv.handschriften.bplaced.de/suche/export.php">aus aktuellen Daten generiertes Findbuch des Archives</extref>
 		</otherfindaid>
 		<dsc>
 			<c level="collection" id="HSA-Bestand">
@@ -72,7 +74,7 @@ if(!empty($dsatz['Bemerkungen'])){
 }
 ?>					</did>
 					<otherfindaid>
-						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=<?php echo $dsatz['ID'];?>">Titelaufnahme im Angebot des Archivs</extref>
+						<extref xlink:role="url_archivalunit" xlink:href="hsa.bplaced.de/suche/details.php?id=<?php echo $dsatz['ID'];?>">Titelaufnahme im Angebot des Archivs</extref>
 					</otherfindaid>
 					<odd>
 						<head>Anzahl</head>
