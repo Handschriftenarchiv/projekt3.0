@@ -223,11 +223,13 @@ require_once "../translate.php";
 									}
 									if(!empty($dsatz['Dokumentlink'])){
 										$docs=explode(' ',$dsatz['Dokumentlink']);
-										echo "<tr><th rowspan=\"".count($docs)."\">Digitalisate:&nbsp;</th><td>"
-											."<iframe width=\"50%\" height=\"394\" src=\"".array_shift($docs)."\" frameborder=\"0\" allowfullscreen>"
-											."Ihr Browser unterstützt leider keine iframes.<br>Wir können ihnen leider keine Digitalisate anzeigen.</iframe></td></tr>";
+										echo "<tr><th rowspan=\"".count($docs)."\">Digitalisate:&nbsp;</th><td>";
+										echo "<div class=\"digitalisat\"><a href=\"https://issuu.com/hsa6/docs/".array_shift($docs)."\"><div class=\"text\">$dsatz[Titel] auf Issuu</div></a></div></td></tr>";
+											// ."<iframe width=\"50%\" height=\"394\" src=\"".array_shift($docs)."\" frameborder=\"0\" allowfullscreen>"
+											// ."Ihr Browser unterstützt leider keine iframes.<br>Wir können ihnen leider keine Digitalisate anzeigen.</iframe></td></tr>";
 										foreach($docs as $doc){
-											echo "<tr><td><iframe width=\"50%\" height=\"394\" src=\"$doc\" frameborder=\"0\" allowfullscreen></iframe></td></tr>";
+											echo "<tr><td><div class=\"thumbnail digitalisat\"><a href=\"https://issuu.com/hsa6/docs/$doc\"></a></div></td></tr>";
+											// echo "<tr><td><iframe width=\"50%\" height=\"394\" src=\"$doc\" frameborder=\"0\" allowfullscreen></iframe></td></tr>";
 										}
 									}
 									?>
@@ -290,5 +292,24 @@ require_once "../translate.php";
 				}
 			}
 		</script>
+
+		<style>
+			.digitalisat{
+				position:relative;
+				margin:10px;
+			}
+			.digitalisat img{
+				filter:blur(2px);
+				margin:auto;
+			}
+			.digitalisat .text{
+				position: absolute;
+				z-index: 1;
+				top:0;
+				left:0;
+			}
+		</style>
+
+		<script src="embed.js"></script>
 	</body>
 </html>
