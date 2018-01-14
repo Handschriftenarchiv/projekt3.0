@@ -223,11 +223,13 @@ require_once "../translate.php";
 									}
 									if(!empty($dsatz['Dokumentlink'])){
 										$docs=explode(' ',$dsatz['Dokumentlink']);
-										echo "<tr><th rowspan=\"".count($docs)."\">Digitalisate:&nbsp;</th><td>"
-											."<iframe width=\"50%\" height=\"394\" src=\"".array_shift($docs)."\" frameborder=\"0\" allowfullscreen>"
-											."Ihr Browser unterstützt leider keine iframes.<br>Wir können ihnen leider keine Digitalisate anzeigen.</iframe></td></tr>";
+										echo "<tr><th rowspan=\"".count($docs)."\">Digitalisate:&nbsp;</th><td class=\"d\">";
+										echo "<div class=\"digitalisat\"><a href=\"https://issuu.com/hsa6/docs/".array_shift($docs)."\">Digitalisat auf Issuu</a></div></td></tr>";
+											// ."<iframe width=\"50%\" height=\"394\" src=\"".array_shift($docs)."\" frameborder=\"0\" allowfullscreen>"
+											// ."Ihr Browser unterstützt leider keine iframes.<br>Wir können ihnen leider keine Digitalisate anzeigen.</iframe></td></tr>";
 										foreach($docs as $doc){
-											echo "<tr><td><iframe width=\"50%\" height=\"394\" src=\"$doc\" frameborder=\"0\" allowfullscreen></iframe></td></tr>";
+											echo "<tr><td><div class=\"digitalisat\"><a href=\"https://issuu.com/hsa6/docs/$doc\">Digitalisat auf Issuu</a></div></td></tr>";
+											// echo "<tr><td><iframe width=\"50%\" height=\"394\" src=\"$doc\" frameborder=\"0\" allowfullscreen></iframe></td></tr>";
 										}
 									}
 									?>
@@ -290,5 +292,34 @@ require_once "../translate.php";
 				}
 			}
 		</script>
+
+		<style>
+			.digitalisat{
+				position:relative;
+				margin:10px;
+			}
+			.digitalisat a{
+				display: block;
+				padding: 10px;
+				text-align: center;
+				background-color: rgba(0,0,0,.4);
+				border-radius: 4px;
+				color: #ffffff;
+			}
+			.digitalisat .bg-img{
+				z-index: -1;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				filter:blur(2px);
+				background-position: top center;
+				background-size: cover;
+				border-radius: 4px;
+			}
+		</style>
+
+		<script src="embed.js"></script>
 	</body>
 </html>
