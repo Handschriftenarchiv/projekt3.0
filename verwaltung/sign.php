@@ -1,9 +1,48 @@
 <?php
-// aus Sicherheitsgründen sollte diese Datei nicht ausführbar sein
-// hiermit könnte eine "Denial of Service"-Atacke ausgeführt werden
-exit(0);
-
-header("Content-Type: text/plain");
+session_start();
+require_once '../suche/config.php';
+if(empty($_SESSION['login'])&&empty($_POST['user'])){
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Signaturvergabe</title>
+		<style>
+			*{
+				font-family: monospace;
+			}
+		</style>
+	</head>
+	<body>
+		<form method="post">
+			User:<input type="text" name="user"/><br>
+			Pass:<input type="password" name="pass"/><br>
+			<button type="submit">Authentifizieren</button>
+		</form>
+	</body>
+</html>
+<?php
+}else{
+	if(isset($_POST['user'])){
+		if(sig_auth($_POST['user'],$_POST['pass'])){
+			$_SESSION['login']=1;
+		}else{
+			session_destroy();
+			header("Location: /");
+		}
+	}
+	if(isset($_GET['logout'])){
+		session_destroy();
+		header("Location: sign.php");
+	}
+?>
+<a href="sign.php?logout">Logout</a>
+<h3>Vergebene Signaturen:</h3>
+<a href="sign.php">wiederholen</a>
+<pre>
+-----------------------------------
+<?php
 require_once "../suche/config.php";
 $pdo=dbConPDO();
 $stmnt=$pdo->prepare('SELECT row FROM (SELECT @row := @row + 1 as row,ID FROM archivalien, (SELECT @row:=0)r WHERE Komponist=? ORDER BY Titel) AS a WHERE ID=?');
@@ -26,4 +65,5 @@ foreach($pdo->query('SELECT ID,Titel,Komponist,Abk,Typus FROM archivalien LEFT J
 	$upd_stmnt->execute(array($sig,$dsatz['ID']));
 	echo "-----------------------------------\n";
 }
-?>
+echo '</pre>';
+}
