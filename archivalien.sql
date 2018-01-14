@@ -325,7 +325,7 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 
 CREATE TABLE `komponisten` (
   `Abk` varchar(3) NOT NULL,
-  `Name` varchar(100) NOT NULL,
+  `Name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`Abk`),
   UNIQUE KEY `Name` (`Name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -397,7 +397,7 @@ INSERT INTO `komponisten` (`Abk`, `Name`) VALUES
 ('SWR', 'Sergei Wassiljewitsch Rachmaninow'),
 ('SCA', 'Sethus Calvisius'),
 ('SGR', 'Siegfried Greis'),
-('UNB', 'Unbekannt'),
+('UNB', NULL),
 ('VLK', 'Volksweise'),
 ('WRO', 'Walter Rohde'),
 ('WUN', 'Walter Unger'),
