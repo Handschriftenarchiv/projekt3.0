@@ -316,3 +316,89 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (256, 'Dresdner Requiem (rot)', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer (»JDI«)', 'Kopie von Handschrift', NULL, '1967', 'ger', 'Latn', '?', 'Archiv', 'Kasten 16', NULL, NULL, NULL, NULL),
 (257, 'Dresdner Requiem (schwarz)', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '7x Partitur', 'Archiv', 'Kasten 16', 'Setzer-Kürzel JDI', NULL, NULL, NULL),
 (258, 'Erquicke mich mit deinem Licht', 'Albert Becker', NULL, 'G. W. Schulze', NULL, 'Druck', 'Breitkopf & Härtel', NULL, 'ger', 'Latn', '1x Sopran<br>2x Alt<br>1x Tenor<br>2x Bass', 'Archiv', 'Kasten 2', 'Breitkopf & Härtels Chorbibliothek Nr. 824', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `komponisten`
+--
+
+CREATE TABLE `komponisten` (
+  `Abk` varchar(5) NOT NULL,
+  `Name` varchar(255) NOT NULL,
+  PRIMARY KEY (`Abk`),
+  UNIQUE KEY `Name` (`Name`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Daten für Tabelle `komponisten`
+--
+
+INSERT INTO `komponisten` (`Abk`, `Name`) VALUES
+('ALB', 'Albert Becker'),
+('AK', 'Albert Kranz'),
+('ATG', 'Alexander Tichonowitsch Gretschaninow'),
+('AH', 'Andreas Hammerschmidt'),
+('AB', 'Anton Bruckner'),
+('AD', 'Antonín Dvorák'),
+('BH', 'Bruno Herold'),
+('CAR', 'Carl Riedel'),
+('CB', 'Christoph Bernhard'),
+('CF', 'Cornelius Freundt'),
+('CUR', 'Curt Roth'),
+('EP', 'Ernst Pepping'),
+('FM', 'F. Malden'),
+('FA', 'Felice Anerio'),
+('FMB', 'Felix Mendelssohn Bartholdy'),
+('FD', 'Francesco Durante'),
+('FS', 'Franz Schubert'),
+('FMA', 'Franz-Meyer Abrosius'),
+('GD', 'Gallus Dressler'),
+('GG', 'Giovanni Gabrieli'),
+('GAH', 'Gottfried August Homilius'),
+('GB', 'Gustav Brand'),
+('GS', 'Gustav Schreck'),
+('GR', 'Günter Raphael'),
+('HH', 'H. Harden'),
+('HE', 'Hanns Eisler'),
+('HLH', 'HAns Leo Haßler'),
+('HR', 'Hans Reimann'),
+('HI', 'Heinrich Isaak'),
+('HPH', 'Heinrich Peter Freiherr von Herzogenberg'),
+('HS', 'Heinrich Schütz'),
+('HWZ', 'Heinz Werner Zimmermann'),
+('HB', 'Helmut Bräutigam'),
+('HWA', 'Herbert Waelrant'),
+('HWO', 'Herbert Wolf'),
+('HD', 'Hugo Distler'),
+('IOD', 'Isaak Ossipowitsch Dujanewski'),
+('ISS', 'Iwan S. Schönebaum'),
+('JPS', 'J. P. Sweetinch'),
+('JE', 'Johann Eccard'),
+('JHS', 'Johann Hermann Schein'),
+('JSB', 'Johann Sebastian Bach'),
+('JB', 'Johannes Brahms'),
+('JS', 'Johannes Stobaeus'),
+('MA', 'M. Anzeff'),
+('MB', 'Max Bruch'),
+('MV', 'Melchior Vulpius'),
+('MP', 'Michael Prätorius'),
+('NWG', 'Niels Wilhelm Gade'),
+('OdL', 'Orlando di Lasso'),
+('OR', 'Otto Reinhold'),
+('PGC', 'Pavel Grigorievich Chesnokov'),
+('RT', 'R. Töpfer'),
+('RIS', 'Richard Strauss'),
+('RW', 'Richard Wagner'),
+('ROS', 'Robert Schumann'),
+('RM', 'Rudolf Mauersberger'),
+('SP', 'S. Palonski'),
+('SR', 'Samuel Rühling'),
+('SWR', 'Sergei Wassiljewitsch Rachmaninow'),
+('SC', 'Sethus Calvisius'),
+('SG', 'Siegfried Greis'),
+('UNB', 'Unbekannt'),
+('VOLK', 'Volksweise'),
+('WR', 'Walter Rohde'),
+('WU', 'Walter Unger'),
+('WB', 'Walther Buchheim');
