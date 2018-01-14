@@ -324,8 +324,8 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 --
 
 CREATE TABLE `komponisten` (
-  `Abk` varchar(5) NOT NULL,
-  `Name` varchar(255) NOT NULL,
+  `Abk` varchar(3) NOT NULL,
+  `Name` varchar(100) NOT NULL,
   PRIMARY KEY (`Abk`),
   UNIQUE KEY `Name` (`Name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
