@@ -331,6 +331,7 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 -- Tabellenstruktur für Tabelle `komponisten`
 --
 
+DROP TABLE IF EXISTS `komponisten`;
 CREATE TABLE `komponisten` (
   `Abk` varchar(3) NOT NULL,
   `Name` varchar(100) DEFAULT NULL,
