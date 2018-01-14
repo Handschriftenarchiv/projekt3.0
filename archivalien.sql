@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `archivalien` (
   `Bemerkungen` text,
   `Audiolink` varchar(255) DEFAULT NULL,
   `Dokumentlink` text DEFAULT NULL,
-  `Signatur` int(6) DEFAULT NULL,
+  `Signatur` varchar(7) DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=259 ;
 
