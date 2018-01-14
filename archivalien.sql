@@ -8,6 +8,8 @@
 -- PHP-Version: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 --
@@ -28,13 +30,18 @@ CREATE TABLE IF NOT EXISTS `analytics` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
 
+--
+-- Daten für Tabelle `analytics` zur besseren Übersicht nicht enthalten
+--
+
 -- --------------------------------------------------------
 
 --
 -- Tabellenstruktur für Tabelle `archivalien`
 --
 
-CREATE TABLE IF NOT EXISTS `archivalien` (
+DROP TABLE IF EXISTS `archivalien`;
+CREATE TABLE `archivalien` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Titel` varchar(100) NOT NULL,
   `Komponist` varchar(50) DEFAULT NULL,
@@ -53,7 +60,8 @@ CREATE TABLE IF NOT EXISTS `archivalien` (
   `Audiolink` varchar(255) DEFAULT NULL,
   `Dokumentlink` text DEFAULT NULL,
   `Signatur` varchar(7) NOT NULL,
-  PRIMARY KEY (`ID`)
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `Signatur` (`Signatur`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=259 ;
 
 --
@@ -95,10 +103,10 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (33, 'Einen Brief soll ich schreiben', 'Bruno Heroldt', NULL, NULL, 'Kruzianer, Kürzel K.M.', 'Kopie von Handschrift', NULL, '1957', 'ger', 'Latn', '5x Knabenchor (auch Jugendchor)<br>5x Tenor<br>5x Baß', 'Archiv', 'Kasten 12', 'Kopien mit dem Stempel vom »Riedelscher Männerchor von Plauen« versehen', NULL, NULL, 'BHEK004'),
 (34, 'Abendwolke', 'Bruno Heroldt', NULL, 'Conrad Ferdinand Meyer', 'Kruzianer, Kürzel K.M.', 'Kopie von Handschrift', NULL, '1957', 'ger', 'Latn', '5x Knabenchor (auch Jugendchor)<br>5x Männerchor (Tenor I,II)', 'Archiv', 'Kasten 12', 'Kopien mit dem Stempel vom »Riedelscher Männerchor von Plauen« versehen', NULL, NULL, 'BHEK001'),
 (35, 'Morgenstern-Gesänge', 'Otto Reinhold', NULL, 'Christian Morgenstern', 'Kruzianer', 'Handschrift', NULL, '1949-1960*', 'ger', 'Latn', '17x Sopran<br>10x Alt<br>35x Tenor**<br>43x Baß**', 'Archiv', 'Kasten 12', '* Die Handschriften sind verschieden datiert. Vermutlich wurde sie zwischen 1949 und 1960 verfasst. \n<br>\n**Sopran und Alt werden aus ganzen Stimmgruppen-Partituren gebildet (Präludium, Kleine Geschichte, Das Häuschen an der Bahn, Abendläuten). Bei Tenor und Baß bildet sich der Bestand aus einzelnen Liedblättern:\n<br>\n- Tenor aus 11x Präludium, 9x Kleine Geschichte, 7x Das Häuschen an der Bahn, 8x Abendläuten\n<br>\n- Baß aus 10x Präludium, 12x Kleine Geschichte, 10x Das Häuschen an der Bahn, 11x Abendläuten', NULL, NULL, 'OREH001'),
-(36, 'Dresdner Requiem', 'Rudolf Mauersberger', NULL, NULL, 'Gunter Groß', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x Kanbenchorpartitur', 'Archiv', 'Kasten 12', 'Männerchorpartitur in Kasten 7!', NULL, NULL, 'RMAK006'),
+(36, 'Dresdner Requiem', 'Rudolf Mauersberger', NULL, NULL, 'Gunter Groß', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x Kanbenchorpartitur', 'Archiv', 'Kasten 12', 'Männerchorpartitur in Kasten 7!', NULL, NULL, 'RMAK009'),
 (37, 'Danket dem Herrn', 'Franz-Meyer Ambros', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x Sopran<br>1x Alt<br>1x Tenor<br>1x Baß', 'Archiv', 'Kasten 12', NULL, NULL, NULL, 'UNBK004'),
 (38, 'Laßt uns lauschen', 'Volksweise', 'U. Schicha', NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Gesamtchor', 'Archiv', 'Kasten 12', NULL, NULL, NULL, 'VLKK011'),
-(39, 'Dresdner Requiem', 'Rudolf Mauersberger', NULL, NULL, 'Gunter Groß', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x Knabenchor', 'Archiv', 'Kasten 12', NULL, NULL, NULL, 'RMAK006'),
+(39, 'Dresdner Requiem', 'Rudolf Mauersberger', NULL, NULL, 'Gunter Groß', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x Knabenchor', 'Archiv', 'Kasten 12', NULL, NULL, NULL, 'RMAK008'),
 (40, 'Introitus für den Sonntag Jubilate', NULL, NULL, 'Psalm 66', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', 'Psalm 66', NULL, NULL, 'UNBK055'),
 (41, 'Liturgische Ergänzung zu den Sonntagen Inovativ, Reminiscere, Okuli und Lätare', NULL, NULL, 'Psalm 143', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK081'),
 (42, 'Introitus für den letzten Sonntag nach Trinitatis', NULL, NULL, 'Psalm 50', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x DIN A5<br>1x DIN A4<br>1x ehemals DIN A4', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK050'),
@@ -181,7 +189,7 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (119, 'Dort unten in der Mühle', 'Rudolf Mauersberger', NULL, 'Justinus Lerner', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x Knabenchor', 'Archiv', 'Kasten 10', NULL, NULL, NULL, 'RMAK005'),
 (120, 'Geständnis', 'Rudolf Mauersberger', NULL, 'Hermann Hesse', 'Kruzianer Martin Müller', 'Kopie von Handschrift', NULL, '08.1942', 'ger', 'Latn', '1x Knabenchor<br>1x Männerchor', 'Archiv', 'Kasten 10', 'Notenbibliothek: 1-11-29', NULL, NULL, 'RMAK012'),
 (121, 'Nun Ade, du mein lieb Heimatland', 'Volksweise', 'Kruzianer', NULL, 'Rudolf Mauersberger', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Knabenchor<br>1x Männerchor', 'Archiv', 'Kasten 10', 'Notenbibliothek: 1-41-51', NULL, NULL, 'VLKH014'),
-(122, 'Hymnus auf die Arbeit', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, '1946', 'ger', 'Latn', '26x Männerchor', 'Archiv', '', 'Notenbibliothek: 1-11-32', NULL, NULL, 'RMAK015'),
+(122, 'Hymnus auf die Arbeit', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, '1946', 'ger', 'Latn', '26x Männerchor', 'Archiv', '', 'Notenbibliothek: 1-11-32', NULL, NULL, 'RMAK016'),
 (123, 'Hymnus auf die Arbeit', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, '1946', 'ger', 'Latn', '26x Männerchor', 'Archiv', '', 'Notenbibliothek: 1-11-32', NULL, NULL, 'RMAK015'),
 (124, 'Der du bist drei in Einigkeit', 'vermutl. Kantor Meier (Seifhennersdorf)', NULL, 'Martin Luther', 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Chor-Partitur', 'Archiv', 'Kasten 10', 'Trinitatismotette<br>Uraufführung 1. Pfingstfeiertag 1951', NULL, NULL, 'UNBH006'),
 (125, 'Lern nur das Lachen', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '3x Chor-Partitur', 'Archiv', 'Kasten 10', 'Notenbibliothek: 1-11-30', NULL, NULL, 'RMAK018'),
@@ -200,15 +208,15 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (138, 'Lukaspassion', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Knabenchor<br>1x Männerchor', 'Archiv', 'Kasten 9', NULL, NULL, NULL, 'RMAH019'),
 (139, 'Jan Hinnerk', 'Volksweise', 'Siegfried Ochs', NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Alt<br>1x Tenor<br>1x Bass', 'Archiv', 'Kasten 8', 'in Hamburger Plattdeutsch', NULL, NULL, 'VLKH007'),
 (140, 'Zogen einst fünf wilde Schwäne', 'Volksweise', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '10x Alt<br>2x Männerchor', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'VLKH016'),
-(141, 'Die Fichte', 'Sergei Wassiljewitsch Rachmaninow', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt', 'Archiv', 'Kasten 9', NULL, NULL, NULL, 'SWRK001'),
-(142, 'Jan Hinnerk', 'Volksweise', 'Siegfried Ochs', NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', 'in Hamburger Plattdeutsch', NULL, NULL, 'VLKK007'),
+(141, 'Die Fichte', 'Sergei Wassiljewitsch Rachmaninow', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt', 'Archiv', 'Kasten 9', NULL, NULL, NULL, 'SWRK002'),
+(142, 'Jan Hinnerk', 'Volksweise', 'Siegfried Ochs', NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', 'in Hamburger Plattdeutsch', NULL, NULL, 'VLKK008'),
 (143, 'Wir werden säen, Weißrussen', 'S. Palonski', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Sopran<br>1x Alt<br>1x Tenor', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'SPAH001'),
-(144, 'Wir werden säen, Weißrussen', 'S. Palonski', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>6x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'SPAK001'),
+(144, 'Wir werden säen, Weißrussen', 'S. Palonski', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>6x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'SPAK002'),
 (145, 'Das Glöckchen', 'M. Anzeff', 'Kruzianer', 'Aleksey Nikolayevich Tolstoy', NULL, 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Solist<br>1x Sopran<br>1x Alt', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'MANH001'),
-(146, 'Das Glöckchen', 'M. Anzeff', 'Kruzianer', 'Aleksey Nikolayevich Tolstoy', NULL, 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '9x Sopran<br>9x Alt', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'MANK001'),
+(146, 'Das Glöckchen', 'M. Anzeff', 'Kruzianer', 'Aleksey Nikolayevich Tolstoy', NULL, 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '9x Sopran<br>9x Alt', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'MANK002'),
 (147, 'Das grüne Rauschen', 'Pavel Grigorievich Chesnokov', 'Kruzianer', NULL, NULL, 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Alt', 'Archiv', 'Kasten 8', 'auch 2 misslungene Kopien', NULL, NULL, 'PGCH001'),
 (148, 'Frohe Fahrt', 'Isaak Ossipowitsch Dujanewski', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'deu', 'Latn', '1x Sopran<br>1x Alt<br>1x Tenor<br>1x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'IODH001'),
-(149, 'Frohe Fahrt', 'Isaak Ossipowitsch Dujanewski', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'IODK001'),
+(149, 'Frohe Fahrt', 'Isaak Ossipowitsch Dujanewski', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'IODK002'),
 (150, 'Die zwei Kuckucke', 'Volksweise', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Alt', 'Archiv', 'Kasten 8', 'russische Volksweise', NULL, NULL, 'VLKK002'),
 (151, 'Hodie Christus natus est', 'J. P. Sweetinch', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran I<br>6x Sopran II<br>6x Alt<br>6x Tenor<br>6x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'JPSK001'),
 (152, 'Ich lag in tiefer Todesnacht', 'Johann Eccard', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Alt<br>6x Tenor I<br>6x Tenor II<br>6x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'JECK002'),
@@ -217,13 +225,13 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (155, 'Sweet and Low', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'eng', 'Latn', '6x Sopran<br>9x Alt<br>3x Tenor<br>3x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'UNBH088'),
 (156, 'Letzte Rose', 'Volksweise', 'Siegfried Ochs', NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>14x Alt<br>6x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', 'irische Melodie', NULL, NULL, 'VLKH013'),
 (157, 'Schwedisches Tanzlied', 'F. Malden', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Sopran<br>1x alt<br>1x Tenor<br>1x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'FMLH001'),
-(158, 'Schwedisches Tanzlied', 'F. Malden', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'FMLK001'),
+(158, 'Schwedisches Tanzlied', 'F. Malden', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'FMLK002'),
 (159, 'Es wollt ein Jägerlein jagen', 'Albert Kranz', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Sopran<br>1x Alt<br>1x Tenor<br>1x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'AKRH001'),
-(160, 'Es wollt ein Jägerlein jagen', 'Albert Kranz', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', 'Notenbibliothek: 3-03-53', NULL, NULL, 'AKRK001'),
+(160, 'Es wollt ein Jägerlein jagen', 'Albert Kranz', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', 'Notenbibliothek: 3-03-53', NULL, NULL, 'AKRK002'),
 (161, 'Vom Häschen', 'Alexander Tichonowitsch Gretschaninow', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'rus', 'Latn', '6x Sopran<br>6x Alt', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'ATGK002'),
 (162, 'O Freude über Freud', 'Johann Eccard', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '8x Sopran I<br>8x Sopran II<br>8x Alt I<br>8x Alt II<br>8x Teno I<br>8x Tenor II<br>8x Bass I<br>8x Bass II', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'JECK003'),
 (163, 'Sei nun wieder zufrieden', 'Johann Sebastian Bach', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '9x Sopran<br>5x Alt<br>1x Tenor<br>1x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'JSBH002'),
-(164, 'Dresdner Requiem', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Männerchorpartitur', 'Archiv', 'Kasten 7', 'Knabenchorpartitur in Kasten 12!', NULL, NULL, 'RMAK006'),
+(164, 'Dresdner Requiem', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Männerchorpartitur', 'Archiv', 'Kasten 7', 'Knabenchorpartitur in Kasten 12!', NULL, NULL, 'RMAK007'),
 (165, 'Christvesper', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '7x Sopran<br>7x Alt<br>7x Tenor<br>7x Bass', 'Archiv', 'Kasten 6', 'zu jeder Stimme kommt noch eine Solo-Stimme hinzu', NULL, NULL, 'RMAK004'),
 (166, 'Birke am grünen Bergesrand', 'Antonín Dvorák', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '7x Sopran<br>8x Alt<br>7x Tenor<br>7x Bass', 'Archiv', 'Kasten 6', NULL, NULL, NULL, 'ADVH001'),
 (167, 'Das Alter', 'Iwan S. Schönebaum', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran I<br>6x Sopran II<br>6x Alt I<br>5x Alt II<br>6x Tenor I<br>5x Tenor II<br>6x Baß I<br>6x Baß II', 'Archiv', 'Kasten 6', NULL, NULL, NULL, 'ISSH001'),
@@ -233,8 +241,8 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (171, 'Adventsmusik auf eine alte Weise', 'Siegfried Greis', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Knabenchor<br>6x Männerchor', 'Archiv', 'Kasten 6', NULL, NULL, NULL, 'SGRH001'),
 (172, '4 Leiters Lieder für gemischten Chor, Weihe der Fa?', 'Walther Buchheim', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '?', 'Archiv', 'Kasten 6', NULL, NULL, NULL, 'WBUH001'),
 (173, 'Ich bin die Auferstehung', 'Gallus Dressler', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Sopran', 'Archiv', 'Kasten 6', NULL, NULL, NULL, 'GDRH001'),
-(174, 'Ich bin die Auferstehung', 'Gallus Dressler', NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '1x Partitur', 'Archiv', 'Kasten 6', NULL, NULL, NULL, 'GDRD001'),
-(175, 'Christkindleins Bergfahrt', 'Carl Riedel', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran', 'Archiv', 'Kasten 6', 'Druck in Kasten 9!', NULL, NULL, 'CARH001'),
+(174, 'Ich bin die Auferstehung', 'Gallus Dressler', NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '1x Partitur', 'Archiv', 'Kasten 6', NULL, NULL, NULL, 'GDRD002'),
+(175, 'Christkindleins Bergfahrt', 'Carl Riedel', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran', 'Archiv', 'Kasten 6', 'Druck in Kasten 9!', NULL, NULL, 'CARH002'),
 (176, 'Schön ist der Friede', 'R. Töpfer', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, '21.01.1951', 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 6', 'komponiert 29.12.1950', NULL, NULL, 'RTOK002'),
 (177, 'Fünf Lieder - Im Himmelreich', 'Max Bruch', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1xPartitur<br>7x Sopran<br>5x Alt<br>7x Tenor<br>7x Bass', 'Archiv', 'Kasten 6', 'dem Kreuzchor gewidmet<br>verfasst 1922', NULL, NULL, 'MBRH001'),
 (178, 'Schlafe kleines Jesulein', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Solist und Violine (oder Flöte)', 'Archiv', 'Kasten 6', NULL, NULL, 'schlafe_kleines_jesulein', 'UNBH087'),
@@ -258,7 +266,7 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (198, 'Da Pacem Domini', 'Heinrich Schütz', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '7x Sopran<br>2x Alt<br>2x Tenor<br>1x Bass', 'Archiv', 'Kasten 5', NULL, NULL, NULL, 'HSCH002'),
 (199, 'Introitus zur Christvesper', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, '1962', 'ger', 'Latn', '3x Partitur SATB', 'Archiv', 'Kasten 5', NULL, NULL, NULL, 'RMAK017'),
 (200, 'Wiegenlied der Hirten an der Krippe', 'Hans Reimann', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '3x Partitur<br>9x Sopran<br>5x Alt<br>4x Tenor<br>1x Bass', 'Archiv', 'Kasten 5', NULL, NULL, NULL, 'HREH001'),
-(201, 'Wiegenlied der Hirten an der Krippe', 'Hans Reimann', NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '?', 'Archiv', 'Kasten 5', NULL, NULL, NULL, 'HRED001'),
+(201, 'Wiegenlied der Hirten an der Krippe', 'Hans Reimann', NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '?', 'Archiv', 'Kasten 5', NULL, NULL, NULL, 'HRED002'),
 (202, 'Dresdner Requiem', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Knabenchor<br>5x Knaben-Fernchor<br>1x Männer-Fernchor<br>?x Knaben-Altarchor', 'Archiv', 'Kasten 4', NULL, NULL, NULL, 'RMAK006'),
 (203, 'Misericordias Domini', 'Francesco Durante', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Partitur', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'FDUK001'),
 (204, 'Jährlich eine blanke Leier', 'Volksweise', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '7x Sopran II<br>7x Knabenchor<br>1x Tenor<br>7x Männerchor', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'VLKH009'),
@@ -269,7 +277,7 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (209, 'Tristis est anima mea', 'Orlando di Lasso', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '3x Partitur', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'ODLH002'),
 (210, 'Es ging ein Sämann aus, zu säen seinen Samen', 'Heinrich Schütz', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Sopran<br>21x Bass', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'HSCH006'),
 (211, 'kleine Weihnachtsmotette', 'Helmut Bräutigam', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Sopran<br>1x Alt<br>1x Tenor<br>1x Bass', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'HBRH001'),
-(212, 'Kleine Weihnachtsmotette', 'Helmut Bräutigam', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '4x Sopran<br>4x Alt<br>4x Tenor<br>4x Baß', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'HBRK001'),
+(212, 'Kleine Weihnachtsmotette', 'Helmut Bräutigam', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '4x Sopran<br>4x Alt<br>4x Tenor<br>4x Baß', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'HBRK002'),
 (213, 'Verstohlen geht der Mond auf', 'Johannes Brahms', NULL, NULL, 'Kruzianer (»Gennig«)', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Knabenchor<br>6x Mänerchor', 'Archiv', 'Kasten 3', NULL, NULL, 'verstohlen_geht_der_mond_auf_m__n verstohlen_geht_der_mond_auf_knb', 'JBRK002'),
 (214, 'Aus der Tiefe rufe ich zu dir', 'Heinrich Schütz', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '2x Sopran I<br>4x Sopran II<br>5x Alt I<br>4x Alt II<br>5x Tenor I<br>5x Tenor II<br>5x Bass I<br>6x Bass II', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'HSCK001'),
 (215, 'Es zog manch Lied', 'Antonín Dvorák', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '4x Sopran<br>4x Alt<br>4x Tenor<br>4x Bass', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'ADVK002'),
@@ -282,7 +290,7 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (221, 'Leise rieselt der Schnee', 'Volksweise', NULL, NULL, 'U. Schicha', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Alt<br>6x Tenor<br>6x Baß', 'Archiv', 'Kasten 3', NULL, NULL, 'leise_rieselt_2 leise_rieselt', 'VLKK012'),
 (222, 'Ihr Kinderlein kommet', 'Volksweise', NULL, NULL, 'U. Schicha', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Alt<br>6x Tenor<br>6x Bass', 'Archiv', 'Kasten 3', NULL, NULL, 'ihr_kinderlein_kommet', 'VLKK003'),
 (223, 'Mache mich selig, o Jesu', 'Albert Becker', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '4x I. und II. Knabenstimme<br>3x III. und IV. Knabenstimme', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'ALBH005'),
-(224, 'Mache mich selig, o Jesu', 'Albert Becker', NULL, NULL, NULL, 'Druck', 'Ad. Bauer, Dresden', NULL, 'ger', 'Latn', '2x I. und II. Knabenstimme<br>2x III. und IV. Knabenstimme<br>1x Harfe<br>1x Orgel', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'ALBD005'),
+(224, 'Mache mich selig, o Jesu', 'Albert Becker', NULL, NULL, NULL, 'Druck', 'Ad. Bauer, Dresden', NULL, 'ger', 'Latn', '2x I. und II. Knabenstimme<br>2x III. und IV. Knabenstimme<br>1x Harfe<br>1x Orgel', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'ALBD006'),
 (225, 'Geh aus mein Herz', 'Albert Becker', '', NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 28.06.1949', 'ger', 'Latn', '6x Sopran<br>4x Alt<br>1x Tenor', 'Archiv', 'Kasten 2', '- Choral-Motette<br>\n- Namen und Kürzel:<br>\n\"Volkmar Kerchel,<br>\nMonogramm A und D (2x),<br>\n\"Gakenlust\",<br>\n\"W. Bitterlich\" [Wolfgang],<br>\n\"U.Rothe\" [Ulrich] (2x)<br>\n- Bemerkungen:<br>\nAufschriften einer Handschrift: Seiner Exzellenz dem Herrn Grafen von Hochberg in Verehrung gewidmet. / <br>Spartacus, 17. Juni 1930 / <br>Eigentum der Verleger für alle Sünder / <br>Ed. Hose & G Bock Berlin<br>\n-Melodie von Bolko Graf von Hochberg (Musica Sacra Bd. 16 No. 8)', NULL, NULL, 'ALBH003'),
 (226, 'Erquicke mich mit deinem Licht', 'Albert Becker', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 10.10.1967', 'ger', 'Latn', '6x Sopran<br>6x Alt<br>6x Tenor<br>6x Bass', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\r\n\"J.O.\" [Johannes Oelsner],<br>\r\n\"M.T.\",<br>\r\n\"Dieter Leffler\"', NULL, NULL, 'ALBH001'),
 (227, 'Reiselied', 'Albert Becker', NULL, 'Nikolaus Hermann (um 1560)', NULL, 'Handschrift', NULL, 'ungefähr 12.07.1949', 'ger', 'Latn', '5x Sopran<br>6x Alt', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\r\n\"KNeubert\" [Klaus] (2x),<br>\r\n\"UR\",<br>\r\n\"R. Müller\" (5x),<br>\r\n\"R. Mü.\" (2x),<br>\r\n\"Wa\"\r\n\r\n', NULL, 'reiselied', 'ALBH007'),
@@ -294,9 +302,9 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (233, 'Bei stiller Nacht', 'Herbert Wolf', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, '1956', 'ger', 'Latn', '5x Sopran<br>5x Alt<br>4x Tenor<br>4x Bass', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'HWOK001'),
 (234, 'Also hat Gott die Welt geliebt', 'Walther Unger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran I<br>5x Sopran II<br>6x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'UNBK003'),
 (235, 'Im Herbst', 'Volksweise', 'Johannes Brahms', NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Sopran<br>1x Alt<br>1x Tenor<br>1x Bass', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\r\n\"SCHWARZ\"', NULL, NULL, 'VLKH004'),
-(236, 'Im Herbst', 'Volksweise', 'Johannes Brahms', NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\r\n\"SCHWARZ\"', NULL, NULL, 'VLKK004'),
+(236, 'Im Herbst', 'Volksweise', 'Johannes Brahms', NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\r\n\"SCHWARZ\"', NULL, NULL, 'VLKK005'),
 (237, 'Zigeunerleben', 'Robert Schumann', NULL, 'Emanuel Geibel', 'Kruzianer (mehrere)', 'Handschrift', NULL, NULL, 'ger', 'Latn', '19x Sopran<br>1x Sopransolo<br>10x Alt<br>6x Tenor<br>4x Bass', 'Archiv', 'Kasten 2', '- mit dem Stempel des \"Damengesangverein - Leisnig\"<br>\r\n- Namen und Kürzel:<br>\"V.S. (15x)\"', NULL, NULL, 'ROSH001'),
-(238, 'Zigeunerleben', 'Robert Schumann', NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '1x Sopran<br> 1x Alt', 'Archiv', 'Kasten 2', 'Mit dem Stempel des \"Damengesangverein - Leisnig\"', NULL, NULL, 'ROSD001'),
+(238, 'Zigeunerleben', 'Robert Schumann', NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '1x Sopran<br> 1x Alt', 'Archiv', 'Kasten 2', 'Mit dem Stempel des \"Damengesangverein - Leisnig\"', NULL, NULL, 'ROSD002'),
 (239, 'Lasset uns doch den Herrn unsern Gott loben', 'Heinrich Schütz', NULL, NULL, 'Kruzianer Gunter Groß', 'Kopie von Handschrift', NULL, '05.06.1960', 'ger', 'Latn', '5x Partitur', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'HSCK010'),
 (240, 'Der zwölfjährige Jesus im Tempel', 'Heinrich Schütz', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 22.05.1967', 'ger', 'Latn', '10x Sopran<br>1x Alt<br>2x Tenor', 'Archiv', 'Kasten 2', 'Namen und Kürzel: <br>\"D.M.\"[vermutl. Dietmar Mühne],<br> Monogramm G (2x), <br>Monogramm N, <br>\"BM\" (2x), <br>\"GS\" (3x), <br>\"Paspirgilis\" [Titus] ', NULL, NULL, 'HSCH004'),
 (241, 'Wahrlich, wahrlich, ich sage euch', 'Christoph Bernhard', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '23x Knabenchor<br>15x Männerchor', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'CBEK001'),
@@ -315,7 +323,7 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (255, 'Echolied', 'Orlando di Lasso', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, '13.10.1952', 'ger', 'Latn', '7x Partitur', 'Archiv', 'Kasten 1', 'Namen und Kürzel: <br> \"H.Wi.\"', NULL, NULL, 'ODLK001'),
 (256, 'Dresdner Requiem (rot)', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer (»JDI«)', 'Kopie von Handschrift', NULL, '1967', 'ger', 'Latn', '?', 'Archiv', 'Kasten 16', NULL, NULL, NULL, 'RMAK010'),
 (257, 'Dresdner Requiem (schwarz)', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '7x Partitur', 'Archiv', 'Kasten 16', 'Setzer-Kürzel JDI', NULL, NULL, 'RMAK011'),
-(258, 'Erquicke mich mit deinem Licht', 'Albert Becker', NULL, 'G. W. Schulze', NULL, 'Druck', 'Breitkopf & Härtel', NULL, 'ger', 'Latn', '1x Sopran<br>2x Alt<br>1x Tenor<br>2x Bass', 'Archiv', 'Kasten 2', 'Breitkopf & Härtels Chorbibliothek Nr. 824', NULL, NULL, 'ALBD001');
+(258, 'Erquicke mich mit deinem Licht', 'Albert Becker', NULL, 'G. W. Schulze', NULL, 'Druck', 'Breitkopf & Härtel', NULL, 'ger', 'Latn', '1x Sopran<br>2x Alt<br>1x Tenor<br>2x Bass', 'Archiv', 'Kasten 2', 'Breitkopf & Härtels Chorbibliothek Nr. 824', NULL, NULL, 'ALBD002');
 
 -- --------------------------------------------------------
 
@@ -335,13 +343,14 @@ CREATE TABLE `komponisten` (
 --
 
 INSERT INTO `komponisten` (`Abk`, `Name`) VALUES
+('UNB', NULL),
 ('ALB', 'Albert Becker'),
 ('AKR', 'Albert Kranz'),
 ('ATG', 'Alexander Tichonowitsch Gretschaninow'),
 ('AHA', 'Andreas Hammerschmidt'),
 ('ABR', 'Anton Bruckner'),
 ('ADV', 'Antonín Dvorák'),
-('BHE', 'Bruno Herold'),
+('BHE', 'Bruno Heroldt'),
 ('CAR', 'Carl Riedel'),
 ('CBE', 'Christoph Bernhard'),
 ('CFR', 'Cornelius Freundt'),
@@ -397,8 +406,8 @@ INSERT INTO `komponisten` (`Abk`, `Name`) VALUES
 ('SWR', 'Sergei Wassiljewitsch Rachmaninow'),
 ('SCA', 'Sethus Calvisius'),
 ('SGR', 'Siegfried Greis'),
-('UNB', NULL),
 ('VLK', 'Volksweise'),
 ('WRO', 'Walter Rohde'),
 ('WUN', 'Walter Unger'),
 ('WBU', 'Walther Buchheim');
+COMMIT;
