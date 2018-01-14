@@ -6,7 +6,7 @@ exit(0);
 header("Content-Type: text/plain");
 require_once "../suche/config.php";
 $pdo=dbConPDO();
-$stmnt=$pdo->prepare('SELECT row FROM (SELECT @row := @row + 1 as row,Titel FROM archivalien, (SELECT @row:=0)r WHERE Komponist=? ORDER BY Titel) AS a WHERE Titel=?');
+$stmnt=$pdo->prepare('SELECT row FROM (SELECT @row := @row + 1 as row,ID FROM archivalien, (SELECT @row:=0)r WHERE Komponist=? ORDER BY Titel) AS a WHERE ID=?');
 $upd_stmnt=$pdo->prepare('UPDATE archivalien SET Signatur = ? WHERE ID = ?');
 $unbekannt=0;
 foreach($pdo->query('SELECT ID,Titel,Komponist,Abk,Typus FROM archivalien LEFT JOIN komponisten ON Komponist=Name ORDER BY Titel') as $dsatz){
@@ -18,7 +18,7 @@ foreach($pdo->query('SELECT ID,Titel,Komponist,Abk,Typus FROM archivalien LEFT J
 	if($dsatz['Abk']=='UNB'){
 		$n=++$unbekannt;
 	}else{
-		$stmnt->execute(array($dsatz['Komponist'],$dsatz['Titel']));
+		$stmnt->execute(array($dsatz['Komponist'],$dsatz['ID']));
 		$n=$stmnt->fetchColumn(0);
 	}
 	$sig.=str_pad($n,3,'0',STR_PAD_LEFT);
