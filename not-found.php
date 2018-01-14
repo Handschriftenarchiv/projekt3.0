@@ -18,6 +18,10 @@ if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 	$path=$_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.implode(DIRECTORY_SEPARATOR,$urip);
 	if(file_exists($path)){
 		if(is_dir($path)){
+			if(substr($_SERVER['REQUEST_URI'],-1)!='/'){
+				// Slash an URL anhängen, vermeidet viele Fehler
+				header("Location: $_SERVER[REQUEST_URI]/");
+			}
 			chdir($path);
 			// find index file
 			$files=scandir($path);

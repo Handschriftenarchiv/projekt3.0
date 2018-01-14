@@ -1,13 +1,15 @@
 <?php
 require_once "../analytics.php";
+// Dafür sorgen, dass der Seiten-Inhalt als XML-Datei heruntergeladen wird
 header("Content-Type: text/xml");
 header('Content-Disposition: attachment; filename="findbuch.xml"');
-// Platzhalter für den Identifier
+// ISIL-Nummer
 $ident="DE-2535";
+// muss mit echo ausgegeben werden, da ein '<?' sonst einen öffnenden PHP-Block symbolisieren würde
 echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
-<ead xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd">
-	<eadheader>
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd" audience="external">
+	<eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b" repositoryencoding="iso15511" scriptencoding="iso15924">
 		<eadid mainagencycode="DE-ISIL"><?php echo $ident;?></eadid>
 		<filedesc>
 			<titlestmt>
@@ -26,18 +28,19 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 			<repository>
 				<corpname role="Sonstige">Handschriftenarchiv Dresdner Kreuzchor</corpname>
 				<address>
-					<adressline>Dornblüthstraße 4,01277 Dresden,handschriftenarchiv@protonmail.com</adressline>
+					<addressline>Dornblüthstraße 4,01277 Dresden,handschriftenarchiv@protonmail.com</addressline>
 				</address>
 				<extref xlink:role="url_archive" xlink:href="archiv.handschriften.bplaced.com">Website des Handschriftenarchiv Dresdner Kreuzchor</extref>
 			</repository>
 		</did>
 		<otherfindaid>
-			<extref xlink:role="url_findbuch" xlink:href="archiv.handschriften.bplaced.de/suche/export.php">Findbuch Handschriftenarchiv Dresdner Kreuzchor</extref>
+			<extref xlink:role="url_findbuch" xlink:href="archiv.handschriften.bplaced.de/suche/export.php">aus aktuellen Daten generiertes Findbuch des Archives</extref>
 		</otherfindaid>
 		<dsc>
 			<c level="collection" id="HSA-Bestand">
 				<did>
-					<unitid>HSA-Bestand</unitid>
+					<unittitle>HSA-Bestand</unittitle>
+					<unitid><?php echo $ident; ?></unitid>
 					<!-- evtl. <origination>Dresdner Kreuzchor</origination> -->
 				</did>
 <?php
@@ -51,7 +54,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 						<origination label="Autor"><?php echo $dsatz['Komponist']?></origination>
 						<physdesc>
 <?php
-$norm_type="";
+$norm_type="Sonstige";
 switch($dsatz['Typus']){
 	case 'Handschrift':$norm_type='Handschriften';break;
 /* ?! */case 'Kopie von Handschrift':$norm_type='Sonstige';break;
@@ -71,7 +74,7 @@ if(!empty($dsatz['Bemerkungen'])){
 }
 ?>					</did>
 					<otherfindaid>
-						<extref xlink:role="url_archivalunit" xlink:href="archiv.handschriften.bplaced.de/suche/details.php?id=<?php echo $dsatz['ID'];?>">Titelaufnahme im Angebot des Archivs</extref>
+						<extref xlink:role="url_archivalunit" xlink:href="hsa.bplaced.de/suche/details.php?id=<?php echo $dsatz['ID'];?>">Titelaufnahme im Angebot des Archivs</extref>
 					</otherfindaid>
 					<odd>
 						<head>Anzahl</head>
@@ -92,7 +95,7 @@ switch($dsatz['Typus']){
 		echo "der Handschrift";
 		break;
 	case 'Kopie von Handschrift':
-		echo "der Kopie der Handschrift";
+		echo "der Kopie einer Handschrift";
 		break;
 	case 'Druck':
 		echo "des Druckes";
