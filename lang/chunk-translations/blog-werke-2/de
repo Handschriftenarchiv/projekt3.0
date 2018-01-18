@@ -1,0 +1,43 @@
+<aside id="fh5co-hero" class="js-fullheight">
+	<div class="flexslider js-fullheight">
+		<ul class="slides">
+			<li style="background-image: url(/images/blog/werke/werke-2/2.png);">
+				<div class="overlay-gradient"></div>
+				<div class="container">
+					<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
+						<div class="slider-text-inner">
+							<div class="desc">
+								<span>18. Jan. 2018</span>
+								<h2>Im Himmelreich</h2>
+								<p class="fh5co-lead">Teil II der Serie "Besondere Werke des Handschriftenarchivs"</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			</ul>
+		</div>
+</aside>
+<div class="container">
+		<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+			<h2>Fünf Lieder - Im Himmelreich</h2>
+			<p>Besondere Werke II</p>
+			<blockquote>
+				<p>
+					as Stück »Im Himmelreich« von Max Bruch wurde im Kreuzchor 1922 verfasst. Max Bruch (in manchen Quellen auch als »Max Christian
+	Friedrich Bruch« oder als »Max Karl August Bruch«) wurde am 06.01.1838 in Köln geboren. Er war ein deutscher Komponist und Dirigent. Berühmt
+	wurde er vor allen Dingen durch sein 1. Violinenkonzert und seine »Schottische Phantasie«.
+				</p>
+			</blockquote>
+      <br>
+      <img class="image-center" src="/images/blog/werke/werke-2/1.png" alt="Wallpaper - Im Himmelreich" style="width:600px;height:400px">
+      <br>
+      <blockquote>
+      <p>
+				Das Werk »Im Himmelreich« ist aus seiner Liedersammlung »Fünf Lieder«. Es ist das erste dieser Fünf (op. 90 no.1). Bruch widmente es damals dem Kreuzchor wahrscheinlich zur damaligen 700-Jahrfeier. Dies kann jedoch nicht genau belegt werden, da diese fünfmal stattfand: 1916, 1926, 1931, 1937 und 1947. Der Dichter ist unbekannt. Das Werk an sich ist eine der wenigen Stücke, die dem Kreuzchor gewidmet sind und die so in Vergessenheit geraten sind. Aus anderen Quellen geht jedoch hervor, dass das Werk dem Stadtkantor Haubold zur Erinnerung gewidmet wurde. Auch beim Dichter sind sich die Quellen nicht einig. Manche meinen der Dichter des Textes wäre unbekannt, andere jedoch sagen, dass der Text von Spenvogel dem Älteren stamme und dieser von Bruch selbst überarbeitet wurde. Jedoch kann man abschließend festhalten, dass das Werk leider vergessen ist, auch wenn es tolle Musik ist.
+      </p>
+      </blockquote>
+      <br>
+      <a style='font-family:"Karla",Arial,serif;' href="http://archiv.handschriften.bplaced.de/de/suche/details.php?id=177" class="btn btn-primary">In der Datenbank…</a><br>
+		</div>
+	</div>

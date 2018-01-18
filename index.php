@@ -200,7 +200,7 @@ _idl.variant = "modal";
 					<?php
 					echo __blog_prev('ratser-liste','4')
 						.__blog_prev('gunter-gross','4')
-						.__blog_prev('tools-1','4');
+						.__blog_prev('vorschau-2018','4');
 					?>
 				</div>
 			</div>
