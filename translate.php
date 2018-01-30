@@ -54,7 +54,7 @@ function dictionary_setup($strict){
 			}
 		}elseif(isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])){
 			//selects the users preferred language (from browser settings)
-			$langs=split("[,;]",$_SERVER['HTTP_ACCEPT_LANGUAGE']);
+			$langs=preg_split("[,;]",$_SERVER['HTTP_ACCEPT_LANGUAGE']);
 			foreach ($langs as $l){
 				if($l[0]=='q'&&$l[1]=='='){
 					// this is a quality code; skip it
