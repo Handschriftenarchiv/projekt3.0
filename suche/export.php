@@ -110,7 +110,7 @@ switch($dsatz['Typus']){
 						</daodesc>
 <?php
 foreach($docs as $doc){
-?>						<daoloc xlink:role="externer_viewer" xlink:href="<?php echo $doc; ?>"/>
+?>						<daoloc xlink:role="externer_viewer" xlink:href="https://issuu.com/hsa6/docs/<?php echo $doc; ?>"/>
 <?php }
 ?>					</daogrp>
 <?php }
