@@ -7,13 +7,30 @@ require_once "translate.php";
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title><?php echo __('welcome');?> - <?php echo __('hsa'); ?></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Das Handschriftenarchiv Dresdner Kreuzchor sammelt, archiviert, digitalisiert und bereitet alte Drucke, Handschriften und Kopien des Dresdner Kreuzchores auf." />
-	<meta name="keywords" content="Handschrift, Kreuzchor, Geschichte, Archiv, Dresden" />
-	<meta name="author" content="Handschriftenarchiv Dresdner Kreuzchor" />
+
+		<title><?php echo __('welcome');?> - <?php echo __('hsa'); ?></title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Das Handschriftenarchiv Dresdner Kreuzchor sammelt, archiviert, digitalisiert und bereitet alte Drucke, Handschriften und Kopien des Dresdner Kreuzchores auf.">
+
+		<!-- Google / Search Engine Tags -->
+		<meta itemprop="name" content="Willkommen - Handschriftenarchiv Dresdner Kreuzchor">
+		<meta itemprop="description" content="Das Handschriftenarchiv Dresdner Kreuzchor sammelt, archiviert, digitalisiert und bereitet alte Drucke, Handschriften und Kopien des Dresdner Kreuzchores auf.">
+		<meta itemprop="image" content="http://archiv.handschriften.bplaced.de/images/index/slider/5.jpg">
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="http://archiv.handschriften.bplaced.de/">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Willkommen - Handschriftenarchiv Dresdner Kreuzchor">
+		<meta property="og:description" content="Das Handschriftenarchiv Dresdner Kreuzchor sammelt, archiviert, digitalisiert und bereitet alte Drucke, Handschriften und Kopien des Dresdner Kreuzchores auf.">
+		<meta property="og:image" content="http://archiv.handschriften.bplaced.de/images/index/slider/5.jpg">
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Willkommen - Handschriftenarchiv Dresdner Kreuzchor">
+		<meta name="twitter:description" content="Das Handschriftenarchiv Dresdner Kreuzchor sammelt, archiviert, digitalisiert und bereitet alte Drucke, Handschriften und Kopien des Dresdner Kreuzchores auf.">
+		<meta name="twitter:image" content="http://archiv.handschriften.bplaced.de/images/index/slider/5.jpg">
 
   <!--
 	//////////////////////////////////////////////////////
