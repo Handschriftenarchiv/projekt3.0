@@ -138,7 +138,12 @@ require_once 'analytics.php';
 													$sql.="='$daten[Name]'";
 												}
 												$res=mysqli_query($con,$sql);
-												printf(__('num-composed'),mysqli_fetch_array($res,MYSQLI_NUM)[0]);
+												$num=mysqli_fetch_array($res,MYSQLI_NUM)[0];
+												if($num==1){
+													echo __('num-composed-sg');
+												}else{
+													printf(__('num-composed'),$num);
+												}
 											?>
 											</p>
 										</div>
