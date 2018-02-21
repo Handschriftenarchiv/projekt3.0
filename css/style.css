@@ -15,6 +15,15 @@
 /*Nachträglich eingefügte Style-Elemente*/
 
 /* =======================================================*/
+.icon-medium {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
 td.ratser, th.ratser {
   padding: 20px;
 }
@@ -162,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   width: 100%;
   height: 100%;
-  background: #606060;
+  background: linear-gradient(to top right, #625f59, #8a867c 47.9%, #b5aea0 77.73%, #e2d9c6);
   padding: 3em 0;
   z-index: 1002;
   text-align: center;
@@ -819,7 +828,7 @@ header .fh5co-navbar-brand .fh5co-social-icon a {
 }
 #fh5co-hero .flexslider .slider-text > .slider-text-inner .desc {
   padding: 5em;
-  background: rgba(195, 159, 0, 0.9);
+  background: linear-gradient(32deg, rgba(187, 131, 58, 0.74), #d1a233, #e7c127, #fde104);
   -webkit-box-shadow: 0px 10px 30px -13px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 10px 30px -13px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 10px 30px -13px rgba(0, 0, 0, 0.75);
