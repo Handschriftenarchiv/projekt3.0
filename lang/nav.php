@@ -18,9 +18,7 @@
 				<a href="https://issuu.com/hsa6" target="_blank"><i class="icon-book"></i></a>
 				<a href="https://vimeo.com/handschriftenarchiv" target="_blank"><i class="icon-vimeo"></i></a>
 				<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw" target="_blank"><i class="icon-youtube"></i></a>
-				<a href="https://plus.google.com/108785494716898198379" target="_blank"><i class="icon-google"></i></a>
 				<a href="https://github.com/handschriftenarchiv" target="_blank"><i class="icon-github2"></i></a>
-				<a href="https://be.net/handschriftenarchiv" target="_blank"><i class="icon-behance"></i></a>
 			</p>
 		</div>
 	</div>
