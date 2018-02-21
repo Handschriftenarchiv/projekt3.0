@@ -132,7 +132,7 @@ require_once "misc.php";
 										<p class="fh5co-lead"><?php
 										if((int)$_GET['id']>0){
 											require_once "../analytics.php";
-											$res=mysqli_query($con,"SELECT * FROM archivalien WHERE ID=".$_GET['id']);
+											$res=mysqli_query($con,"SELECT * FROM archivalien LEFT JOIN komponisten ON komponisten.Name=archivalien.Komponist WHERE ID=$_GET[id]");
 											if($res&&mysqli_num_rows($res)>0){
 												$dsatz=mysqli_fetch_assoc($res);
 												if(empty($dsatz['Komponist'])){
@@ -191,7 +191,7 @@ require_once "misc.php";
 								text-align:left;}
 								</style>
 								<h2><?php echo $dsatz['Titel']; ?></h2>
-								<h3><i><?php echo $dsatz['Komponist']; ?></i></h3>
+								<h3><a href="<?php echo "/$use_lang/komponist/$dsatz[Abk]"; ?>"<i><?php echo $dsatz['Komponist']; ?></i></h3>
 								<table style="margin:auto;">
 									<tr><th><?php echo __('title');?>:&nbsp;</th><td><?php echo $dsatz['Titel'];?></td></tr>
 									<tr><th><?php echo __('comp');?>:&nbsp;</th><td><?php echo $dsatz['Komponist']; ?></td></tr>
