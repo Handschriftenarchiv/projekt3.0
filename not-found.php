@@ -7,9 +7,10 @@ $urip=explode('/',$_SERVER['REQUEST_URI']);
 $urip=array_values(array_filter($urip,function($value){return $value !== '';}));
 // mögliche Ursache: Anfrage enthält Sprache
 if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
-	// Umleitung 'hinter den Kulissen'
+	// Umleitung 'hinter den Kulissen', wenn "Nur Sprache"-URL nicht mit / endet
 	if(count($urip)==1&&substr($_SERVER['REQUEST_URI'],-1)!='/'){
 		header("Location: $_SERVER[REQUEST_URI]/");
+		exit;
 	}
 	// Sprache in GET-Parameter einfangen
 	$_GET['lang']=$urip[0];
@@ -21,48 +22,46 @@ if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 			if(substr($_SERVER['REQUEST_URI'],-1)!='/'){
 				// Slash an URL anhängen, vermeidet viele Fehler
 				header("Location: $_SERVER[REQUEST_URI]/");
+				exit;
 			}
 			chdir($path);
-			// find index file
+			// Index-Datei suchen
 			$files=scandir($path);
 			foreach ($files as $f) {
 				if($f=='index.php'||$f=='index.html'){
+					// Index-Datei gefunden
 					$path.=DIRECTORY_SEPARATOR.$f;
-					break;
+					// für Analytics
+					$_SERVER['SCRIPT_NAME']=substr($path,strlen($_SERVER['DOCUMENT_ROOT']));
+					include $path;
+					exit;
 				}
 			}
-			$_SERVER['SCRIPT_NAME']=substr($path,strlen($_SERVER['DOCUMENT_ROOT']));
-			include $path;
-			exit;
+			// wenn keine Index-Datei gefunden wird, fährt das Script fort
 		}else{
 			chdir(substr($path,0,strrpos($path,DIRECTORY_SEPARATOR)));
+			// für Analytics
 			$_SERVER['SCRIPT_NAME']=substr($path,strlen($_SERVER['DOCUMENT_ROOT'])-1);
 			include $path;
 			exit;
 		}
-	}elseif(file_exists($path.'.php')){
-		$path.=".php";
-		chdir(substr($path,0,strrpos($path,DIRECTORY_SEPARATOR)));
-		$_SERVER['SCRIPT_NAME']=substr($path,strlen($_SERVER['DOCUMENT_ROOT'])-1);
-		include $path;
-		exit;
-	}else if(strtolower($urip[0])=='blog'){
-		require_once 'translate.php';
-		array_shift($urip);
-		if(file_exists($dict_dir."/chunk-translations/blog-".implode($urip))){
-			// Blog-Artikel
-			chdir($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'blog');
-			$_SERVER['SCRIPT_NAME']="/blog/blog.php";
-			include "blog/blog.php";
-			exit;
-		}
 	}
-}else if(strtolower($urip[0])=='blog'){
+}
+$path=$_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.implode(DIRECTORY_SEPARATOR,$urip);
+if(file_exists($path.'.php')){
+	$path.=".php";
+	// für Analytics
+	$_SERVER['SCRIPT_NAME']=substr($path,strlen($_SERVER['DOCUMENT_ROOT']));
+	chdir(substr($path,0,strrpos($path,DIRECTORY_SEPARATOR)));
+	include $urip[count($urip)-1].".php";
+	exit;
+}elseif(strtolower($urip[0])=='blog'){
 	require_once 'translate.php';
 	array_shift($urip);
 	if(file_exists($dict_dir."/chunk-translations/blog-".implode($urip))){
 		// Blog-Artikel
 		chdir($_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.'blog');
+		// für Analytics
 		$_SERVER['SCRIPT_NAME']="/blog/blog.php";
 		include "blog/blog.php";
 		exit;
