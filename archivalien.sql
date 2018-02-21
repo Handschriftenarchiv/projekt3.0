@@ -335,6 +335,7 @@ DROP TABLE IF EXISTS `komponisten`;
 CREATE TABLE `komponisten` (
   `Abk` varchar(3) NOT NULL,
   `Name` varchar(100) DEFAULT NULL,
+  `Info` text DEFAULT NULL,
   PRIMARY KEY (`Abk`),
   UNIQUE KEY `Name` (`Name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
