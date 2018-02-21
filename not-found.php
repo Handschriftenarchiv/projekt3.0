@@ -66,6 +66,12 @@ if(file_exists($path.'.php')){
 		include "blog/blog.php";
 		exit;
 	}
+}elseif(strtolower($urip[0])=='komponist'&&!empty($urip[1])){
+	$_GET['id']=$urip[1];
+	// für Analytics
+	$_SERVER['SCRIPT_NAME']="komponist-info.php";
+	include 'komponist-info.php';
+	exit;
 }
 
 require_once 'translate.php';
