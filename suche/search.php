@@ -146,11 +146,11 @@ if(isset($_GET['js'])){
 					<div class="col-md-8 col-md-offset-2 text-center animate-box">
 						<div class="about-content">
 							<center>
-							<div class="form-group" style="position: center">
-								<input type="submit" value="Beta Version" class="btn-lable">
-							</div>
-						</center>
-						<br>
+								<div class="form-group" style="position: center">
+									<input type="submit" value="Beta Version" class="btn-lable">
+								</div>
+							</center>
+							<br />
 <?php
 if(!isset($_GET['mode'])){
 	$s=$_GET['search'];
@@ -158,7 +158,7 @@ if(!isset($_GET['mode'])){
 	"OR Verfassungsdatum like '%$s%' OR Sprache like '%$s%' OR Anzahl like '%$s%' OR Sammlung like '%$s%'OR Standort like '%$s%' OR Signatur like '%".stripSig($s)."%'";
 	$res=mysqli_query($con,$sql);
 	while($dsatz=mysqli_fetch_assoc($res)){
-		echo "\t\t\t\t\t\t\t<blockquote><a href=\"details.php?id=".$dsatz['ID']."\"><p>".$dsatz['Titel']."<br><i>".$dsatz['Komponist']."</i></p></a></blockquote><br>\n";
+		echo "\t\t\t\t\t\t\t<blockquote><a href=\"details/".$dsatz['ID']."\"><p>".$dsatz['Titel']."<br><i>".$dsatz['Komponist']."</i></p></a></blockquote><br>\n";
 	}
 }else{
 	$res=mysqli_query($con,"DESCRIBE archivalien");
@@ -199,7 +199,7 @@ if(!isset($_GET['mode'])){
 }
 if(isset($_GET['search'])){
 ?>
-<a href="."><p>neue Suche</p></a>
+							<a href="."><p>neue Suche</p></a>
 <?php } ?>
 						</div>
 					</div>
