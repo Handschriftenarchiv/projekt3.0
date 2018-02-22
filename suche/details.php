@@ -3,6 +3,8 @@ require_once "../translate.php";
 if(empty($_GET['id'])){
 	header("Location: /$use_lang/suche");
 	exit;
+}elseif(empty($_GET['rewrite'])){
+	header("Location: /$use_lang/suche/details/$_GET[id]");
 }
 require_once "misc.php";
 ?>

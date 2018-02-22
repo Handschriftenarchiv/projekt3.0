@@ -74,6 +74,7 @@ if(file_exists($path.'.php')){
 	exit;
 }elseif(strtolower($urip[0])=='suche'&&strtolower($urip[1])=='details'){
 	$_GET['id']=$urip[2];
+	$_GET['rewrite']=true;
 	// für Analytics
 	chdir("suche");
 	$_SERVER['SCRIPT_NAME']="suche/details.php";
