@@ -118,7 +118,7 @@ require_once 'analytics.php';
 							$daten['Name']="Unbekannt";
 						}else{
 							// TODO
-							$img="";
+							$img="/database/composer.jpeg";
 						}
 						?>
 						<li style="background-image: url(/images/<?php echo $img; ?>);">
@@ -168,6 +168,9 @@ if(empty($info)){
 	echo $info;
 }
 ?>
+<br>
+<br>
+<a href="javascript:history.back()"><p>zurück zum Suchergebnis</p></a>
 							</div>
 						</div>
 					</div>
