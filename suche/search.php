@@ -158,7 +158,7 @@ if(!isset($_GET['mode'])){
 	"OR Verfassungsdatum like '%$s%' OR Sprache like '%$s%' OR Anzahl like '%$s%' OR Sammlung like '%$s%'OR Standort like '%$s%' OR Signatur like '%".stripSig($s)."%'";
 	$res=mysqli_query($con,$sql);
 	while($dsatz=mysqli_fetch_assoc($res)){
-		echo "\t\t\t\t\t\t\t<blockquote><a href=\"details/".$dsatz['ID']."\"><p>".$dsatz['Titel']."<br><i>".$dsatz['Komponist']."</i></p></a></blockquote><br>\n";
+		echo "\t\t\t\t\t\t\t<blockquote><a href=\"details/".formatSig($dsatz['Signatur'])."\"><p>".$dsatz['Titel']."<br><i>".$dsatz['Komponist']."</i></p></a></blockquote><br>\n";
 	}
 }else{
 	$res=mysqli_query($con,"DESCRIBE archivalien");
