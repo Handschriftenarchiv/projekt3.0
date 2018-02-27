@@ -191,7 +191,7 @@ require_once "misc.php";
 								text-align:left;}
 								</style>
 								<h2><?php echo $dsatz['Titel']; ?></h2>
-								<h3><a href="<?php echo "/$use_lang/komponist/$dsatz[Abk]"; ?>"<i><?php echo $dsatz['Komponist']; ?></i></a></h3>
+								<h3><a href="<?php echo "/$use_lang/komponist/$dsatz[Abk]"; ?>"><i><?php echo $dsatz['Komponist']; ?></i></a></h3>
 								<table style="margin:auto;">
 									<tr><th><?php echo __('title');?>:&nbsp;</th><td><?php echo $dsatz['Titel'];?></td></tr>
 									<tr><th><?php echo __('comp');?>:&nbsp;</th><td><?php echo $dsatz['Komponist']; ?></td></tr>
