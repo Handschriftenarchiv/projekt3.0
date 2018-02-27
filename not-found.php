@@ -72,6 +72,14 @@ if(file_exists($path.'.php')){
 	$_SERVER['SCRIPT_NAME']="komponist-info.php";
 	include 'komponist-info.php';
 	exit;
+}elseif(strtolower($urip[0])=='suche'&&strtolower($urip[1])=='details'){
+	$_GET['id']=$urip[2];
+	$_GET['rewrite']=true;
+	// für Analytics
+	chdir("suche");
+	$_SERVER['SCRIPT_NAME']="suche/details.php";
+	include 'details.php';
+	exit;
 }
 
 require_once 'translate.php';

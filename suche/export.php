@@ -74,7 +74,7 @@ if(!empty($dsatz['Bemerkungen'])){
 }
 ?>					</did>
 					<otherfindaid>
-						<extref xlink:role="url_archivalunit" xlink:href="hsa.bplaced.de/suche/details.php?id=<?php echo $dsatz['ID'];?>">Titelaufnahme im Angebot des Archivs</extref>
+						<extref xlink:role="url_archivalunit" xlink:href="hsa.bplaced.de/suche/details/<?php echo formatSig($dsatz['Signatur']);?>">Titelaufnahme im Angebot des Archivs</extref>
 					</otherfindaid>
 					<odd>
 						<head>Anzahl</head>

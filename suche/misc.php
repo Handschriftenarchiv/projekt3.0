@@ -8,7 +8,11 @@ function formatSig($sig){
 }
 
 function stripSig($str){
-	return preg_replace('/([A-Z]{3})-([A-Z])-([0-9]{3})/i','\1\2\3',$str);
+	if(preg_match('/([A-Z]{3})-([A-Z])-([0-9]{3})/i',$str)){
+		return preg_replace('/([A-Z]{3})-([A-Z])-([0-9]{3})/i','\1\2\3',$str);
+	}else{
+		return false;
+	}
 }
 
 function translate_iso639_2B($langcode){
