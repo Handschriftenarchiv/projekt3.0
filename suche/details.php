@@ -3,6 +3,8 @@ require_once "../translate.php";
 if(empty($_GET['id'])){
 	header("Location: /$use_lang/suche");
 	exit;
+}elseif(empty($_GET['rewrite'])){
+	header("Location: /$use_lang/suche/details/$_GET[id]");
 }
 require_once "misc.php";
 ?>
@@ -130,7 +132,20 @@ require_once "misc.php";
 										<span><?php echo __('db');?></span>
 										<h2>Details</h2>
 										<p class="fh5co-lead"><?php
-										if((int)$_GET['id']>0){
+										if(!ctype_digit($_GET['id'])){
+											// Es handelt sich wahrscheinlich um eine Signatur
+											$sig=stripSig($_GET['id']);
+											// ID der zugehörigen Signatur finden
+											if($sig){
+												$res=mysqli_query($con,"SELECT ID FROM archivalien WHERE Signatur='$sig'");
+												if(mysqli_num_rows($res)){
+													$_GET['id']=mysqli_fetch_array($res,MYSQLI_NUM)[0];
+												}else{
+													$_GET['id']=0;
+												}
+											}
+										}
+										if(ctype_digit($_GET['id'])&&(int)$_GET['id']>0){
 											require_once "../analytics.php";
 											$res=mysqli_query($con,"SELECT * FROM archivalien LEFT JOIN komponisten ON komponisten.Name=archivalien.Komponist WHERE ID=$_GET[id]");
 											if($res&&mysqli_num_rows($res)>0){
