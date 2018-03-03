@@ -116,71 +116,13 @@ require_once 'translate.php';
 			</aside>
 
 			<div id="fh5co-about">
-				<div class="container">
-					<div align="center">
-								<!--<style>
-								.embed-container {
-									position: relative;
-									padding-bottom: 56.25%;
-									height: 0;
-									overflow: hidden;
-									max-width: 100%;
-									}
-									.embed-container iframe, .embed-container object, .embed-container embed {
-										position: absolute;
-										top: 0;
-										left: 0;
-										width: 60%;
-										height: 60%;
-										}
-									</style>
-										<div class='embed-container' align="center" style="position: absolute">
-											<center><iframe src='http://player.vimeo.com/video/225288372?color=ffffff' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen align="center"></iframe></center>
-										</div>-->
-
-										<iframe src="https://player.vimeo.com/video/247134754?color=ffffff" width="640" height="360" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen align="center"></iframe>
-								<blockquote><p>
-									Scannen im Archiv… <br>Pünktlich zu Weihnachten widmen wir uns der einen Seite im Arbeitsalltag, die unabdinglich und doch zeitfressend ist: Das Kopieren! Wir wünschen frohe Weihnachten und nicht mehr all zu viele Stunden am Kopierer dieses Jahr 😃.
-								</p></blockquote><br><br>
-										<iframe src='http://player.vimeo.com/video/225288372?color=ffffff' width="640" height="360" frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen align="center"></iframe>
-								<blockquote><p>
-									Das Projekt 3.0: Eine &raquo;Zur&uuml;ckbesinnung&laquo; auf den Kern des Archives. Mit neuer Webumgebung, durchsuchbarer Datenbank und regelm&auml;&szlig;igen Blogeintr&auml;gen. Der Imagefilm stellt das neu ver&ouml;ffentlichte Pilotprojekt des Handschriftenarchivs vor. <br> [Musik: Into the Light / Lizenzfreie Musik / www.EverMusic.de]
-								</p></blockquote><br><br>
-								<br>
-								<iframe src="https://player.vimeo.com/video/223641172?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-								<blockquote><p>
-									Das Handschriftenarchiv Dresdner Kreuzchor hat heute das Projekt 3.0 gestartet. Eine neue Philosophie eines Archives. Ab Herbst 2017&hellip;
-								</p></blockquote><br><br>
-								<iframe src="https://player.vimeo.com/video/223339906?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-								<blockquote><p>
-									Die neue MySQL-Datenbank im Rahmen des Projekts 3.0 wird nun noch detailliertere Suchen ermöglichen. Und das alles in einem unkomplizierten Interface&hellip;
-								</p></blockquote><br><br>
-								<iframe src="https://player.vimeo.com/video/210479922?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-								<blockquote><p>
-									Unter @NotenarchivDKC ist nun auch das Handschriftenarchiv Dresdner Kreuzchor auf Twitter zu finden. Hier das &raquo;Willkommens-Video&laquo;.
-								</p></blockquote><br><br>
-								<iframe src="https://player.vimeo.com/video/208001881?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-								<blockquote><p>
-									Frühling im Handschriftenarchiv Dresdner Kreuzchor. Das Archiv stellt Noten und Handschriften im Bezug zu Frühling, Natur und Geschichte dar.
-								</p></blockquote><br><br>
-								<iframe src="https://player.vimeo.com/video/202945459?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-								<blockquote><p>
-									Das Dresdner Requiem von Rudolf Mauersberger zum Gedenken an die Opfer des 13. Februar 1945.
-								</p></blockquote><br><br>
-								<iframe src="https://player.vimeo.com/video/191689285?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-								<blockquote><p>
-									Das Handschriftenarchiv Dresdner Kreuzchor w&uuml;nscht frohe Weihnachten.
-								</p></blockquote><br><br>
-								<iframe src="https://player.vimeo.com/video/188418719?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-								<blockquote><p>
-									Das Handschriftenarchiv Dresdner Kreuzchor in Verbidung mit der Stadt Dresden und dem Dresdker Kreuzchor.
-								</p></blockquote><br><br>
-								<iframe src="https://player.vimeo.com/video/185299720?color=ffffff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-								<blockquote><p>
-									Über die Zeit hat sich das Layout - haben sich die Logos - des Handschriftenarchivs geändert. Der neue Film gibt einen kleinen, aber feinen Überblick über die &raquo;Kleine Geschichte&hellip;&laquo;
-								</p></blockquote>
-							</div>
-				</div>
+				<iframe src="https://handschriftenarchiv.rivyt.com" width="100%" height="980px" name="mediathek" scrolling="no" frameborder="0">
+					<p>
+						Ihr Browser ist nicht mehr aktuell. Um diesen Inhalt aufrufen zu können, nutzen Sie bitten diesen Link: <a href="https://handschriftenarchiv.rivyt.com/">Alternative Mediathek</a>
+					</p>
+				</iframe>
+	</div>
+				<?php echo __chunk('footer'); ?>
 			</div>
 
 			<div class="fh5co-counters" style="background-image: url(/images/archiv/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
