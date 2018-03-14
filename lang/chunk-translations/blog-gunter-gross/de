@@ -1,29 +1,4 @@
-<aside id="fh5co-hero" class="js-fullheight" style="background: rgba(220,160,140,0.0);">
-	<div class="flexslider js-fullheight">
-		<ul class="slides">
-		<li style="background-image: url(/images/blog/gross/1.jpg);">
-			<div class="overlay-gradient"></div>
-			<div class="container">
-				<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
-					<div class="slider-text-inner">
-						<div class="desc">
-							<span>29. Jul. 2017</span>
-							<h2>Gunter Groß erinnert sich</h2>
-							<p class="fh5co-lead">Gunter Groß: ein ehemaligen Kruzianer, Notenschreiber und Ratsdiskantist unter Rudolf Mauersberger.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		</ul>
-	</div>
-</aside>
 
-
-<div id="fh5co-about">
-	<div class="container">
-		<div class="row animate-box">
-			<div class="col-md-8 col-md-offset-2 text-center animate-box">
 				<div class="about-content">
 					<h2>Das sechste Schuljahr,...</h2>
 					<blockquote>
@@ -67,7 +42,3 @@
 						</tbody>
 					</table>
 				</div>
-			</div>
-		</div>
-	</div>
-</div>

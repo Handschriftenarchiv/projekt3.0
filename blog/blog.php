@@ -81,7 +81,8 @@ $next=$data[$index]['title'];
 	</head>
 	<body style=" background: url(/images/bg.jpg) no-repeat center center fixed; background-repeat:no-repeat; background-size:cover;">
 		<?php include "../lang/nav.php"; ?>
-		<div style=" background-color: #ffffff; align-self: center; width: 55%; height: auto; opacity: 1; border-radius: 10px; text-align: center; margin-left: auto; margin-right: auto; margin-top: 45px;">
+		<div style=" background-color: #ffffff; align-self: center; width: 55%; height: auto; opacity: 1; border-radius: 10px; text-align: center; margin-left: auto; margin-right: auto; margin-top: 45px; margin-bottom: 45px;">
+			<div style="margin-left:10px;margin-right:10px;margin-top:20px;margin-bottom:20px;"><?php echo __chunk('blog-'.$blog_entry); ?></div>
 		</div>
 
 		<!-- jQuery -->
