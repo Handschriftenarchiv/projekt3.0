@@ -107,7 +107,6 @@ require_once 'analytics.php';
 							$img="404.svg";
 							$daten['Name']="Unbekannt";
 						}else{
-							// TODO
 							$img="/database/composer.jpeg";
 						}
 						?>
