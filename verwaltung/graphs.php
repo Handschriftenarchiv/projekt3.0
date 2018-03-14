@@ -124,7 +124,7 @@ require_once '../analytics.php';
 	<?php } ?>
 		<center>
 			<p>
-				<a href="../.">Zurück zur Startseite</a><br>
+				<a href="/<?php echo $use_lang; ?>/">Zurück zur Startseite</a><br>
 				<a href=".">Zurück zum Verwaltungsportal</a><br>
 				<?php if(isset($_GET['archivalien'])||isset($_GET['notfound'])){ ?>
 				<a href="graphs">Seitenzugriffe</a><br>
