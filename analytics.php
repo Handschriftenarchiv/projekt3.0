@@ -7,7 +7,7 @@ function view(){
 	$page=strtolower(preg_replace('~.*[/\\\\](.+)$~','\\1',$_SERVER['SCRIPT_NAME']));
 	$sql='INSERT INTO analytics(`page`';
 	$requires_additional=array('not-found.php','details.php','komponist-info.php');
-	if(in_array($page)){
+	if(in_array($page,$requires_additional)){
 		$sql.=',`additional`';
 	}
 	$sql.=")VALUES('$page'";
