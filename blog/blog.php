@@ -19,6 +19,8 @@ if($index<0){
 }
 $translation=preg_split('~[\r\n]+~',__chunk("blog-${blog_entry}-prev"));
 $title=$translation[2];
+$_GET['id']=$title;// für analytics
+require_once "../analytics.php";
 $prev=$data[$index]['title'];
 $index=($index+2)%count($data);
 $next=$data[$index]['title'];

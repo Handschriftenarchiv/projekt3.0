@@ -6,7 +6,7 @@ view();
 function view(){
 	$page=strtolower(preg_replace('~.*[/\\\\](.+)$~','\\1',$_SERVER['SCRIPT_NAME']));
 	$sql='INSERT INTO analytics(`page`';
-	$requires_additional=array('not-found.php','details.php','komponist-info.php');
+	$requires_additional=array('not-found.php','details.php','komponist-info.php','blog.php');
 	if(in_array($page,$requires_additional)){
 		$sql.=',`additional`';
 	}
@@ -17,6 +17,7 @@ function view(){
 			break;
 		case 'details.php':
 		case 'komponist-info.php':
+		case 'blog.php':
 			$sql.=",'$_GET[id]'";
 			break;
 	}
@@ -50,6 +51,9 @@ function hasData(){
 	}elseif(isset($_GET['notfound'])){
 		$analytics_sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional FROM analytics "
 			."WHERE page like '%not-found.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
+	}elseif(isset($_GET['blog'])){
+		$analytics_sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional FROM analytics "
+			."WHERE page like '%blog.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
 	}elseif(isset($_GET['komponist'])){
 		$analytics_sql="SELECT page,DATE(created) as dateCreated,COUNT(*) AS views,Name FROM analytics "
 			."LEFT JOIN komponisten ON analytics.additional = komponisten.Abk WHERE page like '%komponist-info.php' "
@@ -92,7 +96,7 @@ function echoData(){
 			$val[$dsatz['additional']]=$dsatz['views'];
 		}
 		echo implode(',',$val);
-	}elseif(isset($_GET['notfound'])){
+	}elseif(isset($_GET['notfound'])||isset($_GET['blog'])){
 		$res=mysqli_query($con,$analytics_sql);
 		if(mysqli_num_rows($res)==0)
 			return; // keine Daten
@@ -199,6 +203,14 @@ function echoSeries(){
 		}
 		foreach ($documents as $s){
 			echo "{name:\"$s\"},";
+		}
+		mysqli_close($con);
+	}elseif(isset($_GET['blog'])){
+		$sql="SELECT additional FROM analytics WHERE page like '%blog.php' GROUP BY additional";
+		$con=dbCon();
+		$res=mysqli_query($con,$sql);
+		while($dsatz=mysqli_fetch_assoc($res)){
+			echo "{name:\"$dsatz[additional]\"},";
 		}
 		mysqli_close($con);
 	}elseif(isset($_GET['notfound'])){
