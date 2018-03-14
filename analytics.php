@@ -202,7 +202,13 @@ function echoSeries(){
 		}
 		mysqli_close($con);
 	}elseif(isset($_GET['notfound'])){
-		// TODO
+		$sql="SELECT additional FROM analytics WHERE page like '%not-found.php' GROUP BY additional";
+		$con=dbCon();
+		$res=mysqli_query($con,$sql);
+		while($dsatz=mysqli_fetch_assoc($res)){
+			echo "{name:\"$dsatz[additional]\"},";
+		}
+		mysqli_close($con);
 	}elseif(isset($_GET['komponist'])){
 		$sql="SELECT Name FROM analytics LEFT JOIN komponisten ON additional = Abk WHERE page like '%komponist-info.php' GROUP BY additional";
 		$con=dbCon();
