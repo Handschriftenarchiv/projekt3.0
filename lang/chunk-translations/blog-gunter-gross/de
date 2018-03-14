@@ -1,4 +1,4 @@
-<aside id="fh5co-hero" class="js-fullheight">
+<aside id="fh5co-hero" class="js-fullheight" style="background: rgba(220,160,140,0.0);">
 	<div class="flexslider js-fullheight">
 		<ul class="slides">
 		<li style="background-image: url(/images/blog/gross/1.jpg);">

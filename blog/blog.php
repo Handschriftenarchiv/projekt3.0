@@ -79,66 +79,9 @@ $next=$data[$index]['title'];
 		<![endif]-->
 
 	</head>
-	<body>
-		<script type="text/javascript">
-			window._idl = {};
-			_idl.variant = "modal";
-			(function() {
-				var idl = document.createElement('script');
-				idl.async = true;
-				idl.src = 'https://members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'modal');
-				document.getElementsByTagName('body')[0].appendChild(idl);
-			})();
-		</script>
-
+	<body style=" background: url(/images/bg.jpg) no-repeat center center fixed; background-repeat:no-repeat; background-size:cover;">
 		<?php include "../lang/nav.php"; ?>
-
-		<div id="fh5co-page">
-			<header>
-				<div class="container">
-					<div class="fh5co-navbar-brand">
-						<div class="row">
-							<div class="col-xs-6">
-								<h1 class="text-left"><a class="fh5co-logo" href="../index.php"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
-							</div>
-							<div class="col-xs-6">
-								<!--<p class="fh5co-social-icon text-right">
-									<a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
-									<a href="https://issuu.com/hsa6"target="_blank"><i class="icon-book"></i></a>
-									<a href="https://vimeo.com/handschriftenarchiv"target="_blank"><i class="icon-vimeo"></i></a>
-									<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"target="_blank"><i class="icon-youtube"></i></a>
-									<a href="https://plus.google.com/108785494716898198379"target="_blank"><i class="icon-google"></i></a>
-									<a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
-									<a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
-								</p>-->
-							</div>
-						</div>
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-					</div>
-				</div>
-			</header>
-
-			<?php echo __chunk('blog-'.$blog_entry); ?>
-
-			<style>
-			#fh5co-about{
-				padding-bottom: 0;
-			}
-			#navigation{
-				display:flex;
-				flex-direction: row;
-				justify-content: space-evenly;
-				padding-bottom: 5em;
-			}
-			</style>
-			<div id="navigation">
-				<a href="<?php echo $prev; ?>" class="btn btn-primary"> ← </a>
-				<a href="/<?php echo $use_lang; ?>/blog" class="btn btn-primary"><i class="icon-home"></i></a>
-				<a href="<?php echo $next; ?>" class="btn btn-primary"> → </a>
-			</div>
-
-			<?php echo __chunk('footer'); ?>
-
+		<div style=" background-color: #ffffff; align-self: center; width: 55%; height: auto; opacity: 1; border-radius: 10px; text-align: center; margin-left: auto; margin-right: auto; margin-top: 45px;">
 		</div>
 
 		<!-- jQuery -->
@@ -156,5 +99,24 @@ $next=$data[$index]['title'];
 
 		<!-- Main JS (Do not remove) -->
 		<script src="/js/main.js"></script>
+
+		<!--<style>
+		#fh5co-about{
+			padding-bottom: 0;
+		}
+		#navigation{
+			display:flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			padding-bottom: 5em;
+		}
+		</style>
+		<div id="navigation">
+			<a href="<?php echo $prev; ?>" class="btn btn-primary"> ← </a>
+			<a href="/<?php echo $use_lang; ?>/blog" class="btn btn-primary"><i class="icon-home"></i></a>
+			<a href="<?php echo $next; ?>" class="btn btn-primary"> → </a>
+		</div>-->
+
+
 	</body>
 </html>
