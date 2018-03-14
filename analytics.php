@@ -4,16 +4,21 @@ require_once 'suche/misc.php';
 view();
 
 function view(){
-	$page=$_SERVER['SCRIPT_NAME'];
+	$page=strtolower(preg_replace('~.*[/\\\\](.+)$~','\\1',$_SERVER['SCRIPT_NAME']));
 	$sql='INSERT INTO analytics(`page`';
-	if(stripos($page,'not-found.php')>-1||stripos($page,'details.php')>-1){
+	$requires_additional=array('not-found.php','details.php','komponist-info.php');
+	if(in_array($page)){
 		$sql.=',`additional`';
 	}
 	$sql.=")VALUES('$page'";
-	if(stripos($page,'not-found.php')>-1){
-		$sql.=",'$_SERVER[REQUEST_URI]'";
-	}elseif(stripos($page,'details.php')>-1){
-		$sql.=",'$_GET[id]'";
+	switch($page){
+		case 'not-found.php':
+			$sql.=",'$_SERVER[REQUEST_URI]'";
+			break;
+		case 'details.php':
+		case 'komponist-info.php':
+			$sql.=",'$_GET[id]'";
+			break;
 	}
 	$sql.=')';
 	$con=dbCon();
