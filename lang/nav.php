@@ -1,3 +1,13 @@
+<script type="text/javascript">
+	window._idl = {};
+	_idl.variant = "modal";
+	(function() {
+	    var idl = document.createElement('script');
+	    idl.async = true;
+	    idl.src = 'https://members.internetdefenseleague.org/include/?url=' + (_idl.url || '') + '&campaign=' + (_idl.campaign || '') + '&variant=' + (_idl.variant || 'modal');
+	    document.getElementsByTagName('body')[0].appendChild(idl);
+	})();
+</script>
 <?php require_once $_SERVER['DOCUMENT_ROOT'].'/translate.php'; ?>
 <nav id="fh5co-main-nav" role="navigation">
 	<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>

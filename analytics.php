@@ -4,16 +4,21 @@ require_once 'suche/misc.php';
 view();
 
 function view(){
-	$page=$_SERVER['SCRIPT_NAME'];
+	$page=strtolower(preg_replace('~.*[/\\\\](.+)$~','\\1',$_SERVER['SCRIPT_NAME']));
 	$sql='INSERT INTO analytics(`page`';
-	if(stripos($page,'not-found.php')>-1||stripos($page,'details.php')>-1){
+	$requires_additional=array('not-found.php','details.php','komponist-info.php');
+	if(in_array($page,$requires_additional)){
 		$sql.=',`additional`';
 	}
 	$sql.=")VALUES('$page'";
-	if(stripos($page,'not-found.php')>-1){
-		$sql.=",'$_SERVER[REQUEST_URI]'";
-	}elseif(stripos($page,'details.php')>-1){
-		$sql.=",'$_GET[id]'";
+	switch($page){
+		case 'not-found.php':
+			$sql.=",'$_SERVER[REQUEST_URI]'";
+			break;
+		case 'details.php':
+		case 'komponist-info.php':
+			$sql.=",'$_GET[id]'";
+			break;
 	}
 	$sql.=')';
 	$con=dbCon();
@@ -40,11 +45,15 @@ function hasData(){
 	$con=dbCon();
 	if(isset($_GET['archivalien'])){
 		$analytics_sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional,Titel FROM analytics "
-			."LEFT JOIN archivalien ON analytics.additional = archivalien.ID WHERE page like '%/details.php' "
+			."LEFT JOIN archivalien ON analytics.additional = archivalien.ID WHERE page like '%details.php' "
 			."GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
 	}elseif(isset($_GET['notfound'])){
 		$analytics_sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views,additional FROM analytics "
-			."WHERE page like '%/not-found.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
+			."WHERE page like '%not-found.php' GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
+	}elseif(isset($_GET['komponist'])){
+		$analytics_sql="SELECT page,DATE(created) as dateCreated,COUNT(*) AS views,Name FROM analytics "
+			."LEFT JOIN komponisten ON analytics.additional = komponisten.Abk WHERE page like '%komponist-info.php' "
+			."GROUP BY additional,dateCreated ORDER BY dateCreated,additional ASC";
 	}else{
 		$analytics_sql="SELECT page,DATE(created) AS dateCreated,COUNT(*) AS views FROM analytics "
 			."GROUP BY page,dateCreated ORDER BY dateCreated,page ASC";
@@ -112,6 +121,33 @@ function echoData(){
 			$val[$dsatz['additional']]=$dsatz['views'];
 		}
 		echo implode(',',$val);
+	}elseif(isset($_GET['komponist'])){
+		$res=mysqli_query($con,$analytics_sql);
+		if(mysqli_num_rows($res)==0)
+			return; // keine Daten
+		echo 'Tag';
+		$komponisten=array();
+		while($dsatz=mysqli_fetch_assoc($res)){
+			$komponisten[]=$dsatz['Name'];
+			echo ','.$dsatz['Name'];
+		}
+		echo '\n';
+		mysqli_data_seek($res,0);
+		$date="";
+		while($dsatz=mysqli_fetch_assoc($res)){
+			if($dsatz['dateCreated']!=$date){
+				if(!empty($val)){
+					echo implode(',',$val).'\n';
+				}
+				foreach($komponisten as $s){
+					$val[$s]=0;
+				}
+				$date=$dsatz['dateCreated'];
+				echo date('j/n/y',strtotime($date)).',';
+			}
+			$val[$dsatz['Name']]=$dsatz['views'];
+		}
+		echo implode(',',$val);
 	}else{
 		$res=mysqli_query($con,$analytics_sql);
 		if(mysqli_num_rows($res)==0)
@@ -164,8 +200,23 @@ function echoSeries(){
 		foreach ($documents as $s){
 			echo "{name:\"$s\"},";
 		}
+		mysqli_close($con);
 	}elseif(isset($_GET['notfound'])){
-		// TODO
+		$sql="SELECT additional FROM analytics WHERE page like '%not-found.php' GROUP BY additional";
+		$con=dbCon();
+		$res=mysqli_query($con,$sql);
+		while($dsatz=mysqli_fetch_assoc($res)){
+			echo "{name:\"$dsatz[additional]\"},";
+		}
+		mysqli_close($con);
+	}elseif(isset($_GET['komponist'])){
+		$sql="SELECT Name FROM analytics LEFT JOIN komponisten ON additional = Abk WHERE page like '%komponist-info.php' GROUP BY additional";
+		$con=dbCon();
+		$res=mysqli_query($con,$sql);
+		while($dsatz=mysqli_fetch_assoc($res)){
+			echo "{name:\"$dsatz[Name]\"},";
+		}
+		mysqli_close($con);
 	}else{
 		$pages=getPages();
 		foreach($pages as $s){
