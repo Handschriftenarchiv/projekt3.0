@@ -1,4 +1,26 @@
 /* blog.php */
+
+body{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#exit{
+	position: fixed;
+	top: 15px;
+	left: 15px;
+	display:block;
+	width:20px;
+	height:20px;
+	background-image: url(/images/exit.svg);
+}
+
+blockquote{
+	border:none !important;
+}
+
 .blog-cancel {
   width: 20px;
   position: sticky;
