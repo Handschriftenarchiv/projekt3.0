@@ -65,6 +65,8 @@ $next=$data[$index]['title'];
 		<link rel="stylesheet" href="/css/icomoon.css">
 		<!-- Bootstrap  -->
 		<link rel="stylesheet" href="/css/bootstrap.css">
+		<!-- Blog-Stylesheet -->
+		<link rel="stylesheet" href="/blog/blog.css">
 
 		<!-- Flexslider  -->
 		<link rel="stylesheet" href="/css/flexslider.css">
@@ -79,11 +81,17 @@ $next=$data[$index]['title'];
 		<![endif]-->
 
 	</head>
-<a href="/blog"><img class="image-center" src="/images/exit.svg" style="width:20px; float:left;"></img></a>
-	<body style=" background: url(/images/bg.jpg) no-repeat center center fixed; background-repeat:no-repeat; background-size:cover;">
-		<?php include "../lang/nav.php"; ?>
-		<div class="blog-div"style=" background-color: #ffffff; align-self: center; width: 55%; height: auto; opacity: 1; border-radius: 10px; text-align: center; margin-left: auto; margin-right: auto; margin-top: 45px; margin-bottom: 45px;">
+	<a href="/blog"><img class="blog-cancel" src="/images/exit.svg"></img></a>
+
+	<!-- Blog-Hintergrund einfügen -->
+	<body style=" background: url(/images/bg.jpg) no-repeat center fixed; background-repeat: no-repeat;background-size: cover;">
+
+		<div class="blog-div">
 			<div><?php echo __chunk('blog-'.$blog_entry); ?></div>
+		</div>
+
+		<div class="blog-autor">
+			<p><!--INHALT--></p>
 		</div>
 
 		<!-- jQuery -->
@@ -102,17 +110,7 @@ $next=$data[$index]['title'];
 		<!-- Main JS (Do not remove) -->
 		<script src="/js/main.js"></script>
 
-		<!--<style>
-		#fh5co-about{
-			padding-bottom: 0;
-		}
-		#navigation{
-			display:flex;
-			flex-direction: row;
-			justify-content: space-evenly;
-			padding-bottom: 5em;
-		}
-		</style>
+		<!--
 		<div id="navigation">
 			<a href="<?php echo $prev; ?>" class="btn btn-primary"> ← </a>
 			<a href="/<?php echo $use_lang; ?>/blog" class="btn btn-primary"><i class="icon-home"></i></a>
