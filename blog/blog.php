@@ -13,6 +13,7 @@ if(!isset($index)){
 	require_once '../not-found.php';
 	exit;
 }
+$bg_img=$data[$index]['background'];
 $index--;
 if($index<0){
 	$index+=count($data);
@@ -81,10 +82,9 @@ $next=$data[$index]['title'];
 		<![endif]-->
 
 	</head>
-	<a href="/blog"><img class="blog-cancel" src="/images/exit.svg"></img></a>
+	<a href="/<?ph echo $use_lang; ?>/blog" id="exit"></a>
 
-	<!-- Blog-Hintergrund einfügen -->
-	<body style=" background: url(/images/bg.jpg) no-repeat center fixed; background-repeat: no-repeat;background-size: cover;">
+	<body style=" background-image: url(<?php echo $bg_img; ?>);">
 
 		<div class="blog-div">
 			<div><?php echo __chunk('blog-'.$blog_entry); ?></div>
