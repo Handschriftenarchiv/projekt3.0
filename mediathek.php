@@ -114,9 +114,6 @@ require_once 'translate.php';
 	</div>
 				<?php echo __chunk('footer'); ?>
 			</div>
-		<?php echo __chunk('footer');?>
-
-		</div>
 
 		<!-- jQuery -->
 		<script src="/js/jquery.min.js"></script>
