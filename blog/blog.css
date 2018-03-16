@@ -1,0 +1,58 @@
+/* blog.php */
+.blog-cancel {
+  width: 20px;
+  position: sticky;
+  margin-left: 25px;
+  fill: #ffffff;
+}
+.blog-background {
+  background: no-repeat;
+  background: center;
+  background: fixed;
+  background-repeat: no-repeat;;
+  background-size: cover;
+}
+.blog-div{
+  background-color: #ffffff;
+  align-self: center;
+  width: 55%;
+  height: auto;
+  opacity: 1;
+  border-radius: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 37px;
+  margin-bottom: 30px;
+}
+
+/* Blog-Beitrag */
+.blog-image{
+  border-radius: 10px;
+  width: 95%;
+}
+
+.blog-header{
+  width:100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.blog-text{
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-left:30px;
+  margin-right:30px;
+}
+
+.blog-autor{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  height: auto;
+  background-color: #929292;
+  opacity: 1;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 10%;
+}
