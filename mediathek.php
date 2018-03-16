@@ -114,25 +114,6 @@ require_once 'translate.php';
 	</div>
 				<?php echo __chunk('footer'); ?>
 			</div>
-
-			<div class="fh5co-counters" style="background-image: url(/images/archiv/counter.jpg);" data-stellar-background-ratio="0.5" id="counter-animate">
-				<div class="fh5co-narrow-content animate-box">
-					<div class="row" >
-						<div class="col-md-4 text-center">
-							<span class="fh5co-counter js-counters"><h2><font color="#ffffff">&nbsp;</font></h2></span>
-							<span class="fh5co-counter-label">&nbsp;</span>
-						</div>
-						<div class="col-md-4 text-center">
-							<span class="fh5co-counter js-counters"><h2><font color="#ffffff">&nbsp;</font></h2></span>
-							<span class="fh5co-counter-label">&nbsp;</span>
-						</div>
-						<div class="col-md-4 text-center">
-							<span class="fh5co-counter js-counters"><h2><font color="#ffffff">&nbsp;</font></h2></span>
-							<span class="fh5co-counter-label">&nbsp;</span>
-						</div>
-					</div>
-				</div>
-			</div>
 		<?php echo __chunk('footer');?>
 
 		</div>
