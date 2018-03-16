@@ -106,7 +106,7 @@ require_once 'translate.php';
 			</aside>
 
 			<div id="fh5co-about">
-				<iframe src="https://handschriftenarchiv.rivyt.com" width="100%" height="980px" name="mediathek" scrolling="no" frameborder="0">
+				<iframe src="https://handschriftenarchiv.rivyt.com" width="100%" height="980px;"name="mediathek" scrolling="no" frameborder="0">
 					<p>
 						Ihr Browser ist nicht mehr aktuell. Um diesen Inhalt aufrufen zu können, nutzen Sie bitten diesen Link: <a href="https://handschriftenarchiv.rivyt.com/">Alternative Mediathek</a>
 					</p>
