@@ -24,7 +24,7 @@
 				<li><a href="/<?php echo $use_lang; ?>/kontakt"><?php echo __('contact'); ?></a></li>
 			</ul>
 			<p class="fh5co-social-icon">
-				<a href="https://twitter.com/NotenarchivDKC" target="_blank"><i class="icon-twitter2"></i></a>
+				<a href="https://twitter.com/search?q=%23hsadkc" target="_blank"><i class="icon-twitter2"></i></a>
 				<a href="https://issuu.com/hsa6" target="_blank"><i class="icon-book"></i></a>
 				<a href="https://vimeo.com/handschriftenarchiv" target="_blank"><i class="icon-vimeo"></i></a>
 				<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw" target="_blank"><i class="icon-youtube"></i></a>
