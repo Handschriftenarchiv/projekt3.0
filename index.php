@@ -172,21 +172,6 @@ require_once "translate.php";
 
 		<div id="fh5co-featured">
 			<div class="container-fluid">
-				<div class="row">
-					<div class="row animate-box">
-						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-							<h2>Twitter</h2>
-							<p><?php echo __('twit-recent').' '.__('followus'); ?></p>
-						</div>
-					</div>
-					<div class="post-entry">
-						<center>
-						<a class="twitter-timeline" data-lang="de" data-width="800" data-height="700" data-link-color="#929292" href="https://twitter.com/NotenarchivDKC"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-					</center>
-			</div>
-		</div>
-<br>
-
 		<div class="container">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>Imagefilm 3.0</h2>
