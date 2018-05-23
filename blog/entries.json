@@ -3,66 +3,77 @@
 		"title": "werke-2",
 		"pubDate": "18.01.2018",
 		"thumbnail": "/images/blog/werke/werke-2/2.png",
-		"background": "/images/blog/werke/werke-2/2.png"
+		"background": "/images/blog/werke/werke-2/2.png",
+		"author":[["Autor","Marc Eric Mitzscherling"],["Veröffentlicher","Archivar"]]
 	},
 	{
 		"title": "werke-1",
 		"pubDate": "02.01.2018",
 		"thumbnail": "/images/blog/werke/werke-1/1.png",
-		"background": "/images/blog/werke/werke-1/1.png"
+		"background": "/images/blog/werke/werke-1/1.png",
+		"author":[["Autor","Marc Eric Mitzscherling"],["Veröffentlicher","Archivar"]]
 	},
 	{
 		"title": "vorschau-2018",
 		"pubDate": "01.01.2018",
 		"thumbnail": "/images/blog/vorschau-2018/1.png",
-		"background": "/images/blog/vorschau-2018/1.png"
+		"background": "/images/blog/vorschau-2018/1.png",
+		"author":[["Autor","Marc Eric Mitzscherling"],["Veröffentlicher","Archivar"]]
 	},
 	{
 		"title": "jahr-2017",
 		"pubDate": "27.12.2017",
 		"thumbnail": "/images/blog/jahr-2017/2.png",
-		"background": "/images/blog/jahr-2017/2.png"
+		"background": "/images/blog/jahr-2017/2.png",
+		"author":[["Autor","Marc Eric Mitzscherling"],["Veröffentlicher","Archivar"]]
 	},
 	{
 		"title": "weihnachten-2017",
 		"pubDate": "13.12.2017",
 		"thumbnail": "/images/blog/weihnachten-2017/1.png",
-		"background": "/images/blog/weihnachten-2017/1.png"
+		"background": "/images/blog/weihnachten-2017/1.png",
+		"author":[["Autor","Marc Eric Mitzscherling"],["Veröffentlicher","Archivar"]]
 	},
 	{
 		"title": "netzneutralitaet",
 		"pubDate": "03.11.2017",
 		"thumbnail": "/images/blog/netzneutralitaet/1.png",
-		"background": "/images/blog/netzneutralitaet/1.png"
+		"background": "/images/blog/netzneutralitaet/1.png",
+		"author":[["Autor","Marc Eric Mitzscherling"],["Veröffentlicher","Archivar"]]
 	},
 	{
 		"title": "ratser-liste",
 		"pubDate": "01.10.2017",
 		"thumbnail": "/images/blog/liste/1.svg",
-		"background": "/images/blog/liste/1.svg"
+		"background": "/images/blog/liste/1.svg",
+		"author":[["Autor","Dr. Vera Keller"],["Redaktion","Marc Eric Mitzscherling"],["Veröffentlicher","Archivar"]]
 	},
 	{
 		"title": "gunter-gross",
 		"pubDate": "29.07.2017",
 		"thumbnail": "/images/blog/gross/1.jpg",
-		"background": "/images/blog/gross/1.jpg"
+		"background": "/images/blog/gross/1.jpg",
+		"author":[["Autor","Gunter Groß"],["Redaktion","Dr. Vera Keller"],["Veröffentlicher","Archivar"]]
 	},
 	{
 		"title": "isil-nummer",
 		"pubDate": "07.10.2017",
 		"thumbnail": "/images/blog/isil/1.png",
-		"background": "/images/blog/isil/1.png"
+		"background": "/images/blog/isil/1.png",
+		"author":[["Autor","Marc Eric Mitzscherling"],["Veröffentlicher","Archivar"]]
 	},
 	{
 		"title": "tools-1",
 		"pubDate": "28.09.2017",
 		"thumbnail": "/images/blog/tools/1/1.svg",
-		"background": "/images/blog/tools/1/1.svg"
+		"background": "/images/blog/tools/1/1.svg",
+		"author":[["Autor","Marc Eric Mitzscherling"],["Veröffentlicher","Archivar"]]
 	},
 	{
 		"title": "datenbankentwicklung",
 		"pubDate": "07.10.2017",
 		"thumbnail": "/images/blog/datenbank/1.png",
-		"background": "/images/blog/datenbank/1.png"
+		"background": "/images/blog/datenbank/1.png",
+		"author":[["Autor","Marc Eric Mitzscherling"],["Veröffentlicher","Archivar"]]
 	}
 ]
