@@ -14,6 +14,7 @@ if(!isset($index)){
 	exit;
 }
 $bg_img=$data[$index]['background'];
+$author=$data[$index]['author'];
 $index--;
 if($index<0){
 	$index+=count($data);
@@ -90,8 +91,21 @@ $next=$data[$index]['title'];
 			<div><?php echo __chunk('blog-'.$blog_entry); ?></div>
 		</div>
 
-		<div class="blog-autor">
-			<p><!--INHALT--></p>
+		<div id="spacer-author"></div>
+
+		<div class="author">
+			<!-- <img src="/images/logo.jpg" alt="Logo Handschriftenarchiv"> -->
+			<?php
+				echo '<table class="author" style="margin:auto;"><tbody align="center"><tr>';
+				foreach($author as $val){
+					echo "<td class='author'>$val[1]</td>";
+				}
+				echo '</tr><tr>';
+				foreach($author as $val){
+					echo "<td class='author'><strong>$val[0]</strong></td>";
+				}
+				echo '</tr></tbody></table>';
+			?>
 		</div>
 
 		<!-- jQuery -->
@@ -109,6 +123,20 @@ $next=$data[$index]['title'];
 
 		<!-- Main JS (Do not remove) -->
 		<script src="/js/main.js"></script>
+
+		<script>
+			window.onscroll = function(){
+				// nach wieviel gescrollten px soll Autor-div angezeigt werden
+				const offset=100;
+				if(document.body.scrollTop>offset||document.documentElement.scrollTop>offset){
+					// anzeigen
+					document.querySelector('div.author').classList.add("show");
+				}else{
+					// nicht mehr anzeigen
+					document.querySelector('div.author').classList.remove("show");
+				}
+			}
+		</script>
 
 		<!--
 		<div id="navigation">
