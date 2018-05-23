@@ -50,6 +50,7 @@ intro
 mail-success
 mail-fail
 mail-enter-addr
+mail-enter-text
 name
 mail-addr
 msg
@@ -62,3 +63,4 @@ compos-info
 num-composed
 no-info
 num-composed-sg
+GDPR-phrase
