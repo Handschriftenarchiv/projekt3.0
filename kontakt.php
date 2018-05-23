@@ -118,6 +118,13 @@ require_once 'translate.php';
 			</div>
 		</aside>
 
+		<style>
+			#phoneno span{
+				margin-left: 5px;
+			}
+		</style>
+
+		<a id="contact-form"></a>
 		<div id="fh5co-contact-section">
 			<div class="container">
 				<div class="row">
@@ -125,7 +132,7 @@ require_once 'translate.php';
 						<h3><?php echo __('contact-top'); ?></h3>
 						<ul class="contact-info">
 							<li><i class="icon-location-pin"></i>Dornblüthstraße 4, 01277 Dresden, Deutschland</li>
-							<li><i class="icon-phone2"></i><span>0351</span><span>3153572</span></li>
+							<li id="phoneno"><i class="icon-phone2"></i><span>+49</span><span>351</span><span>3153572</span></li>
 							<li><i class="icon-mail"></i>handschriftenarchiv<br>[ät]protonmail.com</li>
 							<li><i class="icon-globe2"></i><a href="http://hsa.bplaced.de/">hsa.bplaced.com</a></li>
 						</ul>
@@ -133,21 +140,28 @@ require_once 'translate.php';
 					<div class="col-md-7 col-md-push-1 animate-box">
 						<?php
 						$process=isset($_POST['name']);
-						$valid=!empty($_POST['email'])&&filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+						$valid=!empty($_POST['email'])&&filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)&&!empty($_POST['text']);
 						if($process&&$valid){
-							$header="From: \"".str_replace('"',"",$_POST[name])."\" <$_POST[email]>\nContent-Type: text/plain\n";
-							if(mail('handschriftenarchiv@protonmail.com','Anfrage Kontakt - Handschriftenarchiv Dresdner Kreuzchor',$_POST['text'],$header)){
+							$header="From: \"".str_replace('"',"",$_POST['name'])."\" <$_POST[email]>\nContent-Type: text/plain\n";
+							if(@mail('handschriftenarchiv@protonmail.com','Anfrage Kontakt - Handschriftenarchiv Dresdner Kreuzchor',$_POST['text'],$header)){
 								echo "<p>".__('mail-success')."</p>";
 								$mail=true;
 							}else{
 								echo "<p>".__('mail-fail')."</p>";
 							}
 						}elseif($process){
-							echo "<p>".__('mail-enter-addr')."</p>";
+							echo '<p>';
+							if(empty($_POST['email'])||!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+								echo __('mail-enter-addr').'<br>';
+							}
+							if(empty($_POST['text'])){
+								echo __('mail-enter-text');
+							}
+							echo '</p>';
 						}
 						if(!isset($mail)){
 						?>
-						<form method="POST">
+						<form method="POST" action="#contact-form">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
@@ -156,16 +170,19 @@ require_once 'translate.php';
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="<?php echo __('mail-addr'); ?>" name="email"<?php if(isset($_POST['email'])){echo " value=\"$_POST[email]\"";}?>>
+										<input type="text" class="form-control" placeholder="<?php echo __('mail-addr'); ?> *" name="email"<?php if(isset($_POST['email'])){echo " value=\"$_POST[email]\"";}?>>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
-										<textarea name="text" class="form-control" id="" cols="30" rows="7" placeholder="<?php echo __('msg'); ?>"><?php if(isset($_POST['text'])){echo $_POST['text'];}?></textarea>
+										<textarea name="text" class="form-control" id="" cols="30" rows="7" placeholder="<?php echo __('msg'); ?> *"><?php if(isset($_POST['text'])){echo $_POST['text'];}?></textarea>
 									</div>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
+										<p>
+											<?php echo __('GDPR-phrase'); ?>
+										</p>
 										<input type="submit" value="<?php echo __('mail-send'); ?>" class="btn btn-primary">
 									</div>
 								</div>
