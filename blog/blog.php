@@ -82,7 +82,7 @@ $next=$data[$index]['title'];
 		<![endif]-->
 
 	</head>
-	<a href="/<?ph echo $use_lang; ?>/blog" id="exit"></a>
+	<a href="/<?php echo $use_lang; ?>/blog" id="exit"></a>
 
 	<body style=" background-image: url(<?php echo $bg_img; ?>);">
 
