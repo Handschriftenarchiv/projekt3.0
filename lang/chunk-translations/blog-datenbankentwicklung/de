@@ -1,51 +1,16 @@
-<aside id="fh5co-hero" class="js-fullheight">
-	<div class="flexslider js-fullheight">
-		<ul class="slides">
-		<li style="background-image: url(/images/blog/datenbank/1.png);">
-			<div class="overlay-gradient"></div>
-			<div class="container">
-				<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
-					<div class="slider-text-inner">
-						<div class="desc">
-							<span>07. Okt. 2017</span>
-							<h2>Zur Datenbank</h2>
-							<p class="fh5co-lead">Aktuelle Information zu Online-Datenbank des Handschriftenarchivs.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</li>
-		</ul>
-	</div>
-</aside>
-<div class="container">
-		<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-			<h2>Hinweis:</h2>
-			<p>Im Rahmen der noch laufenden Benutzungsoptimierung sowie Verbesserung und Detaillierung der Datenbankeinträge, kann es vorkommen, dass es verfälschte Suchergebnisse gibt oder unvollständige Angaben zu einer Noten existieren. So kann e beispielsweise passieren, dass nur unvollständige oder visuell nicht ansprechnde Digitalisate angezeigt werden. Für dieses Fall nutzen Sie bitte am Ende der Wesbite unserern Link zu issuu.com wo alle Digitalisierungen veröffentlicht werden. In solch einem Fall können Sie gerne den Link am Ende der Seite benutzen, um einen Fehler zu melden. Wir bemühen uns, die Arbeiten an der Datenbank so schnell wir möglich fertigzustellen, um ein unverfälschtes und detailliertes Suchergebnis bieten zu können.</p>
-			<br>
-			<div class="author">
-			<img src="/images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
-				<table class="author">
-					<tbody align="center">
-						</tr>
-						<tr style="text-align: center;">
-							<td class="author"><strong>Marc Eric Mitzscherling</strong></td>
-							<td class="author"><strong> </strong></td>
-							<td class="author"><strong></strong></td>
-							<td class="author"><strong> </strong></td>
-							<td class="author"><strong>Archivar</strong></td>
-						</tr>
-						<tr style="text-align: center;">
-							<td class="author">Autor</td>
-							<td class="author"><strong> </strong></td>
-							<td class="author"></td>
-							<td class="author"><strong> </strong></td>
-							<td class="author">Veröffentlicher</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<br>
-			</center>
-			</div>
-		</div>
+<img class="blog-image blog-header" src="/images/blog/datenbank/1.png"/>
+<div class="about-content blog-text">
+	<h2>Zur Datenbank</h2>
+	<h4><i>Aktuelle Information zur Online-Datenbank des Handschriftenarchivs.</i></h2>
+	<blockquote>
+	<h4>Hinweis:</h4>
+	<p>
+		Im Rahmen der noch laufenden Benutzungsoptimierung sowie Verbesserung und Detaillierung der Datenbankeinträge,
+		kann es vorkommen, dass es verfälschte Suchergebnisse gibt oder unvollständige Angaben zu einer Noten existieren.
+		So kann e beispielsweise passieren, dass nur unvollständige oder visuell nicht ansprechnde Digitalisate angezeigt werden.
+		Für dieses Fall nutzen Sie bitte am Ende der Wesbite unserern Link zu issuu.com wo alle Digitalisierungen veröffentlicht werden.
+		In solch einem Fall können Sie auch gerne den Link am Ende der Seite benutzen, um einen Fehler zu melden.
+		Wir bemühen uns, die Arbeiten an der Datenbank so schnell wir möglich fertigzustellen,
+		um ein unverfälschtes und detailliertes Suchergebnis bieten zu können.</p>
+	</blockquote>
+</div>

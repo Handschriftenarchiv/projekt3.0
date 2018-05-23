@@ -67,13 +67,13 @@ $next=$data[$index]['title'];
 		<link rel="stylesheet" href="/css/icomoon.css">
 		<!-- Bootstrap  -->
 		<link rel="stylesheet" href="/css/bootstrap.css">
-		<!-- Blog-Stylesheet -->
-		<link rel="stylesheet" href="/blog/blog.css">
-
 		<!-- Flexslider  -->
 		<link rel="stylesheet" href="/css/flexslider.css">
 
 		<link rel="stylesheet" href="/css/style.css">
+
+		<!-- Blog-Stylesheet -->
+		<link rel="stylesheet" href="/blog/blog.css">
 
 		<!-- Modernizr JS -->
 		<script src="/js/modernizr-2.6.2.min.js"></script>
@@ -83,18 +83,19 @@ $next=$data[$index]['title'];
 		<![endif]-->
 
 	</head>
-	<a href="/<?php echo $use_lang; ?>/blog" id="exit"></a>
 
-	<body style=" background-image: url(<?php echo $bg_img; ?>);">
+	<body>
+		<div id="bg-img" style="background-image: url(<?php echo $bg_img; ?>);"></div>
+		<a href="/<?php echo $use_lang; ?>/blog" id="exit"></a>
 
 		<div class="blog-div">
-			<div><?php echo __chunk('blog-'.$blog_entry); ?></div>
+			<?php echo __chunk('blog-'.$blog_entry); ?>
 		</div>
-
-		<div id="spacer-author"></div>
+		<div id="author-spacer"></div>
 
 		<div class="author">
 			<!-- <img src="/images/logo.jpg" alt="Logo Handschriftenarchiv"> -->
+			<div id="profile"></div>
 			<?php
 				echo '<table class="author" style="margin:auto;"><tbody align="center"><tr>';
 				foreach($author as $val){
@@ -127,7 +128,7 @@ $next=$data[$index]['title'];
 		<script>
 			window.onscroll = function(){
 				// nach wieviel gescrollten px soll Autor-div angezeigt werden
-				const offset=100;
+				const offset=200;
 				if(document.body.scrollTop>offset||document.documentElement.scrollTop>offset){
 					// anzeigen
 					document.querySelector('div.author').classList.add("show");
@@ -135,6 +136,12 @@ $next=$data[$index]['title'];
 					// nicht mehr anzeigen
 					document.querySelector('div.author').classList.remove("show");
 				}
+			};
+			document.body.onload=function(){
+				var height=document.querySelector('div.author').offsetHeight;
+				console.log(height);
+				document.querySelector('#author-spacer').style.height=height+"px";
+				console.log(document.querySelector('#author-spacer').style.height);
 			}
 		</script>
 

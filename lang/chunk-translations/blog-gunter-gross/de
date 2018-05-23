@@ -1,12 +1,10 @@
-<!-- Blog-Stylesheet -->
-<link rel="stylesheet" href="/blog/blog.css">
-			<img class="blog-image blog-header" src="/images/blog/gross/1.jpg" alt="Gunter Gross - Titelbild"></img>
-				<div class="about-content blog-text">
-					<br>
-					<h2>Gunther Groß erinnert sich</h2>
-					<h4><i>Gunther Groß, Dr. Vera Keller</i></h4>
-					<blockquote>
-						<p>Das sechste Schuljahr, mein zweites Jahr im Kreuzchor, ging bereits zu Ende. Ich war dabei, nach der Probe im großen Gesangssaal die Noten in Ordnung zu bringen. Eben hatte sich herausgestellt, dass die Partitur des Mendelssohnschen Engelterzetts – es sollte am kommenden Tage bei einem „Geburtstagsständchen“ erklingen – fehlte. Nun war mir aufgetragen worden, eine neue Partitur aus den vorhandenen Stimmen zusammenzustellen, ein nicht ganz alltägliches Unterfangen für mich knapp Zwölfjährigen. Der Professor [Rudolf Mauersberger] hatte mich einmal im Klassenzimmer Noten schreiben sehen, war anscheinend zufrieden gewesen und hatte sich daran jetzt wieder erinnert. Ich durfte ihn nicht enttäuschen. Endlich, nach dreimaligem Ansetzen, gelang das Kunststück; ich war durch das Vertrauen, das der „Chef“ in mich setzte, über mich selbst hinausgewachsen. Glücklich stieg ich an jenem Abend ins Bett, nicht ahnend, dass dieses Notenblatt für meine gesamte Kruzianerzeit bestimmend werden sollte. Einige Tage später schon war ich als Notenschreiber bekannt. An Beschäftigung fehlte es nie; denn wo hundertdreißig Jungen täglich mehrere Stunden singen, verbraucht sich das Chormaterial unter der Hand. Bald jedoch wuchs mein Aufgabenbereich: Die Schütz-Tage des Kreuzchores nahten wieder. Unversehens war ich in den Strudel der Vorbereitungen mit einbezogen.</p>
+<img class="blog-image blog-header" src="/images/blog/gross/1.jpg" alt="Gunter Gross - Titelbild"/>
+<div class="about-content blog-text">
+	<br>
+	<h2>Gunther Groß erinnert sich</h2>
+	<h4><i>Gunther Groß, Dr. Vera Keller</i></h4>
+	<blockquote>
+		<p>Das sechste Schuljahr, mein zweites Jahr im Kreuzchor, ging bereits zu Ende. Ich war dabei, nach der Probe im großen Gesangssaal die Noten in Ordnung zu bringen. Eben hatte sich herausgestellt, dass die Partitur des Mendelssohnschen Engelterzetts – es sollte am kommenden Tage bei einem „Geburtstagsständchen“ erklingen – fehlte. Nun war mir aufgetragen worden, eine neue Partitur aus den vorhandenen Stimmen zusammenzustellen, ein nicht ganz alltägliches Unterfangen für mich knapp Zwölfjährigen. Der Professor [Rudolf Mauersberger] hatte mich einmal im Klassenzimmer Noten schreiben sehen, war anscheinend zufrieden gewesen und hatte sich daran jetzt wieder erinnert. Ich durfte ihn nicht enttäuschen. Endlich, nach dreimaligem Ansetzen, gelang das Kunststück; ich war durch das Vertrauen, das der „Chef“ in mich setzte, über mich selbst hinausgewachsen. Glücklich stieg ich an jenem Abend ins Bett, nicht ahnend, dass dieses Notenblatt für meine gesamte Kruzianerzeit bestimmend werden sollte. Einige Tage später schon war ich als Notenschreiber bekannt. An Beschäftigung fehlte es nie; denn wo hundertdreißig Jungen täglich mehrere Stunden singen, verbraucht sich das Chormaterial unter der Hand. Bald jedoch wuchs mein Aufgabenbereich: Die Schütz-Tage des Kreuzchores nahten wieder. Unversehens war ich in den Strudel der Vorbereitungen mit einbezogen.</p>
 					</blockquote>
 					<img class="blog-image" src="/images/blog/gross/1.jpg" alt="Gunter Gross">
 					<br><br>
@@ -25,5 +23,3 @@
 						</p>
 					</blockquote>
 				</div>
-				<br>
-				<br>
