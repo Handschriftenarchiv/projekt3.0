@@ -155,7 +155,11 @@ if(isset($_GET['js'])){
 if(!isset($_GET['mode'])){
 	$s=$_GET['search'];
 	$sql="SELECT * FROM archivalien WHERE Titel like '%$s%' OR Komponist like '%$s%' OR Bearbeiter like '%$s%' OR Dichter like '%$s%' OR Setzer like '%$s%' OR Typus like '%$s%' OR Verlag like '%$s%' ".
-	"OR Verfassungsdatum like '%$s%' OR Sprache like '%$s%' OR Anzahl like '%$s%' OR Sammlung like '%$s%'OR Standort like '%$s%' OR Signatur like '%".stripSig($s)."%'";
+	"OR Verfassungsdatum like '%$s%' OR Sprache like '%$s%' OR Anzahl like '%$s%' OR Sammlung like '%$s%'OR Standort like '%$s%'";
+	$sig = stripSig($s);
+	if(!empty($sig)){
+		$sql.=" OR Signatur like '%".stripSig($s)."%'";
+	}
 	$res=mysqli_query($con,$sql);
 	while($dsatz=mysqli_fetch_assoc($res)){
 		echo "\t\t\t\t\t\t\t<blockquote><a href=\"details/".formatSig($dsatz['Signatur'])."\"><p>".$dsatz['Titel']."<br><i>".$dsatz['Komponist']."</i></p></a></blockquote><br>\n";
