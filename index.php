@@ -156,7 +156,7 @@ require_once "translate.php";
 						<div class="col-md-8 col-md-offset-2 animate-box text-center">
 							<center>
 							<div class="form-group" style="position: center">
-								<input type="submit" value="Beta Version" class="btn-lable">
+								<input type="submit" value="Version Eins Punkt Zwei" class="btn-lable">
 							</div>
 						</center>
 							<h2 class="intro-heading"><?php echo __('hsa'); ?></h2>
