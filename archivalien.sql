@@ -1,48 +1,19 @@
-﻿-- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Erstellungszeit: 24. Mai 2018 um 16:46
--- Server-Version: 10.1.30-MariaDB
--- PHP-Version: 7.2.1
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
---
--- Datenbank: `handschriften`
---
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `analytics`
---
-
-CREATE TABLE IF NOT EXISTS `analytics` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `analytics`;
+CREATE TABLE `analytics` (
+  `id` bigint(20) UNSIGNED NOT NULL,
   `page` text NOT NULL,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `additional` text,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
-
---
--- Daten für Tabelle `analytics` zur besseren Übersicht nicht enthalten
---
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `archivalien`
---
+  `additional` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 DROP TABLE IF EXISTS `archivalien`;
 CREATE TABLE `archivalien` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ID` int(11) NOT NULL,
   `Titel` varchar(100) NOT NULL,
   `Komponist` varchar(50) DEFAULT NULL,
   `Bearbeiter` varchar(50) DEFAULT NULL,
@@ -58,37 +29,32 @@ CREATE TABLE `archivalien` (
   `Standort` varchar(50) NOT NULL,
   `Bemerkungen` text,
   `Audiolink` varchar(255) DEFAULT NULL,
-  `Dokumentlink` text DEFAULT NULL,
-  `Signatur` varchar(7) NOT NULL,
-  PRIMARY KEY (`ID`),
-  UNIQUE KEY `Signatur` (`Signatur`)
+  `Dokumentlink` text,
+  `Signatur` varchar(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Daten für Tabelle `archivalien`
---
-
+TRUNCATE TABLE `archivalien`;
 INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, `Setzer`, `Typus`, `Verlag`, `Verfassungsdatum`, `Sprache`, `Schrift`, `Anzahl`, `Sammlung`, `Standort`, `Bemerkungen`, `Audiolink`, `Dokumentlink`, `Signatur`) VALUES
 (1, 'Gott der Herr ist Sonn und Schild (Kantate Nr. 79; Kantate zum Reformationstag)', 'Johann Sebastian Bach', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 28.02.1950', 'ger', 'Latn', '12x Sopran', 'Archiv', 'Kasten 1', '- Namen und Kürzel:<br>Heinz-Jürgen Burmeister<br>\"Werner Hocke\"<br>\"kg.\"<br>\"Ch.\"<br>\"E.\"<br>- zwei Noten enthalten am Ende noch griech. Buchstaben : \"&epsilon;&beta;&sigma;&chi;\" und \"&epsilon;&iota;&chi;&lambda;&epsilon;&rho;\"', NULL, 'gott_der_herr_10 gott_der_herr_9 gott_der_herr_8 gott_der_herr_7 gott_der_herr_6 gott_der_herr_5 gott_der_herr_4 gott_der_herr_2 gott_der_herr_2 gott_der_herr_1', 'JSBH001'),
 (2, 'Kein Schöner Land', 'Volksweise', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Tenor II', 'Archiv', 'Kasten 3', NULL, NULL, 'kein_sch__ner_land', 'VLKH010'),
-(3, 'Der Faulbeerbaum', 'Alexander Tichonowitsch Gretschaninow', NULL, 'Sergei Alexandrowitsch Jessenin', 'Gottfried Heder', 'Handschrift', NULL, NULL, 'rus', 'Latn', '5x Sopran<br>5x Alt', 'Archiv', 'Kasten 8', 'für Knabenchor<br>Kruzianer und Rantsdiskantist Dr.rer.nat. Gottfried Heder (Abgang vom Kreuzchor 1952)', NULL, 'der_faulbeerbaum_alt_hands2 der_faulbeerbaum_sopran_hands2 der_faulbeerbaum_alt_hands der_faulbeerbaum_sopran_hands der_faulbeerbaum_alt der_faulbeerbaum_sopran', 'ATGH001'),
+(3, 'Der Faulbeerbaum', 'Alexander Tichonowitsch Gretschaninow', NULL, 'Sergei Alexandrowitsch Jessenin', 'Gottfried Heder', 'Handschrift', NULL, NULL, 'rus', 'Latn', '5x Sopran<br>5x Alt', 'Archiv', 'Kasten 8', 'für Knabenchor <br> Kruzianer und Rantsdiskantist Dr.rer.nat. Gottfried Heder (Abgang vom Kreuzchor 1952)', NULL, 'der_faulbeerbaum_alt_hands2 der_faulbeerbaum_sopran_hands2 der_faulbeerbaum_alt_hands der_faulbeerbaum_sopran_hands der_faulbeerbaum_alt der_faulbeerbaum_sopran', 'ATGH001'),
 (4, 'Maria im Walde', 'Carl Riedel', NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>4x Alt<br>4x Tenor<br>4x Bass', 'Archiv', 'Kasten 9', NULL, NULL, NULL, 'CARD003'),
 (5, 'Weihnachtswunder', 'Carl Riedel', NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>3x Alt<br>4x Tenor<br>4xBass', 'Archiv', 'Kasten 9', NULL, NULL, NULL, 'CARD004'),
 (6, 'Christkindleins Bergfahrt', 'Carl Riedel', NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '4x Sopran<br>4x Alt<br>4x Tenor<br>4x Bass', 'Archiv', 'Kasten 9', 'Handschrift in Kasten 6!', NULL, NULL, 'CARD001'),
-(7, 'Introitus für den 11. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 113', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK019'),
-(9, 'Introitus für den 9. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 40', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '2x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK047'),
-(10, 'Introitus für den Buß- und Bettag', NULL, NULL, 'Psalm 85', 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x A5<br>1x A4', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBH048'),
-(11, 'Introitus für den 21. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 19', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK034'),
-(12, 'Introitus für den 10. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 74', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK018'),
-(13, 'Introitus für den Sonntag Estomihi', NULL, NULL, 'Psalm 31', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK052'),
-(14, 'Introitus für Judica, Palmarum, Gründonnerstag und Karfreitag', NULL, NULL, 'Psalm 102', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK072'),
+(7, 'Introitus für den 11. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 113', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK018'),
+(9, 'Introitus für den 9. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 40', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '2x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK046'),
+(10, 'Introitus für den Buß- und Bettag', NULL, NULL, 'Psalm 85', 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x A5<br>1x A4', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBH047'),
+(11, 'Introitus für den 21. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 19', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK033'),
+(12, 'Introitus für den 10. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 74', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK017'),
+(13, 'Introitus für den Sonntag Estomihi', NULL, NULL, 'Psalm 31', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK051'),
+(14, 'Introitus für Judica, Palmarum, Gründonnerstag und Karfreitag', NULL, NULL, 'Psalm 102', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK071'),
 (15, 'Ergänzung zum Introitus (Invocavit, Reminiscere, Oculi, Laetare)', NULL, NULL, 'verschiedene Psalmen', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK008'),
-(16, 'Introiten-Sammlung - Beilagen', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '4x', 'Introitensammlung', 'Kasten 11', '- Zettel: Vorderseite mit Schreibmaschine: Probentermine für Ostermette (ca. 1950), Rückseite handschriftliche Ergänzungen zu Introiten<br>- Zettel (3x): Rückseite maschinell geschrieben Brief: Von: Bund der Landeskirchen in der Deutschen Demokratischen Republik, 28.10.1980; An: Landesjugendpfarrer der Gliedkirchen des Bundes der Ev. Kirchen in der DDR; Betreff: Friedensdekade und Bußtag 1980Vorderseite: Handschriftliche Reihenfolge der (damaligen) Intoriten-Sammlung', NULL, NULL, 'UNBH011'),
-(17, 'Uns ist ein Kind geboren', NULL, NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '5x', 'Introitensammlung', 'Kasten 11', 'Handschriftliche Ergänzungen<br>ehemals EG 602', NULL, NULL, 'UNBD009'),
-(18, 'Introitus für den 6. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 139', 'Kruzainer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x', 'Introitensammlung', 'Kasten 11', 'Beilage: Programmheft mit Introitus', NULL, NULL, 'UNBK046'),
+(16, 'Introiten-Sammlung - Beilagen', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '4x', 'Introitensammlung', 'Kasten 11', '- Zettel: Vorderseite mit Schreibmaschine: Probentermine für Ostermette (ca. 1950), Rückseite handschriftliche Ergänzungen zu Introiten<br>- Zettel (3x): Rückseite maschinell geschrieben Brief: Von: Bund der Landeskirchen in der Deutschen Demokratischen Republik, 28.10.1980; An: Landesjugendpfarrer der Gliedkirchen des Bundes der Ev. Kirchen in der DDR; Betreff: Friedensdekade und Bußtag 1980Vorderseite: Handschriftliche Reihenfolge der (damaligen) Intoriten-Sammlung', NULL, NULL, 'UNBH010'),
+(17, 'Uns ist ein Kind geboren', NULL, NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '5x', 'Introitensammlung', 'Kasten 11', 'Handschriftliche Ergänzungen<br>ehemals EG 602', NULL, NULL, 'UNBD088'),
+(18, 'Introitus für den 6. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 139', 'Kruzainer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x', 'Introitensammlung', 'Kasten 11', 'Beilage: Programmheft mit Introitus', NULL, NULL, 'UNBK044'),
 (19, 'Introitus für den 6. Sonntag nach Trinitatis', NULL, NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK045'),
-(20, 'Introitus für Judica', NULL, NULL, 'Psalm 102', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK071'),
-(21, 'Introitus für den 5. Sonntag nach Trinitatis', NULL, NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK044'),
+(20, 'Introitus für Judica', NULL, NULL, 'Psalm 102', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK070'),
+(21, 'Introitus für den 5. Sonntag nach Trinitatis', NULL, NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK043'),
 (22, 'Der 150. Psalm', 'Sethus Calvisius', NULL, NULL, NULL, 'Druck', 'Breitkopf & Härtel', NULL, 'ger', 'Latn', '11x Sopran<br>6x Alt<br>9x Tenor<br>9x Bass', 'Archiv', 'Kasten 9', NULL, NULL, NULL, 'SCAD001'),
 (23, 'Stadt am Strom', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '2x Sopran<br>2x Alt<br>2x Tenor<br>3x Bass', 'Archiv', 'Kasten 12', NULL, NULL, NULL, 'RMAK021'),
 (24, 'Ave Maria', 'Anton Bruckner', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, '1968', '?', 'Latn', '5x Partitur ', 'Archiv', 'Kasten 12', NULL, NULL, NULL, 'ABRK001'),
@@ -107,71 +73,71 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (37, 'Danket dem Herrn', 'Franz-Meyer Ambros', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x Sopran<br>1x Alt<br>1x Tenor<br>1x Bass', 'Archiv', 'Kasten 12', NULL, NULL, NULL, 'UNBK004'),
 (38, 'Laßt uns lauschen', 'Volksweise', 'U. Schicha', NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Gesamtchor', 'Archiv', 'Kasten 12', NULL, NULL, NULL, 'VLKK011'),
 (39, 'Dresdner Requiem', 'Rudolf Mauersberger', NULL, NULL, 'Gunter Groß', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x Knabenchor', 'Archiv', 'Kasten 12', NULL, NULL, NULL, 'RMAK008'),
-(40, 'Introitus für den Sonntag Jubilate', NULL, NULL, 'Psalm 66', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', 'Psalm 66', NULL, NULL, 'UNBK055'),
-(41, 'Liturgische Ergänzung zu den Sonntagen Invocavit, Reminiscere, Okuli und Lätare', NULL, NULL, 'Psalm 143', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK081'),
-(42, 'Introitus für den letzten Sonntag nach Trinitatis', NULL, NULL, 'Psalm 50', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x DIN A5<br>1x DIN A4<br>1x ehemals DIN A4', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK050'),
+(40, 'Introitus für den Sonntag Jubilate', NULL, NULL, 'Psalm 66', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', 'Psalm 66', NULL, NULL, 'UNBK054'),
+(41, 'Liturgische Ergänzung zu den Sonntagen Invocavit, Reminiscere, Okuli und Lätare', NULL, NULL, 'Psalm 143', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK080'),
+(42, 'Introitus für den letzten Sonntag nach Trinitatis', NULL, NULL, 'Psalm 50', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x DIN A5<br>1x DIN A4<br>1x ehemals DIN A4', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK049'),
 (43, '25. Sonntag nach Trinitatis (Eingangsliturgie der Kreuzkirche)', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x DIN A5', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'RMAK002'),
-(44, 'Introitus für den vorletzten Sonntag nach Trinitatis', NULL, NULL, 'Psalm 143', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x DIN A5<br>1x DIN A4', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK065'),
+(44, 'Introitus für den vorletzten Sonntag nach Trinitatis', NULL, NULL, 'Psalm 143', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x DIN A5<br>1x DIN A4', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK064'),
 (45, '24. Sonntag nach Trinitatis (Liturgie der Kreuzkirche)', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x DIN A5', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'RMAK001'),
-(46, 'Introitus für das Reformationsfest', NULL, NULL, 'Psalm 40', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x DIN A5', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK013'),
-(47, 'Introitus für den Michaelistag', NULL, NULL, 'Psalm 103, 19-22', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x DIN A5', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK051'),
-(48, 'Introitus für den 14. Sonntag nach Trinitatis (Gedenktag der Kirchweih)', NULL, NULL, 'Psalm 84', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x DIN A5', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK023'),
-(49, 'Introitus für den 15. Sonntag nach Trinitatis (1. Sonntag nach Michaelis; Erntedankfest)', NULL, NULL, 'Psalm 104', ' Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK025'),
-(50, 'Introitus for den 24. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 39', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK012'),
-(51, 'Introitus für den 23. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 138, 2-3', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '3x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK036'),
-(52, 'Introitus für den 22. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 130, 5-8', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK035'),
-(53, 'Introitus für den 20. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 119', ' Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK033'),
-(54, 'Introitus für den 19. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 78, 2-4', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK029'),
-(55, 'Introitus für den 18. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 122', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', 'ersetzt durch Nr. 618 im Evangelischen Kirchengesangbuch', NULL, NULL, 'UNBK028'),
-(56, 'Introitus für den 17. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 119', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK027'),
-(57, 'Introitus für den 16. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 51', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK026'),
-(58, 'Introitus für den 15. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 86', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK024'),
-(59, 'Introitus für den 14. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 146', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK022'),
-(60, 'Introitus für den 13. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 73', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', '', NULL, NULL, 'UNBK021'),
-(61, 'Introitus für den 12. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 71', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK020'),
-(62, 'Introitus für den 4. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 27', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK043'),
-(63, 'Introitus für den 3. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 25, 1, 4, 8, 9', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK040'),
-(64, 'Introitus für den 2. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 18, 2, 3, 7, 47', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK032'),
-(65, 'Introitus für den 1. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 13', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK017'),
+(46, 'Introitus für das Reformationsfest', NULL, NULL, 'Psalm 40', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x DIN A5', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK012'),
+(47, 'Introitus für den Michaelistag', NULL, NULL, 'Psalm 103, 19-22', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x DIN A5', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK050'),
+(48, 'Introitus für den 14. Sonntag nach Trinitatis (Gedenktag der Kirchweih)', NULL, NULL, 'Psalm 84', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x DIN A5', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK022'),
+(49, 'Introitus für den 15. Sonntag nach Trinitatis (1. Sonntag nach Michaelis; Erntedankfest)', NULL, NULL, 'Psalm 104', ' Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK024'),
+(50, 'Introitus for den 24. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 39', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK011'),
+(51, 'Introitus für den 23. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 138, 2-3', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '3x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK035'),
+(52, 'Introitus für den 22. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 130, 5-8', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK034'),
+(53, 'Introitus für den 20. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 119', ' Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK032'),
+(54, 'Introitus für den 19. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 78, 2-4', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK028'),
+(55, 'Introitus für den 18. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 122', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', 'ersetzt durch Nr. 618 im Evangelischen Kirchengesangbuch', NULL, NULL, 'UNBK027'),
+(56, 'Introitus für den 17. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 119', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK026'),
+(57, 'Introitus für den 16. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 51', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK025'),
+(58, 'Introitus für den 15. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 86', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK023'),
+(59, 'Introitus für den 14. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 146', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK021'),
+(60, 'Introitus für den 13. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 73', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', '', NULL, NULL, 'UNBK020'),
+(61, 'Introitus für den 12. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 71', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK019'),
+(62, 'Introitus für den 4. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 27', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK042'),
+(63, 'Introitus für den 3. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 25, 1, 4, 8, 9', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK039'),
+(64, 'Introitus für den 2. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 18, 2, 3, 7, 47', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK031'),
+(65, 'Introitus für den 1. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 13', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK015'),
 (66, 'Introitus für den 1. Sonntag nach Trinitatis', NULL, NULL, 'Psalm 34', 'Kruzianer', 'Kopie von Handschrift', 'Kruzianer ', NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK016'),
-(67, 'Introitus für das Trinitatisfest', NULL, NULL, 'Psalm 145', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK014'),
-(68, 'Introitus für Pfingsten', NULL, NULL, 'Psalm 118', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK075'),
-(69, 'Introitus für Himmelfahrt', NULL, NULL, 'Psalm 47', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK069'),
-(70, 'Introitus für den Sonntag Exaudi', NULL, NULL, 'Psalm 27', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK053'),
-(71, 'Introtius für den Sonntag Rogate', NULL, NULL, 'Psalm 66, 16, 17, 20', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '2x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK078'),
-(72, 'Introitus für den Sonntag Rogate', NULL, NULL, 'Psalm 95', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK062'),
-(73, 'Introitus für den Sonntag Kantate', NULL, NULL, 'Psalm 98', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK056'),
-(74, 'Introitus für Quasimodogeniti, Misericordias Domini, Jubilate, Kantate und Rogate', NULL, NULL, 'Psalm 66', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK076'),
-(75, 'Introitus zum Sonntag Misericordias Domini', NULL, NULL, 'Psalm 23', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK077'),
-(76, 'Introitus für den Sonntag Quasimodogeniti', NULL, NULL, 'Psalm 116', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK060'),
-(77, 'Introitus für Ostern', NULL, NULL, 'Psalm 118', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK074'),
-(78, 'Introitus für den Karfreitag ', NULL, NULL, 'Psalm 22', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK049'),
-(79, 'Introitus für den Sonntag Palmarum', NULL, NULL, 'Psalm 22', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK059'),
-(80, 'Introitus für Iudica', NULL, NULL, 'Psalm 102', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK070'),
-(81, 'Introitus für den Sonntag Laetare', NULL, NULL, 'Psalm 122', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK057'),
-(82, 'Introitus für den Sonntag Oculi', NULL, NULL, 'Psalm 25', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK058'),
-(83, 'Introitus für den Sonntag Reminiscere', NULL, NULL, 'Psalm 10', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK061'),
-(84, 'Introitus für den Sonntag Invokavit', NULL, NULL, 'Psalm 91', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK054'),
-(85, 'Introitus für Estomihi (und für Septuageimae und Sexagesimae)', NULL, NULL, 'Psalm 31', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK068'),
-(86, 'Introitus für den Sonntag Sexagesimae', NULL, NULL, 'Psalm 119, 89-90, 105', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK064'),
-(87, 'Introitus für den Sonntag Septuagesimae', NULL, NULL, 'Psalm 31', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK063'),
-(88, 'Introitus für die [den letzten] Sonntag[e] nach Epiphanias', NULL, NULL, 'Psalm 97', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK066'),
-(89, 'Introitus für den 4. Sonntag nach Epiphanias', NULL, NULL, 'Psalm 93', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK042'),
-(90, 'Introitus für den 3. Sonntag nach Epiphanias', NULL, NULL, 'Psalm 67', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK039'),
-(91, 'Introitus für den 2. Sonntag nach Epiphanias', NULL, NULL, 'Psalm 105', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK031'),
-(92, 'Introitus für den 1. Sonntag nach Epiphanias', NULL, NULL, 'Psalm 89', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK015'),
-(93, 'Introitus für den 25. [drittletzten] Sonntag nach Trinitatis', NULL, NULL, 'Psalm 85', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK037'),
+(67, 'Introitus für das Trinitatisfest', NULL, NULL, 'Psalm 145', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK013'),
+(68, 'Introitus für Pfingsten', NULL, NULL, 'Psalm 118', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK074'),
+(69, 'Introitus für Himmelfahrt', NULL, NULL, 'Psalm 47', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK068'),
+(70, 'Introitus für den Sonntag Exaudi', NULL, NULL, 'Psalm 27', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK052'),
+(71, 'Introtius für den Sonntag Rogate', NULL, NULL, 'Psalm 66, 16, 17, 20', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '2x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK077'),
+(72, 'Introitus für den Sonntag Rogate', NULL, NULL, 'Psalm 95', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK061'),
+(73, 'Introitus für den Sonntag Kantate', NULL, NULL, 'Psalm 98', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK055'),
+(74, 'Introitus für Quasimodogeniti, Misericordias Domini, Jubilate, Kantate und Rogate', NULL, NULL, 'Psalm 66', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK075'),
+(75, 'Introitus zum Sonntag Misericordias Domini', NULL, NULL, 'Psalm 23', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK076'),
+(76, 'Introitus für den Sonntag Quasimodogeniti', NULL, NULL, 'Psalm 116', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK059'),
+(77, 'Introitus für Ostern', NULL, NULL, 'Psalm 118', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK073'),
+(78, 'Introitus für den Karfreitag ', NULL, NULL, 'Psalm 22', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK048'),
+(79, 'Introitus für den Sonntag Palmarum', NULL, NULL, 'Psalm 22', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK058'),
+(80, 'Introitus für Iudica', NULL, NULL, 'Psalm 102', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK069'),
+(81, 'Introitus für den Sonntag Laetare', NULL, NULL, 'Psalm 122', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK056'),
+(82, 'Introitus für den Sonntag Oculi', NULL, NULL, 'Psalm 25', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK057'),
+(83, 'Introitus für den Sonntag Reminiscere', NULL, NULL, 'Psalm 10', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK060'),
+(84, 'Introitus für den Sonntag Invokavit', NULL, NULL, 'Psalm 91', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK053'),
+(85, 'Introitus für Estomihi (und für Septuageimae und Sexagesimae)', NULL, NULL, 'Psalm 31', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK067'),
+(86, 'Introitus für den Sonntag Sexagesimae', NULL, NULL, 'Psalm 119, 89-90, 105', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK063'),
+(87, 'Introitus für den Sonntag Septuagesimae', NULL, NULL, 'Psalm 31', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK062'),
+(88, 'Introitus für die [den letzten] Sonntag[e] nach Epiphanias', NULL, NULL, 'Psalm 97', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK065'),
+(89, 'Introitus für den 4. Sonntag nach Epiphanias', NULL, NULL, 'Psalm 93', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK041'),
+(90, 'Introitus für den 3. Sonntag nach Epiphanias', NULL, NULL, 'Psalm 67', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK038'),
+(91, 'Introitus für den 2. Sonntag nach Epiphanias', NULL, NULL, 'Psalm 105', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK030'),
+(92, 'Introitus für den 1. Sonntag nach Epiphanias', NULL, NULL, 'Psalm 89', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK014'),
+(93, 'Introitus für den 25. [drittletzten] Sonntag nach Trinitatis', NULL, NULL, 'Psalm 85', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK036'),
 (94, 'Gottesdienst - Liturgische Ergänzung', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'RMAK013'),
-(95, 'Introitus für Epiphanias und für die Sonntage nach Epiphanias', NULL, NULL, 'Psalm 100', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK067'),
-(96, 'Introitus für Neujahr', NULL, NULL, 'Psalm 121', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK073'),
-(97, 'Introitus für den 4. Sonntag im Advent', NULL, NULL, 'Psalm 19 (102)', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK041'),
-(98, 'Introitus für den 3. Sonntag im Advent', NULL, NULL, 'Psalm 85', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK038'),
-(99, 'Introitus für den 2. Sonntag im Advent ', NULL, NULL, 'Psalm 80', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK030'),
+(95, 'Introitus für Epiphanias und für die Sonntage nach Epiphanias', NULL, NULL, 'Psalm 100', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK066'),
+(96, 'Introitus für Neujahr', NULL, NULL, 'Psalm 121', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK072'),
+(97, 'Introitus für den 4. Sonntag im Advent', NULL, NULL, 'Psalm 19 (102)', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK040'),
+(98, 'Introitus für den 3. Sonntag im Advent', NULL, NULL, 'Psalm 85', 'Kruzianer ', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK037'),
+(99, 'Introitus für den 2. Sonntag im Advent ', NULL, NULL, 'Psalm 80', 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK029'),
 (100, 'Adventsintroitus', NULL, NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Introitensammlung', 'Kasten 11', NULL, NULL, NULL, 'UNBK002'),
 (101, 'Tochter Zion', 'Heinrich Peter Freiherr von Herzogenberg', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '22x Sopran I<br>15x Sopran II <br>12x Alt <br>4x Tenor I <br>3x Tenor II <br>9x Bass', 'Archiv', 'Kasten 10', NULL, NULL, NULL, 'HPHH001'),
 (102, 'Gesang vom Lernen', 'Hanns Eisler', NULL, 'Johannes Robert Becher', 'Kruzianer', 'Handschrift', NULL, '29.10.1950', 'ger', 'Latn', '42x Partitur (eine Stimmgruppe)', 'Archiv', 'Kasten 10', NULL, NULL, NULL, 'HEIH002'),
 (103, 'Im Frühling', 'Hanns Eisler', NULL, 'Johannes Robert Becher', 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '33x Partitur (eine Stimmgruppe)', 'Archiv', 'Kasten 10', 'Zusätzlich zu den Handschriften wurde der Notensatz, durch Kopien dieser, vergrößert.', NULL, NULL, 'HEIH003'),
-(104, 'Immer Bereit', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '32x Partitur (einer Stimmgruppe)', 'Archiv', 'Kasten 10', NULL, NULL, NULL, 'UNBH010'),
+(104, 'Immer Bereit', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '32x Partitur (einer Stimmgruppe)', 'Archiv', 'Kasten 10', NULL, NULL, NULL, 'UNBH009'),
 (105, 'Beißt das Tor zum Frieden auf', 'h. Harden', NULL, NULL, 'Kruzianer ', 'Handschrift', NULL, NULL, 'ger', 'Latn', '41x Partitur (eine Stimmgruppe)', 'Archiv', 'Kasten 10', NULL, NULL, NULL, 'HHAH001'),
 (106, 'Das Lied der blauen Fahne', 'Hanns Eisler', NULL, 'Johannes Robert Becher', 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Knabenchor<br>6x Männerchor', 'Archiv', 'Kasten 10', 'Zusätzlich zu den Handschriften wurde der Notensatz, durch Kopien dieser, vergrößert.', NULL, NULL, 'HEIH001'),
 (107, 'Not wird vergehen', 'Walter Rohde', NULL, 'Walther Dehmel', 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Alt <br>6x Tenor <br>6x Bass', 'Archiv', 'Kasten 10', 'Zusätzlich zu den Handschriften wurde der Notensatz, durch Kopien dieser, vergrößert.', NULL, NULL, 'WROH002'),
@@ -221,8 +187,8 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (151, 'Hodie Christus natus est', 'J. P. Sweetinch', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran I<br>6x Sopran II<br>6x Alt<br>6x Tenor<br>6x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'JPSK001'),
 (152, 'Ich lag in tiefer Todesnacht', 'Johann Eccard', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Alt<br>6x Tenor I<br>6x Tenor II<br>6x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'JECK002'),
 (153, 'Der heilig Geist vom Himmel kam', 'Johann Eccard', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '17x Chorpartitur SATB<br>5x Sopran I<br>5x Sopran II<br>4x Alt<br>6x Tenor<br>4x Bass', 'Archiv', 'Kasten 8', 'Beilage: Text (51x)', NULL, NULL, 'JECH001'),
-(154, 'Old Folkes at Home', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'eng', 'Latn', '4x Sopran<br>7x Alt<br>7x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', 'ebenfalls auf Blatt: Sweet and Low', NULL, NULL, 'UNBH086'),
-(155, 'Sweet and Low', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'eng', 'Latn', '6x Sopran<br>9x Alt<br>3x Tenor<br>3x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'UNBH088'),
+(154, 'Old Folkes at Home', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'eng', 'Latn', '4x Sopran<br>7x Alt<br>7x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', 'ebenfalls auf Blatt: Sweet and Low', NULL, NULL, 'UNBH085'),
+(155, 'Sweet and Low', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'eng', 'Latn', '6x Sopran<br>9x Alt<br>3x Tenor<br>3x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'UNBH087'),
 (156, 'Letzte Rose', 'Volksweise', 'Siegfried Ochs', NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>14x Alt<br>6x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', 'irische Melodie', NULL, NULL, 'VLKH013'),
 (157, 'Schwedisches Tanzlied', 'F. Malden', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Sopran<br>1x alt<br>1x Tenor<br>1x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'FMLH001'),
 (158, 'Schwedisches Tanzlied', 'F. Malden', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 8', NULL, NULL, NULL, 'FMLK002'),
@@ -245,16 +211,16 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (175, 'Christkindleins Bergfahrt', 'Carl Riedel', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran', 'Archiv', 'Kasten 6', 'Druck in Kasten 9!', NULL, NULL, 'CARH002'),
 (176, 'Schön ist der Friede', 'R. Töpfer', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, '21.01.1951', 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 6', 'komponiert 29.12.1950', NULL, NULL, 'RTOK002'),
 (177, 'Fünf Lieder - Im Himmelreich', 'Max Bruch', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1xPartitur<br>7x Sopran<br>5x Alt<br>7x Tenor<br>7x Bass', 'Archiv', 'Kasten 6', 'dem Kreuzchor gewidmet<br>verfasst 1922', NULL, NULL, 'MBRH001'),
-(178, 'Schlafe kleines Jesulein', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Solist und Violine (oder Flöte)', 'Archiv', 'Kasten 6', NULL, NULL, 'schlafe_kleines_jesulein', 'UNBH087'),
+(178, 'Schlafe kleines Jesulein', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Solist und Violine (oder Flöte)', 'Archiv', 'Kasten 6', NULL, NULL, 'schlafe_kleines_jesulein', 'UNBH086'),
 (179, 'Dankpsalm', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '2x Knabenchor<br>2x Männerchor', 'Archiv', 'Kasten 6', NULL, NULL, NULL, 'UNBH005'),
-(180, 'Motette', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '3x Sopran<br>3x Alt I<br>2x Alt II', 'Archiv', 'Kasten 6', NULL, NULL, NULL, 'UNBH084'),
+(180, 'Motette', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '3x Sopran<br>3x Alt I<br>2x Alt II', 'Archiv', 'Kasten 6', NULL, NULL, NULL, 'UNBH082'),
 (181, 'Motette', NULL, NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '?', 'Archiv', 'Kasten 6', NULL, NULL, NULL, 'UNBK083'),
 (182, 'Magnificat', 'Franz Schubert', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '4x Alt<br>5x Tenor<br>6x Bass 3x Violine I<br>3x Violine II<br>2x Viola<br>3x Cello e Basso<br>1x Oboe I<br>1x Oboe II<br>1x Fagofo I<br>1x Fagofo II<br>1x Tromba 1 in 6<br>1x Tromba 2 in 6<br>1x Timpani in 6', 'Archiv', 'Kasten 10', 'in Altbestand: Standord Kasten 10.2', NULL, 'magnificat_-_violine_i_', 'FSCH002'),
 (183, 'Heiliges Land', 'Rudolf Mauersberger', NULL, 'Luise Prinz', 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x', 'Archiv', 'Kasten 6', NULL, NULL, NULL, 'RMAH014'),
 (184, '? wilde Jagd', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Knabenchor', 'Archiv', 'Kasten 6', 'Abpauschvorlage (transparent)', NULL, NULL, 'UNBH001'),
 (185, 'Weihnachtslied für gemischten Chor', 'Gustav Brand', 'Kruzianer', NULL, NULL, 'Handschrift', NULL, '12.1940', 'ger', 'Latn', '1x Partitur', 'Archiv', 'Kasten 6', NULL, NULL, NULL, 'GBRH002'),
 (186, 'Lobsinget', 'Gustav Brand', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Partitur', 'Archiv', 'Kasten 6', 'auf der Rückseite befindet sich ein gedrucktes Programm vom \"Tag der Deutschen Hausmusik\" in Markleeberg 1938', NULL, NULL, 'GBRH001'),
-(187, 'Morgensang', 'Niels W. Gade', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Knabenchor<br>1x Männerchor', 'Archiv', 'Kasten 6', 'Abpauschvorlage (transparent)', NULL, NULL, 'UNBH082'),
+(187, 'Morgensang', 'Niels W. Gade', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Knabenchor<br>1x Männerchor', 'Archiv', 'Kasten 6', 'Abpauschvorlage (transparent)', NULL, NULL, 'UNBH081'),
 (190, 'Jubilate Deo', 'Giovanni Gabrieli', NULL, NULL, NULL, 'Druck', 'Edition Peters', NULL, 'ger', 'Latn', '3x Sopran<br>3x Alt<br>2x Tenor<br>3x Bass', 'Archiv', 'Kasten 5', NULL, NULL, NULL, 'GGAD001'),
 (191, 'O süßer Jesu Christ, wer an dich recht gedenket', 'Heinrich Schütz', NULL, NULL, 'Gunter Groß', 'Kopie von Handschrift', NULL, '16.05.1960', 'ger', 'Latn', '4x Partitur SSAT', 'Archiv', 'Kasten 5', NULL, NULL, NULL, 'HSCK011'),
 (192, 'Evangelienmusik: Seid barmherzig', 'Heinrich Schütz', NULL, NULL, 'Kruzianer (\"V.Le\", vermutl. Volker Lehmann)', 'Kopie von Handschrift', NULL, 'um 1972', 'ger', 'Latn', '4x Männerchor (TTBB)', 'Archiv', 'Kasten 5', NULL, NULL, NULL, 'HSCK007'),
@@ -270,7 +236,7 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (202, 'Dresdner Requiem', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Knabenchor<br>5x Knaben-Fernchor<br>1x Männer-Fernchor<br>?x Knaben-Altarchor', 'Archiv', 'Kasten 4', NULL, NULL, NULL, 'RMAK006'),
 (203, 'Misericordias Domini', 'Francesco Durante', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Partitur', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'FDUK001'),
 (204, 'Jährlich eine blanke Leier', 'Volksweise', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '7x Sopran II<br>7x Knabenchor<br>1x Tenor<br>7x Männerchor', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'VLKH009'),
-(205, 'Nr. 6, Choral', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'UNBH085'),
+(205, 'Nr. 6, Choral', NULL, NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'UNBH084'),
 (206, 'Motette', 'Gottfried August Homilius', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Alt<br>6x Tenor<br>6x Bass', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'GAHH001'),
 (207, 'Machet die Tore weit', 'Andreas Hammerschmidt', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '13x Sopran<br>5x Alt<br>2x Bass', 'Archiv', 'Kasten 3', NULL, NULL, NULL, 'AHAH001'),
 (208, 'Innsbruck ich muss dich lassen', 'Heinrich Isaak', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '26x Sopran', 'Archiv', 'Kasten 3', NULL, NULL, 'innsbruck', 'HISH001'),
@@ -291,36 +257,36 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (222, 'Ihr Kinderlein kommet', 'Volksweise', NULL, NULL, 'U. Schicha', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Alt<br>6x Tenor<br>6x Bass', 'Archiv', 'Kasten 3', NULL, NULL, 'ihr_kinderlein_kommet', 'VLKK003'),
 (223, 'Mache mich selig, o Jesu', 'Albert Becker', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '4x I. und II. Knabenstimme<br>3x III. und IV. Knabenstimme', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'ALBH005'),
 (224, 'Mache mich selig, o Jesu', 'Albert Becker', NULL, NULL, NULL, 'Druck', 'Ad. Bauer, Dresden', NULL, 'ger', 'Latn', '2x I. und II. Knabenstimme<br>2x III. und IV. Knabenstimme<br>1x Harfe<br>1x Orgel', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'ALBD006'),
-(225, 'Geh aus mein Herz', 'Albert Becker', '', NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 28.06.1949', 'ger', 'Latn', '6x Sopran<br>4x Alt<br>1x Tenor', 'Archiv', 'Kasten 2', '- Choral-Motette<br>Namen und Kürzel:<br>Volkmar Kerchel<br>Monogramm A und D<br>\"Gakenlust\"<br>\"W. Bitterlich\"[Wolfgang Bitterlich]<br>\"U.Rothe\"[Ulrich Rothe]<br>weitere Bemerkungen:<br>Aufschriften einer Handschrift: Seiner Exzellenz dem Herrn Grafen von Hochberg in Verehrung gewidmet. / <br>Spartacus, 17. Juni 1930 /<br>Eigentum der Verleger für alle Sünder /<br>Ed. Hose & G Bock Berlin<br>-Melodie von Bolko Graf von Hochberg (Musica Sacra Bd. 16 No. 8)', NULL, NULL, 'ALBH003'),
-(226, 'Erquicke mich mit deinem Licht', 'Albert Becker', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 10.10.1967', 'ger', 'Latn', '6x Sopran<br>6x Alt<br>6x Tenor<br>6x Bass', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\"J.O.\" [Johannes Oelsner],<br>\"M.T.\",<br>\"Dieter Leffler\"', NULL, NULL, 'ALBH001'),
+(225, 'Geh aus mein Herz', 'Albert Becker', '', NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 28.06.1949', 'ger', 'Latn', '6x Sopran<br>4x Alt<br>1x Tenor', 'Archiv', 'Kasten 2', '- Choral-Motette<br>Namen und Kürzel:<br>Volkmar Kerchel<br>Monogramm A und D<br>\"Gakenlust\"<br>\"W. Bitterlich\"[Wolfgang Bitterlich]<br>\"U.Rothe\"[Ulrich Rothe]<br>weitere Bemerkungen:<br>Aufschriften einer Handschrift: Seiner Exzellenz dem Herrn Grafen von Hochberg in Verehrung gewidmet. / <br>Spartacus, 17. Juni 1930 / <br>Eigentum der Verleger für alle Sünder / <br>Ed. Hose & G Bock Berlin<br>-Melodie von Bolko Graf von Hochberg (Musica Sacra Bd. 16 No. 8)', NULL, NULL, 'ALBH003'),
 (227, 'Reiselied', 'Albert Becker', NULL, 'Nikolaus Hermann (um 1560)', NULL, 'Handschrift', NULL, 'ungefähr 12.07.1949', 'ger', 'Latn', '5x Sopran<br>6x Alt', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\"KNeubert\"[Klaus Neubert]<br>\"UR\"<br>\"R. Müller\"<br>\"R. Mü.\"<br>\"Wa\"', NULL, 'reiselied', 'ALBH007'),
-(228, 'Palmsonntagmorgen', 'Max Bruch', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 25.05.1944', 'ger', 'Latn', '6x Sopran<br>1x Alt', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\"HH\" [eventl. Heinrich Hering],<br>\"G. Huhle\"[Gottfried Huhle]<br>\"Z\"<br>\"H.Gebauer\"', NULL, NULL, 'MBRH002'),
-(229, 'Komm herein!', NULL, 'v. Br. Dost', NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Tenor<br>6x Bass', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>Monogramm J und S', NULL, NULL, 'UNBK080'),
-(230, 'Komm herein!', NULL, 'v. Br. Dost', NULL, NULL, 'Druck', 'Breitkopf & Härtel', NULL, 'ger', 'Latn', '6x Alt', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'UNBD079'),
-(231, 'Gib dich zufrieden', 'Albert Becker', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 08.03.1946', 'ger', 'Latn', '9x Sopran<br>2x Alt<br>1x Bass', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\"G. Hofmann\" [Gottfried Hofmann] (2x),<br>\"Gebler\" [Johannes Gebler]<br>Monogramm H und W<br>\"R. Müller\" [Rolf Müller]<br>Klaus Prezewowsky<br>\"Kluge\"[Reinhard Kluge]<br>\"F\"<br>\"S. Metz\"[Siegfried Metz]<br>\"H. J. Wächtler\"[Jürgen Wächtler]', NULL, 'gib_dich_zufrieden', 'ALBH004'),
+(226, 'Erquicke mich mit deinem Licht', 'Albert Becker', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 10.10.1967', 'ger', 'Latn', '6x Sopran<br>6x Alt<br>6x Tenor<br>6x Bass', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\"J.O.\"[Johannes Oelsner]<br>\"M.T.\"<br>\"Dieter Leffler\"', NULL, NULL, 'ALBH001'),
+(228, 'Palmsonntagmorgen', 'Max Bruch', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 25.05.1944', 'ger', 'Latn', '6x Sopran<br>1x Alt', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\"HH\"[eventl. Heinrich Hering]<br>\"G. Huhle\"[Gottfried Huhle]<br>\"Z\"<br>\"H.Gebauer\"', NULL, NULL, 'MBRH002'),
+(229, 'Komm herein!', NULL, 'v. Br. Dost', NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Tenor<br>6x Bass', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>Monogramm J und S', NULL, NULL, 'UNBK079'),
+(230, 'Komm herein!', NULL, 'v. Br. Dost', NULL, NULL, 'Druck', 'Breitkopf & Härtel', NULL, 'ger', 'Latn', '6x Alt', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'UNBD078'),
+(231, 'Gib dich zufrieden', 'Albert Becker', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 08.03.1946', 'ger', 'Latn', '9x Sopran<br>2x Alt<br>1x Bass', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\"G. Hofmann\"[Gottfried Hofmann]<br>\"Gebler\"[Johannes Gebler]<br>Monogramm H und W<br>\"R. Müller\"[Rolf Müller]<br>\"Klaus Prezewowsky\"<br>\"Kluge\"[Reinhard Kluge]<br>\"F\"<br>\"S. Metz\"[Siegfried Metz]<br>\"H. J. Wächtler\"[Jürgen Wächtler]', NULL, 'gib_dich_zufrieden', 'ALBH004'),
 (232, 'Den die Hirten lobten sehre', 'Herbert Wolf', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '6x Sopran<br>6x Alt<br>6x Tenor<br>6x Bass', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\"HW.\" (2x),<br>\"M. Durck\" (2x),<br>\"KR.\",<br>\"GK\". (3x),<br>\"KZ.\",<br>\"RZ.\",<br>\"Z\" (2x),<br>\"G.St.\" (3x),<br>Monogramm V und Z bzw. B', NULL, NULL, 'HWOH002'),
 (233, 'Bei stiller Nacht', 'Herbert Wolf', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, '1956', 'ger', 'Latn', '5x Sopran<br>5x Alt<br>4x Tenor<br>4x Bass', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'HWOK001'),
 (234, 'Also hat Gott die Welt geliebt', 'Walther Unger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran I<br>5x Sopran II<br>6x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'UNBK003'),
 (235, 'Im Herbst', 'Volksweise', 'Johannes Brahms', NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '1x Sopran<br>1x Alt<br>1x Tenor<br>1x Bass', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\"SCHWARZ\"', NULL, NULL, 'VLKH004'),
 (236, 'Im Herbst', 'Volksweise', 'Johannes Brahms', NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\"SCHWARZ\"', NULL, NULL, 'VLKK005'),
-(237, 'Zigeunerleben', 'Robert Schumann', NULL, 'Emanuel Geibel', 'Kruzianer (mehrere)', 'Handschrift', NULL, NULL, 'ger', 'Latn', '19x Sopran<br>1x Sopransolo<br>10x Alt<br>6x Tenor<br>4x Bass', 'Archiv', 'Kasten 2', '- mit dem Stempel des \"Damengesangverein - Leisnig\"<br>- Namen und Kürzel:<br>\"V.S.\"', NULL, NULL, 'ROSH001'),
-(238, 'Zigeunerleben', 'Robert Schumann', NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '1x Sopran<br>1x Alt', 'Archiv', 'Kasten 2', 'Mit dem Stempel des \"Damengesangverein - Leisnig\"', NULL, NULL, 'ROSD002'),
+(237, 'Zigeunerleben', 'Robert Schumann', NULL, 'Emanuel Geibel', 'Kruzianer (mehrere)', 'Handschrift', NULL, NULL, 'ger', 'Latn', '19x Sopran<br>1x Sopransolo<br>10x Alt<br>6x Tenor<br>4x Bass', 'Archiv', 'Kasten 2', 'mit dem Stempel des \"Damengesangverein - Leisnig\"<br>Namen und Kürzel:<br>\"V.S.\"', NULL, NULL, 'ROSH001'),
+(238, 'Zigeunerleben', 'Robert Schumann', NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '1x Sopran<br> 1x Alt', 'Archiv', 'Kasten 2', 'mit dem Stempel des \"Damengesangverein - Leisnig\"', NULL, NULL, 'ROSD002'),
 (239, 'Lasset uns doch den Herrn unsern Gott loben', 'Heinrich Schütz', NULL, NULL, 'Kruzianer Gunter Groß', 'Kopie von Handschrift', NULL, '05.06.1960', 'ger', 'Latn', '5x Partitur', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'HSCK010'),
-(240, 'Der zwölfjährige Jesus im Tempel', 'Heinrich Schütz', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 22.05.1967', 'ger', 'Latn', '10x Sopran<br>1x Alt<br>2x Tenor', 'Archiv', 'Kasten 2', 'Namen und Kürzel: <br>\"D.M.\"[vermutl. Dietmar Mühne],<br>Monogramm G (2x), <br>Monogramm N, <br>\"BM\" (2x), <br>\"GS\" (3x), <br>\"Paspirgilis\" [Titus Paspirgilis] ', NULL, NULL, 'HSCH004'),
+(240, 'Der zwölfjährige Jesus im Tempel', 'Heinrich Schütz', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, 'ungefähr 22.05.1967', 'ger', 'Latn', '10x Sopran<br>1x Alt<br>2x Tenor', 'Archiv', 'Kasten 2', 'Namen und Kürzel:<br>\"D.M.\"[vermutl. Dietmar Mühne]<br>Monogramm G<br>Monogramm N<br>\"BM\"<br>\"GS\"<br>\"Paspirgilis\"[Titus Paspirgilis]', NULL, NULL, 'HSCH004'),
 (241, 'Wahrlich, wahrlich, ich sage euch', 'Christoph Bernhard', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '23x Knabenchor<br>15x Männerchor', 'Archiv', 'Kasten 2', NULL, NULL, NULL, 'CBEK001'),
 (242, 'Chor der Friedensboten aus Rienzi', 'Richard Wagner', NULL, NULL, NULL, 'Druck', NULL, NULL, 'ger', 'Latn', '6x Gesamtchor', 'Archiv', 'Kasten 1', 'auf einer Handschrift: \"Bassstimme\" und Änderungen an der Bassstimme', NULL, NULL, 'RWAD001'),
-(243, 'An die Musikanten', 'Herbert Waelrant', NULL, NULL, 'Kruzianer (mehrere)', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 1', 'Namen und Kürzel:<br>\"K.Neubert\" [Klaus Neubert],<br>evtl. \"U Sch\"?', NULL, NULL, 'HWAK001'),
+(243, 'An die Musikanten', 'Herbert Waelrant', NULL, NULL, 'Kruzianer (mehrere)', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Sopran<br>5x Alt<br>5x Tenor<br>5x Bass', 'Archiv', 'Kasten 1', 'Namen und Kürzel:<br>\"K.Neubert\"[Klaus Neubert]<br>evtl. \"U Sch\"?', NULL, NULL, 'HWAK001'),
 (245, 'Erwacht aus Rienzi', 'Richard Wagner ', NULL, NULL, 'Kruzianer Gunter Groß', 'Kopie von Handschrift', NULL, '23.09.1962', 'ger', 'Latn', '6x Gesamtchor', 'Archiv', 'Kasten 1', NULL, NULL, NULL, 'RWAK004'),
 (246, 'Der Glaube lebt', 'Richard Wagner', NULL, NULL, 'Kruzianer Gunter Groß', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '5x Partitur', 'Archiv', 'Kasten 1', NULL, NULL, NULL, 'RWAK003'),
-(247, 'Der Chor der Knaben aus Parsifal', 'Richard Wagner ', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, '02.07.1947', 'ger', 'Latn', '5x Gesamtchor', 'Archiv', 'Kasten 1', 'Namen und Kürzel:<br>\"K. Fischer\" [Klaus Fischer] (2x)<br>\"W. Opitz\" [Wilhelm Opitz] (2x)<br>\"W. Op.\" [Wilhelm Opitz] (2x),<br>\"Ch. Schneider\" [Christoph Schneider] (3x),<br>\"R. Kl.\" [Reinhard Kluge] (3x),<br>\"W. Jende\" [Wolfgang Jende] (3x),<br>\"W.J.\" [Walter Julius] (2x),<br>\"R.Gutm.\" [Rolf Gutmann] (3x),<br>\"K.Schlimper\" [Klaus Schlimper] (4x),<br>\"D.Jaßlauk\" [Dieter Jaßlauk] (2x),<br>\"TWeber\" [Tankred Weber],<br>\"U Rothe\" [Ulrich Rothe] (3x),<br>\"J.G.\",<br>\"D. Sachse\" [Dieter Sachse] (2x),<br>\"W. Hellmich\" [Wolfgang Hellmich],<br>\"v. Einsiedel\" [Christian von Einsiedel] (3x),<br>\"Mai\" [Hartmut Mai],<br>\"Wolff\" [Manfred Wolff] (2x),<br>\"Stephan\"(3x),<br>\"Christian Hauschild\"<br>\"R. Rasch\"[Rolf Rasch]<br>\"F. K. Lander\" (3x)<br>\"G. Stange\" (3x)<br>\"Kopetzki\"<br>\"G. Hötzel\"(2x)', NULL, NULL, 'RWAH002'),
+(247, 'Der Chor der Knaben aus Parsifal', 'Richard Wagner ', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, '02.07.1947', 'ger', 'Latn', '5x Gesamtchor', 'Archiv', 'Kasten 1', 'Namen und Kürzel:<br>\"K. Fischer\"[Klaus Fischer]<br>\"W. Opitz\"[Wilhelm Opitz]<br>\"W. Op.\"[Wilhelm Opitz]<br>\"Ch. Schneider\"[Christoph Schneider]<br>\"R. Kl.\"[Reihnhard Kluge]<br>\"W. Jende\"[Wolfgang Jende]<br>\"W.J.\"[Walter Julius]<br>\"R.Gutm.\"[Rolf Gutmann]<br>\"K.Schlimper\"[Klaus Schlimper]<br>\"D.Jaßlauk\"[Dieter Jaßlauk]<br>\"TWeber\"[Tankred Weber]<br>\"U Rothe\"[Ulrich Rothe]<br>\"J.G.\"<br>\"D.Sachse\"[Dieter Sachse]<br>\"W.Hellmich\"[Wolfgang Hellmich]<br>\"v.Einsiedel\"[Christian von Einsiedel]<br>\"Mai\"[Hartmut Mai]<br>\"Wolff\"[Manfred Wolff]<br>\"Stephan\"<br>\"Christian Hauschild\"<br>\"R. Rasch\"[Rolf Rasch]<br>\"F. K. Lander\"<br>\"G. Stange\"<br>\"Kopetzki\"<br>\"G. Hötzel\"', NULL, NULL, 'RWAH002'),
 (248, 'Das Vater unser', 'Heinz Werner Zimmermann', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, '1957', 'ger', 'Latn', '5x Gesamtchor', 'Archiv', 'Kasten 1', NULL, NULL, NULL, 'HWZK001'),
 (249, 'Mein Freund, ich tu dir nicht Unrecht', 'Melchior Vulpius', NULL, 'Matth. 20,13-16', 'Kruzianer (mehrere)', 'Handschrift', NULL, NULL, 'ger', 'Latn', '16x Sopran<br>6x Alt<br>6x Tenor<br>9x Bass', 'Archiv', 'Kasten 1', 'auf einigen Handschriften Untertitel Septuagesimae<br>Namen und Kürzel: "b.w."<br>"K.-W. Pilzer"<br>"Wolfgang Liebert"', NULL, 'mein_freund__ich_tu_dir_nicht_unrec_30d4581eedcff4 mein_freund__ich_tu_dir_nicht_unrec_4792b0061ffd30 mein_freund__ich_tu_dir_nicht_unrec_16254a22f07688 mein_freund__ich_tu_dir_nicht_unrec_199ebea3719ce5 mein_freund__ich_tu_dir_nicht_unrec_aa45cbe542ea25 mein_freund__ich_tu_dir_nicht_unrec_baa76ae6ef46ce mein_freund__ich_tu_dir_nicht_unrec_9d82fdcfda4c74 mein_freund__ich_tu_dir_nicht_unrec_853b1d18bae437 mein_freund__ich_tu_dir_nicht_unrec_891496a40c8c36 mein_freund__ich_tu_dir_nicht_unrec_79a9446a0d695f mein_freund__ich_tu_dir_nicht_unrec_d31900bc7972b5 mein_freund__ich_tu_dir_nicht_unrec_6fdd02577bbc70 mein_freund__ich_tu_dir_nicht_unrec_4765419445932b mein_freund__ich_tu_dir_nicht_unrec_4765419445932b mein_freund__ich_tu_dir_nicht_unrec_09d740b6c4ed61 mein_freund__ich_tu_dir_nicht_unrec', 'MVUH001'),
 (250, 'Habe deine Lust an dem Herren', 'Samuel Rühling', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '4x Partitur', 'Archiv', 'Kasten 1', NULL, NULL, 'hsa_r__ling__habe_deine_lust__-_neu', 'SRUH001'),
 (251, 'Angst-Seufzer', 'Johann Hermann Schein', NULL, 'Psalm 42,2-5', 'Kruzianer', 'Handschrift', NULL, NULL, 'ger', 'Latn', '16x Sopran <br>6x Alt <br>5x Tenor <br>2x Bass', 'Archiv', 'Kasten 1', 'Namen und Kürzel: H.Gebauer', NULL, NULL, 'JHSH001'),
 (252, 'Advents-Motette', 'Gustav Schreck', NULL, NULL, 'Kruzianer (mehrere)', 'Handschrift', NULL, NULL, 'ger', 'Latn', '11x Sopran<br>2x Alt<br>2x Bass', 'Archiv', 'Kasten 1', 'Namen und Kürzel:<br>\"Huhle\"[Gottfried Huhle]<br>\"S.Anger\"[Siegfried Anger],<br>\"Rothe\"[Ulrich Rothe],<br>\"JW\"[vermutl. Hans-Jürgen Wächtler],<br>\"E.S.\"<br>Monogramm M und F[vermutl. Martin Ficker]<br>\"CP\"[Christian Pfretzschner]', NULL, NULL, 'GSCH001'),
 (253, 'In dulci jubilo', 'Michael Prätorius', NULL, NULL, 'Kruzianer', 'Handschrift', NULL, 'einige um 1.7.1964', 'ger', 'Latn', '13x Sopran<br>1x Alt', 'Archiv', 'Kasten 1', 'Namen und Kürzel: <br>\"Lothar Gummitzsch\"(2x),<br>\"M. Jäckel\",<br>\"MB\"(4x),<br>\"R.F.\",<br>\"R.H.\",<br>\"R.J.\",<br>\"KB\",<br>\"CD\"', NULL, 'in_dulci_jubilo_1 in_dulci_jubilo_2', 'MPRH001'),
-(254, 'Wach auf meins Herzens Schöne', 'Johann Sebastian Bach', NULL, NULL, 'Walter Rein', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '9x Gesamtchor', 'Archiv', 'Kasten 1', 'Namen und Kürzel: <br>\"H.Wi.\"[Hermann Winkler]', NULL, 'wach_auf_meins_herzens_sch__ne', 'JSBK003'),
-(255, 'Echolied', 'Orlando di Lasso', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, '13.10.1952', 'ger', 'Latn', '7x Partitur', 'Archiv', 'Kasten 1', 'Namen und Kürzel: <br>\"H.Wi.\"', NULL, NULL, 'ODLK001'),
+(254, 'Wach auf meins Herzens Schöne', 'Johann Sebastian Bach', NULL, NULL, 'Walter Rein', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '9x Gesamtchor', 'Archiv', 'Kasten 1', 'Namen und Kürzel:<br>\"H.Wi.\"[Hermann Winkler]', NULL, 'wach_auf_meins_herzens_sch__ne', 'JSBK003'),
+(255, 'Echolied', 'Orlando di Lasso', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, '13.10.1952', 'ger', 'Latn', '7x Partitur', 'Archiv', 'Kasten 1', 'Namen und Kürzel:<br>\"H.Wi.\"[Hermann Winkler]', NULL, NULL, 'ODLK001'),
 (256, 'Dresdner Requiem (rot)', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer (»JDI«)', 'Kopie von Handschrift', NULL, '1967', 'ger', 'Latn', '?', 'Archiv', 'Kasten 16', NULL, NULL, NULL, 'RMAK010'),
 (257, 'Dresdner Requiem (schwarz)', 'Rudolf Mauersberger', NULL, NULL, 'Kruzianer', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '7x Partitur', 'Archiv', 'Kasten 16', 'Setzer-Kürzel JDI', NULL, NULL, 'RMAK011'),
 (258, 'Erquicke mich mit deinem Licht', 'Albert Becker', NULL, 'G. W. Schulze', NULL, 'Druck', 'Breitkopf & Härtel', NULL, 'ger', 'Latn', '1x Sopran<br>2x Alt<br>1x Tenor<br>2x Bass', 'Archiv', 'Kasten 2', 'Breitkopf & Härtels Chorbibliothek Nr. 824', NULL, NULL, 'ALBD002'),
@@ -330,26 +296,16 @@ INSERT INTO `archivalien` (`ID`, `Titel`, `Komponist`, `Bearbeiter`, `Dichter`, 
 (262, 'Dresdner Requiem', 'Rudolf Mauersberger', NULL, NULL, NULL, 'Druck', 'Kurt Wölfer, Halle/S', NULL, 'ger', 'Latn', '5x Knabenchorpartitur', 'Archiv', 'Kasten 4', NULL, NULL, NULL, NULL);
 (263, 'Jubilate Deo (Partitur)', 'Giovanni Gabrieli', NULL, NULL, 'Kruzianer (Monogramm kleines C auf großem S)', 'Kopie von Handschrift', NULL, NULL, 'ger', 'Latn', '1x Gesamtchorpartitur (SSAATTBB)', 'Archiv', 'Kasten 5', NULL, NULL, NULL, 'GGAH002');
 
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `komponisten`
---
-
-CREATE TABLE IF NOT EXISTS `komponisten` (
+DROP TABLE IF EXISTS `komponisten`;
+CREATE TABLE `komponisten` (
   `Abk` varchar(3) NOT NULL,
   `Name` varchar(100) DEFAULT NULL,
-  `Info` text DEFAULT NULL,
-  PRIMARY KEY (`Abk`),
-  UNIQUE KEY `Name` (`Name`)
+  `Info` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Daten für Tabelle `komponisten`
---
-
+TRUNCATE TABLE `komponisten`;
 INSERT INTO `komponisten` (`Abk`, `Name`, `Info`) VALUES
-('ABR', 'Anton Bruckner', 'Der romantische Komponist Anton Bruckner (* 1824 Ansfelden/Österreich; † 1896 Wien) wirkte ab 1850 als Organist am Stift St. Florian bei Linz, ab 1855 als Domorganist in Linz und ab 1868 als Professor am Konservatorium in Wien. Bis weit in das 20. Jahrhundert übten seine Werke Einfluss auf die kompositorischen Entwicklungen aus.'),
+('ABR', 'Anton Bruckner', 'Der romantische Komponist Anton Bruckner (* 1824 Ansfelden/Österreich; † 1896 Wien) wirkte ab 1850 als Organist am Stift St. Florian bei Linz, ab 1855 als Domorganist in Linz und ab 1868 als Professor am Konservatorium in Wien. Bis weit in das 20. Jahrhundert übten seine Werke Einfluss auf die kompositorischen Entwicklungen aus. '),
 ('ADV', 'Antonín Dvorák', NULL),
 ('AHA', 'Andreas Hammerschmidt', 'Der barocke Komponist Andreas Hammerschmidt (* 1611 oder 1612 Brüx/Böhmen; † 1675 Zittau) wirkte als Organist ab 1633 zunächst auf dem sächsischen Schloss Weesenstein, anschließend an der St. Petri-Kirche in Freiberg und schließlich an St. Johannis in Zittau.'),
 ('AKR', 'Albert Kranz', NULL),
@@ -396,7 +352,7 @@ INSERT INTO `komponisten` (`Abk`, `Name`, `Info`) VALUES
 ('MAN', 'M. Anzeff', NULL),
 ('MBR', 'Max Bruch', 'lebte von 1838 bis 1920'),
 ('MPR', 'Michael Prätorius', 'Michael Praetorius  (* 1571 Creuzburg/Thüringen; †1621 Wolfenbüttel) studierte Theologie und Philosophie, war Organist an der Marienkirche Frankfurt/Oder, dann Hofkapellmeister in Wolfenbüttel, ab 1613 wirkte er am kurfürstlichen Hof in Dresden. Praetorius stand im Kontakt mit bedeutenden Musikern seiner Zeit. Besondere Bedeutung haben seine musiktheoretischen Schriften.'),
-('MVU', 'Melchior Vulpius', 'Melchior Vulpius (* 1570 Wasungen; † 1615 Weimar) entstammt einer armen Handwerkerfamilie, besuchte die Stadtschule in Wasungen und erhielt Unterricht bei Johannes Steuerlein. 1589 erhielt er eine Anstellung als Lehrer in Schleusingen, ehe er 1596 zum Stadtkantor in Weimar berufen wurde.'),
+('MVU', 'Melchior Vulpius', 'Melchior Vulpius (* 1570 Wasungen; † 1615 Weimar) entstammt einer armen Handwerkerfamilie, besuchte die Stadtschule in Wasungen und erhielt Unterricht bei Johannes Steuerlein. 1589 erhielt er eine Anstellung als Lehrer in Schleusingen, ehe er 1596 zum Stadtkantor in Weimar berufen wurde. '),
 ('NWG', 'Niels Wilhelm Gade', NULL),
 ('ODL', 'Orlando di Lasso', 'Orlando di Lasso (* 1532 Mons/Niederlande; † 1594 München) kam nach mehrjähriger Wanderschaft und Studien in Italien 1551 nach Rom und wurde dort 1553 Kapellmeister an San Giovanni in Laterano. Er ging 1555 von Rom über Antwerpen und kam 1556 als Mitglied der herzoglichen Hofkapelle nach München. Dort übernahm er 1562 das Amt des Kapellmeisters und bekleidete bis zu seinem Tod.'),
 ('ORE', 'Otto Reinhold', 'lebte von 1899 bis 1965'),
@@ -416,4 +372,23 @@ INSERT INTO `komponisten` (`Abk`, `Name`, `Info`) VALUES
 ('WBU', 'Walther Buchheim', NULL),
 ('WRO', 'Walter Rohde', NULL),
 ('WUN', 'Walther Unger', NULL);
+
+
+ALTER TABLE `analytics`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `archivalien`
+  ADD PRIMARY KEY (`ID`),
+  ADD UNIQUE KEY `Signatur` (`Signatur`);
+
+ALTER TABLE `komponisten`
+  ADD PRIMARY KEY (`Abk`),
+  ADD UNIQUE KEY `Name` (`Name`);
+
+
+ALTER TABLE `analytics`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15552;
+ALTER TABLE `archivalien`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=260;COMMIT;
+
 COMMIT;
