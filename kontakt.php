@@ -135,6 +135,7 @@ require_once 'translate.php';
 							<li id="phoneno"><i class="icon-phone2"></i><span>+49</span><span>351</span><span>3153572</span></li>
 							<li><i class="icon-mail"></i>handschriftenarchiv<br>[ät]protonmail.com</li>
 							<li><i class="icon-globe2"></i><a href="http://hsa.bplaced.de/">hsa.bplaced.com</a></li>
+							<li><a href="https://protonmail.com/" target="_blank"><img src="/images/kontakt/protonmail.svg" width="174px" alt="<?php echo __('mail-secured'); ?>"></a></li>
 						</ul>
 					</div>
 					<div class="col-md-7 col-md-push-1 animate-box">
@@ -189,9 +190,6 @@ require_once 'translate.php';
 							</div>
 						</form>
 						<?php } ?>
-						<div>
-							<a href="https://protonmail.com/" target="_blank"><img src="/images/kontakt/protonmail.svg" width="174px" alt="<?php echo __('mail-secured'); ?>"></a>
-						</div>
 					</div>
 				</div>
 			</div>
