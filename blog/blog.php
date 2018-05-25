@@ -1,5 +1,9 @@
 <?php
-$blog_entry=explode('blog/',$_SERVER['REQUEST_URI'])[1];
+if(isset($_GET['article'])){
+	$blog_entry=$_GET['article'];
+}else{
+	$blog_entry=explode('blog/',$_SERVER['REQUEST_URI'])[1];
+}
 require_once "../translate.php";
 $data=json_decode(file_get_contents('entries.json'),true);
 foreach($data as $key => $value){
