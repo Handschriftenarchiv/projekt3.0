@@ -40,26 +40,26 @@ require_once '../analytics.php';
  <meta name="twitter:card" content="" />
 
  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
- <link rel="shortcut icon" href="../favicon.ico">
+ <link rel="shortcut icon" href="/favicon.ico">
 
  <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
 
  <!-- Animate.css -->
- <link rel="stylesheet" href="../css/animate.css">
+ <link rel="stylesheet" href="/css/animate.css">
  <!-- Icomoon Icon Fonts-->
- <link rel="stylesheet" href="../css/icomoon.css">
+ <link rel="stylesheet" href="/css/icomoon.css">
  <!-- Bootstrap  -->
- <link rel="stylesheet" href="../css/bootstrap.css">
+ <link rel="stylesheet" href="/css/bootstrap.css">
 
  <!-- Flexslider  -->
- <link rel="stylesheet" href="../css/flexslider.css">
+ <link rel="stylesheet" href="/css/flexslider.css">
 
- <link rel="stylesheet" href="../css/style.css">
+ <link rel="stylesheet" href="/css/style.css">
 
 
  <!-- Modernizr JS -->
- <script src="../js/modernizr-2.6.2.min.js"></script>
+ <script src="/js/modernizr-2.6.2.min.js"></script>
  <!-- FOR IE9 below -->
  <!--[if lt IE 9]>
  <script src="js/respond.min.js"></script>
@@ -98,76 +98,30 @@ _idl.variant = "modal";
 		 </div>
 	 </nav>
 -->
- <nav id="fh5co-main-nav" role="navigation">
-	 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle active"><i></i></a>
-	 <div class="js-fullheight fh5co-table">
-		 <div class="fh5co-table-cell js-fullheight">
-			 <h1 class="text-center"><a class="fh5co-logo" href="../index.php">Handschriftenarchiv Dresdner Kreuzchor</a></h1>
-			 <ul>
-				 <li><a href="../index">Willkommen</a></li>
-				 <li><a href="../archiv">Archiv</a></li>
-				 <li><a href="../blog/">Blog</a></li>
-				 <li><a href="../mediathek">Mediathek</a></li>
-				 <li><a href="../suche/">Datenbank</a></li>
-				 <li><a href="../impressum">Impressum</a></li>
-				 <li><a href="../kontakt">Kontakt</a></li>
-			 </ul>
-			 <p class="fh5co-social-icon">
-				 <a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
-				 <a href="https://issuu.com/hsa6"target="_blank"><i class="icon-book"></i></a>
-				 <a href="https://vimeo.com/handschriftenarchiv"target="_blank"><i class="icon-vimeo"></i></a>
-				 <a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"target="_blank"><i class="icon-youtube"></i></a>
-				 <a href="https://plus.google.com/108785494716898198379"target="_blank"><i class="icon-google"></i></a>
-				 <a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
-				 <a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
-			 </p>
-		 </div>
-	 </div>
- </nav>
 
- <div id="fh5co-page">
-	 <header>
-		 <div class="container">
-			 <div class="fh5co-navbar-brand">
-				 <div class="row">
-					 <div class="col-xs-6">
-						 <h1 class="text-left"><a class="fh5co-logo" href="../index.php"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
-					 </div>
-					 <div class="col-xs-6">
-						 <!--<p class="fh5co-social-icon text-right">
-							 <a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
-							 <a href="https://issuu.com/hsa6"target="_blank"><i class="icon-book"></i></a>
-							 <a href="https://vimeo.com/handschriftenarchiv"target="_blank"><i class="icon-vimeo"></i></a>
-							 <a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"target="_blank"><i class="icon-youtube"></i></a>
-							 <a href="https://plus.google.com/108785494716898198379"target="_blank"><i class="icon-google"></i></a>
-							 <a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
-							 <a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
-						 </p>-->
-					 </div>
-				 </div>
-				 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-			 </div>
-		 </div>
-	 </header>
+	<?php include '../lang/nav.php';?>
+
+	<div id="fh5co-page">
+		<?php include '../lang/header.php'; ?>
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(../images/verwaltung/start.jpg);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container">
-			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
-			   				<div class="slider-text-inner">
-			   					<div class="desc">
-			   						<span>Interne Informationen</span>
-			   						<h2>Verwaltungsportal</h2>
-			   						<p class="fh5co-lead">Auswertung von Traffic und weitere Informationen</p>
-			   					</div>
-			   				</div>
-			   			</div>
-			   		</div>
-			   	</li>
-			  	</ul>
-		  	</div>
+					<li style="background-image: url(/images/verwaltung/start.jpg);">
+						<div class="overlay-gradient"></div>
+						<div class="container">
+							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
+								<div class="slider-text-inner">
+									<div class="desc">
+										<span>Interne Informationen</span>
+										<h2>Verwaltungsportal</h2>
+										<p class="fh5co-lead">Auswertung von Traffic und weitere Informationen</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</aside>
 		<div id="fh5co-intro-section">
 				<div id="fh5co-blog" class="fh5co-bg-section">
@@ -213,7 +167,7 @@ _idl.variant = "modal";
 			<div class="row">
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="graphs"><img class="img-responsive" src="../images/verwaltung/1.svg" alt=""></a>
+						<a href="graphs"><img class="img-responsive" src="/images/verwaltung/1.svg" alt=""></a>
 						<div class="blog-text">
 							<h3><a href="graphs">Zugriffe auf die Website</a></h3>
 							<p>Auswertung der verschiedensten Zugriffe auf die Website.</p>
@@ -222,7 +176,7 @@ _idl.variant = "modal";
 				</div>
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="graphs?archivalien"><img class="img-responsive" src="../images/verwaltung/2.svg" alt=""></a>
+						<a href="graphs?archivalien"><img class="img-responsive" src="/images/verwaltung/2.svg" alt=""></a>
 						<div class="blog-text">
 							<h3><a href="graphs?archivalien">Zugriffe auf den Katalog</a></h3>
 							<p>Auswertung der verschiedensten Zugriffe und Suchanfragen im Online-Katalog.</p>
@@ -231,7 +185,7 @@ _idl.variant = "modal";
 				</div>
 				<div class="col-md-4">
 					<div class="fh5co-blog animate-box">
-						<a href="graphs?notfound"><img class="img-responsive" src="../images/verwaltung/3.svg" alt=""></a>
+						<a href="graphs?notfound"><img class="img-responsive" src="/images/verwaltung/3.svg" alt=""></a>
 						<div class="blog-text">
 							<h3><a href="graphs?notfound">Nicht gefundene Dokumente</a></h3>
 							<p>Übersicht über angeforderte, aber nicht existierende Seiten.</p>
@@ -242,84 +196,24 @@ _idl.variant = "modal";
 		</div>
 	</div>
 
-	<footer>
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
-						<h3 class="section-title">Über das HSA</h3>
-						<p>Das Handschriftenarchiv Dresdner Kreuzchor sammelt, archiviert, digitalisiert und bereitet alte Drucke, Handschriften und Kopien des Dresdner Kreuzchores auf.</p>
-					</div>
-
-					<div class="col-md-3 col-md-push-1">
-						<h3 class="section-title">Links</h3>
-						<ul>
-							<li><a href="../index">Willkommen</a></li>
-	 					 <li><a href="../archiv">Archiv</a></li>
-	 					 <li><a href="../blog/">Blog</a></li>
-	 					 <li><a href="../mediathek">Mediathek</a></li>
-	 					 <li><a href="../suche/">Datenbank</a></li>
-	 					 <li><a href="../impressum">Impressum</a></li>
-	 					 <li><a href="../kontakt">Kontakt</a></li>
-						</ul>
-					</div>
-
-					<div class="col-md-3">
-						<h3 class="section-title">Mitglied</h3>
-						<p>
-						<a href=https://www.deutsche-digitale-bibliothek.de/about-us/institutions/item/PXYIJUCJ654QX5KHG6E34VNE3UG3IXR2?query=Handschriftenarchiv+Dresdner+Kreuzchor target="_blank"><img src=../images/ddb.png alt="Mitglied der Deutschen Digitalen Bibliothek" width=216 height=100 /></a>
-					</div>
-					<div class="col-md-3">
-						<h3 class="section-title">Handschriftenarchiv 3.0</h3>
-						<img src="../images/wrapper-img.gif" width=231 height=130>
-						<!--<form class="form-inline" id="fh5co-header-subscribe">
-							<div class="row">
-								<div class="col-md-12 col-md-offset-0">
-									<div class="form-group">
-										<input type="text" class="form-control" id="email" placeholder="Enter your email">
-										<button type="submit" class="btn btn-default"><i class="icon-paper-plane"></i></button>
-									</div>
-								</div>
-							</div>
-						</form>-->
-					</div>
-				</div>
-				<div class="row copy-right">
-					<div class="col-md-6 col-md-offset-3 text-center">
-						<p class="fh5co-social-icon">
-							<a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
-							<a href="https://issuu.com/hsa6"target="_blank"><i class="icon-book"></i></a>
-							<a href="https://vimeo.com/handschriftenarchiv"target="_blank"><i class="icon-vimeo"></i></a>
-							<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"target="_blank"><i class="icon-youtube"></i></a>
-							<a href="https://plus.google.com/108785494716898198379"target="_blank"><i class="icon-google"></i></a>
-							<a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
-							<a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
-						</p>
-													<p><a href="../verwaltung/report"target="_blank"><i class="icon-bug"></i> Fehler melden</a></p>
-						<p>Copyright 2017 Handschriftenarchiv Dresdner Kreuzchor <a href="/impressum.php">Impressum</a> Alle Rechte vorbehalten. </p>
-						<span class="notranslate" onmouseover="_tipon(this)" onmouseout="_tipoff()"><span class="google-src-text" style="direction: ltr; text-align: left"><a href=https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=de&ie=UTF8&prev=_t&rurl=translate.google.de&sl=en&sp=nmt4&tl=de&u=https://internetdefenseleague.org/&usg=ALkJrhjDQg4VshLY48zmtw4d205QQxxxMg target="_blank"><img src=../images/internet.png alt="Mitglied in der Internet Defense League" width=115 height=115/></a></span>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<?php include '../lang/footer.php';?>
 
 </div>
 
 <!-- jQuery -->
-<script src="../js/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
 <!-- jQuery Easing -->
-<script src="../js/jquery.easing.1.3.js"></script>
+<script src="/js/jquery.easing.1.3.js"></script>
 <!-- Bootstrap -->
-<script src="../js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <!-- Waypoints -->
-<script src="../js/jquery.waypoints.min.js"></script>
+<script src="/js/jquery.waypoints.min.js"></script>
 <!-- Counters -->
-<script src="../js/jquery.countTo.js"></script>
+<script src="/js/jquery.countTo.js"></script>
 <!-- Flexslider -->
-<script src="../js/jquery.flexslider-min.js"></script>
+<script src="/js/jquery.flexslider-min.js"></script>
 
 <!-- Main JS (Do not remove) -->
-<script src="../js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>
