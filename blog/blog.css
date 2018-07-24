@@ -41,16 +41,16 @@ blockquote{
 }
 
 .blog-div{
+  position:relative;
   background-color: #ffffff;
   width: 55%;
   opacity: 1;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 37px;
-  /* margin-bottom: 30px; */
+  margin-bottom: 30px;
   overflow: hidden;
 }
 
@@ -62,7 +62,7 @@ blockquote{
 
 .blog-header{
   width:100%;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px;
 }
 
 .blog-text{
@@ -73,13 +73,7 @@ blockquote{
 }
 
 div.author{
-  position:fixed;
-  left:0;
-  right:0;
-  bottom: 0;
-  transform: translateY(100%);
-  height: 15% !important;
-  transition: transform .3s;
+  padding-bottom:3vh;
 }
 
 #profile{
@@ -89,10 +83,6 @@ div.author{
   width: auto;
   background-repeat: no-repeat;
   background-image: url(/images/logo.jpg);
-}
-
-div.author.show{
-  transform: translateY(0%);
 }
 
 table.author td.author{

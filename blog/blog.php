@@ -94,13 +94,10 @@ $next=$data[$index]['title'];
 
 		<div class="blog-div">
 			<?php echo __chunk('blog-'.$blog_entry); ?>
-		</div>
-		<div id="author-spacer"></div>
-
-		<div class="author">
-			<!-- <img src="/images/logo.jpg" alt="Logo Handschriftenarchiv"> -->
-			<div id="profile"></div>
-			<?php
+			<div class="author">
+				<!-- <img src="/images/logo.jpg" alt="Logo Handschriftenarchiv"> -->
+				<div id="profile"></div>
+				<?php
 				echo '<table class="author" style="margin:auto;"><tbody align="center"><tr>';
 				foreach($author as $val){
 					echo "<td class='author'>$val[1]</td>";
@@ -110,7 +107,8 @@ $next=$data[$index]['title'];
 					echo "<td class='author'><strong>$val[0]</strong></td>";
 				}
 				echo '</tr></tbody></table>';
-			?>
+				?>
+			</div>
 		</div>
 
 		<!-- jQuery -->
@@ -128,26 +126,6 @@ $next=$data[$index]['title'];
 
 		<!-- Main JS (Do not remove) -->
 		<script src="/js/main.js"></script>
-
-		<script>
-			window.onscroll = function(){
-				// nach wieviel gescrollten px soll Autor-div angezeigt werden
-				const offset=200;
-				if(document.body.scrollTop>offset||document.documentElement.scrollTop>offset){
-					// anzeigen
-					document.querySelector('div.author').classList.add("show");
-				}else{
-					// nicht mehr anzeigen
-					document.querySelector('div.author').classList.remove("show");
-				}
-			};
-			document.body.onload=function(){
-				var height=document.querySelector('div.author').offsetHeight;
-				console.log(height);
-				document.querySelector('#author-spacer').style.height=height+"px";
-				console.log(document.querySelector('#author-spacer').style.height);
-			}
-		</script>
 
 		<!--
 		<div id="navigation">
