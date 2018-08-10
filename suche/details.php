@@ -258,8 +258,8 @@ require_once "misc.php";
 						<div id="sidebar">
 							<a type="button" onclick="export_toggle()" class="btn btn-primary"><i class="icon-export"></i></a>
 							<div id="export" data-open="no">
-								<a style='font-family:"Karla",Arial,serif; font-style:italic; width:100%;' href="export-ris.php?id=<?php echo $_GET['id'];?>" class="btn btn-primary">RIS</a><br>
-								<a style='font-family:"Karla",Arial,serif; font-style:italic; width:100%;' href="export.php" class="btn btn-primary">EAD</a>
+								<a style='font-family:"Karla",Arial,serif; font-style:italic; width:100%;' href="/suche/export-ris.php?id=<?php echo $_GET['id'];?>" class="btn btn-primary">RIS</a><br>
+								<a style='font-family:"Karla",Arial,serif; font-style:italic; width:100%;' href="/suche/export.php" class="btn btn-primary">EAD</a>
 							</div>
 						</div>
 					</div>
