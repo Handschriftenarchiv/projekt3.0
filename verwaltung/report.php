@@ -226,11 +226,9 @@ if(!isset($mail)){
 			</div>
 		</form>
 		<?php
-	}
-			echo __chunk('footer');
+			}
+			include '../lang/footer.php';
 		?>
-
-		<?php include '../lang/footer.php' ?>
 
 	</div>
 
