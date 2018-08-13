@@ -155,18 +155,7 @@ require_once 'analytics.php';
 		<?php include "lang/nav.php";?>
 
 		<div id="fh5co-page">
-			<header>
-				<div class="container">
-					<div class="fh5co-navbar-brand">
-						<div class="row">
-							<div class="col-xs-6">
-								<h1 class="text-left"><a class="fh5co-logo" href="index.php"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
-							</div>
-						</div>
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-					</div>
-				</div>
-			</header>
+			<?php include 'lang/header.php'; ?>
 			<aside id="fh5co-hero" class="js-fullheight">
 				<div class="flexslider js-fullheight">
 					<ul class="slides">
@@ -186,7 +175,7 @@ require_once 'analytics.php';
 					</ul>
 				</div>
 			</aside>
-			<?php echo __chunk('footer');?>
+			<?php include 'lang/footer.php'; ?>
 		</div>
 
 		<!-- jQuery -->

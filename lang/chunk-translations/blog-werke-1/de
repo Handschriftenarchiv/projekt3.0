@@ -1,42 +1,29 @@
-<aside id="fh5co-hero" class="js-fullheight">
-	<div class="flexslider js-fullheight">
-		<ul class="slides">
-			<li style="background-image: url(/images/blog/werke/werke-1/1.png);">
-				<div class="overlay-gradient"></div>
-				<div class="container">
-					<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
-						<div class="slider-text-inner">
-							<div class="desc">
-								<span>01. Jan. 2018</span>
-								<h2>Gott der Herr ist Sonn und Schild</h2>
-								<p class="fh5co-lead">Teil I der Serie "Besondere Werke des Handschriftenarchivs"</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>
-			</ul>
-		</div>
-</aside>
-<div class="container">
-		<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-			<h2>Gott der Herr ist Sonn und Schild</h2>
-			<p>Besondere Werke I</p>
-			<blockquote>
-				<p>
-        Gott der Herr ist Sonn und Schied, ist eine Kirchen-Kantate von Johann Sebastian Bach (BWV 79). Der Anlass der Komposition dieses Werkes war das Reformationsfest. Johann Sebastian Bach komponierte es in Leipzig als Thomaskantor (Drittes Amtsjahr) und führte es am 31. Oktober 1725 erstmalig auf. Die Kantate ist besetzt mit drei Vokalsolisten, Sopran, Alt und Bass, vierstimmigem Chor, zwei Hörnern, Pauken, zwei Flauti traversi, zwei Oboen, zwei Violinen, Viola und Basso continuo. Es bildet sich aus 6 Nummern.
-				</p>
-			</blockquote>
-      <br>
-      <iframe style="width:525px; height:417px;" src="//e.issuu.com/embed.html#25938217/56948959" frameborder="0" allowfullscreen></iframe>
-      <br>
-      <blockquote>
-      <p>
-      Im Kreuzchor wurde das Stück zwischen 2000 und 2017 bisher nur einmal Aufgeführt. Das Stück scheint sich früher des Öfteren der Benutzung erfreut zu haben als heute: John Eliot Gardiner, der die Kantaten zum Reformationsfest in der Schlosskirche Wittenberg dirigierte, wo die Reformation begann, beschreibt den Eingangschor als einen feierlichen Einzug und hört die „insistierenden Paukenschläge“ zu den Hornfanfaren als das Hämmern von Luthers Thesen.
-Im Handschriftenarchiv ist ist das Werk voll digitalisiert aufrufbar. Es bietet 12 verschiedene Handschriftliche Noten, von verschiedenen Kruzianern.
-      </p>
-      </blockquote>
-      <br>
-      <a style='font-family:"Karla",Arial,serif;' href="http://archiv.handschriften.bplaced.de/suche/details.php?id=1" class="btn btn-primary">In der Datenbank…</a><br>
-		</div>
-	</div>
+<img class="blog-image" src="/images/blog/werke/werke-1/1.png" alt="Blogeintrag - Titelbild"/>
+<div class="about-content blog-text">
+	<br>
+	<h2>Gott der Herr ist Sonn und Schild</h2>
+	<h4><i>Teil I der Serie "Besondere Werke des Handschriftenarchivs"</i></h4>
+	<h2>Gott der Herr ist Sonn und Schild</h2>
+	<p>Besondere Werke I</p>
+	<blockquote>
+		<p>
+			Gott der Herr ist Sonn und Schied, ist eine Kirchen-Kantate von Johann Sebastian Bach (BWV 79).
+			Der Anlass der Komposition dieses Werkes war das Reformationsfest.
+			Johann Sebastian Bach komponierte es in Leipzig als Thomaskantor (Drittes Amtsjahr)
+			und führte es am 31. Oktober 1725 erstmalig auf.
+			Die Kantate ist besetzt mit drei Vokalsolisten, Sopran, Alt und Bass, vierstimmigem Chor, zwei Hörnern,
+			Pauken, zwei Flauti traversi, zwei Oboen, zwei Violinen, Viola und Basso continuo. Es bildet sich aus 6 Nummern.
+		</p>
+	</blockquote>
+	<br>
+	<iframe style="width:525px; height:417px;" src="//e.issuu.com/embed.html#25938217/56948959" frameborder="0" allowfullscreen></iframe>
+	<br>
+	<blockquote>
+		<p>
+			Im Kreuzchor wurde das Stück zwischen 2000 und 2017 bisher nur einmal Aufgeführt. Das Stück scheint sich früher des Öfteren der Benutzung erfreut zu haben als heute: John Eliot Gardiner, der die Kantaten zum Reformationsfest in der Schlosskirche Wittenberg dirigierte, wo die Reformation begann, beschreibt den Eingangschor als einen feierlichen Einzug und hört die „insistierenden Paukenschläge“ zu den Hornfanfaren als das Hämmern von Luthers Thesen.
+			Im Handschriftenarchiv ist ist das Werk voll digitalisiert aufrufbar. Es bietet 12 verschiedene Handschriftliche Noten, von verschiedenen Kruzianern.
+		</p>
+	</blockquote>
+	<br>
+	<a style='font-family:"Karla",Arial,serif;' href="/suche/details/1" class="btn btn-primary">In der Datenbank...</a><br>
+</div>

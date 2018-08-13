@@ -69,49 +69,27 @@ require_once '../analytics.php';
  <body>
 		<?php include "../lang/nav.php"; ?>
 
- <div id="fh5co-page">
-	 <header>
-		 <div class="container">
-			 <div class="fh5co-navbar-brand">
-				 <div class="row">
-					 <div class="col-xs-6">
-						 <h1 class="text-left"><a class="fh5co-logo" href="<?php echo $use_lang; ?>"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
-					 </div>
-					 <div class="col-xs-6">
-						 <!--<p class="fh5co-social-icon text-right">
-							 <a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
-							 <a href="https://issuu.com/hsa6"target="_blank"><i class="icon-book"></i></a>
-							 <a href="https://vimeo.com/handschriftenarchiv"target="_blank"><i class="icon-vimeo"></i></a>
-							 <a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"target="_blank"><i class="icon-youtube"></i></a>
-							 <a href="https://plus.google.com/108785494716898198379"target="_blank"><i class="icon-google"></i></a>
-							 <a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
-							 <a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
-						 </p>-->
-					 </div>
-				 </div>
-				 <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-			 </div>
-		 </div>
-	 </header>
+	<div id="fh5co-page">
+		<?php include '../lang/header.php'; ?>
 		<aside id="fh5co-hero" class="js-fullheight">
 			<div class="flexslider js-fullheight">
 				<ul class="slides">
-			   	<li style="background-image: url(/images/verwaltung/start.jpg);">
-			   		<div class="overlay-gradient"></div>
-			   		<div class="container">
-			   			<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
-			   				<div class="slider-text-inner">
-			   					<div class="desc">
-			   						<span>Interne Informationen</span>
-			   						<h2>Verwaltungsportal</h2>
-			   						<p class="fh5co-lead">Auswertung von Traffic und weitere Informationen</p>
-			   					</div>
-			   				</div>
-			   			</div>
-			   		</div>
-			   	</li>
-			  	</ul>
-		  	</div>
+					<li style="background-image: url(/images/verwaltung/start.jpg);">
+						<div class="overlay-gradient"></div>
+						<div class="container">
+							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
+								<div class="slider-text-inner">
+									<div class="desc">
+										<span>Interne Informationen</span>
+										<h2>Verwaltungsportal</h2>
+										<p class="fh5co-lead">Auswertung von Traffic und weitere Informationen</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</aside>
 		<div id="fh5co-intro-section">
 				<div id="fh5co-blog" class="fh5co-bg-section">
@@ -186,7 +164,7 @@ require_once '../analytics.php';
 		</div>
 	</div>
 
-	<?php echo __chunk('footer'); ?>
+	<?php include '../lang/footer.php';?>
 
 </div>
 

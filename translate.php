@@ -98,28 +98,18 @@ function __($translate,$lang=null){
 
 function language_switcher(){
 	global $dictionary;
-	//you might add your own styling and remove this line
-	echo '<style>#lang-switcher{background-color:white;position:fixed;right:5px;bottom:5px;}</style>';
-	echo '<div id="lang-switcher">';
+
+	$i=0;
 	foreach(array_keys($dictionary) as $lang){
+		$i++;
 		$language=$dictionary[$lang]['language'];
-		echo '<a href="';
-		// check if REQUEST_URI already contains a lang GET parameter
-		$count=0;
-		$_SERVER['REQUEST_URI']=preg_replace('~(&|\?)lang=.*?($|&)~',$_SERVER['REQUEST_URI'],'$1lang='.$lang.'$2',-1,$count);
-		echo $_SERVER['REQUEST_URI'];
-		if($count==0){
-			/*
-			Don't cause errors if REQUEST_URI already contains a query string!
-			If the uri already contains a query string, we just append the attributes with a ampersand.
-			Otherwise we have to add our query with a question mark.
-			*/
-			echo (strpos($_SERVER['REQUEST_URI'],'?'))?'&':'?';
-			echo "lang=$lang";
+		echo "<a href=\"/$lang/\">$language</a>";
+		// the first grid column always has to be a spacer
+		if($i==5){
+			$i=0;
+			echo "<span>&nbsp;</span>";
 		}
-		echo "\">$language</a>&nbsp;";
 	}
-	echo '</div>';
 }
 
 function language_supported_for_chunk($lang,$chunk){

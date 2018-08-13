@@ -1,5 +1,9 @@
 <?php
-$blog_entry=explode('blog/',$_SERVER['REQUEST_URI'])[1];
+if(isset($_GET['article'])){
+	$blog_entry=$_GET['article'];
+}else{
+	$blog_entry=explode('blog/',$_SERVER['REQUEST_URI'])[1];
+}
 require_once "../translate.php";
 $data=json_decode(file_get_contents('entries.json'),true);
 foreach($data as $key => $value){
@@ -13,6 +17,8 @@ if(!isset($index)){
 	require_once '../not-found.php';
 	exit;
 }
+$bg_img=$data[$index]['background'];
+$author=$data[$index]['author'];
 $index--;
 if($index<0){
 	$index+=count($data);
@@ -65,11 +71,13 @@ $next=$data[$index]['title'];
 		<link rel="stylesheet" href="/css/icomoon.css">
 		<!-- Bootstrap  -->
 		<link rel="stylesheet" href="/css/bootstrap.css">
-
 		<!-- Flexslider  -->
 		<link rel="stylesheet" href="/css/flexslider.css">
 
 		<link rel="stylesheet" href="/css/style.css">
+
+		<!-- Blog-Stylesheet -->
+		<link rel="stylesheet" href="/blog/blog.css">
 
 		<!-- Modernizr JS -->
 		<script src="/js/modernizr-2.6.2.min.js"></script>
@@ -79,56 +87,28 @@ $next=$data[$index]['title'];
 		<![endif]-->
 
 	</head>
+
 	<body>
+		<div id="bg-img" style="background-image: url(<?php echo $bg_img; ?>);"></div>
+		<a href="/<?php echo $use_lang; ?>/blog" id="exit"></a>
 
-		<?php include "../lang/nav.php"; ?>
-
-		<div id="fh5co-page">
-			<header>
-				<div class="container">
-					<div class="fh5co-navbar-brand">
-						<div class="row">
-							<div class="col-xs-6">
-								<h1 class="text-left"><a class="fh5co-logo" href="/<?php echo $use_lang; ?>/"><span>Archiv</span> Handschriftenarchiv <span>Dresdner Kreuzchor</span></a></h1>
-							</div>
-							<div class="col-xs-6">
-								<!--<p class="fh5co-social-icon text-right">
-									<a href="https://twitter.com/NotenarchivDKC"target="_blank"><i class="icon-twitter2"></i></a>
-									<a href="https://issuu.com/hsa6"target="_blank"><i class="icon-book"></i></a>
-									<a href="https://vimeo.com/handschriftenarchiv"target="_blank"><i class="icon-vimeo"></i></a>
-									<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw"target="_blank"><i class="icon-youtube"></i></a>
-									<a href="https://plus.google.com/108785494716898198379"target="_blank"><i class="icon-google"></i></a>
-									<a href="https://github.com/handschriftenarchiv"target="_blank"><i class="icon-github2"></i></a>
-									<a href="https://be.net/handschriftenarchiv"target="_blank"><i class="icon-behance"></i></a>
-								</p>-->
-							</div>
-						</div>
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-					</div>
-				</div>
-			</header>
-
+		<div class="blog-div">
 			<?php echo __chunk('blog-'.$blog_entry); ?>
-
-			<style>
-			#fh5co-about{
-				padding-bottom: 0;
-			}
-			#navigation{
-				display:flex;
-				flex-direction: row;
-				justify-content: space-evenly;
-				padding-bottom: 5em;
-			}
-			</style>
-			<div id="navigation">
-				<a href="<?php echo $prev; ?>" class="btn btn-primary"> ← </a>
-				<a href="/<?php echo $use_lang; ?>/blog" class="btn btn-primary"><i class="icon-home"></i></a>
-				<a href="<?php echo $next; ?>" class="btn btn-primary"> → </a>
+			<div class="author">
+				<!-- <img src="/images/logo.jpg" alt="Logo Handschriftenarchiv"> -->
+				<div id="profile"></div>
+				<?php
+				echo '<table class="author" style="margin:auto;"><tbody align="center"><tr>';
+				foreach($author as $val){
+					echo "<td class='author'>$val[1]</td>";
+				}
+				echo '</tr><tr>';
+				foreach($author as $val){
+					echo "<td class='author'><strong>$val[0]</strong></td>";
+				}
+				echo '</tr></tbody></table>';
+				?>
 			</div>
-
-			<?php echo __chunk('footer'); ?>
-
 		</div>
 
 		<!-- jQuery -->
@@ -146,5 +126,14 @@ $next=$data[$index]['title'];
 
 		<!-- Main JS (Do not remove) -->
 		<script src="/js/main.js"></script>
+
+		<!--
+		<div id="navigation">
+			<a href="<?php echo $prev; ?>" class="btn btn-primary"> ← </a>
+			<a href="/<?php echo $use_lang; ?>/blog" class="btn btn-primary"><i class="icon-home"></i></a>
+			<a href="<?php echo $next; ?>" class="btn btn-primary"> → </a>
+		</div>-->
+
+
 	</body>
 </html>

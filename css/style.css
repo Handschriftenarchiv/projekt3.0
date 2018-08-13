@@ -59,6 +59,16 @@ td.author, th.author {
   align-content: center;
 }
 
+#langs{
+  display:grid;
+  grid-template-columns:min-content repeat(5,1fr);
+  padding-top:5vh;
+  text-align:center;
+}
+#langs>i{
+  line-height:inherit;
+}
+
 /* ======================================================= */
 
 body {

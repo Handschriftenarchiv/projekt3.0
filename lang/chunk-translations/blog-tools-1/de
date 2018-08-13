@@ -1,107 +1,47 @@
-<aside id="fh5co-hero" class="js-fullheight">
-	<div class="flexslider js-fullheight">
-		<ul class="slides">
-			<li style="background-image: url(/images/blog/tools/1/1.svg);">
-				<div class="overlay-gradient"></div>
-				<div class="container">
-					<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
-						<div class="slider-text-inner">
-							<div class="desc">
-								<span>02. Okt. 2017</span>
-								<h2>Tools I</h2>
-								<p class="fh5co-lead">Das Handschriftenarchiv präsentiert seine Arbeitsmittel.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</li>
-			</ul>
-		</div>
-</aside>
-<div class="container">
-		<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-			<h2>Intro</h2>
-			<p>Im Rahmen der Protonmailnutzung und dem Projelkt 3.0 gibt dieser Film einen kleinen Überblick</p>
-			<br>
-			<iframe src="https://player.vimeo.com/video/228385931?color=fff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			<br>
-			<br>
-			<h2 class="intro-heading">Protonmail</h2>
-			<p><span>Der sichere E-Mail Anbieter aus der Schweiz.</span></p>
-			<blockquote>
-				<p>
-					Das Handschriftenarchiv Dresdner Kreuzchor legt sehr viel Wert auf Datenschutz und ein freies Internet,
-					da es selbst mehr eine Online-Einrichtung als eine "analoge" Institution ist. Umso schwieriger ist es jedoch,
-					diesen Anforderungen in der heutigen Zeit gerecht zu werden; einer Zeit, in der Google oder auch die NSA
-					auf der Suche nach immer neuem Datenmaterial sind.<br>
-					Für eine sichere Unternehmens- und Kundenkommunikation nutzt das Handschriftenarchiv Dresdner Kreuzchor
-					aus diesem Grund ProtonMail: Der E-Mail Anbieter ist in der Schweiz ansässig und betreibt auch dort seine Server.
-					Somit unterliegt der Datenverkehr über diesen Dienst den strengen Schweizer Datenschutzbedingungen.
-					Desweiteren ist ProtonMail einer der wenigen Mail-Anbieter, die auf das Prinzip der End-to-End-Verschlüsselung setzen.
-					Das bedeutet, dass der gesamte Mail-Verkehr durch einmalig vergebene Fingerprints verifiziert wird und auf der Strecke
-					vom Sender zum Empfänger verschlüsselt und nur über diesen Fingerprint wieder entschlüsselt werden kann.
-					Allerdings funktioniert dies nur, wenn beide Seiten auch ProtonMail nutzen,
-					denn die meisten anderen E-Mail-Anbieter unterstützen diese Methode der verschlüsselung nicht.
-				</p>
-			</blockquote>
-			<a href="https://protonmail.com/" target="_blank"><img src="/images/kontakt/protonmail.svg" width="174px" alt="Secured by ProtonMail"></a><br>
-			<blockquote>
-				<p>
-					Ein weiterer Aspekt, warum das Handschriftenarchiv Dresdner Kreuzchor auf die Dienste von ProtonMail setzt ist der,
-					dass dieser Mail-Abieter auch Free-Plans, also kostenlose Accounts, anbietet.
-					Da es sich beim Handschriftenarchiv um eine komplett ehrenamtliche Institution handelt,
-					die ohne jegliches Budget operiert, ist dies natürlich ein weiterer Aspekt, der für ProtonMail spricht:<br>
-					Somit auf kostenlosem Wege, die Datensicherheit unserer Mitglieder, Kunden und Nutzer garantieren.
-				</p>
-			</blockquote>
-			<a href="https://protonmail.com/" target="_blank"><img src="/images/blog/tools/1/3.png" width="4%" alt="Protonmail Logo-Klein"></a><br>
-			<blockquote>
-				<p>
-					Die Institutionskommunikation des Handschriftenarchivs verläuft somit komplett über <stong>handschriftenarchiv@protonmail.com</strong>.
-					Auch die Kontaktformulare und Anwendung zum Melden von Fehlern läuft über diese Adresse.
-				</p>
-			</blockquote><br><br>
-			<div class="author">
-			<img src="/images/blog/avatar.jpg" alt="Logo Handschriftenarchiv" style="width:10%;height:10%;position: relative;top: 25px;left: 30px;" vertical-align:"middle" align="left">
-			<center>
-				<table class="author">
-					<tbody align="center">
-						</tr>
-						<tr style="text-align: center;">
-							<td class="author"><strong>Marc Eric Mitzscherling</strong></td>
-							<td class="author"><strong> </strong></td>
-							<td class="author"><strong></strong></td>
-							<td class="author"><strong> </strong></td>
-							<td class="author"><strong>Archivar</strong></td>
-						</tr>
-						<tr style="text-align: center;">
-							<td class="author">Autor</td>
-							<td class="author"><strong> </strong></td>
-							<td class="author"></td>
-							<td class="author"><strong> </strong></td>
-							<td class="author">Veröffentlicher</td>
-						</tr>
-					</tbody>
-				</table>
-
-			<!--<div class="links-social">
-				<a href="http://twitter.com/share?text=Blog%20@NotenarchivDKC:%20Gunter%20Gross%20erinnert%20sich&url=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-twitter-with-circle"></i></a>
-				<a href="https://plus.google.com/share?url=http://archiv.handschriften.bplaced.de/blog/gunter-gross/" target="_blank"><i class="icon-google-with-circle"></i></a>
-				<a href="http://www.facebook.com/sharer.php?u=http://archiv.handschriften.bplaced.de/blog/gunter-gross" target="_blank"><i class="icon-facebook-with-circle"></i></a>
-			</div>-->
-			</div>
-			<br>
-			<table class="author" media="screen">
-				<tbody align="center">
-					</tr>
-					<tr style="align: center;">
-						<td class="author"><a style='font-family:"Karla",Arial,serif;' href="behance" class="btn btn-primary">← Vorheriger Blogeintrag</a></td>
-						<td class="author"><strong> </strong></td>
-						<td class="author"><a style='font-family:"Karla",Arial,serif;' href="." class="btn btn-primary">Zur Eintragsübersicht</a></td>
-						<td class="author"><strong> </strong></td>
-						<td class="author"><a style='font-family:"Karla",Arial,serif;' href="netzneutralität" class="btn btn-primary">Nächster Blogeintrag →</a></td>
-				</tbody>
-			</table>
-			</center>
-			</div>
-		</div>
+<img class="blog-image" src="/images/blog/tools/1/1.svg" alt="Tools I - Titelbild"/>
+<div class="about-content blog-text">
+	<br>
+	<h2>Tools I</h2>
+	<h4><i>Das Handschriftenarchiv präsentiert seine Arbeitsmittel.</i></h4>
+	<h3>Intro</h3>
+	<p>Im Rahmen der Protonmailnutzung und dem Projelkt 3.0 gibt dieser Film einen kleinen Überblick</p>
+	<br>
+	<iframe src="https://player.vimeo.com/video/228385931?color=fff" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	<br>
+	<br>
+	<h3 class="intro-heading">Protonmail</h3>
+	<p><span>Der sichere E-Mail Anbieter aus der Schweiz.</span></p>
+	<blockquote>
+		<p>
+			Das Handschriftenarchiv Dresdner Kreuzchor legt sehr viel Wert auf Datenschutz und ein freies Internet,
+			da es selbst mehr eine Online-Einrichtung als eine "analoge" Institution ist. Umso schwieriger ist es jedoch,
+			diesen Anforderungen in der heutigen Zeit gerecht zu werden; einer Zeit, in der Google oder auch die NSA
+			auf der Suche nach immer neuem Datenmaterial sind.<br>
+			Für eine sichere Unternehmens- und Kundenkommunikation nutzt das Handschriftenarchiv Dresdner Kreuzchor
+			aus diesem Grund ProtonMail: Der E-Mail Anbieter ist in der Schweiz ansässig und betreibt auch dort seine Server.
+			Somit unterliegt der Datenverkehr über diesen Dienst den strengen Schweizer Datenschutzbedingungen.
+			Desweiteren ist ProtonMail einer der wenigen Mail-Anbieter, die auf das Prinzip der End-to-End-Verschlüsselung setzen.
+			Das bedeutet, dass der gesamte Mail-Verkehr durch einmalig vergebene Fingerprints verifiziert wird und auf der Strecke
+			vom Sender zum Empfänger verschlüsselt und nur über diesen Fingerprint wieder entschlüsselt werden kann.
+			Allerdings funktioniert dies nur, wenn beide Seiten auch ProtonMail nutzen,
+			denn die meisten anderen E-Mail-Anbieter unterstützen diese Methode der verschlüsselung nicht.
+		</p>
+	</blockquote>
+	<a href="https://protonmail.com/" target="_blank"><img src="/images/kontakt/protonmail.svg" width="174px" alt="Secured by ProtonMail"></a><br>
+	<blockquote>
+		<p>
+			Ein weiterer Aspekt, warum das Handschriftenarchiv Dresdner Kreuzchor auf die Dienste von ProtonMail setzt ist der,
+			dass dieser Mail-Abieter auch Free-Plans, also kostenlose Accounts, anbietet.
+			Da es sich beim Handschriftenarchiv um eine komplett ehrenamtliche Institution handelt,
+			die ohne jegliches Budget operiert, ist dies natürlich ein weiterer Aspekt, der für ProtonMail spricht:<br>
+			Somit auf kostenlosem Wege, die Datensicherheit unserer Mitglieder, Kunden und Nutzer garantieren.
+		</p>
+	</blockquote>
+	<a href="https://protonmail.com/" target="_blank"><img src="/images/blog/tools/1/3.png" width="4%" alt="Protonmail Logo-Klein"></a><br>
+	<blockquote>
+		<p>
+			Die Institutionskommunikation des Handschriftenarchivs verläuft somit komplett über <stong>handschriftenarchiv@protonmail.com</strong>.
+			Auch die Kontaktformulare und Anwendung zum Melden von Fehlern läuft über diese Adresse.
+		</p>
+	</blockquote>
+</div>
