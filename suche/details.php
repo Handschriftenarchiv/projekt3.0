@@ -318,6 +318,6 @@ require_once "misc.php";
 			}
 		</style>
 
-		<script src="embed.js"></script>
+		<script src="/suche/embed.js"></script>
 	</body>
 </html>
