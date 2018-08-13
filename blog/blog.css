@@ -52,17 +52,12 @@ blockquote{
   margin-top: 37px;
   margin-bottom: 30px;
   overflow: hidden;
+  box-shadow: 0 0 13px black;
 }
 
 /* Blog-Beitrag */
 .blog-image{
-  border-radius: 10px;
-  width: 95%;
-}
-
-.blog-header{
-  width:100%;
-  border-radius: 10px;
+  width: 100%;
 }
 
 .blog-text{
