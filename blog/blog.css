@@ -52,7 +52,7 @@ blockquote{
   margin-top: 37px;
   margin-bottom: 30px;
   overflow: hidden;
-  box-shadow: 0 0 13px black;
+  box-shadow: 0 0 13px #3f3f3f;
 }
 
 /* Blog-Beitrag */
