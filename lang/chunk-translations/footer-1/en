@@ -2,7 +2,7 @@
 			<div class="row copy-right">
 				<div class="col-md-6 col-md-offset-3 text-center">
 					<p class="fh5co-social-icon">
-						<a href="https://twitter.com/NotenarchivDKC" target="_blank"><i class="icon-twitter2"></i></a>
+						<a href="https://twitter.com/search?q=%23hsadkc" target="_blank"><i class="icon-twitter2"></i></a>
 						<a href="https://issuu.com/hsa6" target="_blank"><i class="icon-book"></i></a>
 						<a href="https://vimeo.com/handschriftenarchiv" target="_blank"><i class="icon-vimeo"></i></a>
 						<a href="https://www.youtube.com/channel/UCLuX1DzvPkx1OBjjuKQhXPw" target="_blank"><i class="icon-youtube"></i></a>
@@ -12,13 +12,6 @@
 						<a href="/verwaltung/report"target="_blank"><i class="icon-bug"></i> report a bug</a>
 					</p>
 					<p>Copyright 2018 Handschriftenarchiv Dresdner Kreuzchor <a href="/impressum.php">Site Notice</a> All rights reserved. </p>
-					<span class="notranslate" onmouseover="_tipon(this)" onmouseout="_tipoff()">
-						<span class="google-src-text" style="direction: ltr; text-align: left">
-							<a href="https://translate.googleusercontent.com/translate_c?act=url&depth=1&hl=de&ie=UTF8&prev=_t&rurl=translate.google.de&sl=en&sp=nmt4&tl=de&u=https://internetdefenseleague.org/&usg=ALkJrhjDQg4VshLY48zmtw4d205QQxxxMg" target="_blank">
-								<img src="/images/internet.png" alt="Member of the Internet Defense League" width="115" height="115"/>
-							</a>
-						</span>
-					</span>
 				</div>
 			</div>
 		</div>

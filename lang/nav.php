@@ -18,7 +18,6 @@
 				<li><a href="/<?php echo $use_lang; ?>"><?php echo __('welcome'); ?></a></li>
 				<li><a href="/<?php echo $use_lang; ?>/archiv"><?php echo __('archive'); ?></a></li>
 				<li><a href="/<?php echo $use_lang; ?>/blog"><?php echo __('blog'); ?></a></li>
-				<li><a href="/<?php echo $use_lang; ?>/mediathek"><?php echo __('medialib'); ?></a></li>
 				<li><a href="/<?php echo $use_lang; ?>/suche"><?php echo __('db'); ?></a></li>
 				<li><a href="/<?php echo $use_lang; ?>/impressum"><?php echo __('sitenotice'); ?></a></li>
 				<li><a href="/<?php echo $use_lang; ?>/kontakt"><?php echo __('contact'); ?></a></li>
