@@ -10,7 +10,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
 <ead xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd" audience="external">
 	<eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b" repositoryencoding="iso15511" scriptencoding="iso15924">
-		<eadid mainagencycode="DE-ISIL"><?php echo $ident;?></eadid>
+		<eadid mainagencycode="<?php echo $ident;?>">HSA-Bestand</eadid>
 		<filedesc>
 			<titlestmt>
 				<titleproper>Handschriftenarchiv Dresdner Kreuzchor</titleproper>
@@ -50,7 +50,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>				<c level="file" id="<?php echo $ident.'-'.$sig; ?>">
 					<did>
 						<unitid><?php echo $sig; ?></unitid>
-						<unittitle type="title"><?php echo $dsatz['Titel']; ?></unittitle>
+						<unittitle><?php echo $dsatz['Titel']; ?></unittitle>
 						<origination label="Autor"><?php echo $dsatz['Komponist']?></origination>
 						<physdesc>
 <?php
@@ -68,7 +68,7 @@ switch($dsatz['Typus']){
 <?php
 if(!empty($dsatz['Bemerkungen'])){
 ?>						<note>
-							<p><?php echo str_ireplace('<br>','<lb>',$dsatz['Bemerkungen']);?></p>
+							<p><?php echo str_ireplace('<br>','<lb/>',$dsatz['Bemerkungen']);?></p>
 						</note>
 <?php
 }
@@ -78,7 +78,7 @@ if(!empty($dsatz['Bemerkungen'])){
 					</otherfindaid>
 					<odd>
 						<head>Anzahl</head>
-						<p><?php echo str_ireplace('<br>','<lb>',$dsatz['Anzahl']); ?></p>
+						<p><?php echo str_ireplace('<br>','<lb/>',$dsatz['Anzahl']); ?></p>
 					</odd>
 <?php
 if(!empty($dsatz['Dokumentlink'])){
