@@ -4,8 +4,7 @@ Das sogenannte Projekt 3.0 des Handschriftenarchiv Dresdner Kreuzchor ist die ak
 ## Handschriftenarchiv Dresdner Kreuzchor
 Das Handschriftenarchiv Dresdner Kreuzchor sammelt, archiviert, digitalisiert und bereitet alte Drucke, Handschriften und Kopien des Dresdner Kreuzchores auf. Ziel des Archives ist es, all diese historischen Daten als ein Stück mitteldeutsche Geschichte jedem im Internt als ein freies, ehrenamtliches Projekt zugänglich zu machen.
 
-[Twitter](https://twitter.com/notenarchivdkc)
-[Vimeo](https://vimeo.com/handschriftenarchiv)
+[Website](http://archiv.handschriften.bplaced.de)
 
 Copyrightangaben entnehmen Sie bitte unserem [Impressum](http://archiv.handschriften.bplaced.de/impressum) - Bei Lizenzfragen konsultieren Sie bitte unsere `LICENSE.md`
 
