@@ -56,9 +56,11 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 <?php
 $norm_type="Sonstige";
 switch($dsatz['Typus']){
-	case 'Handschrift':$norm_type='Handschriften';break;
-/* ?! */case 'Kopie von Handschrift':$norm_type='Sonstige';break;
-	case 'Druck':$norm_type='Drucksachen';break;
+	case 'Handschrift':
+	case 'Kopie von Handschrift':
+		$norm_type='Handschriften';break;
+	case 'Druck':
+		$norm_type='Drucksachen';break;
 }
 ?>							<genreform normal="<?php echo $norm_type; ?>"><?php echo $dsatz['Typus']; ?></genreform>
 						</physdesc>
