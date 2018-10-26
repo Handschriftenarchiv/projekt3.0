@@ -146,6 +146,7 @@ if(!isset($mail)){
 									.toggle + label{
 										transition:color .5s;
 										color:#929292;
+										cursor:pointer;
 									}
 									input.toggle:checked + label{
 										color:#c39f00;
