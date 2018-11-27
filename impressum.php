@@ -15,20 +15,6 @@ require_once "translate.php";
 	<meta name="keywords" content="Impressum, Archiv, Kreuchor, Dresdner, Handschriften" />
 	<meta name="author" content="Handschriftenarchiv Dresdner Kreuzchor" />
 
-	<!--
-	//////////////////////////////////////////////////////
-
-	FREE HTML5 TEMPLATE
-	DESIGNED & DEVELOPED by FREEHTML5.CO
-
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
-
-	//////////////////////////////////////////////////////
-		-->
-
 	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
