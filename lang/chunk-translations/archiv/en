@@ -19,117 +19,117 @@ Im Herbst 2017, hat das Handschriftenarchiv das »Projekt 3.0«, als Neu-Konzept
 			</div>
 		</div>
 
-					<div id="fh5co-work-section">
-						<div class="container">
-							<div class="row animate-box">
-								<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-									<h2>Einblick</h2>
-									<p>Einblick in den Bestand des Handschriftenarchivs Dresdner Kreuzchor</p>
-								</div>
-							</div>
-							<div id="werk">
-							<div class="row">
-								<div class="col-md-4 text-center animate-box">
-									<div class="work" style="background-image: url(images/archiv/werke/1.jpg);">
-										<a href="/suche/details.php?id=3" class="view">
-											<span>Der Faulbeerbaum - Alexander Tichonowitsch Gretschaninow</span>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-8 text-center animate-box">
-									<div class="work" style="background-image: url(images/archiv/werke/2.jpg);">
-										<a href="/suche/details.php?id=1" class="view">
-											<span>Gott der Herr ist Sonn und Schild - Johann Sebastian Bach</span>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-7 text-center animate-box">
-									<div class="work" style="background-image: url(images/archiv/werke/3.jpg);">
-										<a href="/suche/details.php?id=182" class="view">
-											<span>Magnificat - Franz Schubert</span>
-										</a>
-									</div>
-								</div>
-								<div class="col-md-5 text-center animate-box">
-									<div class="work" style="background-image: url(images/archiv/werke/4.jpg);">
-										<a href="/suche/details.php?id=213" class="view">
-											<span>Verstohlen geht der Mond auf - Johannes Brahms</span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div id="werk">
-						<div class="row">
-							<div class="col-md-4 text-center animate-box">
-								<div class="work" style="background-image: url(images/archiv/werke/5.jpg);">
-									<a href="/suche/details.php?id=253" class="view">
-										<span>In dulci Jubilo - Michael Praetorius</span>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-8 text-center animate-box">
-								<div class="work" style="background-image: url(images/archiv/werke/6.jpg);">
-									<a href="/suche/details.php?id=249" class="view">
-										<span>Mein Freund, ich tu dir nicht Unrecht - Melchior Vulpius</span>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-7 text-center animate-box">
-								<div class="work" style="background-image: url(images/archiv/werke/7.jpg);">
-									<a href="/suche/details.php?id=227" class="view">
-										<span>Reiselied - Albert Becker</span>
-									</a>
-								</div>
-							</div>
-							<div class="col-md-5 text-center animate-box">
-								<div class="work" style="background-image: url(images/archiv/werke/8.jpg);">
-									<a href="/suche/details.php?id=1" class="view">
-										<span>Gott der Herr ist Sonn und Schild - Johann Sebastian Bach</span>
-									</a>
-								</div>
-							</div>
-						</div>
-						</div>
+		<div id="fh5co-work-section">
+			<div class="container">
+				<div class="row animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>Insight</h2>
+						<p>Presentation of some special handwritings</p>
+					</div>
+				</div>
+				<div id="werk">
+				<div class="row">
+					<div class="col-md-4 text-center animate-box">
+						<div class="work" style="background-image: url(/images/archiv/werke/1.jpg);">
+							<a href="/suche/details.php?id=3" class="view">
+								<span>Der Faulbeerbaum - Alexander Tichonowitsch Gretschaninow</span>
+							</a>
 						</div>
 					</div>
+					<div class="col-md-8 text-center animate-box">
+						<div class="work" style="background-image: url(/images/archiv/werke/2.jpg);">
+							<a href="/suche/details.php?id=1" class="view">
+								<span>Gott der Herr ist Sonn und Schild - Johann Sebastian Bach</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-7 text-center animate-box">
+						<div class="work" style="background-image: url(/images/archiv/werke/3.jpg);">
+							<a href="/suche/details.php?id=182" class="view">
+								<span>Magnificat - Franz Schubert</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-md-5 text-center animate-box">
+						<div class="work" style="background-image: url(/images/archiv/werke/4.jpg);">
+							<a href="/suche/details.php?id=213" class="view">
+								<span>Verstohlen geht der Mond auf - Johannes Brahms</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="werk">
+			<div class="row">
+				<div class="col-md-4 text-center animate-box">
+					<div class="work" style="background-image: url(/images/archiv/werke/5.jpg);">
+						<a href="/suche/details.php?id=253" class="view">
+							<span>In dulci Jubilo - Michael Praetorius</span>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-8 text-center animate-box">
+					<div class="work" style="background-image: url(/images/archiv/werke/6.jpg);">
+						<a href="/suche/details.php?id=249" class="view">
+							<span>Mein Freund, ich tu dir nicht Unrecht - Melchior Vulpius</span>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-7 text-center animate-box">
+					<div class="work" style="background-image: url(/images/archiv/werke/7.jpg);">
+						<a href="/suche/details.php?id=227" class="view">
+							<span>Reiselied - Albert Becker</span>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-5 text-center animate-box">
+					<div class="work" style="background-image: url(/images/archiv/werke/8.jpg);">
+						<a href="/suche/details.php?id=1" class="view">
+							<span>Gott der Herr ist Sonn und Schild - Johann Sebastian Bach</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			</div>
+			</div>
+		</div>
 
 
 		<div class="row animate-box">
 			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 				<div id="dokumente">
-				<h2>Im Archiv</h2>
-				<p>Hier finden Sie Informationen zum Archivbesuch und unsere Archivordnung</p>
+				<h2>In the archive</h2>
+				<p>About the regulations and rules of the archive</p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-3 animate-box" data-animate-effect="fadeIn">
 				<div class="fh5co-staff">
-					<img class="img-responsive" src="images/archiv/doc/doc1.jpg" alt="Screenschot 1">
-					<h3>Benutzungsantrag</h3>
-					<strong class="role"><a href="../verwaltung/dokumente/benutzungsantrag.pdf">Download [319 KB]</a></strong>
-					<p>Sie wollen das Archiv besuchen? Dann senden Sie dieses Formular ausgefüllt an handschriftenarchiv[at]<br>protonmail.com</p>
+					<img class="img-responsive" src="/images/archiv/doc/doc1.jpg" alt="Screenschot 1">
+					<h3>Application for use</h3>
+					<strong class="role"><a href="../verwaltung/dokumente/benutzungsantrag.pdf">Download [319 KB], German</a></strong>
+					<p>You want to visit the archive? Then fill out this form and send it to handschriftenarchiv[at]<br>protonmail.com</p>
 				</div>
 			</div>
 			<div class="col-sm-3 animate-box" data-animate-effect="fadeIn">
 				<div class="fh5co-staff">
-					<img class="img-responsive" src="images/archiv/doc/doc2.jpg" alt="Screenschot 2">
-					<h3>Benutzungsordnung</h3>
-					<strong class="role"><a href="../verwaltung/dokumente/benutzungsordnung.pdf">Download [220 KB]</a></strong>
-					<p>Die aktuelle Benutzungsordnung für das Handschriftenarchiv Dresdner Kreuzchor.</p>
+					<img class="img-responsive" src="/images/archiv/doc/doc2.jpg" alt="Screenschot 2">
+					<h3>Rules of use</h3>
+					<strong class="role"><a href="../verwaltung/dokumente/benutzungsordnung.pdf">Download [220 KB], German</a></strong>
+					<p>The current rules of use for the Handschriftenarchiv Dresdner Kreuzchor.</p>
 				</div>
 			</div>
 			<div class="col-sm-3 animate-box" data-animate-effect="fadeIn">
 				<div class="fh5co-staff">
-					<img class="img-responsive" src="images/archiv/doc/doc3.jpg" alt="Screenschot 3">
-					<h3>Kostenordnung</h3>
-					<strong class="role"><a href="../verwaltung/dokumente/kostenordnung.pdf">Download [208 KB]</a></strong>
-					<p>Die aktuelle Kostenordnung für das Handschriftenarchiv Dresdner Kreuzchor.</p>
+					<img class="img-responsive" src="/images/archiv/doc/doc3.jpg" alt="Screenschot 3">
+					<h3>Cost arrangement</h3>
+					<strong class="role"><a href="../verwaltung/dokumente/kostenordnung.pdf">Download [208 KB], German</a></strong>
+					<p>The current cost arrangement for the Handschriftenarchiv Dresdner Kreuzchor.</p>
 				</div>
 			</div>
 			<div class="col-sm-3 animate-box" data-animate-effect="fadeIn">
 				<div class="fh5co-staff">
-					<img class="img-responsive" src="images/archiv/doc/doc4.jpg" alt="Screenschot 4">
+					<img class="img-responsive" src="/images/archiv/doc/doc4.jpg" alt="Screenschot 4">
 					<h3>Regelung zur Nutzung von Archivalien</h3>
 					<strong class="role"><a href="../verwaltung/dokumente/regelung.pdf">Download [211 KB]</a></strong>
 					<p>Die aktuellen Regelung zur Nutzung von Archivalien für das Handschriftenarchiv Dresdner Kreuzchor.</p>
