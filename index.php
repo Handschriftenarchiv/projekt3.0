@@ -177,7 +177,7 @@ require_once "translate.php";
 					<?php
 					echo __blog_prev('ratser-liste','4')
 						.__blog_prev('gunter-gross','4')
-						.__blog_prev('vorschau-2018','4');
+						.__blog_prev('selbststaendigkeit-2019','4');
 					?>
 				</div>
 			</div>
