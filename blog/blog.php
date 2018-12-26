@@ -96,7 +96,7 @@ $next=$data[$index]['title'];
 			<?php echo __chunk('blog-'.$blog_entry); ?>
 			<div class="author">
 				<!-- <img src="/images/logo.jpg" alt="Logo Handschriftenarchiv"> -->
-				<div id="profile"></div>
+				<!--<div id="profile"></div>
 				<?php
 				echo '<table class="author" style="margin:auto;"><tbody align="center"><tr>';
 				foreach($author as $val){
@@ -108,7 +108,7 @@ $next=$data[$index]['title'];
 				}
 				echo '</tr></tbody></table>';
 				?>
-			</div>
+			</div>-->
 		</div>
 
 		<!-- jQuery -->
