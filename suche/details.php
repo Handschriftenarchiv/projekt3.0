@@ -110,7 +110,7 @@ require_once "misc.php";
 								<div class="slider-text-inner">
 									<div class="desc">
 										<span><?php echo __('db');?></span>
-										<h2>Details</h2>
+										<h2><?php echo __('det');?></h2>
 										<p class="fh5co-lead"><?php
 										if(!ctype_digit($_GET['id'])){
 											// Es handelt sich wahrscheinlich um eine Signatur
@@ -148,19 +148,19 @@ require_once "misc.php";
 												$dsatz['Signatur']=formatSig($dsatz['Signatur']);
 												switch($dsatz['Typus']){
 													case 'Handschrift':
-														echo "zur Handschrift";
+														echo __('4h');
 														break;
 													case 'Kopie von Handschrift':
-														echo "zur Kopie der Handschrift";
+														echo __('4kvh');
 														break;
 													case 'Druck':
-														echo "zum Druck";
+														echo __('4d');
 														break;
 												}
 												echo " &quot;".$dsatz['Titel']."&quot;";
 											}
 										}else{
-											echo "Nichts gefunden";
+											echo __('404');
 										}
 										?></p>
 									</div>
@@ -195,44 +195,43 @@ require_once "misc.php";
 										echo "<tr><th>Bearbeiter:&nbsp;</th><td>".$dsatz['Bearbeiter'].'</td></tr>';
 									}
 									?>
-									<tr><th>Dichter:&nbsp;</th><td><?php echo $dsatz['Dichter']; ?></td></tr>
-									<tr><th>Setzer:&nbsp;</th><td><?php echo $dsatz['Setzer']; ?></td></tr>
-									<tr><th>Typus:&nbsp;</th><td><?php echo $dsatz['Typus'];?></td></tr><?php
+									<tr><th><?php echo __('poet');?>:&nbsp;</th><td><?php echo $dsatz['Dichter']; ?></td></tr>
+									<tr><th><?php echo __('setter');?>:&nbsp;</th><td><?php echo $dsatz['Setzer']; ?></td></tr>
+									<tr><th><?php echo __('typ');?>:&nbsp;</th><td><?php echo $dsatz['Typus'];?></td></tr><?php
 									if($dsatz['Typus']=='Druck'){
 										echo "<tr><th>Verlag:&nbsp;</th><td>$dsatz[Verlag]</td></tr>\n";
 									}
-									?><tr><th>Verfassungsdatum:&nbsp;</th><td><?php echo $dsatz['Verfassungsdatum']; ?></td></tr>
-									<tr><th>Sprache:&nbsp;</th><td><?php echo translate_iso639_2B($dsatz['Sprache']);?></td></tr>
-									<tr><th>Schriftsystem:&nbsp;</th><td><?php echo translate_iso15924($dsatz['Schrift']);?></td></tr>
-									<tr><th>Anzahl:&nbsp;</th><td><?php echo $dsatz['Anzahl'];?></td></tr>
-									<tr><th>Sammlung:&nbsp;</th><td><?php echo $dsatz['Sammlung'];?></td></tr>
-									<tr><th>Standort:&nbsp;</th><td><?php echo $dsatz['Standort'];?></td></tr>
-									<tr><th>Signatur:&nbsp;</th><td><?php echo $dsatz['Signatur'];?></td></tr>
+									?><tr><th><?php echo __('pub');?>:&nbsp;</th><td><?php echo $dsatz['Verfassungsdatum']; ?></td></tr>
+									<tr><th><?php echo __('lang');?>:&nbsp;</th><td><?php echo translate_iso639_2B($dsatz['Sprache']);?></td></tr>
+									<tr><th><?php echo __('script');?>:&nbsp;</th><td><?php echo translate_iso15924($dsatz['Schrift']);?></td></tr>
+									<tr><th><?php echo __('num');?>:&nbsp;</th><td><?php echo $dsatz['Anzahl'];?></td></tr>
+									<tr><th><?php echo __('collection');?>:&nbsp;</th><td><?php echo $dsatz['Sammlung'];?></td></tr>
+									<tr><th><?php echo __('loc');?>:&nbsp;</th><td><?php echo $dsatz['Standort'];?></td></tr>
+									<tr><th><?php echo __('sig');?>:&nbsp;</th><td><?php echo $dsatz['Signatur'];?></td></tr>
 									<?php
 									if(!empty($dsatz['Bemerkungen'])){
-										echo '<tr><th>Bemerkungen:&nbsp;</th><td>'.$dsatz['Bemerkungen'].'</td></tr>';
+										echo '<tr><th>'.__('rem').':&nbsp;</th><td>'.$dsatz['Bemerkungen'].'</td></tr>';
 									}
 									if(!empty($dsatz['Audiolink'])){
-										echo "<tr><th>Hörbeispiel:&nbsp;</th><td><audio controls><source src=\"$dsatz[Audiolink]\" type=\"audio/mpeg\" />"
+										echo "<tr><th>".__('audiolink').":&nbsp;</th><td><audio controls><source src=\"$dsatz[Audiolink]\" type=\"audio/mpeg\" />"
 											."Ihr Browser unterstütz HTML5 leider nicht.<br>Wir können ihnen leider kein Hörbeispiel vorspielen.</audio></td></tr>";
 									}
 									if(!empty($dsatz['Dokumentlink'])){
 										$docs=explode(' ',$dsatz['Dokumentlink']);
-										echo "<tr><th rowspan=\"".count($docs)."\">Digitalisate:&nbsp;</th><td class=\"d\">";
-										echo "<div class=\"digitalisat\"><a href=\"https://issuu.com/hsa6/docs/".array_shift($docs)."\">Digitalisat auf Issuu</a></div></td></tr>";
+										echo "<tr><th rowspan=\"".count($docs)."\">".__('digi').":&nbsp;</th><td class=\"d\">";
+										echo "<div class=\"digitalisat\"><a href=\"https://issuu.com/hsa6/docs/".array_shift($docs)."\">".__('digi')." @ issuu.com</a></div></td></tr>";
 											// ."<iframe width=\"50%\" height=\"394\" src=\"".array_shift($docs)."\" frameborder=\"0\" allowfullscreen>"
 											// ."Ihr Browser unterstützt leider keine iframes.<br>Wir können ihnen leider keine Digitalisate anzeigen.</iframe></td></tr>";
 										foreach($docs as $doc){
-											echo "<tr><td><div class=\"digitalisat\"><a href=\"https://issuu.com/hsa6/docs/$doc\">Digitalisat auf Issuu</a></div></td></tr>";
+											echo "<tr><td><div class=\"digitalisat\"><a href=\"https://issuu.com/hsa6/docs/$doc\">".__('digi')." @ issuu.com</a></div></td></tr>";
 											// echo "<tr><td><iframe width=\"50%\" height=\"394\" src=\"$doc\" frameborder=\"0\" allowfullscreen></iframe></td></tr>";
 										}
 									}
 									?>
 								</table>
 								<br>
-								<a href="javascript:history.back()"><p>zurück zum Suchergebnis</p></a>
-								<a href="."><p>neue Suche</p></a>
-								<p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.</p>
+								<a href="javascript:history.back()"><p><?php echo __('back');?></p></a>
+								<a href="."><p><?php echo __('new-src');?></p></a>
 							</div>
 						</div>
 						<div id="sidebar">
@@ -315,6 +314,9 @@ require_once "misc.php";
 				background-position: top center;
 				background-size: cover;
 				border-radius: 4px;
+			}
+			#footer{
+				background-color: white;
 			}
 		</style>
 
