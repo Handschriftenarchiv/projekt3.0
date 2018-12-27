@@ -18,7 +18,9 @@ quantity
 collection
 location
 shelfmark
+audio example
 audio example available
+digitisation
 digitisation available
 start search
 database
@@ -46,6 +48,9 @@ print
 manuscripts
 copies of manuscripts
 printings
+about the manuscript
+about the manuscript copy
+about the printing
 scores, printings and manuscripts of the Dresden Kreuzchor
 Your message was sent successfully. We will come back to you as soon as possible.
 Your message could not be sent.
@@ -64,3 +69,8 @@ This composer created %d works in our database.
 Sorry, but there is nothing we can show you here.
 This composer created 1 work in our database.
 All fields marked with * are necessary for us to be able to contact you. All other fields are optional.
+remarks
+back
+new search
+details
+nothing found

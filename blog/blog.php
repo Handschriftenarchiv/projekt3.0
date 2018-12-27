@@ -94,9 +94,9 @@ $next=$data[$index]['title'];
 
 		<div class="blog-div">
 			<?php echo __chunk('blog-'.$blog_entry); ?>
-			<div class="author">
-				<!-- <img src="/images/logo.jpg" alt="Logo Handschriftenarchiv"> -->
-				<!--<div id="profile"></div>
+			<!--<div class="author">
+				<img src="/images/logo.jpg" alt="Logo Handschriftenarchiv">
+				<div id="profile"></div>
 				<?php
 				echo '<table class="author" style="margin:auto;"><tbody align="center"><tr>';
 				foreach($author as $val){
