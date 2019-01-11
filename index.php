@@ -124,6 +124,18 @@ require_once "translate.php";
 							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 								<div class="slider-text-inner">
 									<div class="desc">
+										<?php echo __chunk('index-4'); ?>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li style="background-image: url(/images/index/slider/7.jpg);">
+						<div class="overlay-gradient"></div>
+						<div class="container">
+							<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
+								<div class="slider-text-inner">
+									<div class="desc">
 										<?php echo __chunk('index-3'); ?>
 									</div>
 								</div>
@@ -140,7 +152,7 @@ require_once "translate.php";
 						<div class="col-md-8 col-md-offset-2 animate-box text-center">
 							<center>
 							<div class="form-group" style="position: center">
-								<input type="submit" value="Version Eins Punkt Zwei" class="btn-lable">
+								<input type="submit" value="Support Status: partly" class="btn-lable">
 							</div>
 						</center>
 							<h2 class="intro-heading"><?php echo __('hsa'); ?></h2>
@@ -177,7 +189,7 @@ require_once "translate.php";
 					<?php
 					echo __blog_prev('ratser-liste','4')
 						.__blog_prev('gunter-gross','4')
-						.__blog_prev('vorschau-2018','4');
+						.__blog_prev('selbststaendigkeit-2019','4');
 					?>
 				</div>
 			</div>

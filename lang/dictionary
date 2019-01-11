@@ -18,7 +18,9 @@ num
 collection
 loc
 sig
+audiolink
 audiolink+
+digi
 digi+
 src!
 db
@@ -46,6 +48,9 @@ d
 h-pl
 kvh-pl
 d-pl
+4h
+4kvh
+4d
 intro
 mail-success
 mail-fail
@@ -64,3 +69,8 @@ num-composed
 no-info
 num-composed-sg
 GDPR-phrase
+rem
+back
+new-src
+det
+404
