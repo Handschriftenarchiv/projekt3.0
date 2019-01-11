@@ -109,14 +109,14 @@ require_once 'analytics.php';
 											<span><?php echo __('compos-info'); ?></span>
 											<h2><?php echo $daten['Name']; ?></h2>
 											<p><?php
-												$sql="SELECT COUNT(*) FROM archivalien WHERE Komponist";
+												$sql="SELECT Titel,Signatur FROM archivalien WHERE Komponist";
 												if($daten['Name']=='Unbekannt'){
 													$sql.=" IS NULL";
 												}else{
 													$sql.="='$daten[Name]'";
 												}
-												$res=mysqli_query($con,$sql);
-												$num=mysqli_fetch_array($res,MYSQLI_NUM)[0];
+												$titles=mysqli_query($con,$sql);
+												$num=mysqli_num_rows($titles);
 												if($num==1){
 													echo __('num-composed-sg');
 												}else{
@@ -144,6 +144,11 @@ if(empty($info)){
 	echo __('no-info');
 }else{
 	echo $info;
+}
+
+echo "<br><br><h4>Werke von ".$daten['Name']." in unserer Datenbank:</h4>";
+while($data=mysqli_fetch_assoc($titles)){
+	echo "<blockquote><a href=\"details/".formatSig($data['Signatur'])."\"><p>".$data['Titel']."<br><i>".$daten['Name']."</i></p></a></blockquote><br>\n";
 }
 ?>
 <br>
