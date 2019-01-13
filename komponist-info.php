@@ -1,5 +1,6 @@
 <?php
 require_once 'suche/misc.php';
+require_once 'translate.php';
 
 if(strlen($_GET['id'])!=3){
 	header("Location: /$use_lang/404");
@@ -14,7 +15,6 @@ if(!$res||mysqli_num_rows($res)==0){
 }
 $daten=mysqli_fetch_assoc($res);
 
-require_once 'translate.php';
 require_once 'analytics.php';
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -148,7 +148,7 @@ if(empty($info)){
 
 echo "<br><br><h4>Werke von ".$daten['Name']." in unserer Datenbank:</h4>";
 while($data=mysqli_fetch_assoc($titles)){
-	echo "<blockquote><a href=\"details/".formatSig($data['Signatur'])."\"><p>".$data['Titel']."<br><i>".$daten['Name']."</i></p></a></blockquote><br>\n";
+	echo "<blockquote><a href=\"/suche/details/".formatSig($data['Signatur'])."\"><p>".$data['Titel']."<br><i>".$daten['Name']."</i></p></a></blockquote><br>\n";
 }
 ?>
 <br>
