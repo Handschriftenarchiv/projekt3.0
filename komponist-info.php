@@ -94,7 +94,7 @@ require_once 'analytics.php';
 						<?php
 						if(empty($daten['Name'])){
 							$img="404.svg";
-							$daten['Name']="Unbekannt";
+							$daten['Name']=__('UNB');
 						}else{
 							$img="/database/composer.jpeg";
 						}
@@ -110,7 +110,7 @@ require_once 'analytics.php';
 											<h2><?php echo $daten['Name']; ?></h2>
 											<p><?php
 												$sql="SELECT Titel,Signatur FROM archivalien WHERE Komponist";
-												if($daten['Name']=='Unbekannt'){
+												if($_GET['id']=='UNB'){
 													$sql.=" IS NULL";
 												}else{
 													$sql.="='$daten[Name]'";
@@ -143,12 +143,24 @@ $res=mysqli_query($con,"SELECT Info FROM komponisten WHERE Abk='$_GET[id]'");
 if(empty($info)){
 	echo __('no-info');
 }else{
+	if(strpos($use_lang,'de')!==0){
+?>
+<style>
+	.about-content::before{
+		content:'<?php echo __('only-ger'); ?>';
+		display:block;
+		background:orange;
+		border-radius:5px;
+	}
+</style>
+<?php
+	}
 	echo $info;
 }
 
-echo "<br><br><h4>Werke von ".$daten['Name']." in unserer Datenbank:</h4>";
+echo "<br><br><h4>".__('works-of-0')." $daten[Name] ".__('works-of-1').":</h4>";
 while($data=mysqli_fetch_assoc($titles)){
-	echo "<blockquote><a href=\"/suche/details/".formatSig($data['Signatur'])."\"><p>".$data['Titel']."<br><i>".$daten['Name']."</i></p></a></blockquote><br>\n";
+	echo "<blockquote><a href=\"/$use_lang/suche/details/".formatSig($data['Signatur'])."\"><p>".$data['Titel']."<br><i>".$daten['Name']."</i></p></a></blockquote><br>\n";
 }
 ?>
 <br>
