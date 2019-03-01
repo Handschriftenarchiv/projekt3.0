@@ -1,9 +1,16 @@
 [
 	{
+		"title": "deutsche-digitale-bibliothek",
+		"pubDate": "01.03.2019",
+		"thumbnail": "/images/blog/ddb/1.png",
+		"background": "/images/blog/ddb/2.png",
+		"author":[["Autor","Marc Eric Mitzscherling"],["Veröffentlicher","Archivar"]]
+	},
+	{
 		"title": "selbststaendigkeit-2019",
 		"pubDate": "31.12.2018",
 		"thumbnail": "/images/blog/selbststaendigkeit-2019/1.png",
-		"background": "/images/blog/werke/werke-2/2.png",
+		"background": "/images/blog/selbststaendigkeit-2019/2.png",
 		"author":[["Autor","Marc Eric Mitzscherling"],["Veröffentlicher","Archivar"]]
 	},
 	{
