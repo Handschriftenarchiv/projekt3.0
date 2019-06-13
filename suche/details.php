@@ -131,7 +131,8 @@ require_once "misc.php";
 											if($res&&mysqli_num_rows($res)>0){
 												$dsatz=mysqli_fetch_assoc($res);
 												if(empty($dsatz['Komponist'])){
-													$dsatz['Komponist']="unbekannt";
+													$dsatz['Komponist']='unbekannt';
+													$dsatz['Abk']='UNB';
 												}
 												if(empty($dsatz['Dichter'])){
 													$dsatz['Dichter']='unbekannt';
