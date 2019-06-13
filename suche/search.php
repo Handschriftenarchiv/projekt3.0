@@ -142,6 +142,9 @@ if(!isset($_GET['mode'])){
 	}
 	$res=mysqli_query($con,$sql);
 	while($dsatz=mysqli_fetch_assoc($res)){
+		if(empty($dsatz['Komponist'])){
+			$dsatz['Komponist']='unbekannt';
+		}
 		echo "\t\t\t\t\t\t\t<blockquote><a href=\"details/".formatSig($dsatz['Signatur'])."\"><p>".$dsatz['Titel']."<br><i>".$dsatz['Komponist']."</i></p></a></blockquote><br>\n";
 	}
 }else{

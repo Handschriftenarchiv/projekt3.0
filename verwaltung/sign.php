@@ -45,13 +45,12 @@ if(empty($_SESSION['login'])&&empty($_POST['user'])){
 <?php
 require_once "../suche/config.php";
 $pdo=dbConPDO();
-$stmnt=$pdo->prepare('SELECT row FROM (SELECT @row := @row + 1 as row,ID FROM archivalien, (SELECT @row:=0)r WHERE Komponist=? ORDER BY Titel) AS a WHERE ID=?');
+$stmnt=$pdo->prepare('SELECT row FROM (SELECT @row := @row + 1 as row,ID FROM archivalien, (SELECT @row:=0)r WHERE Komponist=? ORDER BY ID) AS a WHERE ID=?');
 $upd_stmnt=$pdo->prepare('UPDATE archivalien SET Signatur = ? WHERE ID = ?');
 $unbekannt=0;
-foreach($pdo->query('SELECT ID,Titel,Komponist,Abk,Typus FROM archivalien LEFT JOIN komponisten ON Komponist=Name ORDER BY Titel') as $dsatz){
+foreach($pdo->query('SELECT ID,Titel,Komponist,Abk,Typus FROM archivalien LEFT JOIN komponisten ON Komponist=Name ORDER BY ID') as $dsatz){
 	if(empty($dsatz['Abk'])){
 		$dsatz['Abk']="UNB";
-	}else{
 	}
 	$sig=$dsatz['Abk'].substr($dsatz['Typus'],0,1);
 	if($dsatz['Abk']=='UNB'){
