@@ -22,11 +22,11 @@
 				<div class="col-md-3">
 					<h3 class="section-title">Partnerschaften</h3>
 					<p>
-					<a href="https://www.deutsche-digitale-bibliothek.de/about-us/institutions/item/PXYIJUCJ654QX5KHG6E34VNE3UG3IXR2?query=Handschriftenarchiv+Dresdner+Kreuzchor" target="_blank"><img src="/images/ddb.png" alt="Mitglied der Deutschen Digitalen Bibliothek"  height="100" /></a>
+					<a href="https://www.deutsche-digitale-bibliothek.de/about-us/institutions/item/PXYIJUCJ654QX5KHG6E34VNE3UG3IXR2?query=Handschriftenarchiv+Dresdner+Kreuzchor" target="_blank"><img src="/images/ddb.png" alt="Mitglied der Deutschen Digitalen Bibliothek"  height="70" /></a>
 				</div>
 				<div class="col-md-3">
 					<h3 class="section-title"> &nbsp; </h3>
-					<a href="https://www.archivportal-d.de/objects?facetValues%5B%5D=context%3DPXYIJUCJ654QX5KHG6E34VNE3UG3IXR2" target="_blank"><img src="/images/apd.jpg" alt="Mitglied des Archivportal-D"  height="100" /></a>
+					<a href="https://www.archivportal-d.de/objects?facetValues%5B%5D=context%3DPXYIJUCJ654QX5KHG6E34VNE3UG3IXR2" target="_blank"><img src="/images/apd.jpg" alt="Mitglied des Archivportal-D"  height="70" /></a>
 					<!--<form class="form-inline" id="fh5co-header-subscribe">
 						<div class="row">
 							<div class="col-md-12 col-md-offset-0">
@@ -37,6 +37,11 @@
 							</div>
 						</div>
 					</form>-->
+				</div>
+				<div class="col-md-3">
+					<h3 class="section-title">&nbsp; </h3>
+					<p>
+					<a href="http://www.archivesportaleurope.net/de/ead-display/-/ead/pl/aicode/DE-2535/type/fa/id/HSA-Bestand" target="_blank"><img src="/images/ape.jpg" alt="Mitglied des Europäischen Archivportals"  height="70" /></a>
 				</div>
 			</div>
 			<div id="langs">
