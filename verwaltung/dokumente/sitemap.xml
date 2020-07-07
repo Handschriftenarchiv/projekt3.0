@@ -48,11 +48,6 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://archiv.handschriften.bplaced.de/de/blog/ratser-liste</loc>
-  <lastmod>2019-03-01T21:45:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>http://archiv.handschriften.bplaced.de/de/blog/gunter-gross</loc>
   <lastmod>2019-03-01T21:45:50+00:00</lastmod>
   <priority>0.80</priority>
@@ -294,11 +289,6 @@
 </url>
 <url>
   <loc>http://archiv.handschriften.bplaced.de/en/kontakt</loc>
-  <lastmod>2019-03-01T21:45:50+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://archiv.handschriften.bplaced.de/en/blog/ratser-liste</loc>
   <lastmod>2019-03-01T21:45:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>

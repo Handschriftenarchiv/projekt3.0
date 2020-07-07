@@ -8,3 +8,4 @@ Disallow: /js/
 Disallow: /verwaltung/graphs.php
 Disallow: /verwaltung/index.php
 Disallow: /suche/config.php
+Disallow: /blog/ratser-liste
