@@ -187,7 +187,7 @@ require_once "translate.php";
 				</div>
 				<div class="row">
 					<?php
-					echo __blog_prev('ratser-liste','4')
+					echo __blog_prev('deutsche-digitale-bibliothek','4')
 						.__blog_prev('gunter-gross','4')
 						.__blog_prev('selbststaendigkeit-2019','4');
 					?>
