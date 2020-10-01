@@ -77,7 +77,7 @@ require_once 'translate.php';
 				<div class="flexslider js-fullheight">
 					<ul class="slides">
 						<li style="background-image: url(/images/archiv/start.jpg);">
-							<div class="overlay-gradient"></div>
+						 <div class="overlay-gradient"></div>
 							<div class="container">
 								<div class="col-md-8 col-md-offset-2 col-md-push-4 js-fullheight slider-text">
 									<div class="slider-text-inner">
