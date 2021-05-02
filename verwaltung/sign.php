@@ -30,11 +30,13 @@ if(empty($_SESSION['login'])&&empty($_POST['user'])){
 		}else{
 			session_destroy();
 			header("Location: /");
+			exit;
 		}
 	}
 	if(isset($_GET['logout'])){
 		session_destroy();
 		header("Location: sign.php");
+		exit;
 	}
 ?>
 <a href="sign.php?logout">Logout</a>
