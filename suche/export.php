@@ -44,14 +44,20 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 					<!-- evtl. <origination>Dresdner Kreuzchor</origination> -->
 				</did>
 <?php
-				$res=mysqli_query($con,'SELECT * FROM archivalien');
+				$res=mysqli_query($con, 'SELECT * FROM archivalien LEFT JOIN komponisten ON Komponist=Name ORDER BY ID');
 				while($dsatz=mysqli_fetch_assoc($res)){
 					$sig=formatSig($dsatz['Signatur']);
 ?>				<c level="file" id="<?php echo $ident.'-'.$sig; ?>">
 					<did>
 						<unitid><?php echo $sig; ?></unitid>
 						<unittitle><?php echo $dsatz['Titel']; ?></unittitle>
-						<origination label="Autor"><?php echo $dsatz['Komponist']?></origination>
+						<origination label="Autor"><?php
+							 if (isset($dsatz['GND'])){
+								?><name source="GND" authfilenumber="<?php echo $dsatz['GND'];?>"><?php echo $dsatz['Komponist'];?></name><?php
+							 }else{
+								echo $dsatz['Komponist'];
+							}
+						?></origination>
 						<physdesc>
 <?php
 $norm_type="Sonstige";
