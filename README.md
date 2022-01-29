@@ -6,7 +6,8 @@ Das Handschriftenarchiv Dresdner Kreuzchor sammelt, archiviert, digitalisiert un
 
 [Website](http://archiv.handschriften.bplaced.de)
 
-Copyrightangaben entnehmen Sie bitte unserem [Impressum](http://archiv.handschriften.bplaced.de/impressum) - Bei Lizenzfragen konsultieren Sie bitte unsere `LICENSE.md`
+Inhalte stehen unter der Lizenz die im selben oder einem übergeordneten Verzeichnis als Datei "LICENSE" zu finden ist.
+Wenn dies auf mehrere Dateien zutrifft, gilt die im Verzeichnisbaum näher liegende.
 
 ## Bemerkung für Entwickler:
 Die Datei `suche/config.php` wurde aus Datenschutzrechtlichen Gründen nicht auf GitHub veröffentlicht. In dieser Datei wird lediglich die Funktion `dbCon()` deklariert, welche die Verbindung zu Datenbank herstellt und ein `mysqli`-Objekt zurückgibt, welches diese Verbindung darstellt.

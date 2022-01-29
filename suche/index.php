@@ -8,8 +8,8 @@ require_once '../translate.php';
 		<title><?php echo __('db');?> - <?php echo __('hsa')?></title>
 		<link rel="shortcut icon" href="/favicon.ico"/>
 		<link rel="stylesheet" type="text/css" href="/suche/index.css"/>
-		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400" rel="stylesheet">
+		<link href="/fonts/karla/include.css" rel="stylesheet"/>
+		<link href="/fonts/playfair-display/include.css" rel="stylesheet"/>
 		<!-- Icomoon Icon Fonts-->
 		<link rel="stylesheet" href="/css/icomoon.css">
 		<script type="text/javascript" src="/suche/search.js"></script>

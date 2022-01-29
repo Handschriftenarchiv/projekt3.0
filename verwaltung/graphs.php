@@ -49,7 +49,7 @@ require_once '../analytics.php';
 		<script src="highcharts-data.js"></script>
 
 		<div id="chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+		<link href="/fonts/karla/include.css" rel="stylesheet"/>
 
 		<script>
 			Highcharts.chart('chart',{

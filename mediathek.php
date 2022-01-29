@@ -32,8 +32,8 @@ require_once 'translate.php';
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		<link rel="shortcut icon" href="/favicon.ico">
 
-		<link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+		<link href="/fonts/karla/include.css" rel="stylesheet"/>
+		<link href="/fonts/playfair-display/include.css" rel="stylesheet"/>
 
 		<!-- Animate.css -->
 		<link rel="stylesheet" href="/css/animate.css">
