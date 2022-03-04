@@ -42,6 +42,9 @@ if(preg_match('~^[a-z]{2}(-[a-z]{2})*$~i',$urip[0])){
 			chdir(substr($path,0,strrpos($path,DIRECTORY_SEPARATOR)));
 			// für Analytics
 			$_SERVER['SCRIPT_NAME']=substr($path,strlen($_SERVER['DOCUMENT_ROOT'])-1);
+			if(substr($path,-3)==='.js') {
+				header('Content-Type: application/javascript');
+			}
 			include $path;
 			exit;
 		}
