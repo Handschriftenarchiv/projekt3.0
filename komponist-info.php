@@ -107,7 +107,7 @@ require_once 'analytics.php';
 									<div class="slider-text-inner">
 										<div class="desc">
 											<span><?php echo __('compos-info'); ?></span>
-											<h2><?php echo $daten['Name']; echo $daten['GND'];?></h2>
+											<h2><?php echo $daten['Name']; ?></h2>
 											<p><?php
 												$sql="SELECT Titel,Signatur FROM archivalien WHERE Komponist";
 												if($_GET['id']=='UNB'){
