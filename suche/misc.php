@@ -23,6 +23,7 @@ function translate_iso639_2B($langcode){
 		case 'jpn':return 'Japanisch';
 		case 'chi':return 'Chinesisch';
 		case 'eng':return 'Englisch';
+		case 'ita':return 'Italienisch';
 		case 'mul':return 'mehrere Sprachen';
 		case 'zxx':return 'kein linguistischer Inhalt';
 		case 'und':
