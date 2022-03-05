@@ -49,10 +49,10 @@ require_once '../translate.php';
 		<div id="details">
 			<img border="0" src="/images/database/info.svg" id="details"/>
 			<div id="info">
-				<a href="details?id=134">
+				<a href="details?id=1">
 					<img border="0" src="/images/database/background.scharf.png" style="border-radius: 5px;"/>
-					<p class="title">Mai</p>
-					<p class="composer">Ernst Pepping</p>
+					<p class="title">Gott der Herr ist Sonn und Schild</p>
+					<p class="composer">Johann Sebastian Bach</p>
 				</a>
 			</div>
 		</div>
