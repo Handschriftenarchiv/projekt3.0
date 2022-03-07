@@ -1,7 +1,3 @@
-*{
-	margin:0;
-	padding:0;
-}
 body{
 	width:96%;
 	height:96%;
@@ -17,7 +13,8 @@ body:after{
 	bottom: 0;
 	right: 0;
 	opacity:0.5;
-	background: url('../images/database/background.png');
+	background: url('../images/database/background.scharf.png');
+	filter: blur(5px);
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -79,7 +76,6 @@ input,select,button{
 }
 .go{
 	background-image:url('/images/database/enter.svg');
-	width:5em;
 	float:right;
 	margin-right:45%;
 }
@@ -87,55 +83,48 @@ input,select,button{
 	width:15em;
 }
 
-#details{
-	cursor: pointer;
-	position: absolute;
-	right: 0%;
-	bottom: 1%;
-	left: 3%;
-	border-radius: 5px;
-	width:2.75em;
-	height:2.75em;
-	float:right;
-	margin-right:45%;
-	opacity: 0.95;
+.info-div{
+	position: fixed;
+  bottom: 8px;
+  left: 8px;
+  background-color: rgba(0, 0, 0, 0);;
+  border: none!important;
+  cursor: pointer;
 }
 
-#info{
-	right: 0%;
-	bottom: 1%;
-	left: 10%;
+.info-img{
+  width: 28px;
+  transition: 0.5s;
+}
+
+.info-img:hover{
+  width: 30px;
+  transition: 0.5s;
+}
+
+.info{
+	bottom: 8px;
+	left: 5%;
 	position:fixed;
-	background-color:rgba(196,196,196,0.82);
-	width: 25%;
 	height: 20%;
-	border-radius: 5px;
-	border: none;
-	opacity:0;
+	width: 50%;
+	opacity: 0;
 	transition:opacity 0.5s;
 }
 
-#info a{
-	color:#000;
-}
-
-#details:hover #info{
+.info-div:hover .info{
 	opacity:1;
 }
 
-#details img {
-	position: absolute;
-	height: 100%;
+.info a{
+	color:#000;
 }
 
 p.composer {
 	position: absolute;
 	font-family:"Karla";
 	bottom: 1%;
-	top: 50%;
-	left: 60%;
-	width: 100%;
-	height: 100%;
+	top:65%;
 	font-size: 100%;
 	text-align:left;
 }
@@ -143,10 +132,7 @@ p.title {
 	position: absolute;
 	font-family:"Playfair Display",Arial,serif;
 	bottom: 1%;
-	top: 25%;
-	left: 60%;
-	width: 100%;
-	height: 100%;
+	top: 40%;
 	font-size: 150%;
 	text-align:left;
 }

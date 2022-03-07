@@ -16,7 +16,7 @@ require_once '../translate.php';
 		<script type="text/html" id="template">
 		</script>
 	</head>
-	<body onload="start()">
+	<body onload="start()" class="scharf">
 		<a href="/<?php echo $use_lang; ?>"><img border="0" src="/favicon.ico" id="icon"/></a>
 		<div id="search">
 			<span style="font-size:16pt;"><?php echo __('fulltextsrc');?></span>
@@ -46,17 +46,19 @@ require_once '../translate.php';
 			</form>
 		</div>
 
-		<div id="details">
-			<img border="0" src="/images/database/info.svg" id="details"/>
-			<div id="info">
+		<!--Komponist-Info-->
+		<div class="info-div"
+		<button type="button" class="info-div">
+      <img class="info-img"src="../images/database/info.svg"/>
+    </button>
+
+			<div class="info">
 				<a href="details?id=1">
-					<img border="0" src="/images/database/background.scharf.png" style="border-radius: 5px;"/>
 					<p class="title">Gott der Herr ist Sonn und Schild</p>
 					<p class="composer">Johann Sebastian Bach</p>
 				</a>
 			</div>
 		</div>
-
 		<datalist id="suggestions"></datalist>
 		<!-- jQuery -->
 		<script src="/js/jquery.min.js"></script>
